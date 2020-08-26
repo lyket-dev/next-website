@@ -39,9 +39,9 @@ export default function Home() {
                 your static website in just a few seconds!
               </p>
               <div className="check">
-                <img src={"/clap.svg"} className="check__icons" />
-                <img src={"/heart.svg"} className="check__icons" />
-                <img src={"/like.svg"} className="check__icons" />
+                <img src={"/assets/clap.svg"} className="check__icons" />
+                <img src={"/assets/heart.svg"} className="check__icons" />
+                <img src={"/assets/like.svg"} className="check__icons" />
               </div>
               <form
                 name="login"
@@ -92,7 +92,7 @@ export default function Home() {
                   <div className="social">
                     <div className="social__container">
                       <button onClick={pressUp} className="social__button">
-                        <img src={"/clapping.svg"} />
+                        <img src={"/assets/clapping.svg"} />
                       </button>
                     </div>
                     <span className="social__counter">{counter}</span>
@@ -250,7 +250,7 @@ export default function Home() {
             <div className="flag__image__container">
               <video
                 className="flag__video"
-                src={"/lyket_video.mp4"}
+                src={"/assets/lyket_video.mp4"}
                 autoPlay
                 playsInline
                 loop
@@ -319,7 +319,7 @@ export default function Home() {
             <div className="flag__image__container">
               <img
                 className="section__portrait"
-                src={"/karen.jpeg"}
+                src={"/assets/karen.jpeg"}
                 alt="Idontexist"
               />
             </div>
