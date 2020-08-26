@@ -1,0 +1,40 @@
+.header
+  @extend .section
+
+.header__container
+  max-width: 840px
+  margin: 0 auto
+  padding: 50px 15px
+  padding-top: 20px
+
+.header__title
+  +heading-font-family
+  +font-size(alpha)
+  text-align: center
+  font-weight: 900
+
+.header__subtitle
+  text-align: center
+  +font-size(regular)
+  +margin-bottom(1)
+
+.header__image
+  display: none
+
+@media only screen and (min-width: 1000px)
+  .header__container
+    padding: 100px 0
+    max-width: 950px
+    padding-top: 50px
+
+  .header__title
+    +font-size(huge)
+    text-align: left
+
+  .header__subtitle
+    +font-size(beta)
+    text-align: left
+
+  .header__image
+    display: block
+    width: 100px

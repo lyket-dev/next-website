@@ -1,0 +1,32 @@
+.decorator__chosen
+  display: inline-block
+  position: relative
+  z-index: 0
+  &:before
+    content: ''
+    display: block
+    height: 40%
+    margin: 0 auto
+    position: absolute
+    left: -5px
+    right: -5px
+    bottom: 10px
+    transition: all .5s
+    z-index: -1
+    box-shadow: 2px 14px 15px #ddd
+    transform: skewX(10deg)
+
+.decorator__chosen--blue
+  @extend .decorator__chosen
+  &::before
+    background: $green
+
+.decorator__chosen--red
+  @extend .decorator__chosen
+  &::before
+    background: $raspberry
+
+.decorator__chosen--yellow
+  @extend .decorator__chosen
+  &::before
+    background: $yellow

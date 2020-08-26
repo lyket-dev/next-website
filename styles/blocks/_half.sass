@@ -1,0 +1,96 @@
+.half
+  text-align: left
+  +vertical-padding(2)
+  position: relative
+  display: flex
+  flex-direction: column
+  +font-size(regular)
+
+.half:nth-of-type(2)
+  @extend .half
+  flex-direction: column-reverse
+  .half__left
+    margin-bottom: 0
+  .half__right
+    +margin-bottom(1)
+
+.half__title
+  +heading-font-family
+  +font-size(beta)
+
+.half__text
+  +margin-bottom(1)
+
+.half__item
+  max-width: 700px
+  margin: 0 auto
+  text-align: center
+
+.half__right
+  @extend .half__item
+
+.half__left
+  @extend .half__item
+  +margin-bottom(2)
+
+.half__border
+  padding: 20px
+  border: 2px dashed $base-body-color
+  max-width: 500px
+
+.half__line
+  text-align: center
+  +vertical-margin(2)
+  font-size: 7vh
+  line-height: 10px
+
+.half__line--pink
+  @extend .half__line
+  color: $raspberry
+  text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #fc3df660, 0 0 0.5em #fc3df660, 0 0 32px #fc3df660, 0 10px 3px #fc3df630
+
+.half__line--green
+  @extend .half__line
+  color: $green
+  text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #2b4e9960, 0 0 0.5em #2b4e9960, 0 0 32px #2b4e9960, 0 10px 3px #2b4e9930
+
+.half__line--yellow
+  @extend .half__line
+  color: $yellow
+  text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #2b4e9960, 0 0 0.5em #2b4e9960, 0 0 32px #2b4e9960, 0 10px 3px #2b4e9930
+
+.half__reaction
+  text-align: center
+  +margin-top(2)
+
+@media only screen and (min-width: 1000px)
+  .half
+    flex-direction: row
+    align-items: center
+    flex-basis: 50%
+    +font-size(gamma)
+
+  .half:nth-of-type(2)
+    flex-direction: row
+
+  .half__title
+    +font-size(alpha)
+
+  .half__item
+    width: 50%
+    margin: 0
+    text-align: left
+
+  .half__left
+    padding-right: 60px
+
+  .half__right
+    padding-left: 60px
+
+  .half__border
+    padding: 50px
+
+  .half__line
+    +center
+    font-size: 60px
+    margin: 0

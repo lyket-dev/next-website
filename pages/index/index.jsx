@@ -1,16 +1,11 @@
 import React from "react";
-import Decorator from "./sub/Decorator";
+import Decorator from "../sub/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
 import dynamic from "next/dynamic";
 
 const ClapButton = dynamic(
-  () =>
-    import("@lyket/react").then(m => {
-      console.log(m);
-
-      return m.ClapButton;
-    }),
+  () => import("@lyket/react").then(mod => mod.ClapButton),
   { ssr: false }
 );
 

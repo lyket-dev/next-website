@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Home from "./Home";
-// import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 
-// const { Provider } = dynamic(() => import("@lyket/react"), { ssr: false });
+const Provider = dynamic(
+  () => import("@lyket/react").then(mod => mod.Provider),
+  { ssr: false }
+);
 
 export default function Index() {
   return (
@@ -12,7 +15,9 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Home />
+      <Provider apiKey="xxx">
+        <Home />
+      </Provider>
 
       <footer>
         <a
