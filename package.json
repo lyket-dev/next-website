@@ -8,8 +8,11 @@
     "start": "next start -p 4567"
   },
   "dependencies": {
+    "@lyket/react": "0.0.7",
     "next": "9.3.5",
+    "next-images": "^1.4.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-typist": "^2.0.5"
   }
 }
