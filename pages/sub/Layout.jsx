@@ -6,14 +6,14 @@ export default function Layout({ children }) {
       <>
         {false && (
           <li className="navbar__item">
-            <Link className="navbar__link" href="/signup">
-              <a>Signup</a>
+            <Link href="/signup">
+              <a className="navbar__link">Signup</a>
             </Link>
           </li>
         )}
         <li className="navbar__item">
-          <Link href="/login" className="button">
-            <a>Log in</a>
+          <Link href="/login">
+            <a className="button">Log in</a>
           </Link>
         </li>
       </>
@@ -30,8 +30,8 @@ export default function Layout({ children }) {
         </li>
         <div className="navbar__container">
           <li className="navbar__item">
-            <Link href="/docs" className="navbar__link">
-              <a>Docs</a>
+            <Link href="/docs">
+              <a className="navbar__link">Docs</a>
             </Link>
           </li>
           {renderLoggedMenuItems()}
