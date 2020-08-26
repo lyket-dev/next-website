@@ -61,7 +61,6 @@ export default function Home() {
               <div className="check">
                 <p className="check__text">1 minute setup</p>
                 <p className="check__text">Free forever plan</p>
-                <p className="check__text">Headless</p>
               </div>
             </div>
           </div>
