@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Home from "./Home";
+// import dynamic from "next/dynamic";
+
+// const { Provider } = dynamic(() => import("@lyket/react"), { ssr: false });
 
 export default function Index() {
   return (

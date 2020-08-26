@@ -2,7 +2,26 @@ import React from "react";
 import Decorator from "./sub/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
-import { LikeButton, ClapButton, UpdownButton } from "@lyket/react";
+import dynamic from "next/dynamic";
+
+const ClapButton = dynamic(
+  () =>
+    import("@lyket/react").then(m => {
+      console.log(m);
+
+      return m.ClapButton;
+    }),
+  { ssr: false }
+);
+
+const UpdownButton = dynamic(
+  () => import("@lyket/react").then(mod => mod.UpdownButton),
+  { ssr: false }
+);
+const LikeButton = dynamic(
+  () => import("@lyket/react").then(mod => mod.LikeButton),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
@@ -21,8 +40,8 @@ export default function Home() {
             </div>
             <div className="half__right half__border">
               <p className="header__subtitle">
-                Lyket lets you add a <strong>like button</strong> in your static
-                website in just a few seconds!
+                Lyket lets you add a <strong>like/clap/vote button</strong> in
+                your static website in just a few seconds!
               </p>
               <div className="check">
                 <img src={"/clap.svg"} className="check__icons" />
@@ -42,7 +61,7 @@ export default function Home() {
                   required
                   placeholder="myemail@mail.com"
                 />
-                <button type="submit">Signup for updates!</button>
+                <button type="submit">Receive an API key!</button>
               </form>
               <div className="check">
                 <p className="check__text">1 minute setup</p>
@@ -79,49 +98,13 @@ export default function Home() {
                   <div className="social">
                     <div className="social__container">
                       <button onClick={pressUp} className="social__button">
-                        <img src={"/clapping.svg"} className="check__icons" />
+                        <img src={"/clapping.svg"} />
                       </button>
                     </div>
                     <span className="social__counter">{counter}</span>
                   </div>
                 )}
               </ClapButton>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="section__container">
-          <h2 className="section__title">
-            <Decorator
-              fulltext="No-brainer"
-              toDecorate="No-brainer"
-              color="yellow"
-            />
-          </h2>
-          <div className="flag">
-            <div className="flag__image__container">
-              <video
-                className="flag__video"
-                src={"/lyket_video.mp4"}
-                autoPlay
-                playsInline
-                loop
-                type="video/mp4"
-              />
-            </div>
-            <div className="flag__right">
-              <p className="flag__text">
-                Lyket is composed by a <strong>simple API</strong> that keeps
-                track of reactions and a customizable{" "}
-                <strong>React component</strong> with all the most famous social
-                button themes. Is the ultimate tool for your visitors to leave a
-                token of appreciation and for you to see how your work is
-                perceived!
-              </p>
-              <Link href="docs" className="section__link">
-                Check out our docs {">>"}
-              </Link>
             </div>
           </div>
         </div>
@@ -148,7 +131,11 @@ export default function Home() {
                 your blog feel a little less aloof!
               </p>
               <div className="half__reaction">
-                <ClapButton id="blog" namespace="homepage" theme="medium" />
+                <ClapButton
+                  id="blog"
+                  namespace="homepage"
+                  // theme={ClapButton.themes.Medium}
+                />
               </div>
             </div>
             <div className="half__line--green">—</div>
@@ -162,7 +149,7 @@ export default function Home() {
                 <strong>critics can be even more crucial</strong>!
               </p>
               <div className="half__reaction">
-                <UpdownButton id="docs" namespace="homepage" theme="reddit" />
+                <UpdownButton id="docs" namespace="homepage" />
               </div>
             </div>
             <div className="half__right half__border">
@@ -188,11 +175,107 @@ export default function Home() {
                 <LikeButton
                   id="portfolio"
                   namespace="homepage"
-                  theme="twitter"
+                  // theme={LikeButton.themes.Twitter}
                 />
               </div>
             </div>
             <div className="half__line--yellow">—</div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="section__container">
+          <h2 className="section__title">
+            <Decorator
+              fulltext="No-brainer"
+              toDecorate="No-brainer"
+              color="yellow"
+            />
+          </h2>
+          <div className="ternary">
+            <div className="ternary__item">
+              <p className="ternary__title">Register on Lyket >></p>
+              <div className="ternary__line--green">—</div>
+              <div className="typist--white">
+                <div className="typist--animated">Signup</div>
+                <Typist
+                  cursor={{ show: false }}
+                  startDelay={1500}
+                  avgTypingDelay={50}
+                >
+                  {"{"}
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;{"YOUR-API-KEY = xxx"}
+                  <br />
+                  {"}"}
+                  <br />
+                  <br />
+                </Typist>
+              </div>
+            </div>
+            <div className="ternary__item">
+              <p className="ternary__title">Configure the provider >></p>
+              <div className="ternary__line--pink">—</div>
+
+              <Typist
+                className="typist--white"
+                startDelay={3500}
+                avgTypingDelay={50}
+              >
+                {'import { Provider } from "@lyket/react";'}
+                <br />
+                <br />
+                {"<Provider apiKey='xxx'/>"}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;{"<App />"}
+                <br />
+                {"</Provider>"}
+              </Typist>
+            </div>
+            <div className="ternary__item">
+              <p className="ternary__title">Choose a button >></p>
+              <div className="ternary__line--yellow">—</div>
+
+              <Typist
+                className="typist--white"
+                startDelay={8000}
+                avgTypingDelay={50}
+              >
+                {'import { LikeButton } from "@lyket/react";'}
+                <br />
+                <br />
+                {"<LikeButton"}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;{'id="my-button"'}
+                <br />
+                {"/>"}
+              </Typist>
+            </div>
+          </div>
+          <div className="flag">
+            <div className="flag__image__container">
+              <video
+                className="flag__video"
+                src={"/lyket_video.mp4"}
+                autoPlay
+                playsInline
+                loop
+                type="video/mp4"
+              />
+            </div>
+            <div className="flag__right">
+              <p className="flag__text">
+                Lyket is composed by a <strong>simple API</strong> that keeps
+                track of reactions and a customizable{" "}
+                <strong>React component</strong> with all the most famous social
+                button themes. Is the ultimate tool for your visitors to leave a
+                token of appreciation and for you to see how your work is
+                perceived!
+              </p>
+              <Link href="docs" className="section__link">
+                <a>Check out our docs {">>"}</a>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
