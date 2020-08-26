@@ -3,6 +3,9 @@ import Decorator from "./sub/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
 import dynamic from "next/dynamic";
+import Clap from "../public/svg/clap.svg";
+import Like from "../public/svg/like.svg";
+import Heart from "../public/svg/heart.svg";
 
 const ClapButton = dynamic(
   () => import("@lyket/react").then(mod => mod.ClapButton),
@@ -39,9 +42,9 @@ export default function Home() {
                 your static website in just a few seconds!
               </p>
               <div className="check">
-                <img src={"/assets/clap.svg"} className="check__icons" />
-                <img src={"/assets/heart.svg"} className="check__icons" />
-                <img src={"/assets/like.svg"} className="check__icons" />
+                <Like className="check__icons" />
+                <Heart className="check__icons" />
+                <Clap className="check__icons" />
               </div>
               <form
                 name="login"
@@ -266,8 +269,8 @@ export default function Home() {
                 token of appreciation and for you to see how your work is
                 perceived!
               </p>
-              <Link href="docs" className="section__link">
-                <a>Check out our docs {">>"}</a>
+              <Link href="docs">
+                <a className="section__link">Check out our docs {">>"}</a>
               </Link>
             </div>
           </div>
