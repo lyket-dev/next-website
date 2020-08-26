@@ -119,7 +119,7 @@ export default function Home() {
                 token of appreciation and for you to see how your work is
                 perceived!
               </p>
-              <Link to="docs" className="section__link">
+              <Link href="docs" className="section__link">
                 Check out our docs {">>"}
               </Link>
             </div>
