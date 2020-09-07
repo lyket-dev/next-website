@@ -7,12 +7,7 @@ import Clap from "../public/svg/clap.svg";
 import Like from "../public/svg/like.svg";
 import Heart from "../public/svg/heart.svg";
 import ClapIcon from "../public/svg/clap.svg";
-// import Promo from "../public/assets/lyket_video.mp4";
-
-const ClapButton = dynamic(
-  () => import("@lyket/react").then(mod => mod.ClapButton),
-  { ssr: false }
-);
+import { ClapButton } from "@lyket/react";
 
 const UpdownButton = dynamic(
   () => import("@lyket/react").then(mod => mod.UpdownButton),
