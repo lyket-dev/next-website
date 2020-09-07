@@ -1,55 +1,29 @@
 import Link from "next/link";
 
-export default function Navbar({ loggedIn }) {
-  const renderLoggedMenuItems = () => {
-    return loggedIn ? (
-      <>
-        <li className="navbar__item">
-          <Link className="navbar__link" to="/dashboard">
-            Dashboard
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link className="navbar__link" to="/user-settings">
-            Settings
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link to="/logout" className="button">
-            Log out
-          </Link>
-        </li>
-      </>
-    ) : (
-      <>
-        {false && (
-          <li className="navbar__item">
-            <Link className="navbar__link" to="/signup">
-              Signup
-            </Link>
-          </li>
-        )}
-        <li className="navbar__item">
-          <Link to="/login" className="button">
-            Log in
-          </Link>
-        </li>
-      </>
-    );
-  };
-
+export default function Navbar() {
   return (
     <ul className="navbar">
       <li className="navbar__logo">
-        <Link to="/">LYKET</Link>
+        <Link href="/">
+          <a>LYKET</a>
+        </Link>
       </li>
       <div className="navbar__container">
         <li className="navbar__item">
-          <Link to="/docs" className="navbar__link">
-            Docs
+          <Link href="docs">
+            <a className="navbar__link">Docs</a>
           </Link>
         </li>
-        {renderLoggedMenuItems()}
+        <li className="navbar__item">
+          <Link href="pricing">
+            <a className="navbar__link">Pricing</a>
+          </Link>
+        </li>
+        <li className="navbar__item">
+          <Link href="/login">
+            <a className="button">Log in</a>
+          </Link>
+        </li>
       </div>
     </ul>
   );

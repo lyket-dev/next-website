@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Decorator from "./sub/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import Clap from "../public/svg/clap.svg";
 import Like from "../public/svg/like.svg";
 import Heart from "../public/svg/heart.svg";
+import ClapIcon from "../public/svg/clap.svg";
+// import Promo from "../public/assets/lyket_video.mp4";
 
 const ClapButton = dynamic(
   () => import("@lyket/react").then(mod => mod.ClapButton),
@@ -22,6 +24,21 @@ const LikeButton = dynamic(
 );
 
 export default function Home() {
+  const [email, emailSet] = useState(null);
+
+  const handleChange = e => {
+    // emailSet(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleClick = e => {
+    e.preventDefault();
+    // myRef.current.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start"
+    // });
+  };
+
   return (
     <>
       <section className="header">
@@ -35,6 +52,19 @@ export default function Home() {
                   color="blue"
                 />
               </h2>
+              <a
+                href="https://www.producthunt.com/posts/lyket?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lyket"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  style={{ width: "200px" }}
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=249624&theme=light"
+                  alt="Lyket - Engage your audience with fresh out of the box like buttons | Product Hunt Embed"
+                  width="250"
+                  height="54"
+                />
+              </a>
             </div>
             <div className="half__right half__border">
               <p className="header__subtitle">
@@ -42,28 +72,27 @@ export default function Home() {
                 your static website in just a few seconds!
               </p>
               <div className="check">
-                <Like className="check__icons" />
-                <Heart className="check__icons" />
                 <Clap className="check__icons" />
+                <Heart className="check__icons" />
+                <Like className="check__icons" />
               </div>
-              <form
-                name="login"
-                method="POST"
-                data-netlify="true"
-                className="search"
-              >
+              <form name="login" className="search">
                 <input type="hidden" name="form-name" value="contact" />
                 <input
                   type="text"
                   name="email"
                   required
                   placeholder="myemail@mail.com"
+                  onChange={handleChange}
                 />
-                <button type="submit">Receive an API key!</button>
+                <button type="submit" onClick={handleClick}>
+                  Receive an API key!
+                </button>
               </form>
               <div className="check">
                 <p className="check__text">1 minute setup</p>
                 <p className="check__text">Free forever plan</p>
+                <p className="check__text">Headless</p>
               </div>
             </div>
           </div>
@@ -91,14 +120,14 @@ export default function Home() {
                 <span>APPLAUSE</span>
               </div>
               <ClapButton namespace="homepage" id="everybody-clap-now">
-                {({ counter, pressUp, hasVoted }) => (
+                {({ totalClaps, onClick }) => (
                   <div className="social">
                     <div className="social__container">
-                      <button onClick={pressUp} className="social__button">
-                        <img src={"/assets/clapping.svg"} />
+                      <button onClick={onClick} className="social__button">
+                        <ClapIcon />
                       </button>
                     </div>
-                    <span className="social__counter">{counter}</span>
+                    <span className="social__counter">{totalClaps}</span>
                   </div>
                 )}
               </ClapButton>
@@ -128,11 +157,7 @@ export default function Home() {
                 your blog feel a little less aloof!
               </p>
               <div className="half__reaction">
-                <ClapButton
-                  id="blog"
-                  namespace="homepage"
-                  // theme={ClapButton.themes.Medium}
-                />
+                <ClapButton id="blog" namespace="homepage" />
               </div>
             </div>
             <div className="half__line--green">—</div>
@@ -141,8 +166,8 @@ export default function Home() {
             <div className="half__line--pink">—</div>
             <div className="half__left">
               <p className="half__text">
-                Sometimes you don't need only positive reinforcement. If you are
-                providing a service,{" "}
+                Sometimes you don't need only positive reinforcement. When
+                providing a service{" "}
                 <strong>critics can be even more crucial</strong>!
               </p>
               <div className="half__reaction">
@@ -165,15 +190,11 @@ export default function Home() {
             <div className="half__right">
               <p className="half__text">
                 Just like Twitter, Instagram and all social-networks alike are
-                tools to <strong>expose your work to the word</strong>, your
+                tools to <strong>expose your work to the world</strong>, your
                 website should <strong>behave in the same way!</strong>
               </p>
               <div className="half__reaction">
-                <LikeButton
-                  id="portfolio"
-                  namespace="homepage"
-                  // theme={LikeButton.themes.Twitter}
-                />
+                <LikeButton id="portfolio" namespace="homepage" />
               </div>
             </div>
             <div className="half__line--yellow">—</div>
@@ -253,7 +274,7 @@ export default function Home() {
             <div className="flag__image__container">
               <video
                 className="flag__video"
-                src={"/assets/lyket_video.mp4"}
+                src={"../public/assets/lyket_video.mp4"}
                 autoPlay
                 playsInline
                 loop
@@ -322,13 +343,13 @@ export default function Home() {
             <div className="flag__image__container">
               <img
                 className="section__portrait"
-                src={"/assets/karen.jpeg"}
+                src={"../public/assets/karen.jpeg"}
                 alt="Idontexist"
               />
             </div>
             <div className="flag__right">
               <p className="flag__title">
-                “I cannot wait to see Lyket released. The suspance is killing
+                “I cannot wait to see Lyket released. The suspense is killing
                 me”
               </p>
               <p className="flag__text">Leila, senior dev @Idontexist Agency</p>
@@ -370,34 +391,56 @@ export default function Home() {
             />
           </h2>
           <p className="section__text">
-            Lyket is work in progress and, at the moment, we are only gathering
-            feedback. If you like what you see or think you would use Lyket in
-            one of your projects or simply you want to follow our progress, why
-            not dropping a few lines? Only updates and no spam, of course :D
+            Lyket is in beta stage and we are offering free API keys to try and
+            evaluate the service. Request one using this form! And why not
+            dropping a few lines? :D
           </p>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            className="form"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <label>
-              Your Name: <input type="text" name="name" required />
-            </label>
-            <label>
-              Your Email: <input type="email" name="email" required />
-            </label>
-            <label>
-              Your Role: <input type="text" name="name" />
-            </label>
-            <label>
-              Message: <textarea name="message"></textarea>
-            </label>
-            <button type="submit" className="button">
-              Send
-            </button>
-          </form>
+          <div>
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              className="form"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <label>
+                <span>*Email:</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={email}
+                  placeholder="myemail@mail.com"
+                />
+              </label>
+              <label>
+                <span>*Tech:</span>
+                <select type="text" name="tech" required>
+                  <option value="">Choose one</option>
+                  <option value="react">ReactJS</option>
+                  <option value="next">Next.js</option>
+                  <option value="gatsby">Gatsby</option>
+                  <option value="reactStatic">React Static</option>
+                  <option value="other">Other - can you specify?</option>
+                  <option value="idk">I don't know :)</option>
+                </select>
+              </label>
+              <label>
+                <span>Website: </span>
+                <input
+                  type="text"
+                  name="website"
+                  placeholder="https://myawesomewebsite.com"
+                />
+              </label>
+              <label>
+                <span>Message:</span> <textarea name="message" />
+              </label>
+              <button type="submit" className="button">
+                {email ? "Give me this key, already! :D" : "Receive an API key"}
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </>

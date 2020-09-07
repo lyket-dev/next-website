@@ -1,26 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
-  const renderLoggedMenuItems = () => {
-    return (
-      <>
-        {false && (
-          <li className="navbar__item">
-            <Link href="/signup">
-              <a className="navbar__link">Signup</a>
-            </Link>
-          </li>
-        )}
-        <li className="navbar__item">
-          <Link href="/login">
-            <a className="button">Log in</a>
-          </Link>
-        </li>
-      </>
-    );
-  };
-
   return (
     <main>
       <Head>
@@ -34,28 +17,9 @@ export default function Layout({ children }) {
         />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
       </Head>
-
-      <ul className="navbar">
-        <li className="navbar__logo">
-          <Link href="/">
-            <a>LYKET</a>
-          </Link>
-        </li>
-        <div className="navbar__container">
-          <li className="navbar__item">
-            <Link href="/docs">
-              <a className="navbar__link">Docs</a>
-            </Link>
-          </li>
-          {renderLoggedMenuItems()}
-        </div>
-      </ul>
-
+      <Navbar />
       {children}
-
-      <footer className="footer">
-        <div className="footer__container">Copyright Lyket 2020</div>
-      </footer>
+      <Footer />
     </main>
   );
 }
