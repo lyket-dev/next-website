@@ -6,7 +6,7 @@ import { Provider } from "@lyket/react";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Provider apiKey="xxx" baseUrl="http://localhost:3000">
+    <Provider apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw=">
       <Layout>
         <Component {...pageProps} />
       </Layout>

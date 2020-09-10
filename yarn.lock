@@ -1141,24 +1141,17 @@
   dependencies:
     stream "^0.0.2"
 
-"@lyket/react@0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-0.0.7.tgz#3a0dddeba40cf5be7d6b0bdcfadaecf98ee3d643"
-  integrity sha512-l+TT9nsUBr0234mmQ0hzZkwhEATqpHmH7r+/s9EXk1hf3mGcuGYb0IHvQ6p5knqzOpAd0u1nJIquTYYOltzEPg==
+"@lyket/react@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.0.3.tgz#3eab38dd5cd289915b98b6e8f5129f57dc6bb8bb"
+  integrity sha512-A6AmQ+8HiH9iFNUZObGoj3/lN0fOMpefLeG+OAeYGOipjgrAArX43kYR7ByChuT1wdjfqWPOP6ZPsJNu8j+F6w==
   dependencies:
-    "@mojs/core" "^0.288.2"
+    theme-ui "^0.3.1"
 
 "@mdx-js/react@^1.0.0":
   version "1.6.16"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.16.tgz#538eb14473194d0b3c54020cb230e426174315cd"
   integrity sha512-+FhuSVOPo7+4fZaRwWuCSRUcZkJOkZu0rfAbBKvoCg1LWb1Td8Vzi0DTLORdSvgWNbU6+EL40HIgwTOs00x2Jw==
-
-"@mojs/core@^0.288.2":
-  version "0.288.2"
-  resolved "https://registry.yarnpkg.com/@mojs/core/-/core-0.288.2.tgz#3011145672a01c694fbd247b90f4a4a2b216905b"
-  integrity sha512-WBkiwvn14GcHfMyUuLJ0irJlTjv/Lc3jha67npYw04bG6AxATRR+Uyb9x5TkTlJAwCFLhfhLLLe5EeZoiaqiZw==
-  dependencies:
-    babel-runtime "^6.5.0"
 
 "@next/react-dev-overlay@9.5.3":
   version "9.5.3"
@@ -1768,7 +1761,7 @@ babel-plugin-transform-react-remove-prop-types@0.4.24:
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
   integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
 
-babel-runtime@^6.26.0, babel-runtime@^6.5.0:
+babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=

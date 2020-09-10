@@ -8,7 +8,7 @@
     "start": "next start -p 4567"
   },
   "dependencies": {
-    "@lyket/react": "0.0.7",
+    "@lyket/react": "^1.0.3",
     "next": "^9.4.0",
     "next-images": "^1.4.1",
     "next-react-svg": "^1.1.2",

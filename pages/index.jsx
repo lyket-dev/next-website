@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Decorator from "./sub/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
@@ -6,32 +6,24 @@ import dynamic from "next/dynamic";
 import Clap from "../public/svg/clap.svg";
 import Like from "../public/svg/like.svg";
 import Heart from "../public/svg/heart.svg";
-import ClapIcon from "../public/svg/clap.svg";
-import { ClapButton } from "@lyket/react";
-
-const UpdownButton = dynamic(
-  () => import("@lyket/react").then(mod => mod.UpdownButton),
-  { ssr: false }
-);
-const LikeButton = dynamic(
-  () => import("@lyket/react").then(mod => mod.LikeButton),
-  { ssr: false }
-);
+import ClapIcon from "../public/svg/clapping.svg";
+import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
 
 export default function Home() {
   const [email, emailSet] = useState(null);
+  const myRef = useRef(null);
 
   const handleChange = e => {
-    // emailSet(e.target.value);
+    emailSet(e.target.value);
     console.log(e.target.value);
   };
 
   const handleClick = e => {
     e.preventDefault();
-    // myRef.current.scrollIntoView({
-    //   behavior: "smooth",
-    //   block: "start"
-    // });
+    myRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   };
 
   return (
@@ -152,7 +144,11 @@ export default function Home() {
                 your blog feel a little less aloof!
               </p>
               <div className="half__reaction">
-                <ClapButton id="blog" namespace="homepage" />
+                <ClapButton
+                  id="blog"
+                  namespace="homepage"
+                  component={ClapButton.themes.Medium}
+                />
               </div>
             </div>
             <div className="half__line--green">—</div>
@@ -189,7 +185,11 @@ export default function Home() {
                 website should <strong>behave in the same way!</strong>
               </p>
               <div className="half__reaction">
-                <LikeButton id="portfolio" namespace="homepage" />
+                <LikeButton
+                  id="portfolio"
+                  namespace="homepage"
+                  component={LikeButton.themes.Twitter}
+                />
               </div>
             </div>
             <div className="half__line--yellow">—</div>
@@ -396,6 +396,7 @@ export default function Home() {
               method="POST"
               data-netlify="true"
               className="form"
+              ref={myRef}
             >
               <input type="hidden" name="form-name" value="contact" />
               <label>
@@ -416,6 +417,9 @@ export default function Home() {
                   <option value="next">Next.js</option>
                   <option value="gatsby">Gatsby</option>
                   <option value="reactStatic">React Static</option>
+                  <option value="html">Simple HTML</option>
+                  <option value="wordpress">Wordpress</option>
+                  <option value="VueJS">VueJS</option>
                   <option value="other">Other - can you specify?</option>
                   <option value="idk">I don't know :)</option>
                 </select>
