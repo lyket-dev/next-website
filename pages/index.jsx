@@ -269,7 +269,7 @@ export default function Home() {
             <div className="flag__image__container">
               <video
                 className="flag__video"
-                src={"../public/assets/lyket_video.mp4"}
+                src={"./assets/lyket-promo-def.mp4"}
                 autoPlay
                 playsInline
                 loop
@@ -338,7 +338,7 @@ export default function Home() {
             <div className="flag__image__container">
               <img
                 className="section__portrait"
-                src={"../public/assets/karen.jpeg"}
+                src={"./assets/karen.jpeg"}
                 alt="Idontexist"
               />
             </div>
