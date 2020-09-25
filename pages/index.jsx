@@ -147,7 +147,7 @@ export default function Home() {
                 <ClapButton
                   id="blog"
                   namespace="homepage"
-                  component={ClapButton.themes.Medium}
+                  component={ClapButton.templates.Medium}
                 />
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function Home() {
                 <LikeButton
                   id="portfolio"
                   namespace="homepage"
-                  component={LikeButton.themes.Twitter}
+                  component={LikeButton.templates.Twitter}
                 />
               </div>
             </div>

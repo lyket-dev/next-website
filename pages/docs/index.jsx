@@ -8,35 +8,41 @@ export default function Docs() {
   const [showApi, showApiSet] = useState(false);
 
   useAsyncEffect(() => {
-    fetch("https://raw.githubusercontent.com/lyket-dev/react/master/README.md")
+    fetch(
+      "https://raw.githubusercontent.com/lyket-dev/lyket/master/packages/react/README.md"
+    )
       .then(response => response.text())
       .then(text => markdownSet(text));
   }, []);
 
   return (
     <div className="page">
-      <div className="menu">
-        <button className="navbar__link" onClick={() => showApiSet(false)}>
-          Component
-        </button>
-        <span>|</span>
-        <button className="navbar__link" onClick={() => showApiSet(true)}>
-          API
-        </button>
-      </div>
-      <div className="page__container">
-        {showApi ? (
-          <section className="docs">
+      <section className="page__section">
+        <div className="menu">
+          <button className="navbar__link" onClick={() => showApiSet(false)}>
+            Component
+          </button>
+          <span>|</span>
+          <button className="navbar__link" onClick={() => showApiSet(true)}>
+            API
+          </button>
+        </div>
+      </section>
+      {showApi ? (
+        <section className="page__section">
+          <div className="docs">
             <p className="docs__title">API docs</p>
             <SwaggerUI url={`${process.env.NEXT_PUBLIC_API_DOMAIN}/schema`} />
-          </section>
-        ) : (
-          <section className="docs">
+          </div>
+        </section>
+      ) : (
+        <section className="page__section">
+          <div className="docs">
             <p className="docs__title">React component docs</p>
             <ReactMarkdown source={markdown} className="docs__markdown" />
-          </section>
-        )}
-      </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

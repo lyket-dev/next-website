@@ -1,15 +1,29 @@
 .docs__markdown
   position: relative
   +font-size(regular)
-  h2, h3, h4
-    +font-size(gamma)
-    font-weight: 500
-    +margin-bottom(1)
 
-  h1
+  h1, h2
     font-weight: bold
     +font-size(alpha)
+    +margin-top(4)
     +margin-bottom(2)
+
+  h3
+    +font-size(beta)
+    font-weight: 700
+    +margin-top(2)
+    +margin-bottom(2)
+
+  h4
+    +font-size(gamma)
+    font-weight: 700
+    +margin-top(1)
+    +margin-bottom(1)
+
+  h5
+    +margin-top(1)
+    +margin-bottom(1)
+    font-weight: 500
 
   p
     +margin-bottom(2)
