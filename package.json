@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev -p 1234",
     "build": "next build",
-    "start": "next start -p 4567"
+    "start": "next start -p 4567",
+    "export": "next export",
+    "deploy": "yarn build && yarn export"
   },
   "dependencies": {
     "@lyket/react": "^1.2.1",
