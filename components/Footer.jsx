@@ -1,5 +1,5 @@
 import React from "react";
-import Twitter from "../../public/svg/twitter.svg";
+import Twitter from "../public/svg/twitter.svg";
 import Link from "next/link";
 
 export default function Footer() {

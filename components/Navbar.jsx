@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Menu from "../../public/svg/menu.svg";
-import Close from "../../public/svg/close.svg";
+import Menu from "../public/svg/menu.svg";
+import Close from "../public/svg/close.svg";
 import { useRouter } from "next/router";
 
 export default function Navbar() {

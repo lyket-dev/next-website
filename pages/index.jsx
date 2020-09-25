@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Decorator from "./sub/Decorator";
+import Decorator from "../components/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
 import dynamic from "next/dynamic";
