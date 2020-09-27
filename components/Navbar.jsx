@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Menu from "../public/svg/menu.svg";
-import Close from "../public/svg/close.svg";
+import Menu from "public/svg/menu.svg";
+import Close from "public/svg/close.svg";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
@@ -22,17 +22,28 @@ export default function Navbar() {
           <Close />
         </a>
         <li className="navbar__item">
-          <Link href="demo">
+          <Link href="/demo">
             <a className="navbar__link">Demo</a>
           </Link>
         </li>
         <li className="navbar__item">
-          <Link href="docs">
+          <div className="navbar__group">
             <a className="navbar__link">Docs</a>
-          </Link>
+            <div className="navbar__pane">
+              <Link href="/docs/react">
+                <a>React</a>
+              </Link>
+              <Link href="/docs/widget">
+                <a>Widget</a>
+              </Link>
+              <Link href="/docs/api">
+                <a>API</a>
+              </Link>
+            </div>
+          </div>
         </li>
         <li className="navbar__item">
-          <Link href="pricing">
+          <Link href="/pricing">
             <a className="navbar__link">Pricing</a>
           </Link>
         </li>

@@ -18,7 +18,7 @@ export default function Demo() {
           <div className="box">
             <p className="box__title">Default</p>
             <div className="box__button">
-              <ClapButton id="medium" namespace="demo" />
+              <ClapButton id="default" namespace="demo" />
             </div>
           </div>
           <div className="box">
