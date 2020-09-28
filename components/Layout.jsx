@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         <meta name="theme-color" content="#21fdd5" />
         <meta
           name="description"
-          content="A tool for static site builders and JAMstack players to easily add a feedback button/voting mechanism to their website. 👍❤️👏"
+          content="Bring your content to life! Lyket lets you instantly implement a feedback system in any website with clap/like/vote buttons that respect your visitor's privacy 👍❤️👏"
         />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
       </Head>
