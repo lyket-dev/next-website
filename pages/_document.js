@@ -2,10 +2,10 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import flush from "styled-jsx/server";
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
+  static getInitialProps({ renderPage }) {
+    const { html, head, errorHtml, chunks } = renderPage();
     const styles = flush();
-    return { ...initialProps, styles };
+    return { html, head, errorHtml, chunks, styles };
   }
 
   render() {
