@@ -48,9 +48,9 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="navbar__item">
-          <Link href="/login">
-            <a className="button">Log in</a>
-          </Link>
+          <a className="button" href={`${process.env.NEXT_APP_BASE_URL}`}>
+            Log in'
+          </a>
         </li>
       </ul>
       <a className="navbar__toggler" onClick={() => setMenuOpen(true)}>

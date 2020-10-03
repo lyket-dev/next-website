@@ -11,7 +11,7 @@ export default function Docs() {
       <section className="page__section">
         <div className="docs">
           <p className="docs__title">API docs</p>
-          <SwaggerUI url={`${process.env.NEXT_PUBLIC_API_DOMAIN}/schema`} />
+          <SwaggerUI url={`${process.env.NEXT_API_BASE_URL}/schema`} />
         </div>
       </section>
     </div>
