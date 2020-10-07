@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import Decorator from "../components/Decorator";
 import Link from "next/link";
 import Typist from "react-typist";
@@ -10,22 +10,6 @@ import ClapIcon from "../public/svg/clapping.svg";
 import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
 
 export default function Home() {
-  const [email, emailSet] = useState(null);
-  const myRef = useRef(null);
-
-  const handleChange = e => {
-    emailSet(e.target.value);
-    console.log(e.target.value);
-  };
-
-  const handleClick = e => {
-    e.preventDefault();
-    myRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  };
-
   return (
     <>
       <section className="header">
@@ -34,11 +18,15 @@ export default function Home() {
             <div className="half__left">
               <h2 className="header__title">
                 <Decorator
-                  fulltext="Get some fresh feedback from your visitors"
-                  toDecorate="fresh feedback"
+                  fulltext="Start getting feedback from your website now!"
+                  toDecorate="feedback"
                   color="blue"
                 />
+                <Clap className="check__icons" />
+                <Clap className="check__icons" />
+                <Clap className="check__icons" />
               </h2>
+              <div className="stripe" />
               <a
                 href="https://www.producthunt.com/posts/lyket?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lyket"
                 target="_blank"
@@ -55,27 +43,18 @@ export default function Home() {
             </div>
             <div className="half__right half__border">
               <p className="header__subtitle">
-                Lyket lets you add a <strong>like/clap/vote button</strong> in
-                your static website in just a few seconds!
+                Engage your audience with fresh out-of-the-box{" "}
+                <strong>clap and like buttons</strong>. With Lyket is just a
+                matter of seconds!
               </p>
-              <div className="check">
-                <Clap className="check__icons" />
-                <Heart className="check__icons" />
-                <Like className="check__icons" />
+              <div className="stripe--center">
+                <a
+                  className="button button--center"
+                  href={`${process.env.NEXT_APP_BASE_URL}/signup`}
+                >
+                  Register for free
+                </a>
               </div>
-              <form name="login" className="search">
-                <input type="hidden" name="form-name" value="contact" />
-                <input
-                  type="text"
-                  name="email"
-                  required
-                  placeholder="myemail@mail.com"
-                  onChange={handleChange}
-                />
-                <button type="submit" onClick={handleClick}>
-                  Receive an API key!
-                </button>
-              </form>
               <div className="check">
                 <p className="check__text">1 minute setup</p>
                 <p className="check__text">Free forever plan</p>
@@ -134,7 +113,7 @@ export default function Home() {
           <div className="half">
             <div className="half__left half__border">
               <p className="half__title">
-                Do you wonder if your readers are liking the latest blog post?
+                Do you wonder if your readers are enjoying the latest blog post?
               </p>
             </div>
             <div className="half__right">
@@ -168,7 +147,7 @@ export default function Home() {
             <div className="half__right half__border">
               <p className="half__title">
                 Your documentation has taken weeks to complete but you don’t
-                know if users are appreciating it?
+                know if users are making use of it?
               </p>
             </div>
           </div>
@@ -180,9 +159,9 @@ export default function Home() {
             </div>
             <div className="half__right">
               <p className="half__text">
-                Just like Twitter, Instagram and all social-networks alike are
-                tools to <strong>expose your work to the world</strong>, your
-                website should <strong>behave in the same way!</strong>
+                Twitter, Instagram and all social-networks alike are tools to{" "}
+                <strong>expose your work to the world</strong>. Your website
+                should <strong>behave in the same way!</strong>
               </p>
               <div className="half__reaction">
                 <LikeButton
@@ -205,9 +184,17 @@ export default function Home() {
               color="yellow"
             />
           </h2>
+          <span className="section__text">
+            Lyket is composed by a <strong>simple API</strong> that keeps track
+            of reactions and a <strong>React component/JS widget</strong> with
+            all the most famous social button themes. See how it works by{" "}
+            <Link href="docs">
+              <a>checking out our docs {">>"}</a>
+            </Link>
+          </span>
           <div className="ternary">
             <div className="ternary__item">
-              <p className="ternary__title">Register on Lyket >></p>
+              <p className="ternary__title">1. Register on Lyket</p>
               <div className="ternary__line--green">—</div>
               <div className="typist--white">
                 <div className="typist--animated">Signup</div>
@@ -227,7 +214,7 @@ export default function Home() {
               </div>
             </div>
             <div className="ternary__item">
-              <p className="ternary__title">Configure the provider >></p>
+              <p className="ternary__title">2. Configure the provider</p>
               <div className="ternary__line--pink">—</div>
 
               <Typist
@@ -246,9 +233,8 @@ export default function Home() {
               </Typist>
             </div>
             <div className="ternary__item">
-              <p className="ternary__title">Choose a button >></p>
+              <p className="ternary__title">3. Choose a button</p>
               <div className="ternary__line--yellow">—</div>
-
               <Typist
                 className="typist--white"
                 startDelay={8000}
@@ -265,31 +251,6 @@ export default function Home() {
               </Typist>
             </div>
           </div>
-          <div className="flag">
-            <div className="flag__image__container">
-              <video
-                className="flag__video"
-                src={"./assets/lyket-promo-def.mp4"}
-                autoPlay
-                playsInline
-                loop
-                type="video/mp4"
-              />
-            </div>
-            <div className="flag__right">
-              <p className="flag__text">
-                Lyket is composed by a <strong>simple API</strong> that keeps
-                track of reactions and a customizable{" "}
-                <strong>React component</strong> with all the most famous social
-                button themes. Is the ultimate tool for your visitors to leave a
-                token of appreciation and for you to see how your work is
-                perceived!
-              </p>
-              <Link href="docs">
-                <a className="section__link">Check out our docs {">>"}</a>
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
       <section className="section">
@@ -298,16 +259,25 @@ export default function Home() {
             <Decorator
               fulltext="  What makes it different?"
               toDecorate="different"
-              color="yellow"
+              color="blue"
             />
           </h2>
           <div className="ternary">
             <div className="ternary__item">
+              <p className="ternary__title">Privacy oriented</p>
+              <div className="ternary__line--yellow">—</div>
+              <p className="ternary__text">
+                Most feedback services require visitors to sign up and that can
+                <strong>discourage interaction</strong> and{" "}
+                <strong>is bad for privacy concerns</strong>.
+              </p>
+            </div>
+            <div className="ternary__item">
               <p className="ternary__title">Fastest implementation</p>
               <div className="ternary__line--green">—</div>
               <p className="ternary__text">
-                By using our React component you just need to choose a style and
-                provide an identifier for your button and{" "}
+                By using our React component or widget you just need to choose a
+                style, provide an identifier for your button and{" "}
                 <strong>you are done!</strong>
               </p>
             </div>
@@ -318,15 +288,6 @@ export default function Home() {
                 Lyket is integrated with <strong>Google reCAPTCHA V3</strong> to
                 provide protection against malitious use, while never
                 interrupting your users.
-              </p>
-            </div>
-            <div className="ternary__item">
-              <p className="ternary__title">No signup</p>
-              <div className="ternary__line--yellow">—</div>
-              <p className="ternary__text">
-                Most feedback services require visitors to sign up and that
-                discourages interaction. Lyket keeps track of reactions{" "}
-                <strong>without any further steps.</strong>
               </p>
             </div>
           </div>
@@ -380,23 +341,17 @@ export default function Home() {
         <div className="section__container">
           <h2 className="section__title">
             <Decorator
-              fulltext="Interested?"
-              toDecorate="Interested?"
-              color="blue"
+              fulltext="Need anything? Drop us a few lines! :D"
+              toDecorate="Need anything?"
+              color="red"
             />
           </h2>
-          <p className="section__text">
-            Lyket is in beta stage and we are offering free API keys to try and
-            evaluate the service. Request one using this form! And why not
-            dropping a few lines? :D
-          </p>
           <div>
             <form
               name="contact"
               method="POST"
               data-netlify="true"
               className="form"
-              ref={myRef}
             >
               <input type="hidden" name="form-name" value="contact" />
               <label>
@@ -405,7 +360,6 @@ export default function Home() {
                   type="email"
                   name="email"
                   required
-                  value={email}
                   placeholder="myemail@mail.com"
                 />
               </label>
@@ -425,18 +379,10 @@ export default function Home() {
                 </select>
               </label>
               <label>
-                <span>Website: </span>
-                <input
-                  type="text"
-                  name="website"
-                  placeholder="https://myawesomewebsite.com"
-                />
-              </label>
-              <label>
                 <span>Message:</span> <textarea name="message" />
               </label>
               <button type="submit" className="button">
-                {email ? "Give me this key, already! :D" : "Receive an API key"}
+                {"Submit"}
               </button>
             </form>
           </div>
