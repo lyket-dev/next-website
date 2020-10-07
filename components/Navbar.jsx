@@ -31,13 +31,13 @@ export default function Navbar() {
             <a className="navbar__link">Docs</a>
             <div className="navbar__pane">
               <Link href="/docs/react">
-                <a>React</a>
+                <a className="navbar__link">React</a>
               </Link>
               <Link href="/docs/widget">
-                <a>Widget</a>
+                <a className="navbar__link">Widget</a>
               </Link>
               <Link href="/docs/api">
-                <a>API</a>
+                <a className="navbar__link">API</a>
               </Link>
             </div>
           </div>
@@ -48,8 +48,11 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="navbar__item">
-          <a className="button" href={`${process.env.NEXT_APP_BASE_URL}`}>
-            Log in'
+          <a
+            className="button"
+            href={process.env.NEXT_APP_BASE_URL || "http://localhost:5000"}
+          >
+            Login
           </a>
         </li>
       </ul>
