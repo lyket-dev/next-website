@@ -185,9 +185,11 @@ export default function Home() {
             />
           </h2>
           <span className="section__text">
-            Lyket is composed by a <strong>simple API</strong> that keeps track
-            of reactions and a <strong>React component/JS widget</strong> with
-            all the most famous social button themes. See how it works by{" "}
+            Lyket is composed by a <strong>simple API</strong> keeping track of
+            reactions and a <strong>React/JS client</strong>, that works with
+            all React based frameworks and SSGs - like Gatsby, NextJS, React
+            Native - and with all the website builder that support custom HTML
+            embedding - like Wordpress, Wix, Webflow and more! See how by{" "}
             <Link href="docs">
               <a>checking out our docs {">>"}</a>
             </Link>
