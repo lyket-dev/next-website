@@ -22,7 +22,7 @@ export default function Docs() {
       <section className="page__section">
         <div className="docs">
           <p className="docs__title">React component docs</p>
-          <ReactMarkdown source={markdown} className="docs__markdown" />
+          <ReactMarkdown source={markdown} className="markdown" />
         </div>
       </section>
     </div>

@@ -82,6 +82,7 @@
     position: relative
     +vertical-padding(1)
     z-index: 0
+    text-decoration: none
     &:after
       content: ''
       display: block
@@ -98,6 +99,7 @@
       width: 0%
 
     &:hover
+      text-decoration: none
       &:after
         width: 100%
 
@@ -118,7 +120,6 @@
       transition: $transition
       &:hover
         transition: $transition
-        text-decoration: underline
 
   .navbar__group
     position: relative

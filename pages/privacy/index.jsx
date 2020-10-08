@@ -3,7 +3,7 @@ import React from "react";
 export default function Privacy() {
   return (
     <div className="page">
-      <div className="docs__markdown">
+      <div className="markdown">
         <h1>Privacy Policy</h1>
         <p>
           This privacy policy sets out how Lyket uses and protects any

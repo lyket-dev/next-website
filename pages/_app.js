@@ -1,7 +1,6 @@
-import "../styles/main.sass";
-import Layout from "../components/Layout";
+import "styles/main.sass";
+import Layout from "components/Layout";
 import "swagger-ui-react/swagger-ui.css";
-import dynamic from "next/dynamic";
 import { Provider } from "@lyket/react";
 
 export default function App({ Component, pageProps }) {
