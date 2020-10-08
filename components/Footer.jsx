@@ -9,8 +9,11 @@ export default function Footer() {
         <ul className="footer__list">
           <p className="footer__text">Copyright Lyket 2020</p>•
           <li className="footer__item">
-            <Link href="privacy">
+            <Link href="/privacy">
               <a className="footer__link">Privacy Policy</a>
+            </Link>
+            <Link href="/blog">
+              <a className="footer__link">Blog</a>
             </Link>
           </li>
           •
