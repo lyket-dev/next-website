@@ -301,7 +301,7 @@ export default function Home() {
             <div className="flag__image__container">
               <img
                 className="section__portrait"
-                src={"./assets/karen.jpeg"}
+                src={"assets/karen.jpeg"}
                 alt="Idontexist"
               />
             </div>
