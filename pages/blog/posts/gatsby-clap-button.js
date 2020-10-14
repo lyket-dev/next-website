@@ -83,7 +83,7 @@ GatsbyDOM.render(
               <li>
                 <strong>apiKey</strong>: you can get your public API key by
                 registering on{" "}
-                <a href={`${process.env.NEXT_APP_BASE_URL}/signup`}>
+                <a href={`${process.env.appBaseUrl}/signup`}>
                   lyket.dev
                 </a>
               </li>

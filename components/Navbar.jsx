@@ -48,10 +48,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="navbar__item">
-          <a
-            className="button"
-            href={process.env.NEXT_APP_BASE_URL || "http://localhost:5000"}
-          >
+          <a className="button" href={process.env.appBaseUrl}>
             Login
           </a>
         </li>

@@ -4,7 +4,11 @@ const path = require("path");
 
 module.exports = withReactSvg({
   include: path.resolve(__dirname, "public/svg"),
-  webpack(config, options) {
+  env: {
+    appBaseUrl: process.env.APP_BASE_URL,
+    apiBaseUrl: process.env.API_BASE_URL
+  },
+  webpack(config, _options) {
     return config;
   }
 });

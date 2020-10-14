@@ -50,7 +50,7 @@ export default function Home() {
               <div className="stripe--center">
                 <a
                   className="button button--center"
-                  href={`${process.env.NEXT_APP_BASE_URL}/signup`}
+                  href={`${process.env.appBaseUrl}/signup`}
                 >
                   Register for free
                 </a>
