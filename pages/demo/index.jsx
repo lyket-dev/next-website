@@ -11,6 +11,14 @@ export default function Demo() {
           for any kind of content. New templates are constantly added! You can
           control the button size by changing font-size
         </p>
+        <p>
+          Do you have an idea for the perfect clap or like button?{" "}
+          <a href="mailto:write@lyket.dev">Write to us</a> explaining your idea
+          or make a pull request to our open-source{" "}
+          <a href="https://github.com/lyket-dev/react" target="_blank">
+            Github repository
+          </a>{" "}
+        </p>
       </section>
       <section className="page__section">
         <h4 className="page__subtitle">Clap Buttons</h4>

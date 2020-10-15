@@ -307,8 +307,7 @@ export default function Home() {
             </div>
             <div className="flag__right">
               <p className="flag__title">
-                “I cannot wait to see Lyket released. The suspense is killing
-                me”
+                “Lyket is super-easy and flexible, a great product indeed”
               </p>
               <p className="flag__text">Leila, senior dev @Idontexist Agency</p>
             </div>

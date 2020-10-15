@@ -24,8 +24,13 @@ export default function Docs() {
                   <a>Notion</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/blog/posts/like-clap-button-on-worpress">
+                  <a>Wordpress</a>
+                </Link>
+              </li>
             </ul>
-            <h1>Installation</h1>
+            <h2>Installation</h2>
             <p>
               In your html file add the script top-level passing your Lyket API
               key as argument, then just add an element with a data-lyket-type
@@ -37,7 +42,7 @@ export default function Docs() {
                 src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
               </code>
             </pre>
-            <h1>Buttons</h1>
+            <h2>Buttons</h2>
             <p>
               When you add a Lyket element a GET request is made to retrieve
               info about the button with that certain id and namespace. If no
@@ -58,7 +63,7 @@ export default function Docs() {
               There are three different button types that have different
               behaviours.
             </p>
-            <h3>Add a like button</h3>
+            <h3>Like button</h3>
             <p>
               Like buttons behave like Twitter buttons. Users can only like once
               and a subsequent call from the same user will remove the user's
@@ -86,7 +91,7 @@ export default function Docs() {
 ></div>`}
               </code>
             </pre>
-            <h3>Add a clap button</h3>
+            <h3>Clap button</h3>
             <p>
               Clap buttons behave like Medium applauses. Users can like multiple
               times and every other call from the same user will increment the
@@ -114,7 +119,7 @@ export default function Docs() {
 ></div>`}
               </code>
             </pre>
-            <h3>Add an up/down button</h3>
+            <h3>Up/down button</h3>
             <p>
               Up/down buttons behave like Reddit buttons. Users can only vote or
               unvote once and a subsequent call from the same user will remove
@@ -142,6 +147,22 @@ export default function Docs() {
 ></div>`}
               </code>
             </pre>
+            <h2>Button Templates</h2>
+            <p>
+              Browse our{" "}
+              <Link href="/docs/widget">
+                <a>demo gallery</a>
+              </Link>{" "}
+              to choose your favourite template!
+            </p>
+            <p>
+              Do you have an idea for the perfect clap or like button?{" "}
+              <a href="mailto:write@lyket.dev">Write to us</a> explaining your
+              idea or make a pull request to our open-source{" "}
+              <a href="https://github.com/lyket-dev/react" target="_blank">
+                Github repository
+              </a>{" "}
+            </p>
           </div>
         </div>
       </section>
