@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 1234",
-    "build": "next build",
+    "build": "rimraf out && next build",
     "start": "next start -p 4567",
-    "export": "next export",
+    "export": "next export && node nextjs_sitemap_generator.js",
     "deploy": "yarn build && yarn export"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "next": "^9.4.0",
     "next-images": "^1.4.1",
     "next-react-svg": "^1.1.2",
+    "nextjs-sitemap-generator": "^1.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
