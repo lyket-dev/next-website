@@ -1,20 +1,20 @@
 import React from "react";
-import { LikeButton } from "@lyket/react";
+import { UpdownButton } from "@lyket/react";
 import Link from "next/link";
 import Head from "next/head";
 
 export const meta = {
-  title: "How to add a like button to any Gatsby website with Lyket"
+  title: "How to add a like/dislike button to any Gatsby website with Lyket"
 };
 
 export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a like button to your Gatsby website</title>
+        <title>Lyket - Add a like/dislike button to a Gatsby website</title>
         <meta
           property="og:description"
-          content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons in any Gatsby project in a matter of seconds"
+          content="Lyket lets you add privacy compliant like/dislike buttons in any Gatsby project in a matter of seconds"
           name="description"
         />
       </Head>
@@ -22,10 +22,10 @@ export default function Post() {
         <section className="page__section">
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
-            <LikeButton
+            <UpdownButton
               namespace="blog"
               id="like-button-gatsby"
-              component={LikeButton.templates.Twitter}
+              component={UpdownButton.templates.Reddit}
             />
           </div>
           <p className="page__text"></p>
@@ -35,9 +35,9 @@ export default function Post() {
           <div className="markdown">
             <p>
               Lyket is the ultimate tool to quickly implement GDPR-compliant
-              like buttons on Gatsby. From the moment you create the button our
-              server will keep track of every visitor interaction without
-              storing their personal data.
+              like/dislike buttons on Gatsby. From the moment you create the
+              button our server will keep track of every visitor interaction
+              without storing their personal data.
             </p>
             <p>
               To get started you just need to signup to Lyket and get your
@@ -91,8 +91,8 @@ GatsbyDOM.render(
                 <p>
                   <strong>theme</strong>: This prop allows you to provide your
                   own style to the default theme. Read more about it in the{" "}
-                  <em>Styling like buttons</em> section at the end of this
-                  article
+                  <em>Styling like/dislike buttons</em> section at the end of
+                  this article
                 </p>
               </li>
               <li>
@@ -103,12 +103,12 @@ GatsbyDOM.render(
                 </p>
               </li>
             </ul>
-            <h3>Create a like button</h3>
+            <h3>Create a like/dislike button</h3>
             <p>
               When the Gatsby component is mounted, a fetch request is made to
-              retrieve info about the like button with that certain id and
-              namespace. If no button is found, a new resource is created with
-              the id/namespace identifier.
+              retrieve info about the like/dislike button with that certain id
+              and namespace. If no button is found, a new resource is created
+              with the id/namespace identifier.
             </p>
             <p>
               Notice that the server will create a new resource for every
@@ -121,24 +121,24 @@ GatsbyDOM.render(
               Visitors don't have to signup to any third party service.
             </p>
             <p>
-              Like buttons behave like Twitter buttons. Users can only like once
-              and a subsequent call from the same user will remove the user's
-              like. Here is an example of a like button with id
-              "how-to-beat-me-at-chess", namespace "post" and a Twitter-like
-              template.
+              Updown buttons behave like Reddit buttons. Users can only like or
+              dislike once and a subsequent call from the same user will remove
+              the user's like/dislike. Here is an example of a like/dislike
+              button with id "how-to-beat-me-at-chess", namespace "post" and a
+              Reddit-like template.
             </p>
             <pre>
               <code class="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+                {`import { UpdownButton } from '@lyket/react';
 
 export default BlogPost = ({ title, content }) => {
   return (
     <div>
       {title}
-      <LikeButton
+      <UpdownButton
         id="how-to-beat-me-at-chess"
         namespace="post"
-        component={LikeButton.templates.Twitter}
+        component={UpdownButton.templates.Reddit}
       />
       {content}
     </div>
@@ -146,7 +146,7 @@ export default BlogPost = ({ title, content }) => {
 };`}
               </code>
             </pre>
-            <h5>Required like button props</h5>
+            <h5>Required like/dislike button props</h5>
             <ul>
               <li>
                 <strong>id</strong>: The API uses the ID to determine which
@@ -184,19 +184,19 @@ export default BlogPost = ({ title, content }) => {
             </ul>
             <h4>Templates</h4>
             <p>
-              A number of like button templates are provided to use Lyket
-              out-of-the-box. You can see all the available options on{" "}
+              A number of like/dislike button templates are provided to use
+              Lyket out-of-the-box. You can see all the available options on{" "}
               <Link href="/demo">
                 <a>the demo section</a>
               </Link>
             </p>
             <ul>
               <li>
-                <strong>Simple</strong>: default LikeButton - supports themes
+                <strong>Simple</strong>: default UpdownButton - supports themes
                 prop
               </li>
               <li>
-                <strong>Twitter</strong>: Twitter style LikeButton
+                <strong>Reddit</strong>: Reddit style UpdownButton
               </li>
             </ul>
             <p>
@@ -205,15 +205,15 @@ export default BlogPost = ({ title, content }) => {
             </p>
             <pre>
               <code class="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+                {`import { UpdownButton } from '@lyket/react';
 
 export default StandingOvation = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <LikeButton
+      <UpdownButton
         id="do-you-like-pizza"
-        component={LikeButton.templates.Twitter}
+        component={UpdownButton.templates.Reddit}
       />
     </>
   );
@@ -233,23 +233,32 @@ export default StandingOvation = () => {
             </p>
             <pre>
               <code class="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+                {`import { UpdownButton } from '@lyket/react';
 
 export default Faq = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
-        ({ onClick, totalLikes, userHasVoted, isLoading, isCounterVisible }) => {
+      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
+        ({
+          pressUp,
+          pressDown,
+          totalScore,
+          userVoteDirection,
+          isLoading,
+          isCounterVisible
+        }) => {
           return (
             <>
-              <button onClick={onClick} disabled={isLoading}>Of course! 🍕🍕🍕</button>
-              {isCounterVisible && <div>Total: {totalLikes}</div>}
-              {userHasVoted && <div>Thanks for your vote!</div>}
+              <button onClick={pressUp} disabled={isLoading}>Of course! 🍕🍕🍕</button>
+              <button onClick={pressDown} disabled={isLoading}>Naaah</button>
+              {isCounterVisible && <div>Total: {totalScore}</div>}
+              {userVoteDirection > 0 && <div>I knew you were a good person!</div>}
+              {userVoteDirection < 0 && <div>I express my disgust</div>}
             </>
           )
         }
-      </LikeButton>
+      </UpdownButton>
     </>
   )
 };`}
@@ -259,7 +268,7 @@ export default Faq = () => {
             <h2>Styling buttons</h2>
             <h3>Resizing</h3>
             <p>
-              Like buttons can be resized by wrapping them in a container and
+              UpdownButtons can be resized by wrapping them in a container and
               changing the font-size.
             </p>
             <h3>Applying your own theme to the default template</h3>

@@ -34,11 +34,10 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              Lyket is the ultimate tool to quickly implement GDPR-compliant
-              clap buttons on any Gatsby project, NextJS, Gatsby, Gatsby Native
-              and any other framework that uses Gatsby. From the moment you
-              create the button our server will keep track of every visitor
-              interaction without storing their personal data.
+              Lyket is the ultimate tool to implement GDPR-compliant clap or
+              applause buttons on Gatsby. From the moment you create the button
+              our server will keep track of every visitor interaction without
+              storing their personal data.
             </p>
             <p>
               To get started you just need to signup to Lyket and get your
@@ -83,9 +82,7 @@ GatsbyDOM.render(
               <li>
                 <strong>apiKey</strong>: you can get your public API key by
                 registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>
-                  lyket.dev
-                </a>
+                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
               </li>
             </ul>
             <h5>Optional props</h5>

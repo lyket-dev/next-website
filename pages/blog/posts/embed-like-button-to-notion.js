@@ -30,7 +30,7 @@ export default function Post() {
           <div className="markdown">
             <p>
               Lyket is the ultimate tool to quickly implement GDPR-compliant
-              like clap or vote buttons on any Notion project. From the moment
+              like, clap or vote buttons on any Notion project. From the moment
               you create the button our server will keep track of every visitor
               interaction without storing their personal data.
             </p>
