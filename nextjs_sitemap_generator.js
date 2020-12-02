@@ -1,4 +1,4 @@
-import sitemap from "nextjs-sitemap-generator";
+const sitemap = require("nextjs-sitemap-generator");
 
 sitemap({
   alternateUrls: {
