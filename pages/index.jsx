@@ -14,61 +14,59 @@ export default function Home() {
     <>
       <section className="header">
         <div className="header__container">
-          <div className="half">
-            <div className="half__left">
-              <h2 className="header__title">
-                <Decorator
-                  fulltext="Start getting feedback from your website now!"
-                  toDecorate="feedback"
-                  color="blue"
-                />
-                <Clap className="check__icons" />
-                <Clap className="check__icons" />
-                <Clap className="check__icons" />
-              </h2>
-              <div className="stripe" />
+          <div>
+            <h2 className="header__title">
+              <Decorator
+                fulltext="Start getting feedback now!"
+                toDecorate="feedback"
+                color="blue"
+              />
+              <Clap className="check__icons" />
+              <Clap className="check__icons" />
+              <Clap className="check__icons" />
+            </h2>
+          </div>
+          <div>
+            <p className="header__subtitle">
+              Engage your audience with fresh out-of-the-box{" "}
+              <strong>clap and like buttons</strong>. With Lyket is just a
+              matter of seconds!
+            </p>
+            <div className="stripe--center">
               <a
-                href="https://www.producthunt.com/posts/lyket?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lyket"
-                target="_blank"
-                rel="noopener noreferrer"
+                className="button button--center"
+                href={`${process.env.appBaseUrl}/signup`}
               >
-                <img
-                  style={{ width: "200px" }}
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=249624&theme=light"
-                  alt="Lyket - Engage your audience with fresh out of the box like buttons | Product Hunt Embed"
-                  width="250"
-                  height="54"
-                />
+                Register for free
               </a>
             </div>
-            <div className="half__right half__border">
-              <p className="header__subtitle">
-                Engage your audience with fresh out-of-the-box{" "}
-                <strong>clap and like buttons</strong>. With Lyket is just a
-                matter of seconds!
-              </p>
-              <div className="stripe--center">
-                <a
-                  className="button button--center"
-                  href={`${process.env.appBaseUrl}/signup`}
-                >
-                  Register for free
-                </a>
-              </div>
-              <div className="check">
-                <p className="check__text">1 minute setup</p>
-                <p className="check__text">Free forever plan</p>
-                <p className="check__text">Headless</p>
-              </div>
+            <div className="check">
+              <p className="check__text">1 minute setup</p>
+              <p className="check__text">Free forever plan</p>
             </div>
           </div>
+          {false && (
+            <a
+              href="https://www.producthunt.com/posts/lyket?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lyket"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                style={{ width: "200px" }}
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=249624&theme=light"
+                alt="Lyket - Engage your audience with fresh out of the box like buttons | Product Hunt Embed"
+                width="250"
+                height="54"
+              />
+            </a>
+          )}
         </div>
       </section>
-      <section className="section--black">
+      <section className="section--gradient">
         <div className="section__container">
           <div className="flag">
             <div className="flag__left">
-              <Typist className="typist">
+              <div className="window">
                 {'import { ClapButton } from "@lyket/react";'}
                 <br />
                 <br />
@@ -79,12 +77,9 @@ export default function Home() {
                 &nbsp;&nbsp;&nbsp;&nbsp;{'id="everybody-clap-now"'}
                 <br />
                 {"/>"}
-              </Typist>
+              </div>
             </div>
             <div className="flag__right">
-              <div className="neon">
-                <span>APPLAUSE</span>
-              </div>
               <ClapButton namespace="homepage" id="everybody-clap-now">
                 {({ totalClaps, onClick }) => (
                   <div className="social">
@@ -111,7 +106,7 @@ export default function Home() {
             />
           </p>
           <div className="half">
-            <div className="half__left half__border">
+            <div className="half__left half__shadow">
               <p className="half__title">
                 Do you wonder if your readers are enjoying the latest blog post?
               </p>
@@ -144,16 +139,16 @@ export default function Home() {
                 <UpdownButton id="docs" namespace="homepage" />
               </div>
             </div>
-            <div className="half__right half__border">
-              <p className="half__title">
+            <div className="half__right half__shadow">
+              <p className="half__title ">
                 Your documentation has taken weeks to complete but you don’t
                 know if users are making use of it?
               </p>
             </div>
           </div>
           <div className="half">
-            <div className="half__left half__border">
-              <p className="half__title">
+            <div className="half__left half__shadow">
+              <p className="half__title ">
                 Your portfolio could use some lovin'?
               </p>
             </div>
@@ -297,20 +292,8 @@ export default function Home() {
       </section>
       <section className="section--black">
         <div className="section__container">
-          <div className="flag">
-            <div className="flag__image__container">
-              <img
-                className="section__portrait"
-                src={"assets/karen.jpeg"}
-                alt="Idontexist"
-              />
-            </div>
-            <div className="flag__right">
-              <p className="flag__title">
-                “Lyket is super-easy and flexible, a great product indeed”
-              </p>
-              <p className="flag__text">Leila, senior dev @Idontexist Agency</p>
-            </div>
+          <div className="neon">
+            <span>APPLAUSE</span>
           </div>
         </div>
       </section>

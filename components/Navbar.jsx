@@ -31,13 +31,22 @@ export default function Navbar() {
             <a className="navbar__link">Docs</a>
             <div className="navbar__pane">
               <Link href="/docs/react">
-                <a className="navbar__link">React</a>
+                <a className="navbar__pane__link">
+                  <strong>React</strong>
+                  <p>Add buttons in a React project</p>
+                </a>
               </Link>
               <Link href="/docs/widget">
-                <a className="navbar__link">Widget</a>
+                <a className="navbar__pane__link">
+                  <strong>Widget</strong>
+                  <p>Add buttons in a any website</p>
+                </a>
               </Link>
               <Link href="/docs/api">
-                <a className="navbar__link">API</a>
+                <a className="navbar__pane__link">
+                  <strong>API</strong>
+                  <p>All endpoints</p>
+                </a>
               </Link>
             </div>
           </div>

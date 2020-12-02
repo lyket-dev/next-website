@@ -1,9 +1,7 @@
 .button
   display: inline-flex
   font-family: $heading-font-family
-  background-color: $base-body-color
-  padding: 10px 20px
-  color: white
+  padding: 15px 25px
   line-height: 1
   position: relative
   white-space: nowrap
@@ -12,10 +10,9 @@
   border-radius: 3px
   cursor: pointer
   font-size: inherit
-
-  &:hover
-    transition: $transition
-    background-color: $button-color
+  font-weight: 600
+  background: $gradient
+  box-shadow: $shadow
 
 .button--big
   @extend .button
@@ -32,3 +29,14 @@
     text-decoration: none
   i
     margin-left: 5px
+
+@media only screen and (min-width: 1000px)
+  .button
+    border: 1px solid $base-body-color
+    background: white
+    box-shadow: none
+
+    &:hover
+      transition: $transition
+      background: $gradient
+      box-shadow: $shadow

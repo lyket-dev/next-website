@@ -15,8 +15,8 @@
     +margin-bottom(1)
 
 .half__title
-  +heading-font-family
   +font-size(beta)
+  font-weight: 500
 
 .half__text
   +margin-bottom(1)
@@ -33,10 +33,10 @@
   @extend .half__item
   +margin-bottom(2)
 
-.half__border
-  padding: 20px
-  border: 2px dashed $base-body-color
+.half__shadow
+  padding: 80px
   max-width: 500px
+  box-shadow: $shadow
 
 .half__line__container
   height: 7vh
