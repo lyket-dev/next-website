@@ -303,7 +303,7 @@ export default Faq = () => {
               There are a few templates that support theming. Read the templates
               detail to know which ones.
             </p>
-            <h1>reCAPTCHA</h1>
+            <h2>reCAPTCHA</h2>
             <p>
               Lyket is integrated with Google reCAPTCHA V3 to handle malicious
               use without interrupting <em>human</em> users. To enable it you

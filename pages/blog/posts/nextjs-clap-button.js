@@ -83,9 +83,7 @@ NextJSDOM.render(
               <li>
                 <strong>apiKey</strong>: you can get your public API key by
                 registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>
-                  lyket.dev
-                </a>
+                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
               </li>
             </ul>
             <h5>Optional props</h5>
@@ -306,7 +304,7 @@ export default Faq = () => {
               There are a few templates that support theming. Read the templates
               detail to know which ones.
             </p>
-            <h1>reCAPTCHA</h1>
+            <h2>reCAPTCHA</h2>
             <p>
               Lyket is integrated with Google reCAPTCHA V3 to handle malicious
               use without interrupting <em>human</em> users. To enable it you
