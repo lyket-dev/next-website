@@ -9,8 +9,8 @@ export default function Docs() {
         <QuickDocsMenu />
       </section>
       <section className="page__section">
+        <h1 className="page__title">Lyket API docs</h1>
         <div className="docs">
-          <p className="docs__title">API docs</p>
           <SwaggerUI url={`${process.env.apiBaseUrl}/schema`} />
         </div>
       </section>

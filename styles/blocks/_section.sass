@@ -3,22 +3,25 @@
   position: relative
   background-color: white
   +font-size(regular)
+  +vertical-padding(6)
+
+.section--small
+  @extend .section
+  +vertical-padding(4)
 
 .section--left
   @extend .section
   text-align: left
 
 .section__container
-  max-width: 840px
-  margin: 0 auto
-  padding: 50px 15px
+  +wrap
 
 .section__title
   max-width: 85%
   margin: 0 auto
-  +margin-bottom(1)
+  +margin-bottom(6)
   +font-size(alpha)
-  font-weight: 900
+  font-weight: 700
 
 .section__text
   display: inline-block
@@ -60,13 +63,13 @@
   max-width: 50%
   border-radius: 3px 50%
 
-.section--button
+.section--gradient
   @extend .section
-  background-color: $button-color
+  background: $light-gradient
 
 .section--primary
   @extend .section
-  background-color: $blue
+  background: $light-blue-gradient
 
 .section--black
   @extend .section
@@ -76,14 +79,14 @@
 @media only screen and (min-width: 1000px)
   .section
     +font-size(gamma)
+    +vertical-padding(12)
 
-  .section__container
-    padding: 100px 0
-    max-width: 950px
+  .section--small
+    +vertical-padding(6)
 
   .section__title
     +font-size(big)
-    +margin-bottom(4)
+    +margin-bottom(8)
 
   .section__link
     +margin-top(2)

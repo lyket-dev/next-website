@@ -1,7 +1,7 @@
 import React from "react";
 import Decorator from "../components/Decorator";
+import Window from "../components/Window";
 import Link from "next/link";
-import Typist from "react-typist";
 import dynamic from "next/dynamic";
 import Clap from "../public/svg/clap.svg";
 import Like from "../public/svg/like.svg";
@@ -14,77 +14,61 @@ export default function Home() {
     <>
       <section className="header">
         <div className="header__container">
-          <div className="half">
-            <div className="half__left">
-              <h2 className="header__title">
-                <Decorator
-                  fulltext="Start getting feedback from your website now!"
-                  toDecorate="feedback"
-                  color="blue"
-                />
-                <Clap className="check__icons" />
-                <Clap className="check__icons" />
-                <Clap className="check__icons" />
-              </h2>
-              <div className="stripe" />
+          <div>
+            <h2 className="header__title">
+              <Decorator
+                fulltext="Start getting feedback now!"
+                toDecorate="feedback"
+                color="blue"
+              />
+              <Clap className="check__icons" />
+              <Clap className="check__icons" />
+              <Clap className="check__icons" />
+            </h2>
+          </div>
+          <div>
+            <p className="header__subtitle">
+              Engage your audience with fresh out-of-the-box{" "}
+              <strong>clap and like buttons</strong>. With Lyket is just a
+              matter of seconds!
+            </p>
+            <div className="stripe--center">
               <a
-                href="https://www.producthunt.com/posts/lyket?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lyket"
-                target="_blank"
-                rel="noopener noreferrer"
+                className="button button--center"
+                href={`${process.env.appBaseUrl}/signup`}
               >
-                <img
-                  style={{ width: "200px" }}
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=249624&theme=light"
-                  alt="Lyket - Engage your audience with fresh out of the box like buttons | Product Hunt Embed"
-                  width="250"
-                  height="54"
-                />
+                Register for free
               </a>
             </div>
-            <div className="half__right half__border">
-              <p className="header__subtitle">
-                Engage your audience with fresh out-of-the-box{" "}
-                <strong>clap and like buttons</strong>. With Lyket is just a
-                matter of seconds!
-              </p>
-              <div className="stripe--center">
-                <a
-                  className="button button--center"
-                  href={`${process.env.appBaseUrl}/signup`}
-                >
-                  Register for free
-                </a>
-              </div>
-              <div className="check">
-                <p className="check__text">1 minute setup</p>
-                <p className="check__text">Free forever plan</p>
-                <p className="check__text">Headless</p>
-              </div>
+            <div className="check">
+              <p className="check__text">1 minute setup</p>
+              <p className="check__text">Free forever plan</p>
             </div>
           </div>
+          {false && (
+            <a
+              href="https://www.producthunt.com/posts/lyket?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lyket"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                style={{ width: "200px" }}
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=249624&theme=light"
+                alt="Lyket - Engage your audience with fresh out of the box like buttons | Product Hunt Embed"
+                width="250"
+                height="54"
+              />
+            </a>
+          )}
         </div>
       </section>
-      <section className="section--black">
+      <section className="section--gradient">
         <div className="section__container">
           <div className="flag">
             <div className="flag__left">
-              <Typist className="typist">
-                {'import { ClapButton } from "@lyket/react";'}
-                <br />
-                <br />
-                {"<ClapButton"}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{'namespace="homepage"'}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{'id="everybody-clap-now"'}
-                <br />
-                {"/>"}
-              </Typist>
+              <Window />
             </div>
             <div className="flag__right">
-              <div className="neon">
-                <span>APPLAUSE</span>
-              </div>
               <ClapButton namespace="homepage" id="everybody-clap-now">
                 {({ totalClaps, onClick }) => (
                   <div className="social">
@@ -111,17 +95,17 @@ export default function Home() {
             />
           </p>
           <div className="half">
-            <div className="half__left half__border">
+            <div className="half__left half__shadow">
               <p className="half__title">
-                Do you wonder if your readers are enjoying the latest blog post?
+                Are your readers enjoying the latest blog post?
+              </p>
+              <p className="half__text">
+                Comments can lead to useless polemics, while a{" "}
+                <strong>simple clap button</strong> can make your blog feel
+                alive!
               </p>
             </div>
             <div className="half__right">
-              <p className="half__text">
-                While comments can lead to useless polemics, a{" "}
-                <strong>simple reaction button</strong> can immediately make
-                your blog feel a little less aloof!
-              </p>
               <div className="half__reaction">
                 <ClapButton
                   id="blog"
@@ -135,34 +119,33 @@ export default function Home() {
           <div className="half">
             <div className="half__line--pink">—</div>
             <div className="half__left">
-              <p className="half__text">
-                Sometimes you don't need only positive reinforcement. When
-                providing a service{" "}
-                <strong>critics can be even more crucial</strong>!
-              </p>
               <div className="half__reaction">
                 <UpdownButton id="docs" namespace="homepage" />
               </div>
             </div>
-            <div className="half__right half__border">
-              <p className="half__title">
-                Your documentation has taken weeks to complete but you don’t
-                know if users are making use of it?
+            <div className="half__right half__shadow">
+              <p className="half__title ">
+                Are your users happy with the new documentation?
+              </p>
+              <p className="half__text">
+                When providing a service you need more than just positive
+                reinforcement, <strong>critics can be even more crucial</strong>
+                !
               </p>
             </div>
           </div>
           <div className="half">
-            <div className="half__left half__border">
-              <p className="half__title">
+            <div className="half__left half__shadow">
+              <p className="half__title ">
                 Your portfolio could use some lovin'?
+              </p>
+              <p className="half__text">
+                All social-networks alike are windows to{" "}
+                <strong>expose your work</strong>. Your website should{" "}
+                <strong>behave in the same way!</strong>
               </p>
             </div>
             <div className="half__right">
-              <p className="half__text">
-                Twitter, Instagram and all social-networks alike are tools to{" "}
-                <strong>expose your work to the world</strong>. Your website
-                should <strong>behave in the same way!</strong>
-              </p>
               <div className="half__reaction">
                 <LikeButton
                   id="portfolio"
@@ -175,7 +158,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section--primary">
         <div className="section__container">
           <h2 className="section__title">
             <Decorator
@@ -184,73 +167,39 @@ export default function Home() {
               color="yellow"
             />
           </h2>
-          <span className="section__text">
-            Lyket is composed by a <strong>simple API</strong> keeping track of
-            reactions and a <strong>React/JS client</strong>, that works with
-            all React based frameworks and SSGs - like Gatsby, NextJS, React
-            Native - and with all the website builder that support custom HTML
-            embedding - like Wordpress, Wix, Webflow and more! See how by{" "}
-            <Link href="docs">
-              <a>checking out our docs {">>"}</a>
-            </Link>
-          </span>
-          <div className="ternary">
-            <div className="ternary__item">
-              <p className="ternary__title">1. Register on Lyket</p>
-              <div className="ternary__line--green">—</div>
-              <div className="typist--white">
-                <div className="typist--animated">Signup</div>
-                <Typist
-                  cursor={{ show: false }}
-                  startDelay={1500}
-                  avgTypingDelay={50}
-                >
-                  {"{"}
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;{"YOUR-API-KEY = xxx"}
-                  <br />
-                  {"}"}
-                  <br />
-                  <br />
-                </Typist>
-              </div>
-            </div>
-            <div className="ternary__item">
-              <p className="ternary__title">2. Configure the provider</p>
-              <div className="ternary__line--pink">—</div>
 
-              <Typist
-                className="typist--white"
-                startDelay={3500}
-                avgTypingDelay={50}
-              >
-                {'import { Provider } from "@lyket/react";'}
-                <br />
-                <br />
-                {"<Provider apiKey='xxx'/>"}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{"<App />"}
-                <br />
-                {"</Provider>"}
-              </Typist>
+          <div className="ternary">
+            <div className="ternary__item--dyn">
+              <h6 className="ternary__title">The API</h6>
+              <p className="shbox">
+                Lyket's <strong>simple API</strong> tracks all reactions. You
+                can use a private API key to make requests from your server or
+                the public one to make requests from the client
+              </p>
+              <Link href="docs/api">
+                <a className="button--small">Read the docs</a>
+              </Link>
             </div>
-            <div className="ternary__item">
-              <p className="ternary__title">3. Choose a button</p>
-              <div className="ternary__line--yellow">—</div>
-              <Typist
-                className="typist--white"
-                startDelay={8000}
-                avgTypingDelay={50}
-              >
-                {'import { LikeButton } from "@lyket/react";'}
-                <br />
-                <br />
-                {"<LikeButton"}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{'id="my-button"'}
-                <br />
-                {"/>"}
-              </Typist>
+            <div className="ternary__item--dyn">
+              <h6 className="ternary__title">The widget</h6>
+              <p className="shbox">
+                The jack-of-all-trades, the Lyket's embedded version works with
+                all the website builders that support custom HTML embedding -
+                like Wordpress, Wix, Webflow and more!
+              </p>
+              <Link href="docs/widget">
+                <a className="button--small">Read the docs</a>
+              </Link>
+            </div>
+            <div className="ternary__item--dyn">
+              <h6 className="ternary__title">The React library</h6>
+              <p className="shbox">
+                The <strong>React/JS client</strong>works with all React based
+                frameworks and SSGs - like Gatsby, NextJS, React Native - See
+              </p>
+              <Link href="docs/react">
+                <a className="button--small">Read the docs</a>
+              </Link>
             </div>
           </div>
         </div>
@@ -266,7 +215,7 @@ export default function Home() {
           </h2>
           <div className="ternary">
             <div className="ternary__item">
-              <p className="ternary__title">Privacy oriented</p>
+              <h6 className="ternary__title">Privacy oriented</h6>
               <div className="ternary__line--yellow">—</div>
               <p className="ternary__text">
                 Most feedback services require visitors to sign up and that can
@@ -275,7 +224,7 @@ export default function Home() {
               </p>
             </div>
             <div className="ternary__item">
-              <p className="ternary__title">Fastest implementation</p>
+              <h6 className="ternary__title">Fastest implementation</h6>
               <div className="ternary__line--green">—</div>
               <p className="ternary__text">
                 By using our React component or widget you just need to choose a
@@ -284,32 +233,13 @@ export default function Home() {
               </p>
             </div>
             <div className="ternary__item">
-              <p className="ternary__title">No bots allowed</p>
+              <h6 className="ternary__title">No bots allowed</h6>
               <div className="ternary__line--pink">—</div>
               <p className="ternary__text">
                 Lyket is integrated with <strong>Google reCAPTCHA V3</strong> to
                 provide protection against malitious use, while never
                 interrupting your users.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section--black">
-        <div className="section__container">
-          <div className="flag">
-            <div className="flag__image__container">
-              <img
-                className="section__portrait"
-                src={"assets/karen.jpeg"}
-                alt="Idontexist"
-              />
-            </div>
-            <div className="flag__right">
-              <p className="flag__title">
-                “Lyket is super-easy and flexible, a great product indeed”
-              </p>
-              <p className="flag__text">Leila, senior dev @Idontexist Agency</p>
             </div>
           </div>
         </div>
@@ -323,69 +253,25 @@ export default function Home() {
             </p>
             <div className="ternary">
               <div className="ternary__item">
-                <p className="ternary__title">Free plan</p>
+                <h6 className="ternary__title">Free plan</h6>
                 <p className="ternary__text">0£</p>
               </div>
               <div className="ternary__item">
-                <p className="ternary__title">Growth plan</p>
+                <h6 className="ternary__title">Growth plan</h6>
                 <p className="ternary__text">0£</p>
               </div>
               <div className="ternary__item">
-                <p className="ternary__title">Custom plan</p>
+                <h6 className="ternary__title">Custom plan</h6>
                 <p className="ternary__text">0£</p>
               </div>
             </div>
           </div>
         </section>
       )}
-      <section className="section">
+      <section className="section--black">
         <div className="section__container">
-          <h2 className="section__title">
-            <Decorator
-              fulltext="Need anything? Drop us a few lines! :D"
-              toDecorate="Need anything?"
-              color="red"
-            />
-          </h2>
-          <div>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              className="form"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <label>
-                <span>*Email:</span>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="myemail@mail.com"
-                />
-              </label>
-              <label>
-                <span>*Tech:</span>
-                <select type="text" name="tech" required>
-                  <option value="">Choose one</option>
-                  <option value="react">ReactJS</option>
-                  <option value="next">Next.js</option>
-                  <option value="gatsby">Gatsby</option>
-                  <option value="reactStatic">React Static</option>
-                  <option value="html">Simple HTML</option>
-                  <option value="wordpress">Wordpress</option>
-                  <option value="VueJS">VueJS</option>
-                  <option value="other">Other - can you specify?</option>
-                  <option value="idk">I don't know :)</option>
-                </select>
-              </label>
-              <label>
-                <span>Message:</span> <textarea name="message" />
-              </label>
-              <button type="submit" className="button">
-                {"Submit"}
-              </button>
-            </form>
+          <div className="neon">
+            <span>APPLAUSE</span>
           </div>
         </div>
       </section>

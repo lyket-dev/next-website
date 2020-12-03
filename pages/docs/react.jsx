@@ -20,8 +20,8 @@ export default function Docs() {
         <QuickDocsMenu />
       </section>
       <section className="page__section">
+        <h1 className="page__title">React docs</h1>
         <div className="docs">
-          <p className="docs__title">React component docs</p>
           <ReactMarkdown source={markdown} className="markdown" />
         </div>
       </section>

@@ -13,11 +13,27 @@
 
 .navbar__link
   text-decoration: none
+  display: block
 
 .navbar__pane
   display: block
+  +margin-top(2)
   a
-    +horizontal-padding(1)
+    +margin-bottom(4)
+    text-decoration: none
+  p
+    font-weight: normal
+
+
+  .navbar__pane__link
+    &:last-child
+      margin-bottom: 0
+    strong
+      font-weight: bold
+      text-decoration: underline
+    &:hover
+      strong
+        text-decoration: none
 
 .navbar__logo
   font-size: 0
@@ -40,11 +56,8 @@
   right: 0
   left: 0
   height: 100vh
-  +font-size(alpha)
   font-weight: bold
   background-color: white
-  +padding(2)
-  padding-right: 0
   text-align: center
   flex-direction: column
   justify-content: space-evenly
@@ -55,14 +68,11 @@
   @extend .navbar__container
   display: flex
 
-.navbar__item
-  +margin-bottom(2)
-
 @media only screen and (min-width: 1000px)
   .navbar
     max-width: 950px
     margin: 0 auto
-    +horizontal-padding(0)
+    +padding(0)
 
   .navbar__container
     position: static
@@ -81,21 +91,20 @@
 
   .navbar__link
     position: relative
-    +vertical-padding(1)
     z-index: 0
     text-decoration: none
+
     &:after
       content: ''
       display: block
-      background-color: $green
-      height: 10px
+      background-color: $base-body-color
+      height: 1px
       margin: 0 auto
       position: absolute
       left: 0
       right: 0
-      bottom: 8px
+      bottom: 0
       z-index: -1
-      transform: skewX(10deg)
       transition: $transition
       width: 0%
 
@@ -107,31 +116,27 @@
   .navbar__pane
     display: none
     position: absolute
-    left: 0
+    left: -50px
     +padding(2)
-    +padding-bottom(0)
     text-align: left
-    background: white
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.1)
-    border-left: 2px dashed $base-body-color
-    a
-      text-decoration: none
-      display: block
-      +margin-bottom(2)
-      transition: $transition
-      &:hover
-        transition: $transition
+    min-width: 300px
+    background: $light-gradient
+    z-index: 2
+    +margin-top(0)
 
   .navbar__group
     position: relative
+    z-index: 1
 
     &:hover
       .navbar__pane
-        display: block
+        display: flex
+        flex-direction: column
 
 @media only screen and (min-width: 800px)
   .navbar__logo
-    +font-size(huge)
+    +font-size(big)
     width: auto
     height: auto
     text-decoration: none

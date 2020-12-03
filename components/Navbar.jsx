@@ -22,8 +22,8 @@ export default function Navbar() {
           <Close />
         </a>
         <li className="navbar__item">
-          <Link href="/demo">
-            <a className="navbar__link">Demo</a>
+          <Link href="/templates">
+            <a className="navbar__link">Templates</a>
           </Link>
         </li>
         <li className="navbar__item">
@@ -31,13 +31,22 @@ export default function Navbar() {
             <a className="navbar__link">Docs</a>
             <div className="navbar__pane">
               <Link href="/docs/react">
-                <a className="navbar__link">React</a>
+                <a className="navbar__pane__link">
+                  <strong>React</strong>
+                  <p>Add buttons in a React project</p>
+                </a>
               </Link>
               <Link href="/docs/widget">
-                <a className="navbar__link">Widget</a>
+                <a className="navbar__pane__link">
+                  <strong>Widget</strong>
+                  <p>Add buttons in any website</p>
+                </a>
               </Link>
               <Link href="/docs/api">
-                <a className="navbar__link">API</a>
+                <a className="navbar__pane__link">
+                  <strong>API</strong>
+                  <p>All available endpoints</p>
+                </a>
               </Link>
             </div>
           </div>
@@ -45,6 +54,11 @@ export default function Navbar() {
         <li className="navbar__item">
           <Link href="/pricing">
             <a className="navbar__link">Pricing</a>
+          </Link>
+        </li>
+        <li className="navbar__item">
+          <Link href="/contact">
+            <a className="navbar__link">Contact us</a>
           </Link>
         </li>
         <li className="navbar__item">

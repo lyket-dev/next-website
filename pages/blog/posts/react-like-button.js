@@ -189,8 +189,8 @@ export default BlogPost = ({ title, content }) => {
             <p>
               A number of like button templates are provided to use Lyket
               out-of-the-box. You can see all the available options on{" "}
-              <Link href="/demo">
-                <a>the demo section</a>
+              <Link href="/templates">
+                <a>the templates section</a>
               </Link>
             </p>
             <ul>
