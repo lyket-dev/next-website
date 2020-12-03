@@ -57,6 +57,11 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="navbar__item">
+          <Link href="/contact">
+            <a className="navbar__link">Contact us</a>
+          </Link>
+        </li>
+        <li className="navbar__item">
           <a className="button" href={process.env.appBaseUrl}>
             Login
           </a>

@@ -5,6 +5,10 @@
   +font-size(regular)
   +vertical-padding(6)
 
+.section--small
+  @extend .section
+  +vertical-padding(4)
+
 .section--left
   @extend .section
   text-align: left
@@ -76,6 +80,9 @@
   .section
     +font-size(gamma)
     +vertical-padding(12)
+
+  .section--small
+    +vertical-padding(6)
 
   .section__title
     +font-size(big)
