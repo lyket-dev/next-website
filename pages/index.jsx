@@ -21,9 +21,6 @@ export default function Home() {
                 toDecorate="feedback"
                 color="blue"
               />
-              <Clap className="check__icons" />
-              <Clap className="check__icons" />
-              <Clap className="check__icons" />
             </h2>
           </div>
           <div>
