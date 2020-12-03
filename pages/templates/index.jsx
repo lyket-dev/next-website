@@ -1,6 +1,9 @@
 import React from "react";
-import ButtonBox from "components/ButtonBox";
-import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
+import {
+  ApplauseSandbox,
+  LikeSandbox,
+  UpdownSandbox
+} from "components/ButtonBox";
 
 export default function Templates() {
   return (
@@ -20,70 +23,9 @@ export default function Templates() {
           </a>{" "}
         </p>
       </section>
-      <section className="section">
-        <div className="section__container">
-          <div className="flag">
-            <div className="flag__left">
-              <h4 className="flag__title">Clap Buttons</h4>
-            </div>
-            <div className="flag__right">
-              <div className="box__container">
-                <ButtonBox name="Default">
-                  <ClapButton id="default" namespace="demo" />
-                </ButtonBox>
-
-                <ButtonBox name="Medium">
-                  <ClapButton
-                    id="medium"
-                    namespace="demo"
-                    component={ClapButton.templates.Medium}
-                  />
-                </ButtonBox>
-              </div>
-            </div>
-          </div>
-
-          <div className="flag">
-            <div className="flag__left">
-              <h4 className="flag__title">Like Buttons</h4>
-            </div>
-            <div className="flag__right">
-              <div className="box__container">
-                <ButtonBox name="Default">
-                  <LikeButton id="default" namespace="demo" />
-                </ButtonBox>
-                <ButtonBox name="Twitter">
-                  <LikeButton
-                    id="twitter"
-                    namespace="demo"
-                    component={LikeButton.templates.Twitter}
-                  />
-                </ButtonBox>
-              </div>
-            </div>
-          </div>
-
-          <div className="flag">
-            <div className="flag__left">
-              <h4 className="flag__title">Up/down Buttons</h4>
-            </div>
-            <div className="flag__right">
-              <div className="box__container">
-                <ButtonBox name="Default">
-                  <UpdownButton id="default" namespace="demo" />
-                </ButtonBox>
-                <ButtonBox name="Reddit">
-                  <UpdownButton
-                    id="reddit"
-                    namespace="demo"
-                    component={UpdownButton.templates.Reddit}
-                  />
-                </ButtonBox>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ApplauseSandbox />
+      <LikeSandbox />
+      <UpdownSandbox />
     </div>
   );
 }
