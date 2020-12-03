@@ -39,13 +39,13 @@ export default function Navbar() {
               <Link href="/docs/widget">
                 <a className="navbar__pane__link">
                   <strong>Widget</strong>
-                  <p>Add buttons in a any website</p>
+                  <p>Add buttons in any website</p>
                 </a>
               </Link>
               <Link href="/docs/api">
                 <a className="navbar__pane__link">
                   <strong>API</strong>
-                  <p>All endpoints</p>
+                  <p>All available endpoints</p>
                 </a>
               </Link>
             </div>
