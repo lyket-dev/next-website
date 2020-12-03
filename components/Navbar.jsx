@@ -22,8 +22,8 @@ export default function Navbar() {
           <Close />
         </a>
         <li className="navbar__item">
-          <Link href="/demo">
-            <a className="navbar__link">Demo</a>
+          <Link href="/templates">
+            <a className="navbar__link">Templates</a>
           </Link>
         </li>
         <li className="navbar__item">

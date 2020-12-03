@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function Group() {
+export default function DemoNav() {
   return (
     <div className="navbar__group">
       <a className="navbar__link">Docs</a>

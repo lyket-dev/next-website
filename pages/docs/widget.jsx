@@ -9,8 +9,8 @@ export default function Docs() {
         <QuickDocsMenu />
       </section>
       <section className="page__section">
+        <h1 className="page__title">Widget docs</h1>
         <div class="docs">
-          <p class="docs__title">Widget docs</p>
           <div class="markdown">
             <h1>Lyket Widget</h1>
             <p>
@@ -151,7 +151,7 @@ export default function Docs() {
             <p>
               Browse our{" "}
               <Link href="/docs/widget">
-                <a>demo gallery</a>
+                <a>templates gallery</a>
               </Link>{" "}
               to choose your favourite template!
             </p>
