@@ -1,42 +1,38 @@
 .half
   text-align: left
-  +vertical-padding(2)
+  +margin-bottom(8)
   position: relative
   display: flex
   flex-direction: column
   +font-size(regular)
 
+.half:last-child
+  margin-bottom: 0
+
 .half:nth-of-type(2)
   @extend .half
   flex-direction: column-reverse
-  .half__left
-    margin-bottom: 0
-  .half__right
-    +margin-bottom(1)
 
 .half__title
   +font-size(beta)
   font-weight: 500
-
-.half__text
   +margin-bottom(1)
 
 .half__item
   max-width: 700px
   margin: 0 auto
   text-align: center
+  +margin-bottom(6)
 
 .half__right
   @extend .half__item
 
 .half__left
   @extend .half__item
-  +margin-bottom(2)
 
 .half__shadow
-  padding: 80px
+  +padding(3)
   max-width: 500px
-  box-shadow: $shadow
 
 .half__line__container
   height: 7vh
@@ -66,6 +62,7 @@
 .half__reaction
   text-align: center
   +margin-top(2)
+  +font-size(alpha)
 
 @media only screen and (min-width: 1000px)
   .half
@@ -77,19 +74,16 @@
   .half:nth-of-type(2)
     flex-direction: row
 
-  .half__title
-    +font-size(alpha)
-
   .half__item
     width: 50%
     margin: 0
     text-align: left
 
   .half__left
-    padding-right: 60px
+    +padding-right(7)
 
   .half__right
-    padding-left: 60px
+    +padding-left(7)
 
   .half__border
     padding: 50px
@@ -98,3 +92,7 @@
     +center
     font-size: 60px
     margin: 0
+
+  .half__shadow
+    +padding(7)
+    box-shadow: $shadow

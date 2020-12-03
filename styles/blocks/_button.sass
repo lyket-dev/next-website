@@ -13,11 +13,17 @@
   font-weight: 600
   background: $gradient
   box-shadow: $shadow
+  border: 1px solid $base-body-color
 
 .button--big
   @extend .button
   padding: 18px 30px
   font-size: 20px
+
+.button--small
+  @extend .button
+  padding: 12px 22px
+  +font-size(smallprint)
 
 .button--center
   margin: 0 auto

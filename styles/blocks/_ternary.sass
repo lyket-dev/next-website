@@ -1,7 +1,7 @@
 .ternary
   display: flex
   flex-direction: column
-  justify-content: space-around
+  justify-content: space-between
   font-family: $heading-font-family
   font-weight: 400
   font-size: 20px
@@ -9,25 +9,24 @@
 .ternary__item
   flex-grow: 0
   text-align: center
-  background: white
-  +padding(2)
   border-radius: 3px
   display: flex
   flex-direction: column
   align-items: center
-  +margin-bottom(2)
+  +margin-bottom(6)
+  &:last-child
+    +margin-bottom(0)
+
+.ternary__item--dyn
+  @extend .ternary__item
 
 .ternary__title
   font-weight: bold
-  min-height: 50px
-  +margin-bottom(1)
+  +margin-bottom(2)
 
 .ternary__text
   margin-bottom: $grid-gutter
   font-size: 17px
-
-.ternary__video
-  width: 85%
 
 .ternary__line
   text-align: center
@@ -58,7 +57,14 @@
   .ternary__item
     flex-basis: 33%
     margin-bottom: $grid-gutter
+    max-width: 30%
 
   .ternary__video
     width: 240px
     height: 100px
+
+  .ternary__item--dyn
+    &:last-child
+      margin-top: 100px
+    &:nth-child(2)
+      margin-top: 50px

@@ -2,9 +2,7 @@
   @extend .section
 
 .header__container
-  max-width: 840px
-  margin: 0 auto
-  padding: 80px 0
+  +wrap
 
 .header__title
   +font-size(big)
@@ -23,10 +21,6 @@
   display: none
 
 @media only screen and (min-width: 1000px)
-  .header__container
-    padding: 120px 0 100px 0
-    max-width: 950px
-
   .header__title
     +font-size(huge)
     max-width: 620px
