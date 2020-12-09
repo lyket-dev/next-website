@@ -38,8 +38,11 @@ export default function Post() {
             <p>You don't believe me? See it with your own eyes 👀</p>
             <iframe
               width="100%"
-              height="auto"
-              src="https://youtu.be/acvFpZULNH8"
+              height="400"
+              src="https://www.youtube.com/embed/acvFpZULNH8"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
             ></iframe>
             <h2>As seen on Youtube</h2>
             <p>
