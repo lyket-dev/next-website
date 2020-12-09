@@ -29,12 +29,17 @@ export default function Docs() {
                   <a>Wordpress</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/blog/posts/blogger-like-button">
+                  <a>Blogger</a>
+                </Link>
+              </li>
             </ul>
             <h2>Installation</h2>
             <p>
-              In your html file add the script top-level passing your Lyket API
-              key as argument, then just add an element with a data-lyket-type
-              anywhere in your code.
+              In your HTML file or widget add the script top-level passing your
+              Lyket API key as argument, then just add an element with a
+              data-lyket-type anywhere in your code to create buttons.
             </p>
             <pre>
               <code class="language-html">
