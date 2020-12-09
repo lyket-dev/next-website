@@ -12,7 +12,6 @@ export default function Docs() {
         <h1 className="page__title">Widget docs</h1>
         <div class="docs">
           <div class="markdown">
-            <h1>Lyket Widget</h1>
             <p>
               A simple script that lets you embed Lyket in your
               html/Wordpress/Webflow/Notion website and more!

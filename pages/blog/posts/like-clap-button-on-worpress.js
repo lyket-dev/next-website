@@ -84,7 +84,7 @@ export default function Post() {
                 >
                   this one, called Insert headers and footers
                 </a>{" "}
-                and then follow the instruction to insert the Lyket script
+                and then follow the instructions to insert the Lyket script
                 mentioned above.
               </li>
             </ul>
