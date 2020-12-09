@@ -148,7 +148,7 @@ export default function Docs() {
   data-lyket-type="clap"
   data-lyket-id="my-first-post"
   data-lyket-namespace="blog"
-  data-lyket-template="medium"
+  data-lyket-template="reddit"
 ></div>`}
               </code>
             </pre>
