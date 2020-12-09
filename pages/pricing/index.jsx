@@ -19,7 +19,7 @@ export default function Privacy() {
               <h4 className="ternary__title">FREE</h4>
               <div className="shbox">
                 <p className="ternary__text">
-                  up to <strong>1,000</strong> pageviews
+                  up to <strong>1,000 per month</strong> pageviews
                 </p>
                 <p className="ternary__huge">0$</p>
               </div>
@@ -28,7 +28,7 @@ export default function Privacy() {
               <h4 className="ternary__title">PRO</h4>
               <div className="shbox">
                 <p className="ternary__text">
-                  up to <strong>50,000</strong> pageviews
+                  up to <strong>50,000 per month</strong> pageviews
                 </p>
                 <p className="ternary__huge">60$/year</p>
               </div>
