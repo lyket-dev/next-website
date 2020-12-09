@@ -26,7 +26,7 @@ export default function Home() {
           <div>
             <p className="header__subtitle">
               Engage your audience with fresh out-of-the-box{" "}
-              <strong>clap and like buttons</strong>. With Lyket is just a
+              <strong>clap and like buttons</strong>. With Lyket it's just a
               matter of seconds!
             </p>
             <div className="stripe--center">
