@@ -8,6 +8,7 @@ sitemap({
   pagesDirectory: __dirname + "/pages",
   targetDirectory: "out/",
   nextConfigPath: __dirname + "/next.config.js",
+  ignoreIndexFiles: true,
   sitemapStylesheet: [
     {
       type: "text/sass",
