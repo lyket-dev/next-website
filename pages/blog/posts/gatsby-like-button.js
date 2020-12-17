@@ -239,11 +239,11 @@ export default Faq = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
-        ({ onClick, totalLikes, userHasVoted, isLoading, isCounterVisible }) => {
+      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
+        ({ handlePress, totalLikes, userHasVoted, isLoading, isCounterVisible }) => {
           return (
             <>
-              <button onClick={onClick} disabled={isLoading}>Of course! 🍕🍕🍕</button>
+              <button onClick={handlePress} disabled={isLoading}>Of course! 🍕🍕🍕</button>
               {isCounterVisible && <div>Total: {totalLikes}</div>}
               {userHasVoted && <div>Thanks for your vote!</div>}
             </>

@@ -238,11 +238,11 @@ export default Faq = () => {
   return (
     <>
       <h2>Applause for pizza!</h2>
-      <ClapButton id="claps-4-pizza" namespace="faq" hideCounterIfLessThan=10>
-        ({ onClick, totalClaps, userClaps, isLoading, isCounterVisible }) => {
+      <ClapButton id="claps-4-pizza" namespace="faq" hideCounterIfLessThan={1}>
+        ({ handlePress, totalClaps, userClaps, isLoading, isCounterVisible }) => {
           return (
             <>
-              <button onClick={onClick} disabled={isLoading}>🍕</button>
+              <button onClick={handlePress} disabled={isLoading}>🍕</button>
               {isCounterVisible && <div>Total: {totalClaps}</div>}
               <div>You clapped {userClaps} times</div>
             </>
@@ -279,9 +279,7 @@ export default Faq = () => {
       text: '#292929',
       primary: '#22c1c3',
       secondary: '#ff00c3',
-      accent: '#fcff4b',
       highlight: '#e095ed',
-      muted: '#aaa',
     },
     fonts: {
       body: 'inherit',

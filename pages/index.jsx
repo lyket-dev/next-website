@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Decorator from "../components/Decorator";
 import Window from "../components/Window";
 import Link from "next/link";
@@ -8,8 +8,11 @@ import Like from "../public/svg/like.svg";
 import Heart from "../public/svg/heart.svg";
 import ClapIcon from "../public/svg/clapping.svg";
 import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
+import Confetti from "react-confetti";
 
 export default function Home() {
+  const [showConfetti, setShowConfetti] = useState(false);
+
   return (
     <>
       <section className="header">
@@ -65,15 +68,30 @@ export default function Home() {
             <Decorator fulltext="Just try it!" color="red" />
           </p>
           <div className="flag">
+            {showConfetti && (
+              <Confetti
+                width={2000}
+                height={500}
+                recycle={false}
+                gravity={0.4}
+              />
+            )}
             <div className="flag__left">
               <Window />
             </div>
             <div className="flag__right">
-              <ClapButton namespace="homepage" id="everybody-clap-now">
-                {({ totalClaps, onClick }) => (
+              <ClapButton
+                onPress={() => {
+                  setShowConfetti(true);
+                  setTimeout(() => setShowConfetti(false), 5000);
+                }}
+                namespace="homepage"
+                id="everybody-clap-now"
+              >
+                {({ totalClaps, handlePress }) => (
                   <div className="social">
                     <div className="social__container">
-                      <button onClick={onClick} className="social__button">
+                      <button onClick={handlePress} className="social__button">
                         <ClapIcon />
                       </button>
                     </div>

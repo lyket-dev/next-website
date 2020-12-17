@@ -79,9 +79,7 @@ ReactDOM.render(
               <li>
                 <strong>apiKey</strong>: you can get your public API key by
                 registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>
-                  lyket.dev
-                </a>
+                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
               </li>
             </ul>
             <h5>Optional props</h5>
@@ -239,7 +237,7 @@ export default Faq = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
+      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
         ({
           pressUp,
           pressDown,
@@ -288,9 +286,7 @@ export default Faq = () => {
       text: '#292929',
       primary: '#22c1c3',
       secondary: '#ff00c3',
-      accent: '#fcff4b',
       highlight: '#e095ed',
-      muted: '#aaa',
     },
     fonts: {
       body: 'inherit',

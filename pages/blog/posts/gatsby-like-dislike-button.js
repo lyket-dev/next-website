@@ -234,15 +234,14 @@ export default StandingOvation = () => {
             <pre>
               <code class="language-javascript">
                 {`import { UpdownButton } from '@lyket/react';
-
 export default Faq = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
-        ({
-          pressUp,
-          pressDown,
+      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
+        {({
+          handlePressUp,
+          handlePressDown,
           totalScore,
           userVoteDirection,
           isLoading,
@@ -250,14 +249,14 @@ export default Faq = () => {
         }) => {
           return (
             <>
-              <button onClick={pressUp} disabled={isLoading}>Of course! 🍕🍕🍕</button>
-              <button onClick={pressDown} disabled={isLoading}>Naaah</button>
+              <button onClick={handlePressUp} disabled={isLoading}>Of course! 🍕🍕🍕</button>
+              <button onClick={handlePressDown} disabled={isLoading}>Naaah</button>
               {isCounterVisible && <div>Total: {totalScore}</div>}
               {userVoteDirection > 0 && <div>I knew you were a good person!</div>}
               {userVoteDirection < 0 && <div>I express my disgust</div>}
             </>
           )
-        }
+        }}
       </UpdownButton>
     </>
   )

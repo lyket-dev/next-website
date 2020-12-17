@@ -239,10 +239,10 @@ export default Faq = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
+      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
         ({
-          pressUp,
-          pressDown,
+          handlePressUp,
+          handlePressDown,
           totalScore,
           userVoteDirection,
           isLoading,
@@ -250,8 +250,8 @@ export default Faq = () => {
         }) => {
           return (
             <>
-              <button onClick={pressUp} disabled={isLoading}>Of course! 🍕🍕🍕</button>
-              <button onClick={pressDown} disabled={isLoading}>Naaah</button>
+              <button onClick={handlePressUp} disabled={isLoading}>Of course! 🍕🍕🍕</button>
+              <button onClick={handlePressDown} disabled={isLoading}>Naaah</button>
               {isCounterVisible && <div>Total: {totalScore}</div>}
               {userVoteDirection > 0 && <div>I knew you were a good person!</div>}
               {userVoteDirection < 0 && <div>I express my disgust</div>}
@@ -284,25 +284,23 @@ export default Faq = () => {
             <pre>
               <code class="language-js">
                 {`const defaultTheme = {
-    colors: {
-      background: '#e0e0e0',
-      text: '#292929',
-      primary: '#22c1c3',
-      secondary: '#ff00c3',
-      accent: '#fcff4b',
-      highlight: '#e095ed',
-      muted: '#aaa',
-    },
-    fonts: {
-      body: 'inherit',
-      heading: 'inherit',
-      monospace: 'inherit',
-    },
-    fontWeights: {
-      body: 400,
-      bold: 700,
-    },
-  };`}
+  colors: {
+    background: '#e0e0e0',
+    text: '#292929',
+    primary: '#22c1c3',
+    secondary: '#ff00c3',
+    highlight: '#e095ed',
+  },
+  fonts: {
+    body: 'inherit',
+    heading: 'inherit',
+    monospace: 'inherit',
+  },
+  fontWeights: {
+    body: 400,
+    bold: 700,
+  },
+};`}
               </code>
             </pre>
             <p>

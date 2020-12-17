@@ -83,9 +83,7 @@ ReactDOM.render(
               <li>
                 <strong>apiKey</strong>: you can get your public API key by
                 registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>
-                  lyket.dev
-                </a>
+                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
               </li>
             </ul>
             <h5>Optional props</h5>
@@ -242,16 +240,16 @@ export default Faq = () => {
   return (
     <>
       <h2>Do you like pizza?</h2>
-      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan=10>
-        ({ onClick, totalLikes, userHasVoted, isLoading, isCounterVisible }) => {
+      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
+        {({ handlePress, totalLikes, userHasVoted, isLoading, isCounterVisible }) => {
           return (
             <>
-              <button onClick={onClick} disabled={isLoading}>Of course! 🍕🍕🍕</button>
+              <button onClick={handlePress} disabled={isLoading}>Of course! 🍕🍕🍕</button>
               {isCounterVisible && <div>Total: {totalLikes}</div>}
               {userHasVoted && <div>Thanks for your vote!</div>}
             </>
           )
-        }
+        }}
       </LikeButton>
     </>
   )
@@ -265,11 +263,13 @@ export default Faq = () => {
               Like buttons can be resized by wrapping them in a container and
               changing the font-size.
             </p>
-            <h3>Applying your own theme to the default template</h3>
+            <h3>
+              Use your own color scheme and fonts with the default template
+            </h3>
             <p>
               Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
               library, allowing you to provide your own theme to the buttons
-              through the <strong>theme</strong> prop in the provider.
+              through the <strong>theme</strong> prop in the Provider.
             </p>
             <p>
               These are the default values, you can change any of these
@@ -278,25 +278,23 @@ export default Faq = () => {
             <pre>
               <code class="language-js">
                 {`const defaultTheme = {
-    colors: {
-      background: '#e0e0e0',
-      text: '#292929',
-      primary: '#22c1c3',
-      secondary: '#ff00c3',
-      accent: '#fcff4b',
-      highlight: '#e095ed',
-      muted: '#aaa',
-    },
-    fonts: {
-      body: 'inherit',
-      heading: 'inherit',
-      monospace: 'inherit',
-    },
-    fontWeights: {
-      body: 400,
-      bold: 700,
-    },
-  };`}
+  colors: {
+    background: '#e0e0e0',
+    text: '#292929',
+    primary: '#22c1c3',
+    secondary: '#ff00c3',
+    highlight: '#e095ed',
+  },
+  fonts: {
+    body: 'inherit',
+    heading: 'inherit',
+    monospace: 'inherit',
+  },
+  fontWeights: {
+    body: 400,
+    bold: 700,
+  },
+};`}
               </code>
             </pre>
             <p>

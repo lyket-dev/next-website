@@ -35,7 +35,7 @@ export default function Post() {
               are a fan of Medium, a clap button. Lyket is a new tool that lets
               you add like buttons on any Wordpress site in just a few seconds.
             </p>
-            <p>You don't believe me? See it with your own eyes 👀</p>
+            <p>Don't believe me? See it with your own eyes 👀</p>
             <iframe
               width="100%"
               height="400"
@@ -45,11 +45,10 @@ export default function Post() {
               allowfullscreen
             ></iframe>
             <h2>As seen on TV</h2>
+            <p>Lets's go through the video steps.</p>
             <p>
-              Lets's go through the video steps.
-              <p></p>
-              You need to copy this code in your footer first to make Lyket
-              available all around your Wordpress site.
+              First thing we do here is copying this code in our footer to make
+              Lyket available all around our Wordpress site.
             </p>
             <pre>
               <code class="language-javascript">
@@ -59,10 +58,11 @@ export default function Post() {
               </code>
             </pre>
             <p>
-              Anyway this code uses a test API key that resets all the counters
-              every day so, like I am suggesting in the video, you should
-              register to Lyket to get your own!
+              Be aware that this code uses a test API key that resets all the
+              counters every day so, like I am suggesting in the video, you
+              should register to Lyket to get your own.
             </p>
+            <p>Lets's move on!</p>
             <p>
               Just go to the{" "}
               <a href={`${process.env.appBaseUrl}/signup`}>registration page</a>

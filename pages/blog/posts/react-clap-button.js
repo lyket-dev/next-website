@@ -83,9 +83,7 @@ ReactDOM.render(
               <li>
                 <strong>apiKey</strong>: you can get your public API key by
                 registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>
-                  lyket.dev
-                </a>
+                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
               </li>
             </ul>
             <h5>Optional props</h5>
@@ -241,11 +239,11 @@ export default Faq = () => {
   return (
     <>
       <h2>Applause for pizza!</h2>
-      <ClapButton id="claps-4-pizza" namespace="faq" hideCounterIfLessThan=10>
-        ({ onClick, totalClaps, userClaps, isLoading, isCounterVisible }) => {
+      <ClapButton id="claps-4-pizza" namespace="faq" hideCounterIfLessThan={1}>
+        ({ handlePress, totalClaps, userClaps, isLoading, isCounterVisible }) => {
           return (
             <>
-              <button onClick={onClick} disabled={isLoading}>🍕</button>
+              <button onClick={handlePress} disabled={isLoading}>🍕</button>
               {isCounterVisible && <div>Total: {totalClaps}</div>}
               <div>You clapped {userClaps} times</div>
             </>
@@ -277,25 +275,25 @@ export default Faq = () => {
             <pre>
               <code class="language-js">
                 {`const defaultTheme = {
-    colors: {
-      background: '#e0e0e0',
-      text: '#292929',
-      primary: '#22c1c3',
-      secondary: '#ff00c3',
-      accent: '#fcff4b',
-      highlight: '#e095ed',
-      muted: '#aaa',
-    },
-    fonts: {
-      body: 'inherit',
-      heading: 'inherit',
-      monospace: 'inherit',
-    },
-    fontWeights: {
-      body: 400,
-      bold: 700,
-    },
-  };`}
+  colors: {
+    background: '#e0e0e0',
+    text: '#292929',
+    primary: '#22c1c3',
+    secondary: '#ff00c3',
+    accent: '#fcff4b',
+    highlight: '#e095ed',
+    muted: '#aaa',
+  },
+  fonts: {
+    body: 'inherit',
+    heading: 'inherit',
+    monospace: 'inherit',
+  },
+  fontWeights: {
+    body: 400,
+    bold: 700,
+  },
+};`}
               </code>
             </pre>
             <p>
