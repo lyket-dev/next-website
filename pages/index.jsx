@@ -61,6 +61,9 @@ export default function Home() {
       </section>
       <section className="section--gradient">
         <div className="section__container">
+          <p className="section__title">
+            <Decorator fulltext="Just try it!" color="red" />
+          </p>
           <div className="flag">
             <div className="flag__left">
               <Window />
@@ -180,9 +183,9 @@ export default function Home() {
             <div className="ternary__item--dyn">
               <h6 className="ternary__title">The widget</h6>
               <p className="shbox">
-                The jack-of-all-trades, the Lyket's embedded version works with
-                all the website builders that support custom HTML embedding -
-                like Wordpress, Wix, Webflow and more!
+                The jack-of-all-trades, Lyket's embedded version works with all
+                website builders that support custom HTML embedding - Wordpress,
+                Wix, Webflow and more!
               </p>
               <Link href="docs/widget">
                 <a className="button--small">Read the docs</a>

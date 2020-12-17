@@ -31,7 +31,7 @@ export default function Window() {
     <div className="window">
       <div className="window__top">
         <a
-          href="#"
+          className="window__link"
           onClick={e => {
             e.preventDefault();
             setType("html");
@@ -40,7 +40,7 @@ export default function Window() {
           Widget
         </a>
         <a
-          href="#"
+          className="window__link"
           onClick={e => {
             e.preventDefault();
             setType("react");
@@ -58,11 +58,13 @@ export default function Window() {
         </pre>
         <button
           className="copy-button"
-          onClick={() =>
+          onClick={e => {
+            e.preventDefault();
+
             navigator.clipboard.writeText(
               type === "react" ? reactText() : htmlText()
-            )
-          }
+            );
+          }}
         >
           copy
         </button>

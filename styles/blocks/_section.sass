@@ -9,10 +9,6 @@
   @extend .section
   +vertical-padding(4)
 
-.section--left
-  @extend .section
-  text-align: left
-
 .section__container
   +wrap
 
@@ -22,6 +18,7 @@
   +margin-bottom(6)
   +font-size(alpha)
   font-weight: 700
+  position: relative
 
 .section__text
   display: inline-block
@@ -65,7 +62,11 @@
 
 .section--gradient
   @extend .section
-  background: $light-gradient
+  &::before
+    content: ""
+    transform: skewY(5deg)
+    +position(absolute, 0 0 100px 0)
+    background: $light-gradient
 
 .section--primary
   @extend .section

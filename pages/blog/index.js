@@ -19,8 +19,14 @@ export async function getAllPosts() {
 export default function Blog({ posts }) {
   return (
     <div className="page">
-      <h2 className="page__title">Blog and tutorials</h2>
-      <section className="section">
+      <section className="page__section">
+        <h1 className="page__title">Blog and tutorials</h1>
+        <p className="page__text">
+          A list of articles and tutorials to help you understand Lyket and
+          implement using with your favourite stack.
+        </p>
+      </section>
+      <section className="page__section">
         <div className="section__container">
           <ul className="tile__container">
             {posts.map((post, idx) => (
