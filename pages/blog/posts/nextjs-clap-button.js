@@ -14,7 +14,7 @@ export default function Post() {
         <title>Lyket - Add a clap button to your NextJS website</title>
         <meta
           property="og:description"
-          content="Your NextJS website could use some loving? Lyket lets you add privacy compliant clap buttons in any NextJS project in a matter of seconds"
+          content="Your NextJS website could use some loving? Lyket lets you add privacy compliant clap buttons to any NextJS project in a matter of seconds"
           name="description"
         />
       </Head>

@@ -14,7 +14,7 @@ export default function Post() {
         <title>Lyket - Add like/dislike button to your React website</title>
         <meta
           property="og:description"
-          content="Your React website could use some loving? Lyket lets you add privacy compliant like buttons in any React project in a matter of seconds"
+          content="Your React website could use some loving? Lyket lets you add privacy compliant like buttons to any React project in a matter of seconds"
           name="description"
         />
       </Head>

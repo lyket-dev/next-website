@@ -4,17 +4,17 @@ import Head from "next/head";
 import Link from "next/link";
 
 export const meta = {
-  title: "Add clap and like buttons on Wordpress with Lyket"
+  title: "Add clap and like buttons to Wordpress with Lyket"
 };
 
 export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Like and clap button for Wordpress</title>
+        <title>Lyket - Like and clap buttons for Wordpress</title>
         <meta
           property="og:description"
-          content="Lyket lets you add privacy compliant clap and like buttons in any Wordpress project in a matter of seconds"
+          content="Lyket lets you add privacy compliant clap and like buttons to any Wordpress project in a matter of seconds"
           name="description"
         />
       </Head>

@@ -14,7 +14,7 @@ export default function Post() {
         <title>Lyket - Add a like/dislike button to a NextJS website</title>
         <meta
           property="og:description"
-          content="Lyket lets you add privacy compliant like/dislike buttons in any NextJS project in a matter of seconds"
+          content="Lyket lets you add privacy compliant like/dislike buttons to any NextJS project in a matter of seconds"
           name="description"
         />
       </Head>

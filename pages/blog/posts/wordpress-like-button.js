@@ -14,7 +14,7 @@ export default function Post() {
         <title>Lyket - Add a Wordpress like button in a few seconds</title>
         <meta
           property="og:description"
-          content="Lyket lets you add privacy compliant clap and like buttons in any Wordpress project in a matter of seconds"
+          content="Lyket lets you add privacy compliant clap and like buttons to any Wordpress project in a matter of seconds"
           name="description"
         />
       </Head>

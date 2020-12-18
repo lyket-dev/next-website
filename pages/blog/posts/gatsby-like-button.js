@@ -14,7 +14,7 @@ export default function Post() {
         <title>Lyket - Add a like button to your Gatsby website</title>
         <meta
           property="og:description"
-          content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons in any Gatsby project in a matter of seconds"
+          content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons to any Gatsby project in a matter of seconds"
           name="description"
         />
       </Head>

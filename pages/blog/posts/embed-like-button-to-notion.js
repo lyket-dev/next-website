@@ -13,7 +13,7 @@ export default function Post() {
         <title>Lyket - Add a like button to Notion</title>
         <meta
           property="og:description"
-          content="Lyket lets you add privacy compliant clap and like buttons in any Notion project in a matter of seconds"
+          content="Lyket lets you add privacy compliant clap and like buttons to any Notion project in a matter of seconds"
           name="description"
         />
       </Head>
