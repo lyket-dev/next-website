@@ -1186,12 +1186,13 @@
   dependencies:
     stream "^0.0.2"
 
-"@lyket/react@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.3.0.tgz#76c3a81ccad2ab3b48b75ccbb319ce8cd1d6b0d3"
-  integrity sha512-8g8XuMixvAncxMEE7WVaqNLtmb9j5VQ6UL6LYtYFvqJwQEpcrsARYUfHQt7a3eRnvuvygOtnKrG7E3RdDRnOlQ==
+"@lyket/react@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.3.2.tgz#426abc76a15df5470152b262e26daca23e526d05"
+  integrity sha512-+o9WMATkYhHi2NuZFTJENJnRa+yCX7xjf0TUAfBPoQQl/2xVOzrS5xO/d1UdDaY+z/nFo6i6njYvGANE3qKqcg==
   dependencies:
     "@theme-ui/color" "^0.3.1"
+    humps "^2.0.1"
     theme-ui "^0.3.1"
 
 "@mdx-js/react@^1.0.0":
@@ -3390,6 +3391,11 @@ https-proxy-agent@5.0.0:
   dependencies:
     agent-base "6"
     debug "4"
+
+humps@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
+  integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
 iconv-lite@^0.6.2:
   version "0.6.2"

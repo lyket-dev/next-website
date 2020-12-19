@@ -180,8 +180,13 @@ ReactDOM.render(
                 <li>
                   <p>
                     <strong>onLoad</strong>:{" "}
-                    <strong>(buttonData) =&gt; void</strong> - This function
-                    gets called when the button has finished loading
+                    <strong>
+                      (buttonData: UpdownButtonData | ClapButtonData |
+                      LikeButtonData) =&gt; void
+                    </strong>{" "}
+                    - This function gets called when the button has finished
+                    loading. buttonData has different format depending on the
+                    button type.
                   </p>
                 </li>
               </ul>
@@ -211,12 +216,51 @@ export BlogPost = ({ title, content }) => {
 };`}
                 </code>
               </pre>
-              <h5>Optional props</h5>
+              <h4>Optional props</h4>
               <ul>
                 <li>
-                  <strong>onPress</strong>:{" "}
-                  <strong>(buttonData) =&gt; void</strong> - This function gets
-                  called whenever a Press action is triggered.
+                  <p>
+                    <strong>onPress</strong>:{" "}
+                    <strong>(buttonData: LikeButtonData) =&gt; void</strong> -
+                    This function gets called whenever a Press action is
+                    triggered.
+                  </p>
+                  <p>
+                    <strong>LikeButtonData</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>id</strong>: <strong>string</strong>
+                    </li>
+                    <li>
+                      <strong>type</strong>: <strong>like_button</strong>
+                    </li>
+                    <li>
+                      <strong>attributes</strong>: <strong>Object</strong>
+                      <ul>
+                        <li>
+                          <strong>namespace</strong>: <strong>string</strong>
+                        </li>
+                        <li>
+                          <strong>namespaceRank</strong>:{" "}
+                          <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalLikes</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalRank</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalVotes</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>userHasLiked</strong>:{" "}
+                          <strong>boolean</strong>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </li>
               </ul>
               <h3>Up/down Button</h3>
@@ -243,23 +287,62 @@ export BlogPost = ({ title, content }) => {
 };`}
                 </code>
               </pre>
-              <h5>Optional props</h5>
+              <h4 id="optional-props-3">Optional props</h4>
               <ul>
                 <li>
                   <p>
                     <strong>onPressUp</strong>:{" "}
-                    <strong>(buttonData) =&gt; void</strong> - This function
-                    gets called whenever a PressUp action is triggered.
+                    <strong>(buttonData: UpdownButtonData) =&gt; void</strong> -
+                    This function gets called whenever a PressUp action is
+                    triggered.
                   </p>
                 </li>
                 <li>
                   <p>
                     <strong>onPressDown</strong>:{" "}
-                    <strong>(buttonData) =&gt; void</strong> - This function
-                    gets called whenever a PressDown action is triggered.
+                    <strong>(buttonData: UpdownButtonData) =&gt; void</strong> -
+                    This function gets called whenever a PressDown action is
+                    triggered.
                   </p>
+                  <p>
+                    <strong>UpdownButtonData</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>id</strong>: <strong>string</strong>
+                    </li>
+                    <li>
+                      <strong>type</strong>: <strong>updown_button</strong>
+                    </li>
+                    <li>
+                      <strong>attributes</strong>: <strong>Object</strong>
+                      <ul>
+                        <li>
+                          <strong>namespace</strong>: <strong>string</strong>
+                        </li>
+                        <li>
+                          <strong>namespaceRank</strong>:{" "}
+                          <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalScore</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalRank</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalVotes</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>userVoteDirection</strong>:{" "}
+                          <strong>-1 | 0 | 1</strong>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </li>
               </ul>
+
               <h3>Clap Button</h3>
               <p>
                 Clap buttons behave like Medium applauses. Users can like
@@ -281,12 +364,47 @@ export BlogPost = ({ title, content }) => {
 };`}
                 </code>
               </pre>
-              <h5>Optional props</h5>
+              <h4 id="optional-props-4">Optional props</h4>
               <ul>
                 <li>
-                  <strong>onPress</strong>:{" "}
-                  <strong>(buttonData) =&gt; void</strong> - This function gets
-                  called whenever a Press action is triggered.
+                  <p>
+                    <strong>onPress</strong>:{" "}
+                    <strong>(buttonData: ClapButtonData) =&gt; void</strong> -
+                    This function gets called whenever a Press action is
+                    triggered.
+                  </p>
+                  <p>
+                    <strong>ClapButtonData</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>id</strong>: <strong>string</strong>
+                    </li>
+                    <li>
+                      <strong>type</strong>: <strong>clap_button</strong>
+                    </li>
+                    <li>
+                      <strong>attributes</strong>: <strong>Object</strong>
+                      <ul>
+                        <li>
+                          <strong>namespace</strong>: <strong>string</strong>
+                        </li>
+                        <li>
+                          <strong>namespaceRank</strong>:{" "}
+                          <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalClaps</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>totalRank</strong>: <strong>number</strong>
+                        </li>
+                        <li>
+                          <strong>userClaps</strong>: <strong>number</strong>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </li>
               </ul>
               <h2>Button Templates</h2>

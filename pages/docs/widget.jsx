@@ -163,6 +163,50 @@ export default function Docs() {
 ></div>`}
                 </code>
               </pre>
+              <h2 id="styling-the-buttons">Styling the buttons</h2>
+              <p>
+                You can change the default colors by providing your own color
+                scheme. The color scheme does not apply on buttons with
+                non-default templates.
+              </p>
+              <ul>
+                <li>
+                  <strong>data-lyket-color-primary</strong> - Changes the color
+                  of the "like" button, when user has liked.
+                </li>
+                <li>
+                  <strong>data-lyket-color-secondary</strong> - Changes the
+                  color of the "dislike" button, when user has disliked.
+                </li>
+                <li>
+                  <strong>data-lyket-color-background</strong> - Changes the
+                  background color of the inactive button.
+                </li>
+                <li>
+                  <strong>data-lyket-color-text</strong> - Changes the counter's
+                  text and the inactive icon's color.
+                </li>
+                <li>
+                  <strong>data-lyket-color-highligh</strong> - Changes the
+                  animation's color.
+                </li>
+              </ul>
+              <p>Here is an example for an Updown button</p>
+              <pre>
+                <code class="language-html">
+                  {`<!-- button with color scheme -->
+<div
+  data-lyket-type="updown"
+  data-lyket-id="my-first-post"
+  data-lyket-color-primary="#e095ed"
+  data-lyket-color-secondary="blue"
+  data-lyket-color-background="#333"
+  data-lyket-color-text="green"
+  data-lyket-color-highligh="#ff00c3"
+></div>
+`}
+                </code>
+              </pre>
               <h2>Button Templates</h2>
               <p>
                 Browse our{" "}
