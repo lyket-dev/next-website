@@ -3,7 +3,7 @@
   position: relative
   background-color: white
   +font-size(regular)
-  +vertical-padding(6)
+  +vertical-padding(5)
 
 .section--small
   @extend .section
@@ -11,14 +11,30 @@
 
 .section__container
   +wrap
+  position: relative
+  background: transparent
 
 .section__title
+  position: relative
+  font-weight: 700
+  +font-size(alpha)
+  +heading-font-family
   max-width: 85%
   margin: 0 auto
-  +margin-bottom(6)
-  +font-size(alpha)
-  font-weight: 700
-  position: relative
+  +margin-bottom(4)
+  background: white
+  +vertical-padding(4)
+  border-radius: 10px
+  +horizontal-padding(2)
+
+.section__subtitle
+  +font-size(regular)
+  font-weight: regular
+  +body-font-family
+  +margin-top(2)
+
+.section--center
+  text-align: center
 
 .section__text
   display: inline-block
@@ -26,51 +42,23 @@
   +font-size(regular)
   font-weight: regular
 
-.section__link
-  +margin-top(1)
-  display: inline-block
-  font-weight: bold
-  font-family: $heading-font-family
-  position: relative
-  text-decoration: none
-  z-index: 0
-  &:after
-    content: ''
-    display: block
-    background-color: $green
-    height: 30%
-    margin: 0 auto
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 20%
-    z-index: -1
-    transform: skewX(10deg)
-    transition: $transition
-    width: 0%
-
-  &:hover
-    &:after
-      width: 100%
-
-.section__image
-  max-width: 50%
-
-.section__portrait
-  max-width: 50%
-  border-radius: 3px 50%
-
 .section--gradient
   @extend .section
   &::before
     content: ""
-    transform: skewY(5deg)
-    +position(absolute, 0 0 100px 0)
+    transform: skewY(4deg)
+    +position(absolute, 10px 0 0 0)
     background: $light-gradient
+    height: 320px
 
 .section--primary
   @extend .section
-  background: $light-blue-gradient
+  &::before
+    content: ""
+    transform: skewY(-4deg)
+    +position(absolute, 10px 0 0 0)
+    background: $light-blue-gradient
+    height: 320px
 
 .section--black
   @extend .section
@@ -80,14 +68,17 @@
 @media only screen and (min-width: 1000px)
   .section
     +font-size(gamma)
-    +vertical-padding(12)
+    +vertical-padding(10)
 
   .section--small
     +vertical-padding(6)
 
   .section__title
     +font-size(big)
-    +margin-bottom(8)
+    +margin-bottom(4)
+
+  .section__subtitle
+    +font-size(gamma)
 
   .section__link
     +margin-top(2)

@@ -1,9 +1,7 @@
 .flag
   text-align: left
-  +vertical-padding(2)
-  +font-size(regular)
   position: relative
-  
+
 .flag__title
   +heading-font-family
   +font-size(beta)
@@ -21,6 +19,8 @@
 
 .flag__right, .flag__left
   @extend .flag__item
+  position: relative
+  width: 100%
 
 .flag__image__container
   +margin-bottom(4)
@@ -30,15 +30,12 @@
   .flag
     display: flex
     align-items: center
-    +font-size(gamma)
 
   .flag__image__container
-    flex-basis: 60%
     flex-grow: 0
     margin-bottom: 0
 
   .flag__item
-    flex-basis: 40%
     flex-grow: 0
     margin: 0
     max-width: none

@@ -1,5 +1,5 @@
 import React from "react";
-import Check from "../../public/svg/check.svg";
+import Check from "public/icons/check.svg";
 
 export default function Privacy() {
   return (

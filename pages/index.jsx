@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import Decorator from "../components/Decorator";
-import Window from "../components/Window";
+import Decorator from "components/Decorator";
+import HomeSandbox from "components/HomeSandbox";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import Clap from "../public/svg/clap.svg";
-import Like from "../public/svg/like.svg";
-import Heart from "../public/svg/heart.svg";
-import ClapIcon from "../public/svg/clapping.svg";
+import Bolt from "public/icons/outline/lightning-bolt.svg";
+import Shield from "public/icons/outline/shield-check.svg";
+import Lock from "public/icons/outline/lock-closed.svg";
+import Price from "public/icons/outline/currency-dollar.svg";
 import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
-import Confetti from "react-confetti";
 
 export default function Home() {
-  const [showConfetti, setShowConfetti] = useState(false);
-
   return (
     <>
       <section className="header">
@@ -32,7 +29,7 @@ export default function Home() {
               <strong>clap and like buttons</strong>. With Lyket it's just a
               matter of seconds!
             </p>
-            <div className="stripe--center">
+            <div className="section--center">
               <a
                 className="button button--center"
                 href={`${process.env.appBaseUrl}/signup`}
@@ -64,43 +61,7 @@ export default function Home() {
       </section>
       <section className="section--gradient">
         <div className="section__container">
-          <p className="section__title">
-            <Decorator fulltext="Just try it!" color="red" />
-          </p>
-          <div className="flag">
-            {showConfetti && (
-              <Confetti
-                width={2000}
-                height={500}
-                recycle={false}
-                gravity={0.4}
-              />
-            )}
-            <div className="flag__left">
-              <Window />
-            </div>
-            <div className="flag__right">
-              <ClapButton
-                onPress={() => {
-                  setShowConfetti(true);
-                  setTimeout(() => setShowConfetti(false), 5000);
-                }}
-                namespace="homepage"
-                id="everybody-clap-now"
-              >
-                {({ totalClaps, handlePress }) => (
-                  <div className="social">
-                    <div className="social__container">
-                      <button onClick={handlePress} className="social__button">
-                        <ClapIcon />
-                      </button>
-                    </div>
-                    <span className="social__counter">{totalClaps}</span>
-                  </div>
-                )}
-              </ClapButton>
-            </div>
-          </div>
+          <HomeSandbox />
         </div>
       </section>
       <section className="section">
@@ -142,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="half__right half__shadow">
-              <p className="half__title ">
+              <p className="half__title">
                 Are your users happy with the new documentation?
               </p>
               <p className="half__text">
@@ -176,88 +137,110 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {false && (
+        <section className="section--primary">
+          <div className="section__container">
+            <h2 className="section__title">
+              <Decorator
+                fulltext="No-brainer"
+                toDecorate="No-brainer"
+                color="yellow"
+              />
+            </h2>
+
+            <div className="ternary">
+              <div className="ternary__item--dyn">
+                <h6 className="ternary__title">The API</h6>
+                <p className="shbox">
+                  Lyket's <strong>simple API</strong> tracks all reactions. You
+                  can use a private API key to make requests from your server or
+                  the public one to make requests from the client
+                </p>
+                <Link href="docs/api">
+                  <a className="button--small">Read the docs</a>
+                </Link>
+              </div>
+              <div className="ternary__item--dyn">
+                <h6 className="ternary__title">The widget</h6>
+                <p className="shbox">
+                  The jack-of-all-trades, Lyket's embedded version works with
+                  all website builders that support custom HTML embedding -
+                  Wordpress, Wix, Webflow and more!
+                </p>
+                <Link href="docs/widget">
+                  <a className="button--small">Read the docs</a>
+                </Link>
+              </div>
+              <div className="ternary__item--dyn">
+                <h6 className="ternary__title">The React library</h6>
+                <p className="shbox">
+                  The <strong>React/JS client</strong>works with all React based
+                  frameworks and SSGs - like Gatsby, NextJS, React Native - See
+                </p>
+                <Link href="docs/react">
+                  <a className="button--small">Read the docs</a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
       <section className="section--primary">
         <div className="section__container">
           <h2 className="section__title">
             <Decorator
-              fulltext="No-brainer"
-              toDecorate="No-brainer"
-              color="yellow"
-            />
-          </h2>
-
-          <div className="ternary">
-            <div className="ternary__item--dyn">
-              <h6 className="ternary__title">The API</h6>
-              <p className="shbox">
-                Lyket's <strong>simple API</strong> tracks all reactions. You
-                can use a private API key to make requests from your server or
-                the public one to make requests from the client
-              </p>
-              <Link href="docs/api">
-                <a className="button--small">Read the docs</a>
-              </Link>
-            </div>
-            <div className="ternary__item--dyn">
-              <h6 className="ternary__title">The widget</h6>
-              <p className="shbox">
-                The jack-of-all-trades, Lyket's embedded version works with all
-                website builders that support custom HTML embedding - Wordpress,
-                Wix, Webflow and more!
-              </p>
-              <Link href="docs/widget">
-                <a className="button--small">Read the docs</a>
-              </Link>
-            </div>
-            <div className="ternary__item--dyn">
-              <h6 className="ternary__title">The React library</h6>
-              <p className="shbox">
-                The <strong>React/JS client</strong>works with all React based
-                frameworks and SSGs - like Gatsby, NextJS, React Native - See
-              </p>
-              <Link href="docs/react">
-                <a className="button--small">Read the docs</a>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="section__container">
-          <h2 className="section__title">
-            <Decorator
-              fulltext="  What makes it different?"
+              fulltext="What makes us different?"
               toDecorate="different"
-              color="blue"
+              color="red"
             />
+            <p className="section__subtitle">
+              More and more customers are trusting us ♥
+            </p>
           </h2>
-          <div className="ternary">
-            <div className="ternary__item">
-              <h6 className="ternary__title">Privacy oriented</h6>
-              <div className="ternary__line--yellow">—</div>
-              <p className="ternary__text">
-                Most feedback services require visitors to sign up and that can
-                <strong>discourage interaction</strong> and{" "}
-                <strong>is bad for privacy concerns</strong>.
-              </p>
+          <div className="stripes">
+            <div className="stripe__item">
+              <Lock className="icon" />
+              <div className="stripe__container">
+                <h6 className="stripe__title">Privacy oriented</h6>
+                <p className="stripe__text">
+                  Most feedback services require visitors to sign up and that
+                  can
+                  <strong>discourage interaction</strong> and{" "}
+                  <strong>is bad for privacy concerns</strong>.
+                </p>
+              </div>
             </div>
-            <div className="ternary__item">
-              <h6 className="ternary__title">Fastest implementation</h6>
-              <div className="ternary__line--green">—</div>
-              <p className="ternary__text">
-                By using our React component or widget you just need to choose a
-                style, provide an identifier for your button and{" "}
-                <strong>you are done!</strong>
-              </p>
+            <div className="stripe__item">
+              <Bolt className="icon" />
+              <div className="stripe__container">
+                <h6 className="stripe__title">Fastest implementation</h6>
+                <p className="stripe__text">
+                  By using our React component or widget you just need to choose
+                  a style, provide an identifier for your button and{" "}
+                  <strong>you are done!</strong>
+                </p>
+              </div>
             </div>
-            <div className="ternary__item">
-              <h6 className="ternary__title">No bots allowed</h6>
-              <div className="ternary__line--pink">—</div>
-              <p className="ternary__text">
-                Lyket is integrated with <strong>Google reCAPTCHA V3</strong> to
-                provide protection against malitious use, while never
-                interrupting your users.
-              </p>
+            <div className="stripe__item">
+              <Shield className="icon" />
+              <div className="stripe__container">
+                <h6 className="stripe__title">No bots allowed</h6>
+                <p className="stripe__text">
+                  Lyket is integrated with <strong>Google reCAPTCHA V3</strong>{" "}
+                  to provide protection against malitious use, while never
+                  interrupting your users.
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <Price className="icon" />
+              <div className="stripe__container">
+                <h6 className="stripe__title">Simple pricing</h6>
+                <p className="stripe__text">
+                  Lyket offers a simple pricing plan that includes a free
+                  forever plan for small/hobby projects.
+                </p>
+              </div>
             </div>
           </div>
         </div>

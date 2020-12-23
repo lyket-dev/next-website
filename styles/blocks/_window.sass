@@ -11,17 +11,24 @@
   +monospaced-font-family
 
 .window__top
-  border-radius: 3px
-  background-color: rgba($green, 0.4)
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+  // background-color: $green
+  // border-bottom: 1px solid $base-body-color
   +horizontal-padding(3)
-  +vertical-padding(1.5)
+  +vertical-padding(3)
   a
     +margin-right(2)
 
 .window__body
-  +padding(3)
   +margin-bottom(6)
   position: relative
+  border-bottom-left-radius: 3px
+  border-bottom-right-radius: 3px
+  pre
+    margin: 0 !important
+    padding-top: 32px !important
+
 
 .window__link
   font-weight: bold
@@ -29,15 +36,21 @@
   &:hover
     text-decoration: underline
 
+.window__code
+  border: 3px solid rgba($light-body-color, 0.3)
+  border-radius: 5px
+
 .copy-button
   +padding(1)
+  +horizontal-padding(1.5)
   position: absolute
-  top: 6px
+  top: -22px
   right: 12px
   font-weight: bold
-  border-radius: 3px
+  border-radius: 5px
+  background-color: $yellow
   &:hover
-    background-color: aliceblue
+    background-color: $yellow
 
 @media only screen and (min-width: 1000px)
   .window
@@ -47,5 +60,5 @@
     +horizontal-padding(5)
 
   .window__body
-    +padding(5)
     +margin-bottom(0)
+    // background-color: rgba($dark-purple, 0.9)

@@ -14,8 +14,9 @@
   flex-direction: column-reverse
 
 .half__title
+  +heading-font-family
   +font-size(beta)
-  font-weight: 500
+  font-weight: 700
   +margin-bottom(1)
 
 .half__text
@@ -35,6 +36,7 @@
 
 .half__shadow
   +padding(3)
+  border-radius: 3px
   max-width: 500px
 
 .half__line__container
@@ -44,23 +46,22 @@
 .half__line
   text-align: center
   +vertical-margin(2)
-  font-size: 7vh
   line-height: 10px
 
 .half__line--pink
   @extend .half__line
-  color: $raspberry
-  text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #fc3df660, 0 0 0.5em #fc3df660, 0 0 32px #fc3df660, 0 10px 3px #fc3df630
+  color: rgba($raspberry, 0.5)
+  // text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #fc3df660, 0 0 0.5em #fc3df660, 0 0 32px #fc3df660, 0 10px 3px #fc3df630
 
 .half__line--green
   @extend .half__line
-  color: $green
-  text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #2b4e9960, 0 0 0.5em #2b4e9960, 0 0 32px #2b4e9960, 0 10px 3px #2b4e9930
+  color: rgba($green, 0.5)
+  // text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #2b4e9960, 0 0 0.5em #2b4e9960, 0 0 32px #2b4e9960, 0 10px 3px #2b4e9930
 
 .half__line--yellow
   @extend .half__line
-  color: $yellow
-  text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #2b4e9960, 0 0 0.5em #2b4e9960, 0 0 32px #2b4e9960, 0 10px 3px #2b4e9930
+  color: rgba($yellow, 0.5)
+  // text-shadow: 0 -10px 30px, 0 0 2px, 0 0 1em #2b4e9960, 0 0 0.5em #2b4e9960, 0 0 32px #2b4e9960, 0 10px 3px #2b4e9930
 
 .half__reaction
   text-align: center

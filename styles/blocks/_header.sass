@@ -1,10 +1,11 @@
 .header
-  @extend .section
+  +vertical-padding(5)
 
 .header__container
   +wrap
 
 .header__title
+  +heading-font-family
   +font-size(big)
   text-align: center
   font-weight: 700
@@ -21,11 +22,14 @@
   display: none
 
 @media only screen and (min-width: 1000px)
+  .header
+    +padding-top(12)
+    +padding-bottom(6)
+
   .header__title
     +font-size(huge)
     max-width: 620px
     line-height: 100px
-
 
   .header__subtitle
     +font-size(alpha)

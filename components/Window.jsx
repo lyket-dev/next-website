@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import { Prism } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-export default function Window() {
+export default function Window({ currentButton }) {
   const [type, setType] = useState("html");
+  const capitolized =
+    currentButton.charAt(0).toUpperCase() + currentButton.slice(1);
 
   const reactText = () => {
-    return `import { Provider, ClapButton } from "@lyket/react";
+    return `import { Provider, ${capitolized}Button } from "@lyket/react";
 
 <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
-  <ClapButton
+  <${capitolized}Button
     namespace="testing-react"
-    id="everybody-clap-now"
+    id="everybody-${currentButton}-now"
   />
 </Provider>
   `;
@@ -17,9 +21,9 @@ export default function Window() {
 
   const htmlText = () => {
     return `<div
-    data-lyket-type="clap"
+    data-lyket-type="${currentButton}"
     data-lyket-namespace="testing-widget"
-    data-lyket-id="everybody-clap-now"
+    data-lyket-id="everybody-${currentButton}-now"
 />
 
 <script
@@ -50,12 +54,9 @@ export default function Window() {
         </a>
       </div>
       <div className="window__body">
-        <pre>
-          <code className="language-html">
-            {type === "react" && reactText()}
-            {type === "html" && htmlText()}
-          </code>
-        </pre>
+        <Prism language={"javascript"} style={dracula} showLineNumbers>
+          {type === "react" ? reactText() : htmlText()}
+        </Prism>
         <button
           className="copy-button"
           onClick={e => {

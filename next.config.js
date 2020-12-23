@@ -3,7 +3,7 @@ const withReactSvg = require("next-react-svg");
 const path = require("path");
 
 module.exports = withReactSvg({
-  include: path.resolve(__dirname, "public/svg"),
+  include: path.resolve(__dirname, "public/icons"),
   env: {
     appBaseUrl: process.env.APP_BASE_URL,
     apiBaseUrl: process.env.API_BASE_URL
