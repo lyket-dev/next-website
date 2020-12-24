@@ -16,15 +16,9 @@ const HomeSandbox = () => {
 
   return (
     <>
-      <h3 className="section__title">
-        Easier done than said!
-        <p className="section__subtitle">
-          Choose a button, then copy & paste this code
-        </p>
-      </h3>
-      <div className="space--bottom-5">
+      <div className="menu">
         <button
-          className="button-label"
+          className="menu__link"
           onClick={e => {
             e.preventDefault();
             setButton("like");
@@ -32,8 +26,10 @@ const HomeSandbox = () => {
         >
           Like
         </button>
+        <span>|</span>
+
         <button
-          className="button-label"
+          className="menu__link"
           onClick={e => {
             e.preventDefault();
             setButton("updown");
@@ -41,8 +37,10 @@ const HomeSandbox = () => {
         >
           Updown
         </button>
+        <span>|</span>
+
         <button
-          className="button-label"
+          className="menu__link"
           onClick={e => {
             e.preventDefault();
             setButton("clap");

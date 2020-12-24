@@ -42,13 +42,13 @@ export default function Post() {
               Lyket clap and like buttons in action on your Wordpress website!
               Just follow this few easy steps:
             </p>
-            <h2>Register on Lyket</h2>
+            <h3>Register on Lyket</h3>
             <p>
               To get started you need to{" "}
               <a href={`${process.env.appBaseUrl}/signup`}>register</a> to get
               your personal public API key.
             </p>
-            <h2>Add the Lyket script to your project</h2>
+            <h3>Add Lyket script to your project</h3>
             <p>
               Once you'registered you have to add this code top-level in your
               Wordpress project (remember to replace "[YOUR-API-KEY]" with your
@@ -88,7 +88,7 @@ export default function Post() {
                 mentioned above.
               </li>
             </ul>
-            <h2>Add buttons anywhere in your Wordpress pages</h2>
+            <h3>Add buttons anywhere in your Wordpress pages</h3>
             <p>
               Now that you copied the script, Lyket is available anywhere in
               your Wordpress website so you can add a button wherever you are

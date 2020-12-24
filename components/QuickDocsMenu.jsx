@@ -5,15 +5,15 @@ export default function QuickDocsMenu() {
   return (
     <div className="menu">
       <Link href="/docs/react">
-        <a className="navbar__link">React</a>
+        <a className="menu__link">React</a>
       </Link>
       <span>|</span>
       <Link href="/docs/widget">
-        <a className="navbar__link">Widget</a>
+        <a className="menu__link">Widget</a>
       </Link>
       <span>|</span>
       <Link href="/docs/api">
-        <a className="navbar__link">API</a>
+        <a className="menu__link">API</a>
       </Link>
     </div>
   );

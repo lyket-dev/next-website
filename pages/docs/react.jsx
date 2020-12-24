@@ -52,7 +52,7 @@ export default function Docs() {
                   npm install @lyket/react
                 </code>
               </pre>
-              <h2>Configuration: The Provider component</h2>
+              <h2>Provider</h2>
               <p>
                 Add the Provider component top-level and configure it using your
                 personal public API key that you can get after registering to
@@ -551,8 +551,7 @@ export Faq = () => {
               </p>
               <pre>
                 <code class="language-javascript">
-                  {`
-  import { UpdownButton } from '@lyket/react';
+                  {`import { UpdownButton } from '@lyket/react';
 
 export Faq = () => {
   return (

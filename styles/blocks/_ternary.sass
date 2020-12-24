@@ -8,20 +8,22 @@
 .ternary__item
   flex-grow: 0
   text-align: center
-  border-radius: 3px
+  border-radius: 5px
   display: flex
   flex-direction: column
   align-items: center
   +margin-bottom(6)
+  background: white
+  +horizontal-padding(3)
+  +vertical-padding(6)
+  box-shadow: $shadow
   &:last-child
-    +margin-bottom(0)
-
-.ternary__item--dyn
-  @extend .ternary__item
+    // +margin-bottom(0)
 
 .ternary__title
+  +font-size(alpha)
   font-weight: bold
-  +margin-bottom(2)
+  +margin-bottom(4)
 
 .ternary__text
   margin-bottom: $grid-gutter
@@ -51,7 +53,7 @@
   font-weight: 700
   text-align: center
 
-@media only screen and (min-width: 900px)
+@media only screen and (min-width: 1000px)
   .ternary
     flex-direction: row
 
@@ -59,13 +61,4 @@
     flex-basis: 33%
     margin-bottom: $grid-gutter
     max-width: 30%
-
-  .ternary__video
-    width: 240px
-    height: 100px
-
-  .ternary__item--dyn
-    &:last-child
-      margin-top: 100px
-    &:nth-child(2)
-      margin-top: 50px
+    box-shadow: none

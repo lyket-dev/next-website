@@ -40,6 +40,7 @@ export default function Home() {
             <div className="check">
               <p className="check__text">1 minute setup</p>
               <p className="check__text">Free forever plan</p>
+              <p className="check__text">No trial</p>
             </div>
           </div>
           {false && (
@@ -61,18 +62,28 @@ export default function Home() {
       </section>
       <section className="section--gradient">
         <div className="section__container">
+          <h3 className="section__title">
+            <Decorator
+              fulltext="Easier done than said!"
+              toDecorate="done than said!"
+              color="yellow"
+            />
+            <p className="section__subtitle">
+              Choose a button, then copy & paste the code to see how easy it is
+            </p>
+          </h3>
           <HomeSandbox />
         </div>
       </section>
       <section className="section">
         <div className="section__container">
-          <p className="section__title">
+          <h3 className="section__title">
             <Decorator
               fulltext="Bring your content to life!"
               toDecorate="to life!"
-              color="red"
+              color="yellow"
             />
-          </p>
+          </h3>
           <div className="half">
             <div className="half__left half__shadow">
               <p className="half__title">
@@ -199,19 +210,22 @@ export default function Home() {
           </h2>
           <div className="stripes">
             <div className="stripe__item">
-              <Lock className="icon" />
+              <div className="stripe__left">
+                <Lock className="icon" />
+              </div>
               <div className="stripe__container">
                 <h6 className="stripe__title">Privacy oriented</h6>
                 <p className="stripe__text">
                   Most feedback services require visitors to sign up and that
-                  can
-                  <strong>discourage interaction</strong> and{" "}
+                  can <strong>discourage interaction</strong> +{" "}
                   <strong>is bad for privacy concerns</strong>.
                 </p>
               </div>
             </div>
             <div className="stripe__item">
-              <Bolt className="icon" />
+              <div className="stripe__left">
+                <Bolt className="icon" />
+              </div>
               <div className="stripe__container">
                 <h6 className="stripe__title">Fastest implementation</h6>
                 <p className="stripe__text">
@@ -222,7 +236,9 @@ export default function Home() {
               </div>
             </div>
             <div className="stripe__item">
-              <Shield className="icon" />
+              <div className="stripe__left">
+                <Shield className="icon" />
+              </div>
               <div className="stripe__container">
                 <h6 className="stripe__title">No bots allowed</h6>
                 <p className="stripe__text">
@@ -233,42 +249,21 @@ export default function Home() {
               </div>
             </div>
             <div className="stripe__item">
-              <Price className="icon" />
+              <div className="stripe__left">
+                <Price className="icon" />
+              </div>
               <div className="stripe__container">
                 <h6 className="stripe__title">Simple pricing</h6>
                 <p className="stripe__text">
-                  Lyket offers a simple pricing plan that includes a free
-                  forever plan for small/hobby projects.
+                  We offer a simple pricing that{" "}
+                  <strong>scales with your project</strong>, including a free
+                  forever plan for small/hobby websites.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {false && (
-        <section className="section">
-          <div className="section__container">
-            <h2 className="section__title">Pricing </h2>
-            <p className="section__text">
-              No trial | free forever plan | pay as you grow
-            </p>
-            <div className="ternary">
-              <div className="ternary__item">
-                <h6 className="ternary__title">Free plan</h6>
-                <p className="ternary__text">0£</p>
-              </div>
-              <div className="ternary__item">
-                <h6 className="ternary__title">Growth plan</h6>
-                <p className="ternary__text">0£</p>
-              </div>
-              <div className="ternary__item">
-                <h6 className="ternary__title">Custom plan</h6>
-                <p className="ternary__text">0£</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
       <section className="section--black">
         <div className="section__container">
           <div className="neon">

@@ -1,13 +1,24 @@
 import React from "react";
-import Check from "public/icons/check.svg";
+import Check from "public/icons/outline/check.svg";
+import Beaker from "public/icons/outline/beaker.svg";
+import Thumb from "public/icons/outline/thumb-up.svg";
+import Case from "public/icons/outline/briefcase.svg";
+import Custom from "public/icons/outline/star.svg";
+import Stats from "public/icons/outline/chart-pie.svg";
+import Support from "public/icons/outline/support.svg";
+import Mail from "public/icons/outline/mail.svg";
+import Shield from "public/icons/outline/shield-check.svg";
+import ImEx from "public/icons/outline/upload.svg";
 
 export default function Privacy() {
   return (
     <div className="page">
       <section className="page__section">
-        <h1 className="page__title">Pricing</h1>
+        <div className="page__title">
+          <h1>Pricing</h1>
+        </div>
         <p className="page__text">
-          We want to offer a simple pricing model that grows with your website
+          We want to offer a simple pricing model that grows with your project
           with a free tier that lets you experiment with Lyket and a flat one
           for more professional use.
         </p>
@@ -16,80 +27,109 @@ export default function Privacy() {
         <div className="section__container">
           <div className="ternary">
             <div className="ternary__item">
-              <h4 className="ternary__title">FREE</h4>
-              <div className="shbox">
-                <p className="ternary__text">
-                  up to <strong>1,000 per month</strong> pageviews
-                </p>
-                <p className="ternary__huge">0$</p>
+              <div className="ternary__title">
+                <Beaker className="icon--small" />
+                <h4>FREE</h4>
               </div>
+              <p className="ternary__text">
+                up to <strong>1,000 per month</strong> pageviews
+              </p>
+              <p className="ternary__huge">0$</p>
             </div>
             <div className="ternary__item">
-              <h4 className="ternary__title">PRO</h4>
-              <div className="shbox">
-                <p className="ternary__text">
-                  up to <strong>50,000 per month</strong> pageviews
-                </p>
-                <p className="ternary__huge">60$/year</p>
+              <div className="ternary__title">
+                <Case className="icon--small" />
+                <h4>PRO</h4>
               </div>
+              <p className="ternary__text">
+                up to <strong>50,000 per month</strong> pageviews
+              </p>
+              <p className="ternary__huge">60$/year</p>
             </div>
             <div className="ternary__item">
-              <h4 className="ternary__title">CUSTOM</h4>
-              <div className="shbox">
-                <p className="ternary__text">
-                  up to <strong>custom amount</strong>
-                </p>
-                <p className="ternary__huge">contact us</p>
+              <div className="ternary__title">
+                <Custom className="icon--small" />
+                <h4>CUSTOM</h4>
               </div>
+              <p className="ternary__text">
+                up to <strong>custom amount</strong>
+              </p>
+              <p className="ternary__huge">contact us</p>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="section__container">
-          <h1 className="page__title">What you get</h1>
-          <div className="box__container">
-            <div className="box">
-              <ul className="list">
-                <li className="list__item">
-                  <div className="list__item__icon">
-                    <Check />
-                  </div>
-                  <p className="list__item__title">
-                    Three buttons with different behaviours
-                  </p>
-                </li>
-                <li className="list__item">
-                  <div className="list__item__icon">
-                    <Check />
-                  </div>
-                  <p className="list__item__title">Statistics dashboard</p>
-                </li>
-                <li className="list__item">
-                  <div className="list__item__icon">
-                    <Check />
-                  </div>
-                  <p className="list__item__title">Support</p>
-                </li>
-                <li className="list__item">
-                  <div className="list__item__icon">
-                    <Check />
-                  </div>
-                  <p className="list__item__title">Email notifications</p>
-                </li>
-                <li className="list__item">
-                  <div className="list__item__icon">
-                    <Check />
-                  </div>
-                  <p className="list__item__title">Import-export data</p>
-                </li>
-                <li className="list__item">
-                  <div className="list__item__icon">
-                    <Check />
-                  </div>
-                  <p className="list__item__title">Privacy compliancy</p>
-                </li>
-              </ul>
+          <h2 className="page__title">What you get</h2>
+          <div className="stripes">
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <Thumb className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Three different buttons</h6>
+                <p className="stripe__text">
+                  All three buttons have a specific function and can be used to
+                  receive different feedback.
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <Stats className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Statistics dashboard</h6>
+                <p className="stripe__text">
+                  Sign in your private area to see updated statistics on the
+                  buttons!
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <div className="stripe__left">
+                  <Support className="icon" />
+                </div>
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Support</h6>
+                <p className="stripe__text">
+                  We are a small team always ready to help you.
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <Mail className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Email notifications</h6>
+                <p className="stripe__text">
+                  Get notified when someone is leaving a feedback or when you
+                  reach a certain number of votes! [WIP]
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <Shield className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Privacy compliancy</h6>
+                <p className="stripe__text">
+                  You don't have to update your privacy/cookie policy if you use
+                  Lyket!
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <ImEx className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Import-export data</h6>
+                <p className="stripe__text">
+                  Easily import your data from Medium or export to csv.[WIP]
+                </p>
+              </div>
             </div>
           </div>
         </div>
