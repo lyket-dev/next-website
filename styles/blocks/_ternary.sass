@@ -6,59 +6,45 @@
   font-size: 20px
 
 .ternary__item
-  flex-grow: 0
-  text-align: center
-  border-radius: 5px
   display: flex
   flex-direction: column
+  text-align: center
+  border-radius: 5px
   align-items: center
-  +margin-bottom(6)
   background: white
   +horizontal-padding(3)
   +vertical-padding(6)
   box-shadow: $shadow
+  +margin-bottom(6)
   &:last-child
     // +margin-bottom(0)
 
 .ternary__title
   +font-size(alpha)
   font-weight: bold
-  +margin-bottom(4)
+  +margin-bottom(3)
 
 .ternary__text
-  margin-bottom: $grid-gutter
+  +margin-bottom(3)
   +font-size(beta)
   text-align: center
 
-.ternary__line
+.ternary__subtext
+  +font-size(beta)
   text-align: center
-  +margin-bottom(3)
-  font-size: 7vh
-  line-height: 3px
-
-.ternary__line--pink
-  @extend .ternary__line
-  color: $raspberry
-
-.ternary__line--green
-  @extend .ternary__line
-  color: $green
-
-.ternary__line--yellow
-  @extend .ternary__line
-  color: $yellow
 
 .ternary__huge
   +font-size(alpha)
   font-weight: 700
   text-align: center
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 900px)
   .ternary
     flex-direction: row
 
   .ternary__item
     flex-basis: 33%
-    margin-bottom: $grid-gutter
+    margin: 0
+    +margin-bottom(3)
     max-width: 30%
     box-shadow: none

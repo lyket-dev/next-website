@@ -32,7 +32,7 @@ export default function Privacy() {
                 <h4>FREE</h4>
               </div>
               <p className="ternary__text">
-                up to <strong>1,000 per month</strong> pageviews
+                Up to <strong>1,000 pageviews</strong> per month
               </p>
               <p className="ternary__huge">0$</p>
             </div>
@@ -42,20 +42,27 @@ export default function Privacy() {
                 <h4>PRO</h4>
               </div>
               <p className="ternary__text">
-                up to <strong>50,000 per month</strong> pageviews
+                Up to <strong>50,000 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">60$/year</p>
+              <p className="ternary__huge">5$/month</p>
+              <p className="ternary__text">billed yearly</p>
             </div>
             <div className="ternary__item">
               <div className="ternary__title">
                 <Custom className="icon--small" />
-                <h4>CUSTOM</h4>
+                <h4>FLAT</h4>
               </div>
               <p className="ternary__text">
-                up to <strong>custom amount</strong>
+                <strong>No limits</strong>
               </p>
-              <p className="ternary__huge">contact us</p>
+              <p className="ternary__huge">12$/month</p>
+              <p className="ternary__text">billed yearly</p>
             </div>
+          </div>
+          <div className="ternary__title">
+            <a className="button" href={`${process.env.appBaseUrl}/signup`}>
+              GET STARTED!
+            </a>
           </div>
           <h2 className="page__title">What you get</h2>
           <div className="stripes">
