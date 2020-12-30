@@ -35,7 +35,7 @@ export default function Window({ currentButton }) {
     <div className="window">
       <div className="window__top">
         <a
-          className="window__link"
+          className={`window__link${type === "html" ? " active" : " "}`}
           onClick={e => {
             e.preventDefault();
             setType("html");
@@ -44,7 +44,7 @@ export default function Window({ currentButton }) {
           Widget
         </a>
         <a
-          className="window__link"
+          className={`window__link${type === "react" ? " active" : " "}`}
           onClick={e => {
             e.preventDefault();
             setType("react");

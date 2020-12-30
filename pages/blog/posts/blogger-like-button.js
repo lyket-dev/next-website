@@ -33,9 +33,9 @@ export default function Post() {
               If you have a blog on Blogger you probably wondered if there is an
               easy way to add a like button, or, if you are a fan of Medium, a
               clap button. Lyket is a new tool that lets you add like buttons on
-              any Blogger project in a matter of few seconds.
+              any Blogger project in a matter of seconds.
             </p>
-            <p>You don't believe me? See it with your own eyes 👀</p>
+            <p>Don't believe me? See it with your own eyes 👀</p>
             <iframe
               width="100%"
               height="400"

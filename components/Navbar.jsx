@@ -62,8 +62,8 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="navbar__item">
-          <a className="button" href={process.env.appBaseUrl}>
-            Login
+          <a className="button" href={`${process.env.appBaseUrl}/signup`}>
+            Register
           </a>
         </li>
       </ul>

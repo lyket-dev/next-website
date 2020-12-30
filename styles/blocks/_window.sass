@@ -31,10 +31,13 @@
 
 
 .window__link
-  font-weight: bold
+  @extend .menu__link
   cursor: pointer
-  &:hover
-    text-decoration: underline
+  font-weight: bold
+
+.window__link.active
+  &:after
+    width: 100%
 
 .window__code
   border: 3px solid rgba($light-body-color, 0.3)

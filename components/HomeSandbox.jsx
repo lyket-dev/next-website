@@ -10,15 +10,26 @@ const buttons = {
 };
 
 const HomeSandbox = () => {
-  const [currentButton, setButton] = useState("clap");
+  const [selected, setButton] = useState("clap");
   const [showConfetti, setShowConfetti] = useState(false);
-  const Button = buttons[currentButton];
+  const Button = buttons[selected];
 
   return (
     <>
       <div className="menu">
         <button
-          className="menu__link"
+          className={`menu__link${selected === "clap" ? " active" : " "}`}
+          onClick={e => {
+            e.preventDefault();
+            setButton("clap");
+          }}
+        >
+          Clap
+        </button>
+        <span>|</span>
+
+        <button
+          className={`menu__link${selected === "like" ? " active" : " "}`}
           onClick={e => {
             e.preventDefault();
             setButton("like");
@@ -29,7 +40,7 @@ const HomeSandbox = () => {
         <span>|</span>
 
         <button
-          className="menu__link"
+          className={`menu__link${selected === "updown" ? " active" : " "}`}
           onClick={e => {
             e.preventDefault();
             setButton("updown");
@@ -37,28 +48,17 @@ const HomeSandbox = () => {
         >
           Updown
         </button>
-        <span>|</span>
-
-        <button
-          className="menu__link"
-          onClick={e => {
-            e.preventDefault();
-            setButton("clap");
-          }}
-        >
-          Clap
-        </button>
       </div>
       <div className="flag">
         {showConfetti && (
           <Confetti width={2000} height={500} recycle={false} gravity={0.4} />
         )}
         <div className="flag__left">
-          <Window currentButton={currentButton} />
+          <Window currentButton={selected} />
         </div>
         <div className="flag__right">
           <div className="lyket__container">
-            <div className={`lyket__${currentButton}`}>
+            <div className={`lyket__${selected}`}>
               <Button
                 onPress={buttonData => {
                   if (
@@ -80,7 +80,7 @@ const HomeSandbox = () => {
                   }
                 }}
                 namespace="homepage"
-                id={`everybody-${currentButton}-now`}
+                id={`everybody-${selected}-now`}
               />
             </div>
           </div>

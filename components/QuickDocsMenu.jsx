@@ -1,20 +1,20 @@
 import React from "react";
-import Link from "next/link";
+import ActiveLink from "components/ActiveLink";
 
 export default function QuickDocsMenu() {
   return (
     <div className="menu">
-      <Link href="/docs/react">
+      <ActiveLink href="/docs/react">
         <a className="menu__link">React</a>
-      </Link>
+      </ActiveLink>
       <span>|</span>
-      <Link href="/docs/widget">
+      <ActiveLink href="/docs/widget">
         <a className="menu__link">Widget</a>
-      </Link>
+      </ActiveLink>
       <span>|</span>
-      <Link href="/docs/api">
+      <ActiveLink href="/docs/api">
         <a className="menu__link">API</a>
-      </Link>
+      </ActiveLink>
     </div>
   );
 }
