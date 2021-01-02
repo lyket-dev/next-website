@@ -53,6 +53,20 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+
+        <div
+          className="loading-overlay"
+          style={{
+            backgroundColor: "white",
+            position: "fixed",
+            transition: "all 0.25s ease-in-out",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 2000
+          }}
+        />
       </Html>
     );
   }
