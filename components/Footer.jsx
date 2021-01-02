@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__container">
         <ul className="footer__list">
-          <p className="footer__text">Copyright Lyket 2020</p>•
+          <li className="footer__item">Copyright Lyket 2020</li>•
           <li className="footer__item">
             <Link href="/privacy">
               <a className="footer__link">Privacy Policy</a>

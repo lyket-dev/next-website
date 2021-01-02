@@ -26,9 +26,8 @@ export default function Window({ currentButton }) {
     data-lyket-id="everybody-${currentButton}-now"
 />
 
-<script
-    src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa"
-/>`;
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa" />
+`;
   };
 
   return (

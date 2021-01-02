@@ -26,12 +26,11 @@ export default function Home() {
           <div>
             <p className="header__subtitle">
               Engage your audience with fresh out-of-the-box{" "}
-              <strong>clap and like buttons</strong>. With Lyket it's just a
-              matter of seconds!
+              <strong>clap and like buttons</strong>
             </p>
             <div className="section--center">
               <a
-                className="button button--center"
+                className="button--big button--center"
                 href={`${process.env.appBaseUrl}/signup`}
               >
                 Register for free
@@ -104,13 +103,17 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="half__line--green">—</div>
+            <div className="half__line--green" />
           </div>
           <div className="half">
-            <div className="half__line--pink">—</div>
+            <div className="half__line--pink" />
             <div className="half__left">
               <div className="half__reaction">
-                <UpdownButton id="docs" namespace="homepage" />
+                <UpdownButton
+                  id="docs"
+                  namespace="homepage"
+                  component={UpdownButton.templates.Reddit}
+                />
               </div>
             </div>
             <div className="half__right half__shadow">
@@ -144,7 +147,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="half__line--yellow">—</div>
+            <div className="half__line--yellow" />
           </div>
         </div>
       </section>
