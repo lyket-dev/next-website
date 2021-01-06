@@ -1193,10 +1193,10 @@
   dependencies:
     stream "^0.0.2"
 
-"@lyket/react@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.3.2.tgz#426abc76a15df5470152b262e26daca23e526d05"
-  integrity sha512-+o9WMATkYhHi2NuZFTJENJnRa+yCX7xjf0TUAfBPoQQl/2xVOzrS5xO/d1UdDaY+z/nFo6i6njYvGANE3qKqcg==
+"@lyket/react@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.3.3.tgz#9bef51b917d4c9486627f2c78db80fa72db3a288"
+  integrity sha512-2XoNLCy32a48s5lvTgN9w6+DcNBrUUFquhGAUwkKUYqLcrHF13HvX9D7pCsiF0TzF92reyFOhWHKRiQhpHVgPA==
   dependencies:
     "@theme-ui/color" "^0.3.1"
     humps "^2.0.1"
