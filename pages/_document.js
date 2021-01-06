@@ -53,8 +53,8 @@ export default class MyDocument extends Document {
             window.intergramId = 217428232
             window.intergramCustomizations = {
                 titleClosed: 'Chat 👋',
-                titleOpen: 'Lyket AMA ❤️‍',
-                introMessage: 'Anything on your mind? 👀',
+                titleOpen: 'Lyket AMA',
+                introMessage: 'Anything on your mind?',
                 autoNoResponse: 'Thanks for your message! Sorry, we are busy (or sleeping) right now. We will answer you ASAP',
                 mainColor: "#ff5dff",
             };`
