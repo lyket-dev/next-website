@@ -47,6 +47,24 @@ export default class MyDocument extends Document {
                   gtag("config", "UA-175162938-1");`
             }}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.intergramId = 217428232
+            window.intergramCustomizations = {
+                titleClosed: 'Chat 👋',
+                titleOpen: 'Lyket AMA ❤️‍',
+                introMessage: 'Anything on your mind? 👀',
+                autoNoResponse: 'Thanks for your message! Sorry, we are busy (or sleeping) right now. We will answer you ASAP',
+                mainColor: "#ff5dff",
+            };`
+            }}
+          />
+          <script
+            id="intergram"
+            type="text/javascript"
+            src="https://www.intergram.xyz/js/widget.js"
+          ></script>
         </Head>
 
         <body>

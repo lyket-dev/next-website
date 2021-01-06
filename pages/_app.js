@@ -9,8 +9,8 @@ export default function App({ Component, pageProps }) {
       apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
       theme={{
         colors: {
-          primary: "#24fcc999",
-          secondary: "#f78fb799",
+          primary: "#24fcc966",
+          secondary: "#ffcaff66",
           text: "#1f1630",
           background: "#ececec66"
         }
