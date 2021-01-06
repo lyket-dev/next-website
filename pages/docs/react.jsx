@@ -19,12 +19,10 @@ export default function Docs() {
   return (
     <>
       <Head>
-        <title>
-          Lyket ReactJS docs - like, applause and like/dislike buttons on React
-        </title>
+        <title>Lyket - Add like, clap and like/dislike buttons to React</title>
         <meta
           property="og:description"
-          content="Instantly add like, applause and like/dislike on any React, Gatsby, NextJS project. Read our documentation to see how easy it is!"
+          content="Lyket is a tool to instantly add like, applause and like/dislike on any React project."
           name="description"
         />
       </Head>

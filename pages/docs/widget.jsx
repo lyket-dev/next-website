@@ -8,11 +8,11 @@ export default function Docs() {
     <>
       <Head>
         <title>
-          Lyket HTML docs - add like, applause and like/dislike buttons
+          Lyket - The ultimate like, clap and like/dislike buttons widget
         </title>
         <meta
           property="og:description"
-          content="Instantly add like, applause and like/dislike on any website by using our super simple HTML widget. Read the documentation to see how easy it is!"
+          content="Instantly add like, applause and like/dislike on any website with our super simple HTML widget!"
           name="description"
         />
       </Head>

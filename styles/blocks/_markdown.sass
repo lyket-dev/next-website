@@ -33,6 +33,7 @@
 
   p
     +margin-bottom(2)
+    line-height: 1.7
 
   pre
     +margin-bottom(2)
@@ -52,7 +53,23 @@
     box-shadow: 2px 14px 15px #ddd
 
   strong
-    font-weight: 500
+    font-weight: 600
+
+  .center
+    text-align: center
+    +margin-bottom(2)
+
+  .flex
+    display: flex
+    align-items: center
+    justify-content: center
+    +margin-bottom(2)
+  .flex > *
+    margin: 0
+    +horizontal-margin(2)
 
 .language-html
   overflow: scroll
+
+.big
+  +font-size(big)
