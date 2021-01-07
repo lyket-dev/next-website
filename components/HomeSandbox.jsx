@@ -62,7 +62,7 @@ const HomeSandbox = () => {
               <Button
                 onPress={buttonData => {
                   if (
-                    buttonData.attributes.userHasLiked ||
+                    buttonData.attributes.userLiked ||
                     buttonData.attributes.userClaps
                   ) {
                     setShowConfetti(true);

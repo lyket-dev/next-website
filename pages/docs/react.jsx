@@ -3,6 +3,7 @@ import useAsyncEffect from "../../utils/useAsyncEffect";
 import ReactMarkdown from "react-markdown";
 import QuickDocsMenu from "components/QuickDocsMenu";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Docs() {
   const [markdown, markdownSet] = useState(null);
@@ -32,21 +33,54 @@ export default function Docs() {
         </section>
         <section className="page__section">
           <h1 className="page__title">React docs</h1>
-          <div class="docs">
-            <div class="markdown">
+          <div className="docs">
+            <div className="markdown">
               <p>
                 Lyket is compatible with any React framework. You can use it
-                with Gatsby, NextJS, create-react-app, and so on!
+                with <strong>Gatsby, NextJS, create-react-app</strong>, and so
+                on! You can read here the{" "}
+                <strong>
+                  <a
+                    href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @lyket/react
+                  </a>
+                </strong>{" "}
+                complete documentation and start taming the buttons!
               </p>
-              <p>You can find here all the info to tame the buttons!</p>
+              <p>
+                If you prefer to see examples and use some ready made snippets,
+                you can visit:
+              </p>
+              <ul>
+                <li>
+                  <Link href="/blog/posts/react-like-button">
+                    <a>How to add like buttons to a React project</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/posts/react-clap-button">
+                    <a>How to add clap buttons to a React project</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/posts/react-like-dislike-button">
+                    <a>How to add like dislike buttons to a React project</a>
+                  </Link>
+                </li>
+              </ul>
               <h2>Installation</h2>
               <p>To install the component run</p>
               <pre>
-                <code class="language-javascript">yarn add @lyket/react</code>
+                <code className="language-javascript">
+                  yarn add @lyket/react
+                </code>
               </pre>
               <p>or</p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   npm install @lyket/react
                 </code>
               </pre>
@@ -57,7 +91,7 @@ export default function Docs() {
                 Lyket
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { Provider } from '@lyket/react';
 
 ReactDOM.render(
@@ -197,7 +231,7 @@ ReactDOM.render(
                 user will remove the user's like.
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { LikeButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
@@ -253,8 +287,7 @@ export BlogPost = ({ title, content }) => {
                           <strong>totalVotes</strong>: <strong>number</strong>
                         </li>
                         <li>
-                          <strong>userHasLiked</strong>:{" "}
-                          <strong>boolean</strong>
+                          <strong>userLiked</strong>: <strong>boolean</strong>
                         </li>
                       </ul>
                     </li>
@@ -268,7 +301,7 @@ export BlogPost = ({ title, content }) => {
                 the same user will remove the user's like or dislike.
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { UpdownButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
@@ -348,7 +381,7 @@ export BlogPost = ({ title, content }) => {
                 increment the claps number.
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { ClapButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
@@ -443,7 +476,7 @@ export BlogPost = ({ title, content }) => {
                 using the Twitter template on a LikeButton.
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { LikeButton } from '@lyket/react';
 
 export StandingOvation = () => {
@@ -474,7 +507,7 @@ export StandingOvation = () => {
                 <strong>Custom LikeButton</strong>
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { LikeButton } from '@lyket/react';
 
 export Faq = () => {
@@ -511,7 +544,7 @@ export Faq = () => {
                 <strong>Custom ClapButton</strong>
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { ClapButton } from '@lyket/react';
 
 export Faq = () => {
@@ -548,7 +581,7 @@ export Faq = () => {
                 <strong>Custom UpdownButton</strong>
               </p>
               <pre>
-                <code class="language-javascript">
+                <code className="language-javascript">
                   {`import { UpdownButton } from '@lyket/react';
 
 export Faq = () => {
@@ -582,8 +615,7 @@ export Faq = () => {
       </UpdownButton>
     </>
   );
-};
-  `}
+};`}
                 </code>
               </pre>
               <h2>Styling buttons</h2>
@@ -596,16 +628,17 @@ export Faq = () => {
               <p>
                 Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
                 library, allowing you to provide your own theme to the buttons
-                through the <strong>theme</strong> prop in the provider.
+                through the <strong>theme</strong> prop in the provider. Colors
+                support rgba, hex, and color names.
               </p>
               <ul>
                 <li>
-                  <strong>primary</strong> - Changes the color of the "like"
-                  button, when user has liked.
+                  <strong>primary</strong> - Changes the background color of the
+                  "like" button, when user has liked.
                 </li>
                 <li>
-                  <strong>secondary</strong> - Changes the color of the
-                  "dislike" button, when user has disliked.
+                  <strong>secondary</strong> - Changes the background color of
+                  the "dislike" button, when user has disliked.
                 </li>
                 <li>
                   <strong>background</strong> - Changes the background color of
@@ -613,7 +646,7 @@ export Faq = () => {
                 </li>
                 <li>
                   <strong>text</strong> - Changes the counter's text and the
-                  inactive icon's color.
+                  icon's color.
                 </li>
                 <li>
                   <strong>highlight</strong> - Changes the animation color.
@@ -621,7 +654,7 @@ export Faq = () => {
               </ul>
               <p>These are the default values:</p>
               <pre>
-                <code class="language-js">
+                <code className="language-js">
                   {`const defaultTheme = {
   colors: {
     primary: '#22c1c3',
@@ -633,7 +666,6 @@ export Faq = () => {
   fonts: {
     body: 'inherit',
     heading: 'inherit',
-    monospace: 'inherit',
   },
   fontWeights: {
     body: 400,

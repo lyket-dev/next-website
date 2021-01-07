@@ -55,7 +55,7 @@ export default function Post() {
               own API key you got from registering.):
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]></script>`}
               </code>
             </pre>

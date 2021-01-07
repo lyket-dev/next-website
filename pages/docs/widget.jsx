@@ -22,27 +22,38 @@ export default function Docs() {
         </section>
         <section className="page__section">
           <h1 className="page__title">Widget docs</h1>
-          <div class="docs">
-            <div class="markdown">
+          <div className="docs">
+            <div className="markdown">
               <p>
-                A simple script that lets you embed Lyket in your
-                html/Wordpress/Webflow/Notion website and more!
+                Here you can read the full{" "}
+                <strong>
+                  <a
+                    href="https://github.com/lyket-dev/lyket/tree/master/packages/widget"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @lyket/widget
+                  </a>
+                </strong>{" "}
+                documentation, a simple script that lets you embed Lyket in your{" "}
+                <strong>HTML, Wordpress, Webflow, Notion</strong> website and
+                more!
               </p>
-              <p>We have more detailed guides for:</p>
+              <p>We have more framework-specific guides for:</p>
               <ul>
                 <li>
                   <Link href="/blog/posts/embed-like-button-to-notion">
-                    <a>Notion</a>
+                    <a>How to add like buttons to Notion</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog/posts/like-clap-button-on-worpress">
-                    <a>Wordpress</a>
+                    <a>How to add like buttons to Wordpress</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog/posts/blogger-like-button">
-                    <a>Blogger</a>
+                    <a>How to add like buttons to Blogger</a>
                   </Link>
                 </li>
               </ul>
@@ -53,7 +64,7 @@ export default function Docs() {
                 data-lyket-type anywhere in your code to create buttons.
               </p>
               <pre>
-                <code class="language-html">
+                <code className="language-html">
                   &lt;script
                   src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
                 </code>
@@ -87,7 +98,7 @@ export default function Docs() {
               </p>
               <p>Use the data-lyket-type="like" to create a like button.</p>
               <pre>
-                <code class="language-html">
+                <code className="language-html">
                   {`<!-- minimal settings -->
 <div data-lyket-type="like" data-lyket-id="my-first-post"></div>
 
@@ -115,7 +126,7 @@ export default function Docs() {
               </p>
               <p>Use the data-lyket-type="clap" to create a clap button.</p>
               <pre>
-                <code class="language-html">
+                <code className="language-html">
                   {`<!-- minimal settings -->
 <div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
 
@@ -143,7 +154,7 @@ export default function Docs() {
               </p>
               <p>Use the data-lyket-type="updown" to create a updown button.</p>
               <pre>
-                <code class="language-html">
+                <code className="language-html">
                   {`<!-- minimal settings -->
 <div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
 
@@ -193,7 +204,7 @@ export default function Docs() {
               </ul>
               <p>Here is an example for an Updown button</p>
               <pre>
-                <code class="language-html">
+                <code className="language-html">
                   {`<!-- button with color scheme -->
 <div
   data-lyket-type="updown"

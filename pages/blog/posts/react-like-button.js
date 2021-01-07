@@ -6,7 +6,6 @@ import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 
@@ -85,23 +84,25 @@ export default function Post() {
               If you ever tried to add a <strong>like button to React</strong> I
               am sure you encountered a few obstacles on your way.
             </p>
-            <p>
-              First, you cannot get away with a{" "}
-              <strong>simple toggle function</strong> for changing a like button
-              score, you need to store data somewhere so if someone refreshes
-              the page their vote is still there. So you need to build some
-              stack, with a <strong>DB and some architecture</strong>.
-            </p>
-            <p>
-              Second, you need to be able to{" "}
-              <strong>remember visitors interactions</strong>, so if somebody
-              returns to the page they can still see their like. And you may be
-              worried about how to do it without a signup while avoiding
-              malicious use or bot spamming.
-            </p>
-            <p>
-              Third, decide how to visualize and what to do with all this data!
-            </p>
+            <ul>
+              <li>
+                First, you cannot get away with a{" "}
+                <strong>simple toggle function</strong> for changing a like
+                button score, you need to store data somewhere so if you refresh
+                the page the like is still there.
+              </li>
+              <li>
+                Second, you need to{" "}
+                <strong>remember visitors interactions</strong>, so if somebody
+                returns to the page they can still see their like. And you may
+                be worried about how to do it without a signup while avoiding
+                malicious use or bot spamming.
+              </li>
+              <li>
+                Third, decide how to <strong>visualize</strong> and what to do
+                with all this data!
+              </li>
+            </ul>
             <h3>Lyket in action!</h3>
             <p>
               Lyket takes care of all these nuisances for you! It lets you add
@@ -118,17 +119,21 @@ export default function Post() {
               <strong>
                 simple snippet that you can copy and paste to try it out
               </strong>
-              . Remember! It uses a test API key so remember to register after
-              and get your own or you will loose your data!
+              . Remember! We are using a test API key so remember to register
+              after and get your own or you will loose your data!
             </p>
             <p>
-              In this example we create a like button with id
+              In this example we <strong>create a like button</strong> with id
               "how-to-beat-me-at-chess" under the "my-blog-post" category. To do
-              that we import the Provider component to configure Lyket and the
-              LikeButton component where we want our button to be.
+              that we import the Provider component and the LikeButton component
+              where we want our button to be. Read more about configuring the
+              Provider component on the{" "}
+              <Link href="/docs/react">
+                <a>docs</a>
+              </Link>
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import { Provider, LikeButton } from "@lyket/react";
 
   <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
@@ -140,26 +145,27 @@ export default function Post() {
 `}
               </code>
             </pre>
-            <p>This code will generate this button.</p>{" "}
             <p>
+              If you copy and paste this code you will see the following button.
               Try it out! If you click on it once{" "}
               <strong>it will add one like</strong>. Click on it twice and the
-              like will be removed, just like Twitter for example.
+              like will be removed, just like the Twitter heart.
             </p>
-            <div className="center">
+            <div className="center big">
               <LikeButton namespace="blog" id="like-button-react-example" />
             </div>
             <h3>Changing templates</h3>
             <p>
-              You can change the style by choosing one of the templates you can
-              find{" "}
+              Speaking about Twitter, you can change the like button style by
+              choosing one of the templates you can find in the{" "}
               <Link href="/templates">
-                <a>in the templates section</a>
+                <a>templates section</a>
               </Link>
-              . So if you choose the Twitter button
+              . If you choose the Twitter template you will get the famous
+              Twitter heart
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<LikeButton
   namespace="my-blog-post"
   id="how-to-beat-me-at-chess"
@@ -167,8 +173,7 @@ export default function Post() {
 />`}
               </code>
             </pre>
-            <p>You will get a like button that looks like this</p>
-            <div className="center">
+            <div className="center big">
               <LikeButton
                 namespace="blog"
                 id="like-button-react-example-twitter"
@@ -177,20 +182,34 @@ export default function Post() {
             </div>
             <h3>Changing colors</h3>
             <p>
-              You can also change colors of the default template by configuring
-              the Provider, like this.
+              Some templates support color changing, for example the default
+              one, so you can use your own color palette! You can do that by
+              configuring the Provider component. Theme supports rgba, hex, and
+              color names.
+            </p>
+            <p>
+              The <strong>background</strong> attribute changes the background
+              color of inactive like button.
+            </p>
+            <p>
+              the <strong>primary</strong> attribute will change the background
+              color of a clicked like button
+            </p>
+            <p>
+              The <strong>text</strong> attribute changes the counter font color
+              and the icon color.
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import { Provider, LikeButton } from "@lyket/react";
 
 <Provider
   apiKey="acc0dbccce8e557db5ebbe6d605aaa"
   theme={{
     colors: {
-      background: "aliceblue",
+      background: "#b8fff3",
       text: "violet",
-      primary: "orange"
+      primary: "rgba(255, 224, 138, 0.4)"
     }
   }}
 >
@@ -202,14 +221,14 @@ export default function Post() {
   `}
               </code>
             </pre>
-            <div className="center">
+            <div className="center big">
               <Provider
                 apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
                 theme={{
                   colors: {
-                    background: "aliceblue",
+                    background: "#b8fff3",
                     text: "violet",
-                    primary: "orange"
+                    primary: "rgba(255, 224, 138, 0.4)"
                   }
                 }}
               >
@@ -230,7 +249,7 @@ export default function Post() {
               like button!
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import { LikeButton } from '@lyket/react';
 
 <LikeButton
@@ -255,7 +274,7 @@ export default function Post() {
 </LikeButton>`}
               </code>
             </pre>
-            <div className="center">
+            <div className="center big">
               <LikeButton
                 id="like-button-react-example-custom"
                 namespace="blog"
@@ -313,10 +332,10 @@ export default function Post() {
             </code>
             {SubscribeDialog}
             <p>
-              Try to click on the button! It will open a dialog to ask for a
-              subscription!
+              Try to click on the button! It will open a dialog with the
+              subscription form!
             </p>
-            <div className="flex">
+            <div className="flex big">
               <h3>Click! →</h3>
               <LikeButton
                 namespace="blog"

@@ -49,11 +49,11 @@ export default function Post() {
 
             <p>To install the NextJS component run</p>
             <pre>
-              <code class="language-javascript">yarn add @lyket/react</code>
+              <code className="language-javascript">yarn add @lyket/react</code>
             </pre>
             <p>or</p>
             <pre>
-              <code class="language-javascript">npm install @lyket/react</code>
+              <code className="language-javascript">npm install @lyket/react</code>
             </pre>
             <h2>Configuration</h2>
 
@@ -65,7 +65,7 @@ export default function Post() {
             </p>
 
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import {Provider} from '@lyket/react';
 
 NextJSDOM.render(
@@ -128,7 +128,7 @@ NextJSDOM.render(
               Reddit-like template.
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import { UpdownButton } from '@lyket/react';
 
 export default BlogPost = ({ title, content }) => {
@@ -204,7 +204,7 @@ export default BlogPost = ({ title, content }) => {
               example of using templates.
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import { UpdownButton } from '@lyket/react';
 
 export default StandingOvation = () => {
@@ -232,7 +232,7 @@ export default StandingOvation = () => {
               an example
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`import { UpdownButton } from '@lyket/react';
 
 export default Faq = () => {
@@ -282,7 +282,7 @@ export default Faq = () => {
               parameters by passing your own object:
             </p>
             <pre>
-              <code class="language-js">
+              <code className="language-js">
                 {`const defaultTheme = {
   colors: {
     background: '#e0e0e0',

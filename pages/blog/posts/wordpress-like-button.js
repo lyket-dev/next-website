@@ -51,7 +51,7 @@ export default function Post() {
               Lyket available all around our Wordpress site.
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<script
     src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa"
 />`}
@@ -84,7 +84,7 @@ export default function Post() {
             </p>
             <p>In the video we use this code to create a clap button</p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<div
     data-lyket-type="clap"
     data-lyket-namespace="testing-widget"

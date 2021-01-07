@@ -1,13 +1,59 @@
-import React from "react";
-import { ClapButton } from "@lyket/react";
+import React, { useState } from "react";
+import { Provider, ClapButton } from "@lyket/react";
 import Link from "next/link";
 import Head from "next/head";
+import TextField from "@material-ui/core/TextField";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Button from "@material-ui/core/Button";
 
 export const meta = {
   title: "How to add a clap button to a React website with Lyket"
 };
 
 export default function Post() {
+  const [dialogOpen, setDialog] = useState(false);
+
+  const openSubscribeModal = () => {
+    setTimeout(() => setDialog(true), 500);
+  };
+
+  const SubscribeDialog = (
+    <Dialog
+      open={dialogOpen}
+      onClose={() => setDialog(false)}
+      className="markdown"
+    >
+      <DialogTitle id="form-dialog-title">
+        Subscribe to our newsletter!
+      </DialogTitle>
+      <DialogContent>
+        <p>
+          Thank you so much for liking our post! Subscribe to our newsletter by
+          entering your email address here.
+        </p>
+        <TextField
+          autoFocus
+          margin="dense"
+          id="name"
+          label="Email Address"
+          type="email"
+          fullWidth
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={() => setDialog(false)} color="primary">
+          Cancel
+        </Button>
+        <Button onClick={() => setDialog(false)} color="primary">
+          Subscribe
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+
   return (
     <>
       <Head>
@@ -18,6 +64,7 @@ export default function Post() {
           name="description"
         />
       </Head>
+
       <div className="page">
         <section className="page__section">
           <h1 className="page__title">{meta.title}</h1>
@@ -34,285 +81,287 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              Lyket is the ultimate tool to quickly implement GDPR-compliant
-              clap buttons on any React project, NextJS, Gatsby, React Native
-              and any other framework that uses React. From the moment you
-              create the button our server will keep track of every visitor
-              interaction without storing their personal data.
+              Clap buttons are simply great. They are{" "}
+              <strong>perfect for blogs and portfolios</strong> because content
+              writers can get a flood of positive reinforcement and visitors can
+              express all their appreciation. Medium uses them for every of
+              their blog post and they became quite succesful and popular.
             </p>
             <p>
-              To get started you just need to signup to Lyket and get your
-              personal public API key. It is just a matter of seconds then to
-              start receiving feedback on your website!
+              But if you ever tried to add a{" "}
+              <strong>clap button to your React</strong> project, I am sure you
+              encountered some difficulties.
             </p>
-
-            <h2>Installation using React</h2>
-
-            <p>To install the React component run</p>
-            <pre>
-              <code class="language-javascript">yarn add @lyket/react</code>
-            </pre>
-            <p>or</p>
-            <pre>
-              <code class="language-javascript">npm install @lyket/react</code>
-            </pre>
-            <h2>Configuration</h2>
-
-            <h3>Set up the provider</h3>
-            <p>
-              The provider is in charge of loading the client that will be used
-              to make requests to Lyket's server using your personal public API
-              key.
-            </p>
-
-            <pre>
-              <code class="language-javascript">
-                {`import {Provider} from '@lyket/react';
-
-ReactDOM.render(
-  <Provider apiKey="[YOUR-API-KEY]">
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);`}
-              </code>
-            </pre>
-
-            <h5>Required props</h5>
             <ul>
               <li>
-                <strong>apiKey</strong>: you can get your public API key by
-                registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
+                Store claps somewhere otherwise they will be gone after a simple
+                page refresh. So you need a{" "}
+                <strong>database and some architecture</strong>.
+              </li>
+              <li>
+                See <strong>who has already clapped</strong> and how many times,
+                so if somebody returns to the page they can still see their
+                claps.
+              </li>
+              <li>
+                Decide how to <strong>visualize</strong> and what to do with all
+                this appreciation tokens!
               </li>
             </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>theme</strong>: This prop allows you to provide your
-                  own style to the default theme. Read more about it in the{" "}
-                  <em>Styling clap buttons</em> section at the end of this
-                  article
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>recaptchaSiteKey</strong>: if you enabled reCAPTCHA
-                  you need to provide your public key. Read more at the end of
-                  this document
-                </p>
-              </li>
-            </ul>
-            <h3>Create a clap button</h3>
+            <h3>Lyket solves all your problems</h3>
             <p>
-              When the React component is mounted, a fetch request is made to
-              retrieve info about the clap button with that certain id and
-              namespace. If no button is found, a new resource is created with
-              the id/namespace identifier.
+              Lyket is the ultimate tool to add GDPR-compliant{" "}
+              <strong>
+                clap buttons to any React project, including NextJS, Gatsby,
+                React Native
+              </strong>{" "}
+              and any other framework that uses React, and to be always updated
+              to what your visitors enjoy the most about your website.
             </p>
             <p>
-              Notice that the server will create a new resource for every
-              different and unique identifier, so if you change id or namespace
-              the new button won’t inherit the votes.
+              I will give you a few examples on how you can easily integrate
+              Lyket. Feel free to{" "}
+              <strong>copy and paste the snippets using a test API key</strong>,
+              but, remember to register to get your own!
             </p>
             <p>
-              Every time a user clicks on a button, the React component will
-              update the claps counter and flag that the user has already voted.
-              Visitors don't have to signup to any third party service.
-            </p>
-            <p>
-              Clap buttons behave like Medium applauses. Users can like multiple
-              times and every other call from the same user will increment the
-              claps number. Here is an example of a clap button with id
-              "applaude-me", namespace "post" and a Medium-clap template.
-            </p>
-            <pre>
-              <code class="language-javascript">
-                {`import { ClapButton } from '@lyket/react';
-
-export default BlogPost = ({ title, content }) => {
-  return (
-    <div>
-      {title}
-      <ClapButton
-        id="applaude-me"
-        namespace="post"
-        component={ClapButton.templates.Medium}
-      />
-      {content}
-    </div>
-  );
-};`}
-              </code>
-            </pre>
-            <h5>Required clap button props</h5>
-            <ul>
-              <li>
-                <strong>id</strong>: The API uses the ID to determine which
-                resource you want to interact with. It should be unique. It
-                accepts an alphanumeric string with maximum 50 characters.
-              </li>
-            </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>namespace</strong>: Giving a namespace is useful to
-                  keep buttons organized, and can be used to fetch statistics on
-                  your buttons filtering by namespace. Check the API docs for
-                  more information.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>hideCounterIfLessThan</strong>: You may not want to
-                  show a counter if you are not getting enough feedback. Specify
-                  the number of claps you want to receive before showing the
-                  counter.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>component</strong>: To change the aspect of the
-                  default button you can either provide one of the ready-made{" "}
-                  <strong>templates</strong> that Lyket provides or a{" "}
-                  <strong>custom React component</strong> in the component
-                  attribute. Let's go deeper on this crucial prop.
-                </p>
-              </li>
-            </ul>
-            <h4>Templates</h4>
-            <p>
-              A number of clap button templates are provided to use Lyket
-              out-of-the-box. You can see all the available options on{" "}
-              <Link href="/templates">
-                <a>the templates section</a>
+              In the first example we create a{" "}
+              <strong>
+                clap button with id "applause-react" under the "my-blog-post"
+                category
+              </strong>
+              . To do that we import the Provider component that configures
+              Lyket and the ClapButton component where we want our button to be.
+              Read more about the Provider component on the{" "}
+              <Link href="/docs/react">
+                <a>docs</a>
               </Link>
             </p>
+            <pre>
+              <code className="language-javascript">
+                {`import { Provider, ClapButton } from "@lyket/react";
+
+  <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
+    <ClapButton
+      namespace="my-blog-post"
+      id="applause-react"
+    />
+  </Provider>
+`}
+              </code>
+            </pre>
+            <p>
+              Try it out! It will add as many claps as the number of clicks.
+              There are no limits so your fans can really hit it!
+            </p>
+            <div className="center big">
+              <ClapButton namespace="blog" id="clap-button-react-example" />
+            </div>
+            <h3>Changing templates</h3>
+            <p>
+              You can change the style by choosing one of the templates you can
+              find in the{" "}
+              <Link href="/templates">
+                <a>templates section</a>
+              </Link>
+              . For clap buttons we have the Medium template, that emulates the
+              Medium clap button. Let's try it out!
+            </p>
+            <pre>
+              <code className="language-javascript">
+                {`<ClapButton
+  namespace="my-blog-post"
+  id="applause-react"
+  component={ClapButton.templates.Medium}
+/>`}
+              </code>
+            </pre>
+            <p>
+              You will get a clap button that looks and behaves just like
+              Medium's
+            </p>
+            <div className="center big">
+              <ClapButton
+                namespace="blog"
+                id="clap-button-react-example-twitter"
+                component={ClapButton.templates.Medium}
+              />
+            </div>
+            <h3>Changing colors</h3>
+            <p>
+              Some templates support color changing, for example the default
+              one. You can set your own color palette by configuring the
+              Provider.
+            </p>
+            <p>
+              <strong>background</strong> controls the background color of the
+              inactive clap button, the <strong>primary</strong> attribute will
+              change the background color of a clicked clap button, and the{" "}
+              <strong>text</strong> attribute changes the font color. It
+              supports rgba, hex, and color names.
+            </p>
+            <pre>
+              <code className="language-javascript">
+                {`import { Provider, ClapButton } from "@lyket/react";
+
+<Provider
+  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
+  theme={{
+    colors: {
+      background: "#b8fff3",
+      text: "violet",
+      primary: "rgba(255, 224, 138, 0.4)"
+    }
+  }}
+>
+  <ClapButton
+    namespace="my-blog-post"
+    id="applause-react"
+  />
+</Provider>`}
+              </code>
+            </pre>
+            <div className="center big">
+              <Provider
+                apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                theme={{
+                  colors: {
+                    background: "#b8fff3",
+                    text: "violet",
+                    primary: "rgba(255, 224, 138, 0.4)"
+                  }
+                }}
+              >
+                <ClapButton
+                  namespace="blog"
+                  id="clap-button-react-example-colors"
+                />
+              </Provider>
+            </div>
+            <h2>Creating your own button</h2>
+            <p>
+              You may want to <strong>customize your clap button</strong> to be
+              more consistent with your website, for example with your company
+              logo or an icon from your own icon set.
+            </p>
+            <p>
+              No problem! Here is an example of using the clapping hands emoji
+              as a clap button.
+            </p>
+            <pre>
+              <code className="language-javascript">
+                {`import { ClapButton } from '@lyket/react';
+
+<ClapButton
+  namespace="my-blog"
+  id="applause-now"
+>
+  {({ handlePress, totalClaps, userClaps, isLoading }) => {
+    return (
+      <div>
+        <button
+          onClick={handlePress}
+          disabled={isLoading}
+        >
+        👏
+        </button>
+        <div>Total claps: {totalClaps}</div>
+        <div>You clapped {userClaps} times!</div>
+      </div>
+    )
+  }}
+</ClapButton>`}
+              </code>
+            </pre>
+            <div className="center big">
+              <ClapButton
+                id="clap-button-react-example-custom"
+                namespace="blog"
+              >
+                {({ handlePress, totalClaps, userClaps, isLoading }) => {
+                  return (
+                    <div>
+                      <button
+                        className="big"
+                        onClick={handlePress}
+                        disabled={isLoading}
+                      >
+                        👏
+                      </button>
+                      <div>Total claps: {totalClaps}</div>
+                      <div>You clapped {userClaps} times!</div>
+                    </div>
+                  );
+                }}
+              </ClapButton>
+            </div>
+            <h3>Engage your visitors!</h3>
+            <p>
+              Once a visitor liked your content, you know you have their
+              attention, so why not use it as an occasion to engage further with
+              a call to action? Maybe you can ask your visitors to{" "}
+              <strong>subscribe to your newsletter after they clapped</strong>?
+              Nothing easier!
+            </p>
+            <p>You can use the onPress prop to do something like this:</p>
+            <code>
+              <pre>
+                {`<ClapButton
+  namespace="my-blog-post"
+  id="applause-react"
+  onPress={openSubscribeModal}
+/>`}
+              </pre>
+            </code>
+            {SubscribeDialog}
+            <p>
+              Try to click on the button, it will open a dialog asking to
+              subscribe!
+            </p>
+            <div className="flex big">
+              <h3>Click! →</h3>
+              <ClapButton
+                namespace="blog"
+                id="clap-button-react-example-onpress"
+                onPress={openSubscribeModal}
+              />
+            </div>
+            <h3>Now you can just sit back and watch the numbers grow!</h3>{" "}
+            <p>Where? On the dashboard, of course!</p>
+            <p>
+              Once you are registered you can access your private area and see
+              statistics on all the buttons you created. If you are already
+              registered,{" "}
+              <a href="https://app.lyket.dev/dashboard">
+                why don't you take a look now?
+              </a>
+            </p>
+            <p>
+              For more details about Lyket's React clap button, on how to
+              customize it and style it, you can read our{" "}
+              <Link href="/docs/react">
+                <a>React documentation</a>
+              </Link>
+              .
+            </p>
+            <h3>The other button types</h3>
+            <p>
+              Clap button is just one of the three kind of buttons that Lyket
+              offers. Each button has a different behaviour and provides a
+              different kind af feedback. Check out the other two here:
+            </p>
             <ul>
               <li>
-                <strong>Simple</strong>: default ClapButton - supports themes
-                prop
+                <Link href="/blog/posts/react-like-button">
+                  <a>How to create a React like button</a>
+                </Link>
               </li>
               <li>
-                <strong>Medium</strong>: Medium style ClapButton
+                <Link href="/blog/posts/react-like-dislike-button">
+                  <a>How to create a React like dislike button</a>
+                </Link>
               </li>
             </ul>
-            <p>
-              Import templates directly from the button component. Here is an
-              example of using templates.
-            </p>
-            <pre>
-              <code class="language-javascript">
-                {`import { ClapButton } from '@lyket/react';
-
-export default StandingOvation = () => {
-  return (
-    <>
-      <h2>Do you clap pizza?</h2>
-      <ClapButton
-        id="do-you-clap-pizza"
-        component={ClapButton.templates.Medium}
-      />
-    </>
-  );
-};`}
-              </code>
-            </pre>
-            <h4>Children or custom component</h4>
-            <p>
-              You may want to give a different aspect to a button, for example
-              using your logo as icon or add a callback after a user clicks. You
-              can do that by providing your own component!
-            </p>
-            <p>
-              Here are a few examples of using children for each button type.
-              You can pass a component also through the component prop. Here is
-              an example
-            </p>
-            <pre>
-              <code class="language-javascript">
-                {`import { ClapButton } from '@lyket/react';
-
-export default Faq = () => {
-  return (
-    <>
-      <h2>Applause for pizza!</h2>
-      <ClapButton id="claps-4-pizza" namespace="faq" hideCounterIfLessThan={1}>
-        ({ handlePress, totalClaps, userClaps, isLoading, isCounterVisible }) => {
-          return (
-            <>
-              <button onClick={handlePress} disabled={isLoading}>🍕</button>
-              {isCounterVisible && <div>Total: {totalClaps}</div>}
-              <div>You clapped {userClaps} times</div>
-            </>
-          )
-        }
-      </ClapButton>
-    </>
-  )
-};`}
-              </code>
-            </pre>
-
-            <h2>Styling buttons</h2>
-            <h3>Resizing</h3>
-            <p>
-              Clap buttons can be resized by wrapping them in a container and
-              changing the font-size.
-            </p>
-            <h3>Applying your own theme to the default template</h3>
-            <p>
-              Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
-              library, allowing you to provide your own theme to the buttons
-              through the <strong>theme</strong> prop in the provider.
-            </p>
-            <p>
-              These are the default values, you can change any of these
-              parameters by passing your own object:
-            </p>
-            <pre>
-              <code class="language-js">
-                {`const defaultTheme = {
-  colors: {
-    background: '#e0e0e0',
-    text: '#292929',
-    primary: '#22c1c3',
-    secondary: '#ff00c3',
-    accent: '#fcff4b',
-    highlight: '#e095ed',
-    muted: '#aaa',
-  },
-  fonts: {
-    body: 'inherit',
-    heading: 'inherit',
-    monospace: 'inherit',
-  },
-  fontWeights: {
-    body: 400,
-    bold: 700,
-  },
-};`}
-              </code>
-            </pre>
-            <p>
-              The Provider component makes a deep merge, so you can overwrite
-              the theme object totally or partially.
-            </p>
-            <p>
-              There are a few templates that support theming. Read the templates
-              detail to know which ones.
-            </p>
-            <h2>reCAPTCHA</h2>
-            <p>
-              Lyket is integrated with Google reCAPTCHA V3 to handle malicious
-              use without interrupting <em>human</em> users. To enable it you
-              need to provide your Google reCAPTCHA secret key in the user
-              settings in the private area and add your recaptcha site key
-              through the recaptchaSiteKey prop in the Provider. The key will be
-              encrypted.
-            </p>
           </div>
         </section>
       </div>

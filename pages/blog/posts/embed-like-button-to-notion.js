@@ -90,7 +90,7 @@ export default function Post() {
             </p>
 
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<html style="height: 100%;background-color: white;">
   <body>
     <div
@@ -117,7 +117,7 @@ export default function Post() {
               contain code something similar to this:
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<html style="height: 100%;background-color: white;">
   <body>
     <div

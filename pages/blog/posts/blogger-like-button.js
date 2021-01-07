@@ -50,7 +50,7 @@ export default function Post() {
               to create a clap button
             </p>
             <pre>
-              <code class="language-javascript">
+              <code className="language-javascript">
                 {`<div
       data-lyket-type="clap"
       data-lyket-namespace="testing-widget"
