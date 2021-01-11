@@ -6,6 +6,24 @@
 
 .page__section
   +wrap
+  position: relative
+  background-color: white
+
+.page__section--gradient
+  &::before
+    content: ""
+    transform: skewY(4deg)
+    +position(absolute, 0 0 0 0)
+    background: $light-gradient
+    height: 200px
+
+.page__section--primary
+  &::before
+    content: ""
+    transform: skewY(-4deg)
+    +position(absolute, 0 0 0 0)
+    background: $light-blue-gradient
+    height: 200px
 
 .page__container
   +vertical-padding(4)
@@ -30,3 +48,19 @@
   .page__text
     +font-size(gamma)
     +margin-bottom(6)
+
+  .page__section--gradient
+    &::before
+      content: ""
+      transform: skewY(2deg)
+      +position(absolute, 10px 0 0 0)
+      background: $light-gradient
+      height: 200px
+
+  .page__section--primary
+    &::before
+      content: ""
+      transform: skewY(2deg)
+      +position(absolute, 10px 0 0 0)
+      background: $light-blue-gradient
+      height: 200px

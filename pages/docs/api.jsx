@@ -5,11 +5,10 @@ import SwaggerUI from "swagger-ui-react";
 export default function Docs() {
   return (
     <div className="page">
+      <div className="page__section--gradient" />
       <section className="page__section">
+        <h1 className="docs__title">API docs</h1>
         <QuickDocsMenu />
-      </section>
-      <section className="page__section">
-        <h1 className="page__title">Lyket API docs</h1>
         <div className="docs">
           <SwaggerUI url={`${process.env.apiBaseUrl}/schema`} />
         </div>

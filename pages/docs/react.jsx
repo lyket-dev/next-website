@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import useAsyncEffect from "../../utils/useAsyncEffect";
 import ReactMarkdown from "react-markdown";
 import QuickDocsMenu from "components/QuickDocsMenu";
+import Code from "components/Code";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -28,31 +29,39 @@ export default function Docs() {
         />
       </Head>
       <div className="page">
+        <div className="page__section--gradient" />
         <section className="page__section">
+          <h1 className="docs__title">React docs</h1>
           <QuickDocsMenu />
-        </section>
-        <section className="page__section">
-          <h1 className="page__title">React docs</h1>
           <div className="docs">
             <div className="markdown">
               <p>
-                Lyket is compatible with any React framework. You can use it
-                with <strong>Gatsby, NextJS, create-react-app</strong>, and so
-                on! You can read here the{" "}
-                <strong>
-                  <a
-                    href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @lyket/react
-                  </a>
-                </strong>{" "}
-                complete documentation and start taming the buttons!
+                Lyket is the ultimate tool to add like, applause and
+                like/dislike buttons, and{" "}
+                <strong>it gives its best with React</strong>!
               </p>
               <p>
-                If you prefer to see examples and use some ready made snippets,
-                you can visit:
+                The React library allows a{" "}
+                <strong>great deal of customization</strong> with just a few
+                lines of code and it's{" "}
+                <strong>compatible with all React frameworks</strong> like
+                NextJS, Gatsby, create-react-app. This is the{" "}
+                <strong>full React documentation</strong> that you can also find
+                on the official OS repo on{" "}
+                <a
+                  href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
+                .
+              </p>
+              <p>
+                If you want to discover how to use the{" "}
+                <strong>React library in detail</strong> you came to the right
+                place. If you prefer to learn with examples and ready-made
+                snippets to copy and paste, you can visit:
               </p>
               <ul>
                 <li>
@@ -72,27 +81,18 @@ export default function Docs() {
                 </li>
               </ul>
               <h2>Installation</h2>
-              <p>To install the component run</p>
-              <pre>
-                <code className="language-javascript">
-                  yarn add @lyket/react
-                </code>
-              </pre>
+              <p>Well, Let's get started! To install the component run</p>
+              <Code>yarn add @lyket/react</Code>
               <p>or</p>
-              <pre>
-                <code className="language-javascript">
-                  npm install @lyket/react
-                </code>
-              </pre>
+              <Code>npm install @lyket/react</Code>
               <h2>Provider</h2>
               <p>
                 Add the Provider component top-level and configure it using your
                 personal public API key that you can get after registering to
                 Lyket
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { Provider } from '@lyket/react';
+              <Code>
+                {`import { Provider } from '@lyket/react';
 
 ReactDOM.render(
   <Provider apiKey="[YOUR-API-KEY]">
@@ -100,8 +100,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );`}
-                </code>
-              </pre>
+              </Code>
               <h5>Required props</h5>
               <ul>
                 <li>
@@ -230,9 +229,8 @@ ReactDOM.render(
                 Users can only like once and a subsequent request from the same
                 user will remove the user's like.
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { LikeButton } from '@lyket/react';
+              <Code>
+                {`import { LikeButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
   return (
@@ -246,8 +244,7 @@ export BlogPost = ({ title, content }) => {
     </div>
   );
 };`}
-                </code>
-              </pre>
+              </Code>
               <h4>Optional props</h4>
               <ul>
                 <li>
@@ -300,9 +297,8 @@ export BlogPost = ({ title, content }) => {
                 Users can only like or dislike once and a subsequent action from
                 the same user will remove the user's like or dislike.
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { UpdownButton } from '@lyket/react';
+              <Code>
+                {`import { UpdownButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
   return (
@@ -316,8 +312,7 @@ export BlogPost = ({ title, content }) => {
     </div>
   );
 };`}
-                </code>
-              </pre>
+              </Code>
               <h4 id="optional-props-3">Optional props</h4>
               <ul>
                 <li>
@@ -380,9 +375,8 @@ export BlogPost = ({ title, content }) => {
                 multiple times and every other call from the same user will
                 increment the claps number.
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { ClapButton } from '@lyket/react';
+              <Code>
+                {`import { ClapButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
   return (
@@ -393,8 +387,7 @@ export BlogPost = ({ title, content }) => {
     </div>
   );
 };`}
-                </code>
-              </pre>
+              </Code>
               <h4 id="optional-props-4">Optional props</h4>
               <ul>
                 <li>
@@ -475,9 +468,8 @@ export BlogPost = ({ title, content }) => {
                 Import templates directly from the button. Here is an example of
                 using the Twitter template on a LikeButton.
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { LikeButton } from '@lyket/react';
+              <Code>
+                {`import { LikeButton } from '@lyket/react';
 
 export StandingOvation = () => {
   return (
@@ -490,8 +482,7 @@ export StandingOvation = () => {
     </>
   );
 };`}
-                </code>
-              </pre>
+              </Code>
               <h2>Custom Buttons</h2>
               <p>
                 You may want to give a different flavour to a button, for
@@ -506,9 +497,8 @@ export StandingOvation = () => {
               <p>
                 <strong>Custom LikeButton</strong>
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { LikeButton } from '@lyket/react';
+              <Code>
+                {`import { LikeButton } from '@lyket/react';
 
 export Faq = () => {
   return (
@@ -538,14 +528,12 @@ export Faq = () => {
     </>
   )
 };`}
-                </code>
-              </pre>
+              </Code>
               <p>
                 <strong>Custom ClapButton</strong>
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { ClapButton } from '@lyket/react';
+              <Code>
+                {`import { ClapButton } from '@lyket/react';
 
 export Faq = () => {
   return (
@@ -575,14 +563,12 @@ export Faq = () => {
     </>
   );
 };`}
-                </code>
-              </pre>
+              </Code>
               <p>
                 <strong>Custom UpdownButton</strong>
               </p>
-              <pre>
-                <code className="language-javascript">
-                  {`import { UpdownButton } from '@lyket/react';
+              <Code>
+                {`import { UpdownButton } from '@lyket/react';
 
 export Faq = () => {
   return (
@@ -616,8 +602,7 @@ export Faq = () => {
     </>
   );
 };`}
-                </code>
-              </pre>
+              </Code>
               <h2>Styling buttons</h2>
               <h3>Resizing</h3>
               <p>
@@ -653,9 +638,8 @@ export Faq = () => {
                 </li>
               </ul>
               <p>These are the default values:</p>
-              <pre>
-                <code className="language-js">
-                  {`const defaultTheme = {
+              <Code>
+                {`const defaultTheme = {
   colors: {
     primary: '#22c1c3',
     secondary: '#ff00c3',
@@ -672,8 +656,7 @@ export Faq = () => {
     bold: 700,
   },
 };`}
-                </code>
-              </pre>
+              </Code>
               <p>
                 The Provider component makes a deep merge, so you can overwrite
                 the theme object totally or partially.

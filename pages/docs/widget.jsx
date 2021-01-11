@@ -1,5 +1,6 @@
 import React from "react";
 import QuickDocsMenu from "components/QuickDocsMenu";
+import Code from "components/Code";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -17,11 +18,10 @@ export default function Docs() {
         />
       </Head>
       <div className="page">
+        <div className="page__section--gradient" />
         <section className="page__section">
+          <h1 className="docs__title">Widget docs</h1>
           <QuickDocsMenu />
-        </section>
-        <section className="page__section">
-          <h1 className="page__title">Widget docs</h1>
           <div className="docs">
             <div className="markdown">
               <p>
@@ -63,12 +63,10 @@ export default function Docs() {
                 your Lyket API key as argument, then just add an element with a
                 data-lyket-type anywhere in your code to create buttons.
               </p>
-              <pre>
-                <code className="language-html">
-                  &lt;script
-                  src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
-                </code>
-              </pre>
+              <Code>
+                &lt;script
+                src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
+              </Code>
               <h2>Buttons</h2>
               <p>
                 When you add a Lyket element a GET request is made to retrieve
@@ -97,9 +95,8 @@ export default function Docs() {
                 user's like.
               </p>
               <p>Use the data-lyket-type="like" to create a like button.</p>
-              <pre>
-                <code className="language-html">
-                  {`<!-- minimal settings -->
+              <Code>
+                {`<!-- minimal settings -->
 <div data-lyket-type="like" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
@@ -116,8 +113,7 @@ export default function Docs() {
   data-lyket-namespace="blog"
   data-lyket-template="twitter"
 ></div>`}
-                </code>
-              </pre>
+              </Code>
               <h3>Clap button</h3>
               <p>
                 Clap buttons behave like Medium applauses. Users can like
@@ -125,9 +121,8 @@ export default function Docs() {
                 increment the claps number.
               </p>
               <p>Use the data-lyket-type="clap" to create a clap button.</p>
-              <pre>
-                <code className="language-html">
-                  {`<!-- minimal settings -->
+              <Code>
+                {`<!-- minimal settings -->
 <div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
@@ -144,8 +139,7 @@ export default function Docs() {
   data-lyket-namespace="blog"
   data-lyket-template="medium"
 ></div>`}
-                </code>
-              </pre>
+              </Code>
               <h3>Up/down button</h3>
               <p>
                 Up/down buttons behave like Reddit buttons. Users can only vote
@@ -153,9 +147,8 @@ export default function Docs() {
                 remove the user's vote or unvote.
               </p>
               <p>Use the data-lyket-type="updown" to create a updown button.</p>
-              <pre>
-                <code className="language-html">
-                  {`<!-- minimal settings -->
+              <Code>
+                {`<!-- minimal settings -->
 <div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
@@ -172,8 +165,7 @@ export default function Docs() {
   data-lyket-namespace="blog"
   data-lyket-template="reddit"
 ></div>`}
-                </code>
-              </pre>
+              </Code>
               <h2 id="styling-the-buttons">Styling the buttons</h2>
               <p>
                 You can change the default colors by providing your own color
@@ -203,9 +195,8 @@ export default function Docs() {
                 </li>
               </ul>
               <p>Here is an example for an Updown button</p>
-              <pre>
-                <code className="language-html">
-                  {`<!-- button with color scheme -->
+              <Code>
+                {`<!-- button with color scheme -->
 <div
   data-lyket-type="updown"
   data-lyket-id="my-first-post"
@@ -216,8 +207,7 @@ export default function Docs() {
   data-lyket-color-highligh="#ff00c3"
 ></div>
 `}
-                </code>
-              </pre>
+              </Code>
               <h2>Button Templates</h2>
               <p>
                 Browse our{" "}

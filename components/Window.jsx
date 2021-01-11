@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Prism } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import Code from "components/Code";
 
 export default function Window({ currentButton }) {
   const [type, setType] = useState("html");
@@ -53,9 +52,7 @@ export default function Window({ currentButton }) {
         </a>
       </div>
       <div className="window__body">
-        <Prism language={"javascript"} style={dracula} showLineNumbers>
-          {type === "react" ? reactText() : htmlText()}
-        </Prism>
+        <Code>{type === "react" ? reactText() : htmlText()}</Code>
         <button
           className="copy-button"
           onClick={e => {

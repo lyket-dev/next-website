@@ -15,13 +15,13 @@ export default function Home() {
       <section className="header">
         <div className="header__container">
           <div>
-            <h2 className="header__title">
+            <h1 className="header__title">
               <Decorator
                 fulltext="Start getting feedback now!"
                 toDecorate="feedback"
                 color="blue"
               />
-            </h2>
+            </h1>
           </div>
           <div>
             <p className="header__subtitle">

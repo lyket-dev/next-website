@@ -1,13 +1,57 @@
-import React from "react";
-import { UpdownButton } from "@lyket/react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { UpdownButton, Provider } from "@lyket/react";
+import Code from "components/Code";
+import TextField from "@material-ui/core/TextField";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Button from "@material-ui/core/Button";
 
 export const meta = {
   title: "How to add like/dislike buttons to any React website with Lyket"
 };
 
 export default function Post() {
+  const [dialogOpen, setDialog] = useState(false);
+
+  const openSubscribeModal = () => {
+    setTimeout(() => setDialog(true), 500);
+  };
+
+  const SubscribeDialog = (
+    <Dialog
+      open={dialogOpen}
+      onClose={() => setDialog(false)}
+      className="markdown"
+    >
+      <DialogTitle id="form-dialog-title">
+        Subscribe to our newsletter!
+      </DialogTitle>
+      <DialogContent>
+        <p>Thanks for liking our blog post! Leave us your email for more!</p>
+        <TextField
+          autoFocus
+          margin="dense"
+          id="name"
+          label="Email Address"
+          type="email"
+          fullWidth
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={() => setDialog(false)} color="primary">
+          Cancel
+        </Button>
+        <Button onClick={() => setDialog(false)} color="primary">
+          Subscribe
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+
   return (
     <>
       <Head>
@@ -26,297 +70,325 @@ export default function Post() {
           </div>
           <p className="page__text"></p>
         </section>
-        <div className="avatar"></div>
         <section className="page__section">
           <div className="markdown">
             <p>
-              Lyket is the ultimate tool to quickly implement GDPR-compliant
-              like/dislike buttons on any React project, NextJS, Gatsby, React
-              Native and any other framework that uses React. From the moment
-              you create the button our server will keep track of every visitor
-              interaction without storing their personal data.
+              <strong>Like/dislike buttons</strong> are crucial if you want to
+              let visitors judge your content. For example, in a documentation
+              you want to know if the instructions you are providing to use your
+              service are clear enough.
             </p>
             <p>
-              To get started you just need to signup to Lyket and get your
-              personal public API key. It is just a matter of seconds then to
-              start receiving feedback on your website!
+              In this post I will try to give a few like/dislike button examples
+              that you can <strong>copy and paste directly in your code</strong>{" "}
+              to see the magic happen.
             </p>
-
-            <h2>Installation using React</h2>
-
-            <p>To install the React component run</p>
-            <pre>
-              <code className="language-javascript">yarn add @lyket/react</code>
-            </pre>
-            <p>or</p>
-            <pre>
-              <code className="language-javascript">npm install @lyket/react</code>
-            </pre>
-            <h2>Configuration</h2>
-
-            <h3>Set up the provider</h3>
+            <h3>What Lyket can do</h3>
             <p>
-              The provider is in charge of loading the client that will be used
-              to make requests to Lyket's server using your personal public API
-              key.
+              If you were trying to implement a feedback system by yourself in
+              your React project, you would need to be aware of three main
+              things
             </p>
-
-            <pre>
-              <code className="language-javascript">
-                {`import {Provider} from '@lyket/react';
-
-ReactDOM.render(
-  <Provider apiKey="[YOUR-API-KEY]">
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);`}
-              </code>
-            </pre>
-
-            <h5>Required props</h5>
             <ul>
               <li>
-                <strong>apiKey</strong>: you can get your public API key by
-                registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
+                <strong>Storing preferences in a database</strong>. Otherwise
+                simply clearing the local storage will result in data loss.
+              </li>
+              <li>
+                <strong>Track visitors interactions</strong>, so if a visitor
+                returns to the page their preference is still there.
+              </li>
+              <li>
+                <strong>Visualize</strong> all this information!
               </li>
             </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>theme</strong>: This prop allows you to provide your
-                  own style to the default theme. Read more about it in the{" "}
-                  <em>Styling updown buttons</em> section at the end of this
-                  article
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>recaptchaSiteKey</strong>: if you enabled reCAPTCHA
-                  you need to provide your public key. Read more at the end of
-                  this document
-                </p>
-              </li>
-            </ul>
-            <h3>Create like/dislike buttons</h3>
             <p>
-              When the React component is mounted, a fetch request is made to
-              retrieve info about the like/dislike buttons with that certain id
-              and namespace. If no button is found, a new resource is created
-              with the id/namespace identifier.
+              Lyket is a tool for adding like/dislike buttons to NextJS, Gatsby,
+              or React Native website without any of these problems :D
             </p>
             <p>
-              Notice that the server will create a new resource for every
-              different and unique identifier, so if you change id or namespace
-              the new button won’t inherit the votes.
+              It stores every visitor interaction in its database and then
+              <strong>you are in complete control of your data</strong>. You can
+              visualize it in your private area, import and export anytime.
+              Moreover you don't have to worry about privacy because Lyket does
+              not store sensible data making it <strong>GDPR-compliant</strong>.
+            </p>
+            <h3>A simple like/dislike button</h3>
+            <p>
+              Let's start with the the <strong>minimal configuration</strong>.
+              You can copy and paste this snippet into your code or you can see
+              the result here. Remember! We are using a test API key so remember
+              to register after and get your own or you will loose your data!
             </p>
             <p>
-              Every time a user clicks on a button, the React component will
-              update the likes/dislikes counter and flag that the user has
-              already voted. Visitors don't have to signup to any third party
-              service.
-            </p>
-            <p>
-              Like/dislike buttons behave like Reddit buttons. Users can only
-              like or dislike once and a subsequent call from the same user will
-              remove the user's like or dislike. Here is an example of
-              like/dislike button with id "do-you-enjoy-chess", namespace "post"
-              and a Reddit-like template.
-            </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { UpdownButton } from '@lyket/react';
-
-export default BlogPost = ({ title, content }) => {
-  return (
-    <div>
-      {title}
-      <UpdownButton
-        id="do-you-enjoy-chess"
-        namespace="post"
-        component={UpdownButton.templates.Reddit}
-      />
-      {content}
-    </div>
-  );
-};`}
-              </code>
-            </pre>
-            <h5>Required like button props</h5>
-            <ul>
-              <li>
-                <strong>id</strong>: The API uses the ID to determine which
-                resource you want to interact with. It should be unique. It
-                accepts an alphanumeric string with maximum 50 characters.
-              </li>
-            </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>namespace</strong>: Giving a namespace is useful to
-                  keep buttons organized, and can be used to fetch statistics on
-                  your buttons filtering by namespace. Check the API docs for
-                  more information.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>hideCounterIfLessThan</strong>: You may not want to
-                  show a counter if you are not getting enough feedback. Specify
-                  the number of likes you want to receive before showing the
-                  counter.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>component</strong>: To change the aspect of the
-                  default button you can either provide one of the ready-made{" "}
-                  <strong>templates</strong> that Lyket provides or a{" "}
-                  <strong>custom React component</strong> in the component
-                  attribute. Let's go deeper on this crucial prop.
-                </p>
-              </li>
-            </ul>
-            <h4>Templates</h4>
-            <p>
-              A number of like button templates are provided to use Lyket
-              out-of-the-box. You can see all the available options on{" "}
-              <Link href="/templates">
-                <a>the templates section</a>
+              First you should get an API key be registering to Lyket and use it
+              to configure the Provider component. In this example we will use a
+              test API key that resets data every day so remember to get your
+              own! Read more about configuring the Provider component on the{" "}
+              <Link href="/docs/react">
+                <a>docs</a>
               </Link>
             </p>
+            <p>
+              Then, we choose an id, in this case it's
+              "like-dislike-buttons-api" that belongs to the "my-documentation"
+              category. It's all you need to get started!
+            </p>
+            <Code>
+              {`import { Provider, UpdownButton } from "@lyket/react";
+
+<Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
+  <UpdownButton
+    namespace="my-documentation"
+    id="like-dislike-buttons-api"
+  />
+</Provider>`}
+            </Code>
+            <p>
+              If you copy and paste this code you will see the following button.
+              Try it out! If you click on it once{" "}
+              <strong>it will add one like or dislike</strong>. Click on it
+              twice and the like/dislike will be removed, just like Reddit.
+            </p>
+            <div className="center big">
+              <UpdownButton
+                namespace="blog"
+                id="like-dislike-button-react-example"
+              />
+            </div>
+            <h3>Changing templates</h3>
+            <p>
+              Speaking about Reddit, you can change the like/dislike button
+              style by choosing one of the templates you can find in the{" "}
+              <Link href="/templates">
+                <a>templates section</a>
+              </Link>
+              . If you choose the Reddit template you will get the famous Reddit
+              arrows, like this.
+            </p>
+            <Code>
+              {`<UpdownButton
+  namespace="my-documentation"
+  id="like-dislike-buttons-api"
+  component={UpdownButton.templates.Reddit}
+/>`}
+            </Code>
+            <div className="center big">
+              <UpdownButton
+                namespace="blog"
+                id="like-dislike-button-react-example-reddit"
+                component={UpdownButton.templates.Reddit}
+              />
+            </div>
+            <h3>Changing colors</h3>
+            <p>
+              Some templates support color changing, for example the default
+              one, so you can <strong>use your own color palette</strong>! You
+              can do that by configuring the Provider component. Theme supports
+              rgba, hex, and color names.
+            </p>
+            <p>
+              The <strong>background</strong> attribute changes the background
+              color of inactive like/dislike button.
+            </p>
+            <p>
+              the <strong>primary</strong> attribute will change the background
+              color of a clicked like button
+            </p>
+            <p>
+              the <strong>secondary</strong> attribute will change the
+              background color of a clicked dislike button
+            </p>
+            <p>
+              The <strong>text</strong> attribute changes the counter font color
+              and the icon color.
+            </p>
+            <pre>
+              <Code>
+                {`import { Provider, UpdownButton } from "@lyket/react";
+
+<Provider
+  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
+  theme={{
+    colors: {
+      background: "rgba(255, 224, 138, 0.4)",
+      text: "violet",
+      primary: "#b8fff3"
+      secondary: "rgba(220, 234, 108, 0.6)"
+    }
+  }}
+>
+  <UpdownButton
+    namespace="my-documentation"
+    id="like-dislike-buttons-api"
+  />
+</Provider>
+  `}
+              </Code>
+            </pre>
+            <div className="center big">
+              <Provider
+                apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                theme={{
+                  colors: {
+                    background: "rgba(255, 224, 138, 0.4)",
+                    text: "violet",
+                    primary: "#b8fff3",
+                    secondary: "rgba(220, 234, 108, 0.6)"
+                  }
+                }}
+              >
+                <UpdownButton
+                  namespace="blog"
+                  id="like-dislike-button-react-example-colors"
+                />
+              </Provider>
+            </div>
+            <h2>Creating your own button</h2>
+            <p>
+              You may want to give a like/dislike button to be more consistent
+              with your website, for example use your own logo an icon from your
+              own icon set as background for a like/dislike button!
+            </p>
+            <p>
+              Nothing easier! Here is an example of using the pizza emoji as a
+              like button!
+            </p>
+            <Code>
+              {`import { UpdownButton } from '@lyket/react';
+
+<UpdownButton
+  id="pizza"
+  namespace="great-things"
+>
+  {({ handlePressUp,handlePressUp, totalVotes, userVoteDirection, isLoading }) => {
+    return (
+      <div>
+        <button
+          className="big"
+          onClick={handlePressUp}
+          disabled={isLoading}
+        >
+          + 🍕
+        </button>
+        <span> or </span>
+        <button
+          className="big"
+          onClick={handlePressDown}
+          disabled={isLoading}
+        >
+          - 🍕
+        </button>
+        <div>Total votes: {totalVotes}</div>
+        {userVoteDirection > 0 ? <div>More pizza!</div> : <div>Less pizza!</div>}
+      </div>
+    )
+  }}
+</UpdownButton>`}
+            </Code>
+            <div className="center big">
+              <UpdownButton
+                id="like-dislike-button-react-example-custom"
+                namespace="blog"
+              >
+                {({
+                  handlePressUp,
+                  handlePressDown,
+                  totalVotes,
+                  userVoteDirection,
+                  isLoading
+                }) => {
+                  return (
+                    <div>
+                      <button
+                        className="big"
+                        onClick={handlePressUp}
+                        disabled={isLoading}
+                      >
+                        + 🍕
+                      </button>
+                      <span> or </span>
+                      <button
+                        className="big"
+                        onClick={handlePressDown}
+                        disabled={isLoading}
+                      >
+                        - 🍕
+                      </button>
+                      <div>Total votes: {totalVotes}</div>
+                      {userVoteDirection > 0 ? (
+                        <div>More pizza!</div>
+                      ) : (
+                        <div>Less pizza!</div>
+                      )}
+                    </div>
+                  );
+                }}
+              </UpdownButton>
+            </div>
+            <p>Now you can click on pizza and see your score growing!</p>{" "}
+            <p>Where? On the dashboard of course!</p>
+            <p>
+              Once you are registered you can access your private area and take
+              a look on all the buttons you created and all the likes that a
+              button has received. If you are already registered{" "}
+              <a href="https://app.lyket.dev/dashboard">take a look now</a>!
+            </p>
+            <p>
+              For more details about Lyket's React like button you can read our{" "}
+              <Link href="/docs/react">
+                <a>React documentation</a>
+              </Link>
+              .
+            </p>
+            <h3>Engage your visitors!</h3>
+            <p>
+              Once you have the buttons where you want them to be, for example
+              in your blog posts, or in your documentation, you can start
+              thinking about how to{" "}
+              <strong>put this user-feedback to good use</strong>. Maybe asking
+              your visitors to <strong>subscribe to your newsletter</strong>{" "}
+              after they liked one of your articles? Piece of cake!
+            </p>
+            <p>You can use the onPressUp prop to do something like this:</p>
+            <Code>
+              {`<UpdownButton
+  namespace="my-documentation"
+  id="like-dislike-buttons-api"
+  onPressUp={openSubscribeModal}
+/>`}
+            </Code>
+            {SubscribeDialog}
+            <p>
+              Try to click on the button! It will open a dialog with the
+              subscription form!
+            </p>
+            <div className="flex big">
+              <h3>Click! →</h3>
+              <UpdownButton
+                namespace="blog"
+                id="like-dislike-button-react-example-onpress"
+                onPressUp={openSubscribeModal}
+              />
+            </div>
+            <h3>The other button types</h3>
+            <p>
+              Like/dislike button is just one of the three kind of buttons that
+              Lyket offers. Each button has a different behaviour and can get
+              you a different kind af feedback. See also{" "}
+            </p>
             <ul>
               <li>
-                <strong>Simple</strong>: default UpdownButton - supports themes
-                prop
+                <Link href="/blog/posts/react-clap-button">
+                  <a>How to create a React clap button</a>
+                </Link>
               </li>
               <li>
-                <strong>Reddit</strong>: Reddit style UpdownButton
+                <Link href="/blog/posts/react-like-button">
+                  <a>How to create a React like button</a>
+                </Link>
               </li>
             </ul>
-            <p>
-              Import templates directly from the button component. Here is an
-              example of using templates.
-            </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { UpdownButton } from '@lyket/react';
-
-export default StandingOvation = () => {
-  return (
-    <>
-      <h2>Do you like pizza?</h2>
-      <UpdownButton
-        id="do-you-like-pizza"
-        component={UpdownButton.templates.Reddit}
-      />
-    </>
-  );
-};`}
-              </code>
-            </pre>
-            <h4>Children or custom component</h4>
-            <p>
-              You may want to give a different aspect to a button, for example
-              using your logo as icon or add a callback after a user clicks. You
-              can do that by providing your own component!
-            </p>
-            <p>
-              Here are a few examples of using children for each button type.
-              You can pass a component also through the component prop. Here is
-              an example
-            </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { UpdownButton } from '@lyket/react';
-
-export default Faq = () => {
-  return (
-    <>
-      <h2>Do you like pizza?</h2>
-      <UpdownButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
-        ({
-          pressUp,
-          pressDown,
-          totalScore,
-          userVoteDirection,
-          isCounterVisible,
-          isLoading
-        }) => {
-          return (
-            <>
-              <button onClick={pressUp} disabled={isLoading}>Of course! 🍕🍕🍕</button>
-              <button onClick={pressDown} disabled={isLoading}>I am a bad person</button>
-              {isCounterVisible && <p>Total: {totalScore}</p>}
-              <p>Your vote: {userVoteDirection}</p>
-            </>
-          )
-        }
-      </UpdownButton>
-    </>
-  )
-};`}
-              </code>
-            </pre>
-
-            <h2>Styling buttons</h2>
-            <h3>Resizing</h3>
-            <p>
-              Like buttons can be resized by wrapping them in a container and
-              changing the font-size.
-            </p>
-            <h3>Applying your own theme to the default template</h3>
-            <p>
-              Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
-              library, allowing you to provide your own theme to the buttons
-              through the <strong>theme</strong> prop in the provider.
-            </p>
-            <p>
-              These are the default values, you can change any of these
-              parameters by passing your own object:
-            </p>
-            <pre>
-              <code className="language-js">
-                {`const defaultTheme = {
-    colors: {
-      background: '#e0e0e0',
-      text: '#292929',
-      primary: '#22c1c3',
-      secondary: '#ff00c3',
-      highlight: '#e095ed',
-    },
-    fonts: {
-      body: 'inherit',
-      heading: 'inherit',
-      monospace: 'inherit',
-    },
-    fontWeights: {
-      body: 400,
-      bold: 700,
-    },
-  };`}
-              </code>
-            </pre>
-            <p>
-              The Provider component makes a deep merge, so you can overwrite
-              the theme object totally or partially.
-            </p>
-            <p>
-              There are a few templates that support theming. Read the templates
-              detail to know which ones.
-            </p>
-            <h2>reCAPTCHA</h2>
-            <p>
-              Lyket is integrated with Google reCAPTCHA V3 to handle malicious
-              use without interrupting <em>human</em> users. To enable it you
-              need to provide your Google reCAPTCHA secret key in the user
-              settings in the private area and add your recaptcha site key
-              through the recaptchaSiteKey prop in the Provider. The key will be
-              encrypted.
-            </p>
           </div>
         </section>
       </div>
