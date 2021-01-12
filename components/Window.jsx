@@ -15,7 +15,7 @@ export default function Window({ currentButton }) {
     id="everybody-${currentButton}-now"
   />
 </Provider>
-  `;
+`;
   };
 
   const htmlText = () => {

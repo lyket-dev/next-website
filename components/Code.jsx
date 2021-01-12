@@ -1,16 +1,14 @@
-import React from "react";
-import { PrismLight as Prism } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { jsx } from "react-syntax-highlighter/dist/cjs/languages/prism";
-
-Prism.registerLanguage("jsx", jsx);
+import React, { useEffect } from "react";
+import Prism from "prismjs";
+import PrismJsx from "prismjs/components/prism-jsx.min";
+import Line from "prismjs/plugins/line-numbers/prism-line-numbers.js";
 
 export default function Code({ children }) {
+  useEffect(Prism.highlightAll, [children]);
+
   return (
-    <code>
-      <Prism language={"jsx"} style={dracula} showLineNumbers>
-        {children}
-      </Prism>
-    </code>
+    <pre className="language-jsx line-numbers">
+      <code>{children}</code>
+    </pre>
   );
 }

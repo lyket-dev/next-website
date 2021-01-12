@@ -8,6 +8,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
+import Code from "components/Code";
 
 export const meta = {
   title: "How to add a like button to any React website with Lyket"
@@ -132,9 +133,8 @@ export default function Post() {
                 <a>docs</a>
               </Link>
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { Provider, LikeButton } from "@lyket/react";
+            <Code>
+              {`import { Provider, LikeButton } from "@lyket/react";
 
   <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
     <LikeButton
@@ -143,8 +143,7 @@ export default function Post() {
     />
   </Provider>
 `}
-              </code>
-            </pre>
+            </Code>
             <p>
               If you copy and paste this code you will see the following button.
               Try it out! If you click on it once{" "}
@@ -164,15 +163,13 @@ export default function Post() {
               . If you choose the Twitter template you will get the famous
               Twitter heart
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`<LikeButton
+            <Code>
+              {`<LikeButton
   namespace="my-blog-post"
   id="how-to-beat-me-at-chess"
   component={LikeButton.templates.Twitter}
 />`}
-              </code>
-            </pre>
+            </Code>
             <div className="center big">
               <LikeButton
                 namespace="blog"
@@ -199,9 +196,8 @@ export default function Post() {
               The <strong>text</strong> attribute changes the counter font color
               and the icon color.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { Provider, LikeButton } from "@lyket/react";
+            <Code>
+              {`import { Provider, LikeButton } from "@lyket/react";
 
 <Provider
   apiKey="acc0dbccce8e557db5ebbe6d605aaa"
@@ -219,8 +215,7 @@ export default function Post() {
   />
 </Provider>
   `}
-              </code>
-            </pre>
+            </Code>
             <div className="center big">
               <Provider
                 apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
@@ -248,9 +243,8 @@ export default function Post() {
               Nothing easier! Here is an example of using the pizza emoji as a
               like button!
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+            <Code>
+              {`import { LikeButton } from '@lyket/react';
 
 <LikeButton
   id="pizza"
@@ -272,8 +266,7 @@ export default function Post() {
     )
   }}
 </LikeButton>`}
-              </code>
-            </pre>
+            </Code>
             <div className="center big">
               <LikeButton
                 id="like-button-react-example-custom"
@@ -321,15 +314,13 @@ export default function Post() {
               after they liked one of your articles? Piece of cake!
             </p>
             <p>You can use the onPress prop to do something like this:</p>
-            <code>
-              <pre>
-                {`<LikeButton
+            <Code>
+              {`<LikeButton
   namespace="my-blog-post"
   id="how-to-beat-me-at-chess"
   onPress={openSubscribeModal}
 />`}
-              </pre>
-            </code>
+            </Code>
             {SubscribeDialog}
             <p>
               Try to click on the button! It will open a dialog with the

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Provider, ClapButton } from "@lyket/react";
 import Link from "next/link";
 import Head from "next/head";
+import Code from "components/Code";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -137,9 +138,8 @@ export default function Post() {
                 <a>docs</a>
               </Link>
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { Provider, ClapButton } from "@lyket/react";
+            <Code>
+              {`import { Provider, ClapButton } from "@lyket/react";
 
   <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
     <ClapButton
@@ -148,8 +148,7 @@ export default function Post() {
     />
   </Provider>
 `}
-              </code>
-            </pre>
+            </Code>
             <p>
               Try it out! It will add as many claps as the number of clicks.
               There are no limits so your fans can really hit it!
@@ -167,15 +166,13 @@ export default function Post() {
               . For clap buttons we have the Medium template, that emulates the
               Medium clap button. Let's try it out!
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`<ClapButton
+            <Code>
+              {`<ClapButton
   namespace="my-blog-post"
   id="applause-react"
   component={ClapButton.templates.Medium}
 />`}
-              </code>
-            </pre>
+            </Code>
             <p>
               You will get a clap button that looks and behaves just like
               Medium's
@@ -200,9 +197,8 @@ export default function Post() {
               <strong>text</strong> attribute changes the font color. It
               supports rgba, hex, and color names.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { Provider, ClapButton } from "@lyket/react";
+            <Code>
+              {`import { Provider, ClapButton } from "@lyket/react";
 
 <Provider
   apiKey="acc0dbccce8e557db5ebbe6d605aaa"
@@ -219,8 +215,7 @@ export default function Post() {
     id="applause-react"
   />
 </Provider>`}
-              </code>
-            </pre>
+            </Code>
             <div className="center big">
               <Provider
                 apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
@@ -248,9 +243,8 @@ export default function Post() {
               No problem! Here is an example of using the clapping hands emoji
               as a clap button.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { ClapButton } from '@lyket/react';
+            <Code>
+              {`import { ClapButton } from '@lyket/react';
 
 <ClapButton
   namespace="my-blog"
@@ -271,8 +265,7 @@ export default function Post() {
     )
   }}
 </ClapButton>`}
-              </code>
-            </pre>
+            </Code>
             <div className="center big">
               <ClapButton
                 id="clap-button-react-example-custom"
@@ -304,15 +297,13 @@ export default function Post() {
               Nothing easier!
             </p>
             <p>You can use the onPress prop to do something like this:</p>
-            <code>
-              <pre>
-                {`<ClapButton
+            <Code>
+              {`<ClapButton
   namespace="my-blog-post"
   id="applause-react"
   onPress={openSubscribeModal}
 />`}
-              </pre>
-            </code>
+            </Code>
             {SubscribeDialog}
             <p>
               Try to click on the button, it will open a dialog asking to
