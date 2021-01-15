@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import Code from "components/Code";
 
 export const meta = {
-  title: "How to add a like button to any React website with Lyket"
+  title: "How to add a React like button with Lyket"
 };
 
 export default function Post() {
@@ -65,6 +65,7 @@ export default function Post() {
           content="Lyket is the ultimate tool to add like buttons to any React project in a matter of seconds"
           name="description"
         />
+        <meta name="keywords" content="React like button, React, like button" />
       </Head>
       <div className="page">
         <section className="page__section">

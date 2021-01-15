@@ -11,10 +11,10 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a clap button to your Gatsby website</title>
+        <title>Gatsby clap button - Lyket</title>
         <meta
           property="og:description"
-          content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant clap buttons to any Gatsby project in a matter of seconds"
+          content="How to add a clap button to any Gatsby website in a matter of seconds with Lyket"
           name="description"
         />
       </Head>
@@ -22,11 +22,7 @@ export default function Post() {
         <section className="page__section">
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
-            <ClapButton
-              namespace="blog"
-              id="clap-button-gatsby"
-              component={ClapButton.templates.Medium}
-            />
+            <ClapButton namespace="blog" id="clap-button-gatsby" />
           </div>
           <p className="page__text"></p>
         </section>
@@ -53,7 +49,9 @@ export default function Post() {
             </pre>
             <p>or</p>
             <pre>
-              <code className="language-javascript">npm install @lyket/react</code>
+              <code className="language-javascript">
+                npm install @lyket/react
+              </code>
             </pre>
             <h2>Configuration</h2>
 
