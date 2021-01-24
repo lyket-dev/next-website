@@ -73,23 +73,27 @@ export default function Post() {
             </ul>
             <h2>Your own buttons generator app</h2>
             <p>
-              Creating your own widget is definitely the best way to embed an
-              external service to Notion because it's fully customisable and
-              it's free if you use Netlify or Vercel!
+              Creating your own widget is definitely{" "}
+              <strong>
+                the best way to embed an external service to Notion
+              </strong>{" "}
+              because it's fully customisable and
+              <strong>it's free</strong> if you use Netlify or Vercel!
             </p>
             <p>
-              We made this easier for you by creating a buttons generator app
-              for you that you can fork and customise.
+              We made this easier for you by creating a{" "}
+              <strong>buttons generator app</strong> that you can fork and
+              customise.
             </p>
-
             <p>
-              Follow all the steps in{" "}
+              To create your own widget simply{" "}
+              <strong>follow all the steps</strong> in{" "}
               <a
                 href="https://github.com/lyket-dev/notion-embed"
                 target="_blank"
               >
-                the README
-              </a>
+                the repo README
+              </a>{" "}
               and start generating buttons in the smoothest way.
             </p>
             <h2>The Potion Shop</h2>
