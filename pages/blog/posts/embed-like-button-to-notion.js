@@ -29,10 +29,10 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              Lyket is the ultimate tool to quickly implement GDPR-compliant
-              like, clap or vote buttons on any Notion project. From the moment
-              you create the button our server will keep track of every visitor
-              interaction without storing their personal data.
+              With Lyket you can quickly implement GDPR-compliant{" "}
+              <strong>like, clap or vote buttons Notion</strong>. From the
+              moment you create the button our server will keep track of every
+              visitor interaction without storing their personal data.
             </p>
             <p>
               To get started you just need to{" "}
@@ -41,12 +41,17 @@ export default function Post() {
             </p>
             <h2>How to embed a widget on Notion</h2>
             <p>
-              If you’re using Notion then you probably know that you can’t embed
-              HTML widgets directly into it and there is not a clean/nice way to
-              achieve that. But do not dispair! There are at least 3 workarounds
-              to do so at the moment. I will briefly describe the first 2
+              If you’re using Notion then you probably know that there is not a{" "}
+              <strong>clean/nice way to embed widgets</strong>. But do not
+              dispair! There are at least 3 workarounds succesfully add like
+              buttons in your Notion page at the moment. I will briefly describe
+              them
             </p>
             <ul>
+              <li>
+                Deploy your buttons to serverless platforms like Netlify or
+                Vercel.
+              </li>
               <li>
                 <a href="https://www.notion.so/Welcome-to-the-Potion-Shop-ee919c15f8e6410f9c20e3c6af486430">
                   The potion shop
@@ -66,6 +71,27 @@ export default function Post() {
                 to add more{" "}
               </li>
             </ul>
+            <h2>Your own buttons generator app</h2>
+            <p>
+              Creating your own widget is definitely the best way to embed an
+              external service to Notion because it's fully customisable and
+              it's free if you use Netlify or Vercel!
+            </p>
+            <p>
+              We made this easier for you by creating a buttons generator app
+              for you that you can fork and customise.
+            </p>
+
+            <p>
+              Follow all the steps in{" "}
+              <a
+                href="https://github.com/lyket-dev/notion-embed"
+                target="_blank"
+              >
+                the README
+              </a>
+              and start generating buttons in the smoothest way.
+            </p>
             <h2>The Potion Shop</h2>
             <p>
               This is very easy, you have to register on Potion to receive a
