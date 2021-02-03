@@ -4,17 +4,17 @@ import Head from "next/head";
 import Link from "next/link";
 
 export const meta = {
-  title: "Wordpress like button with Lyket video tutorial"
+  title: "Add a like button to Wordpress in a matter of seconds"
 };
 
 export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a Wordpress like button in a few seconds</title>
+        <title>Like button Wordpress | Lyket</title>
         <meta
           property="og:description"
-          content="Lyket lets you add privacy compliant clap and like buttons to any Wordpress project in a matter of seconds"
+          content="Add a stylish and privacy-friendly like button to Wordpress in a matter of seconds"
           name="description"
         />
       </Head>
@@ -30,10 +30,10 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              If you have a blog or an e-commerce on Wordpress you probably
-              wondered if there is an easy way to add a like button, or, if you
-              are a fan of Medium, a clap button. Lyket is a new tool that lets
-              you add like buttons on any Wordpress site in just a few seconds.
+              If you have a blog or an e-commerce probably wondered if there is
+              an easy way to add a like button to Wordpress, or, if you are a
+              fan of Medium, a clap button. Lyket is a new tool that lets you
+              add like buttons to any Wordpress site in just a few seconds.
             </p>
             <p>Don't believe me? See it with your own eyes 👀</p>
             <iframe
@@ -76,7 +76,7 @@ export default function Post() {
             </p>
             <p>
               Then, to create a button you need to specify the type of button
-              you want to create - like, clap or up/down - using the
+              you want to create - like, clap or like/dislike - using the
               "data-lyket-type" attribute, and choose an unique identifier with
               the "data-lyket-id" attribute. "data-lyket-namespace" is useful to
               tag or categorize your buttons once you see them listed in your
