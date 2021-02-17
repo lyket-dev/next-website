@@ -18,7 +18,10 @@ export default function Templates() {
           Do you have an idea for the perfect clap or like button?{" "}
           <a href="mailto:write@lyket.dev">Write to us</a> explaining your idea
           or make a pull request to our open-source{" "}
-          <a href="https://github.com/lyket-dev/react" target="_blank">
+          <a
+            href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
+            target="_blank"
+          >
             Github repository
           </a>{" "}
         </p>

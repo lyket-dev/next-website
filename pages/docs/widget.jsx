@@ -211,7 +211,7 @@ export default function Docs() {
               <h2>Button Templates</h2>
               <p>
                 Browse our{" "}
-                <Link href="/docs/widget">
+                <Link href="/templates">
                   <a>templates gallery</a>
                 </Link>{" "}
                 to choose your favourite template!
@@ -220,7 +220,10 @@ export default function Docs() {
                 Do you have an idea for the perfect clap or like button?{" "}
                 <a href="mailto:write@lyket.dev">Write to us</a> explaining your
                 idea or make a pull request to our open-source{" "}
-                <a href="https://github.com/lyket-dev/react" target="_blank">
+                <a
+                  href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
+                  target="_blank"
+                >
                   Github repository
                 </a>{" "}
               </p>
