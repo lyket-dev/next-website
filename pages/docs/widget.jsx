@@ -102,14 +102,14 @@ export default function Docs() {
 <!-- with namespace -->
 <div
   data-lyket-type="like"
-  data-lyket-id="my-first-post"
+  data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
 ></div>
 
 <!-- with non-default template -->
 <div
   data-lyket-type="like"
-  data-lyket-id="my-first-post"
+  data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
   data-lyket-template="twitter"
 ></div>`}
@@ -128,14 +128,14 @@ export default function Docs() {
 <!-- with namespace -->
 <div
   data-lyket-type="clap"
-  data-lyket-id="my-first-post"
+  data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
 ></div>
 
 <!-- with non-default template -->
 <div
   data-lyket-type="clap"
-  data-lyket-id="my-first-post"
+  data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
   data-lyket-template="medium"
 ></div>`}
@@ -149,19 +149,19 @@ export default function Docs() {
               <p>Use the data-lyket-type="updown" to create a updown button.</p>
               <Code>
                 {`<!-- minimal settings -->
-<div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
+<div data-lyket-type="updown" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
 <div
-  data-lyket-type="clap"
-  data-lyket-id="my-first-post"
+  data-lyket-type="updown"
+  data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
 ></div>
 
 <!-- with non-default template -->
 <div
-  data-lyket-type="clap"
-  data-lyket-id="my-first-post"
+  data-lyket-type="updown"
+  data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
   data-lyket-template="reddit"
 ></div>`}
