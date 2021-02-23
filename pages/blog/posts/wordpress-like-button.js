@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 export const meta = {
-  title: "Add a like button to Wordpress in a matter of seconds"
+  title: "Add a Wordpress like button in a matter of seconds"
 };
 
 export default function Post() {
@@ -13,9 +13,8 @@ export default function Post() {
       <Head>
         <title>Like button Wordpress | Lyket</title>
         <meta
-          property="og:description"
-          content="Add a stylish and privacy-friendly like button to Wordpress in a matter of seconds"
           name="description"
+          content="Add a stylish and privacy-friendly like button to Wordpress in a matter of seconds"
         />
       </Head>
       <div className="page">
@@ -31,9 +30,10 @@ export default function Post() {
           <div className="markdown">
             <p>
               If you have a blog or an e-commerce probably wondered if there is
-              an easy way to add a like button to Wordpress, or, if you are a
-              fan of Medium, a clap button. Lyket is a new tool that lets you
-              add like buttons to any Wordpress site in just a few seconds.
+              an easy way to add a <strong>like button to Wordpress</strong>,
+              or, if you are a fan of Medium, a clap button. Lyket is a new tool
+              that lets you add like buttons to any Wordpress site in just a few
+              seconds.
             </p>
             <p>Don't believe me? See it with your own eyes 👀</p>
             <iframe
@@ -48,7 +48,7 @@ export default function Post() {
             <p>Lets's go through the video steps.</p>
             <p>
               First thing we do here is copying this code in our footer to make
-              Lyket available all around our Wordpress site.
+              Lyket available all around our <strong>Wordpress site</strong>.
             </p>
             <pre>
               <code className="language-javascript">
@@ -60,7 +60,7 @@ export default function Post() {
             <p>
               Be aware that this code uses a test API key that resets all the
               counters every day so, like I am suggesting in the video, you
-              should register to Lyket to get your own.
+              should <strong>register to Lyket</strong> to get your own.
             </p>
             <p>Lets's move on!</p>
             <p>
@@ -75,12 +75,12 @@ export default function Post() {
               where you can see which of your buttons were the most upvoted!
             </p>
             <p>
-              Then, to create a button you need to specify the type of button
-              you want to create - like, clap or like/dislike - using the
-              "data-lyket-type" attribute, and choose an unique identifier with
-              the "data-lyket-id" attribute. "data-lyket-namespace" is useful to
-              tag or categorize your buttons once you see them listed in your
-              dashboard in the private area.
+              Then, to <strong>create a Wordpress like button</strong> you need
+              to specify the type of button you want to create - like, clap or
+              like/dislike - using the "data-lyket-type" attribute, and choose
+              an unique identifier with the "data-lyket-id" attribute.
+              "data-lyket-namespace" is useful to tag or categorize your buttons
+              once you see them listed in your dashboard in the private area.
             </p>
             <p>In the video we use this code to create a clap button</p>
             <pre>
@@ -100,6 +100,7 @@ export default function Post() {
               <a
                 href="https://wordpress.org/plugins/insert-headers-and-footers/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 this one
               </a>
@@ -112,7 +113,7 @@ export default function Post() {
               paste Lyket's script together with each button without impacting
               your pageviews count or performance!
             </p>
-            <h2>Customize your buttons</h2>
+            <h2>Customize your Wordpress like buttons</h2>
             <p>
               Once you have copied the script, Lyket will be available anywhere
               in your Wordpress website so you can start adding buttons wherever
@@ -126,8 +127,9 @@ export default function Post() {
             </p>
             <p>
               P.S.: If you’re using Wordpress you are probably accustomed to
-              plugins. We are developing a Lyket Wordpress, write to us if you
-              are interested!
+              plugins. We are developing a{" "}
+              <strong>Lyket Wordpress plugin</strong>, write to us if you are
+              interested!
             </p>
           </div>
         </section>

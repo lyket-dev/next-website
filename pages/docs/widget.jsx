@@ -190,7 +190,7 @@ export default function Docs() {
                   text and the inactive icon's color.
                 </li>
                 <li>
-                  <strong>data-lyket-color-highligh</strong> - Changes the
+                  <strong>data-lyket-color-highlight</strong> - Changes the
                   animation's color.
                 </li>
               </ul>
@@ -204,7 +204,7 @@ export default function Docs() {
   data-lyket-color-secondary="blue"
   data-lyket-color-background="#333"
   data-lyket-color-text="green"
-  data-lyket-color-highligh="#ff00c3"
+  data-lyket-color-highlight="#ff00c3"
 ></div>
 `}
               </Code>
