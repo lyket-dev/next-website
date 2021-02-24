@@ -31,8 +31,11 @@ export default function Docs() {
       <div className="page">
         <div className="page__section--gradient" />
         <section className="page__section">
-          <h1 className="docs__title">React docs</h1>
-          <QuickDocsMenu />
+          <div className="docs__title__container">
+            <h2 className="page__kicker">clap & like button on react</h2>
+            <h1 className="docs__title">React docs</h1>
+            <QuickDocsMenu />
+          </div>
           <div className="docs">
             <div className="markdown">
               <p>
@@ -80,12 +83,12 @@ export default function Docs() {
                   </Link>
                 </li>
               </ul>
-              <h2>Installation</h2>
+              <h4>Installation</h4>
               <p>Well, Let's get started! To install the component run</p>
               <Code>yarn add @lyket/react</Code>
               <p>or</p>
               <Code>npm install @lyket/react</Code>
-              <h2>Provider</h2>
+              <h4>Provider</h4>
               <p>
                 Add the Provider component top-level and configure it using your
                 personal public API key that you can get after registering to
@@ -101,7 +104,7 @@ ReactDOM.render(
   document.getElementById('root')
 );`}
               </Code>
-              <h5>Required props</h5>
+              <h6>Required props</h6>
               <ul>
                 <li>
                   <strong>apiKey</strong>: <strong>string</strong> - You can get
@@ -109,7 +112,7 @@ ReactDOM.render(
                   <a href="https://app.lyket.dev">Lyket</a>.
                 </li>
               </ul>
-              <h5>Optional props</h5>
+              <h6>Optional props</h6>
               <ul>
                 <li>
                   <p>
@@ -133,7 +136,7 @@ ReactDOM.render(
                   </p>
                 </li>
               </ul>
-              <h2>The button components</h2>
+              <h4>The button components</h4>
               <p>
                 Once you configured the Provider you can start adding buttons
                 anywhere in your app.
@@ -168,9 +171,9 @@ ReactDOM.render(
                   </p>
                 </li>
               </ul>
-              <h3>Button props</h3>
+              <h4>Button props</h4>
               <p>All buttons share these required and optional props.</p>
-              <h5>Required props</h5>
+              <h6>Required props</h6>
               <ul>
                 <li>
                   <strong>id</strong>: <strong>string</strong> - The API uses
@@ -178,7 +181,7 @@ ReactDOM.render(
                   accepts an alphanumeric string with maximum 50 characters.
                 </li>
               </ul>
-              <h5>Optional props</h5>
+              <h6>Optional props</h6>
               <ul>
                 <li>
                   <p>
@@ -221,9 +224,9 @@ ReactDOM.render(
                   </p>
                 </li>
               </ul>
-              <h2>Button types</h2>
+              <h4>Button types</h4>
               <p>The three types of buttons are the following:</p>
-              <h3>Like Button</h3>
+              <h4>Like Button</h4>
               <p>Like buttons behave as Twitter "likes".</p>
               <p>
                 Users can only like once and a subsequent request from the same
@@ -245,7 +248,7 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <h4>Optional props</h4>
+              <h5>Optional props</h5>
               <ul>
                 <li>
                   <p>
@@ -291,7 +294,7 @@ export BlogPost = ({ title, content }) => {
                   </ul>
                 </li>
               </ul>
-              <h3>Up/down Button</h3>
+              <h4>Up/down Button</h4>
               <p>Up/down buttons behave as Reddit like/dislike buttons.</p>
               <p>
                 Users can only like or dislike once and a subsequent action from
@@ -313,7 +316,7 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <h4 id="optional-props-3">Optional props</h4>
+              <h5 id="optional-props-3">Optional props</h5>
               <ul>
                 <li>
                   <p>
@@ -369,7 +372,7 @@ export BlogPost = ({ title, content }) => {
                 </li>
               </ul>
 
-              <h3>Clap Button</h3>
+              <h4>Clap Button</h4>
               <p>
                 Clap buttons behave like Medium applauses. Users can like
                 multiple times and every other call from the same user will
@@ -388,7 +391,7 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <h4 id="optional-props-4">Optional props</h4>
+              <h5 id="optional-props-4">Optional props</h5>
               <ul>
                 <li>
                   <p>
@@ -431,7 +434,7 @@ export BlogPost = ({ title, content }) => {
                   </ul>
                 </li>
               </ul>
-              <h2>Button Templates</h2>
+              <h4>Button Templates</h4>
               <p>
                 Lyket provides a set of out-of-the-box templates. You can see
                 all the available templates on{" "}
@@ -474,7 +477,7 @@ export BlogPost = ({ title, content }) => {
 export StandingOvation = () => {
   return (
     <>
-      <h2>Do you like pizza?</h2>
+      <h4>Do you like pizza?</h4>
       <LikeButton
         id="do-you-like-pizza"
         component={ClapButton.templates.Twitter}
@@ -483,7 +486,7 @@ export StandingOvation = () => {
   );
 };`}
               </Code>
-              <h2>Custom Buttons</h2>
+              <h4>Custom Buttons</h4>
               <p>
                 You may want to give a different flavour to a button, for
                 example using your logo as icon. You can do that by creating
@@ -503,7 +506,7 @@ export StandingOvation = () => {
 export Faq = () => {
   return (
     <>
-      <h2>Do you like pizza?</h2>
+      <h4>Do you like pizza?</h4>
       <LikeButton
         id="do-you-like-pizza"
         namespace="faq"
@@ -538,7 +541,7 @@ export Faq = () => {
 export Faq = () => {
   return (
     <>
-      <h2>Do you like pizza?</h2>
+      <h4>Do you like pizza?</h4>
       <ClapButton
         id="do-you-like-pizza"
         namespace="faq"
@@ -573,7 +576,7 @@ export Faq = () => {
 export Faq = () => {
   return (
     <>
-      <h2>Do you like pizza?</h2>
+      <h4>Do you like pizza?</h4>
       <UpdownButton
         id="do-you-like-pizza"
         namespace="faq"
@@ -603,13 +606,13 @@ export Faq = () => {
   );
 };`}
               </Code>
-              <h2>Styling buttons</h2>
-              <h3>Resizing</h3>
+              <h4>Styling buttons</h4>
+              <h4>Resizing</h4>
               <p>
                 All buttons can be resized by wrapping them in a container and
                 changing the font-size.
               </p>
-              <h3>Apply your color scheme and fonts</h3>
+              <h4>Apply your color scheme and fonts</h4>
               <p>
                 Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
                 library, allowing you to provide your own theme to the buttons
@@ -665,7 +668,7 @@ export Faq = () => {
                 Not all the templates support theming. Read the templates detail
                 to know which ones.
               </p>
-              <h2>reCAPTCHA</h2>
+              <h4>reCAPTCHA</h4>
               <p>
                 Lyket is integrated with Google reCAPTCHA V3 to handle malicious
                 use without interrupting <em>human</em> users. To enable it you

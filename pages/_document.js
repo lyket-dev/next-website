@@ -54,8 +54,9 @@ export default class MyDocument extends Document {
             window.intergramCustomizations = {
                 titleClosed: 'Chat 👋',
                 titleOpen: 'Lyket AMA',
-                introMessage: 'Anything on your mind?',
-                autoNoResponse: 'Thanks for your message! Sorry, we are busy (or sleeping) right now. We will answer you ASAP',
+                introMessage: 'Hi! Anything on your mind? 👀',
+                autoResponse: 'Looking for the first available team member..'
+                autoNoResponse: 'Sorry, we are busy (or sleeping 😴) right now. You can leave your email address and you will be contacted shortly by our support team!',
                 mainColor: "#ff5dff",
             };`
             }}

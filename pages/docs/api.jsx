@@ -7,8 +7,11 @@ export default function Docs() {
     <div className="page">
       <div className="page__section--gradient" />
       <section className="page__section">
-        <h1 className="docs__title">API docs</h1>
-        <QuickDocsMenu />
+        <div className="docs__title__container">
+          <h2 className="page__kicker">clap & like button API</h2>
+          <h1 className="docs__title">API docs</h1>
+          <QuickDocsMenu />
+        </div>
         <div className="docs">
           <SwaggerUI url={`${process.env.apiBaseUrl}/schema`} />
         </div>

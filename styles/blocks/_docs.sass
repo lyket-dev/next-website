@@ -1,11 +1,8 @@
 .docs
   text-align: left
 
-.docs__title
+.docs__title__container
   position: relative
-  font-weight: 700
-  +font-size(alpha)
-  +heading-font-family
   max-width: 85%
   margin: 0 auto
   background: white
@@ -14,6 +11,11 @@
   +padding(4)
   +padding-top(6)
   text-align: center
+
+.docs__title
+  font-weight: 700
+  +font-size(alpha)
+  +heading-font-family
 
 .docs__text
   +font-size(regular)

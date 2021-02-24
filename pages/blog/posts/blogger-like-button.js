@@ -2,6 +2,7 @@ import React from "react";
 import { UpdownButton } from "@lyket/react";
 import Head from "next/head";
 import Link from "next/link";
+import Code from "components/Code";
 
 export const meta = {
   title: "Blogger like button with Lyket + video tutorial"
@@ -11,15 +12,19 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a Blogger like button in a few seconds</title>
+        <title>How to add a Blogger like button | Lyket</title>
         <meta
-          property="og:description"
-          content="Lyket lets you add privacy compliant clap and like buttons to any Blogger project in a matter of seconds"
+          content="Lyket lets you add privacy compliant clap and like buttons to Blogger in a matter of seconds"
           name="description"
+        />
+        <meta
+          name="keywords"
+          content="Blogger like button, Blogger, like button"
         />
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">Blogger like button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="blogger-video-tutorial" />
@@ -30,12 +35,25 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              If you have a blog on Blogger you probably wondered if there is an
-              easy way to add a like button, or, if you are a fan of Medium, a
-              clap button. Lyket is a new tool that lets you add like buttons on
-              any Blogger project in a matter of seconds.
+              Creating a blog with{" "}
+              <strong>Blogger is really a piece of cake</strong> but
+              unfortunately there is no an out-of-the-box way to{" "}
+              <strong>add a like button</strong>, or, a{" "}
+              <strong>Medium-like clap button</strong>.
             </p>
-            <p>Don't believe me? See it with your own eyes 👀</p>
+
+            <p>
+              <strong>
+                Lyket is a new tool that integrates perfectly with Blogger
+              </strong>{" "}
+              to let you add like buttons on all of your blogs in a matter of
+              seconds.
+            </p>
+            <p>
+              In this video tutorial I will try to show how to{" "}
+              <strong>add a Blogger like button</strong> in ust 1.40 minutes!
+              Read on to follow the vide step-by-step
+            </p>
             <iframe
               width="100%"
               height="400"
@@ -44,57 +62,71 @@ export default function Post() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-            <h2>As seen on Youtube</h2>
+            <h4>As seen in the video</h4>
+            <p>Lets's go through the video steps!</p>
             <p>
-              Lets's go through the video steps. In the video we use this code
-              to create a clap button
+              In the video we use this code to create a clap button. But you can
+              create a like button by changing the type attributes. The
+              attribute "data-lyket-type" can be changed to{" "}
+              <strong>like, clap or like/dislike button</strong>.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`<div
-      data-lyket-type="clap"
-      data-lyket-namespace="testing-widget"
-      data-lyket-id="everybody-clap-now"
-  />
-      <script
-  src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa"
-  />
-  `}
-              </code>
-            </pre>
+            <Code>
+              {`<div
+    data-lyket-type="like"
+    data-lyket-namespace="testing-widget"
+    data-lyket-id="everybody-like-now"
+/>
+
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa" />
+`}
+            </Code>
+
             <p>
               Just like I am suggesting in the video, this snippet uses a test
               API key that resets all the button counters every day so you
-              should register to Lyket to get your own!
+              should register to Lyket to get your own! ;)
             </p>
             <p>
               To do that just navigate to the{" "}
               <a href={`${process.env.appBaseUrl}/signup`}>registration page</a>
               , fill out the form and get your personal public API key. Then
-              replace the test one with that, after the "apiKey=" query
+              replace the test key with your own, after the "apiKey=" query
               parameter.
             </p>
             <p>
               Once you register you will also be able to visit your dashboard
-              where you can see which of your buttons were the most upvoted!
+              where you can see which of your{" "}
+              <strong>Blogger like buttons were the most upvoted</strong>!
             </p>
 
-            <h3>Customize your buttons</h3>
+            <h4>Customize the buttons</h4>
             <p>
-              Let's go back to our button. Lyket is very simple to customize.
-              The best way to do it is by following the instructions you can
-              find in the{" "}
+              Let's go back to our button.{" "}
+              <strong>Lyket is super simple to customize</strong>. The best way
+              to do it is by following the instructions you can find in the{" "}
               <Link href="/docs/widget">
-                <a>widget documentation.</a>
+                <a>officil widget documentation.</a>
               </Link>
             </p>
             <p>
-              Basically, to create a button you need to specify the type of
-              button you want to create - like, clap or up/down - using the
-              "data-lyket-type" attribute. Then choose an unique ID for your
-              button using the "data-lyket-id" attribute. "data-lyket-namespace"
-              is useful to tag or categorize your buttons once you see them
-              listed in your dashboard in the private area.
+              Basically, to create a <strong>Blogger like button</strong> you
+              need to:
+              <ul>
+                <li>
+                  Specify the type of button you want in your Blogger blog -
+                  <strong>like, clap or like/dislike</strong> - using the
+                  "data-lyket-type" attribute.
+                </li>
+                <li>
+                  Choose an <strong>unique ID</strong> for your button using the
+                  "data-lyket-id" attribute.
+                </li>
+                <li>
+                  "data-lyket-namespace" is useful to tag or categorize your
+                  buttons once you see them listed in your dashboard in the
+                  private area.
+                </li>
+              </ul>
             </p>
             <p>
               That's it! Easy, right? Write to us if you had any problems using

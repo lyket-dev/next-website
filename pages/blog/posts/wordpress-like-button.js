@@ -11,14 +11,19 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>Like button Wordpress | Lyket</title>
+        <title>Wordpress Like button | Lyket</title>
         <meta
           name="description"
-          content="Add a stylish and privacy-friendly like button to Wordpress in a matter of seconds"
+          content="Add a stylish and privacy-friendly Wordpress like button in a matter of seconds"
+        />
+        <meta
+          name="keywords"
+          content="Wordpress like button, Wordpress, like button"
         />
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">Wordpress like button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="wordpress-video-tutorial" />
@@ -44,7 +49,7 @@ export default function Post() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-            <h2>As seen on TV</h2>
+            <h4>As seen on the video</h4>
             <p>Lets's go through the video steps.</p>
             <p>
               First thing we do here is copying this code in our footer to make
@@ -93,7 +98,7 @@ export default function Post() {
               </code>
             </pre>
 
-            <h2>What if my Wordpress theme do not support HTML widgets?</h2>
+            <h4>What if my Wordpress theme does not support HTML widgets?</h4>
             <p>
               Some themes does not support custom HTML widgets, like the one we
               use in the tutorial. To fix that you can install a plugin like{" "}
@@ -113,7 +118,7 @@ export default function Post() {
               paste Lyket's script together with each button without impacting
               your pageviews count or performance!
             </p>
-            <h2>Customize your Wordpress like buttons</h2>
+            <h4>Customize your Wordpress like buttons</h4>
             <p>
               Once you have copied the script, Lyket will be available anywhere
               in your Wordpress website so you can start adding buttons wherever

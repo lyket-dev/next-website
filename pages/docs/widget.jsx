@@ -20,8 +20,11 @@ export default function Docs() {
       <div className="page">
         <div className="page__section--gradient" />
         <section className="page__section">
-          <h1 className="docs__title">Widget docs</h1>
-          <QuickDocsMenu />
+          <div className="docs__title__container">
+            <h2 className="page__kicker">clap & like button widget</h2>
+            <h1 className="docs__title">Widget docs</h1>
+            <QuickDocsMenu />
+          </div>
           <div className="docs">
             <div className="markdown">
               <p>
@@ -47,7 +50,7 @@ export default function Docs() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/posts/like-clap-button-on-worpress">
+                  <Link href="/blog/posts/wordpress-like-button">
                     <a>How to add like buttons to Wordpress</a>
                   </Link>
                 </li>
@@ -57,7 +60,7 @@ export default function Docs() {
                   </Link>
                 </li>
               </ul>
-              <h2>Installation</h2>
+              <h4>Installation</h4>
               <p>
                 In your HTML file or widget add the script top-level passing
                 your Lyket API key as argument, then just add an element with a
@@ -67,7 +70,7 @@ export default function Docs() {
                 &lt;script
                 src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
               </Code>
-              <h2>Buttons</h2>
+              <h4>Buttons</h4>
               <p>
                 When you add a Lyket element a GET request is made to retrieve
                 info about the button with that certain id and namespace. If no
@@ -88,7 +91,7 @@ export default function Docs() {
                 There are three different button types that have different
                 behaviours.
               </p>
-              <h3>Like button</h3>
+              <h4>Like button</h4>
               <p>
                 Like buttons behave like Twitter buttons. Users can only like
                 once and a subsequent call from the same user will remove the
@@ -114,7 +117,7 @@ export default function Docs() {
   data-lyket-template="twitter"
 ></div>`}
               </Code>
-              <h3>Clap button</h3>
+              <h4>Clap button</h4>
               <p>
                 Clap buttons behave like Medium applauses. Users can like
                 multiple times and every other call from the same user will
@@ -140,7 +143,7 @@ export default function Docs() {
   data-lyket-template="medium"
 ></div>`}
               </Code>
-              <h3>Up/down button</h3>
+              <h4>Up/down button</h4>
               <p>
                 Up/down buttons behave like Reddit buttons. Users can only vote
                 or unvote once and a subsequent call from the same user will
@@ -166,7 +169,7 @@ export default function Docs() {
   data-lyket-template="reddit"
 ></div>`}
               </Code>
-              <h2 id="styling-the-buttons">Styling the buttons</h2>
+              <h4 id="styling-the-buttons">Styling the buttons</h4>
               <p>
                 You can change the default colors by providing your own color
                 scheme. The color scheme does not apply on buttons with
@@ -208,7 +211,7 @@ export default function Docs() {
 ></div>
 `}
               </Code>
-              <h2>Button Templates</h2>
+              <h4>Button Templates</h4>
               <p>
                 Browse our{" "}
                 <Link href="/templates">
