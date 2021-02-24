@@ -1,6 +1,7 @@
 import React from "react";
 import { UpdownButton } from "@lyket/react";
 import Head from "next/head";
+import Code from "components/Code";
 
 export const meta = {
   title: "How to embed a like button on Notion with Lyket"
@@ -10,15 +11,19 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a like button to Notion</title>
+        <title>Add a like button to Notion | Lyket</title>
         <meta
-          property="og:description"
           content="Lyket lets you add privacy compliant clap and like buttons to any Notion project in a matter of seconds"
           name="description"
+        />
+        <meta
+          name="keywords"
+          content="Notion like button, Notion, like button"
         />
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">Notion like button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="embed-on-notion" />
@@ -39,7 +44,7 @@ export default function Post() {
               <a href={`${process.env.appBaseUrl}/signup`}>register</a> to Lyket
               and get your personal public API key.
             </p>
-            <h2>How to embed a widget on Notion</h2>
+            <h4>How to embed a widget on Notion</h4>
             <p>
               If you’re using Notion then you probably know that there is not a{" "}
               <strong>clean/nice way to embed widgets</strong>. But do not
@@ -49,7 +54,7 @@ export default function Post() {
             </p>
             <ul>
               <li>
-                Deploy your buttons to serverless platforms like Netlify or
+                Deploy your buttons to serverless platform like Netlify or
                 Vercel.
               </li>
               <li>
@@ -71,7 +76,7 @@ export default function Post() {
                 to add more{" "}
               </li>
             </ul>
-            <h2>Your own buttons generator app</h2>
+            <h4>Your own buttons generator app</h4>
             <p>
               Creating your own widget is definitely{" "}
               <strong>
@@ -96,7 +101,7 @@ export default function Post() {
               </a>{" "}
               and start generating buttons in the smoothest way.
             </p>
-            <h2>The Potion Shop</h2>
+            <h4>The Potion Shop</h4>
             <p>
               This is very easy, you have to register on Potion to receive a
               link on which you can load your html. Follow all steps in{" "}
@@ -119,9 +124,8 @@ export default function Post() {
               which button you want to create:
             </p>
 
-            <pre>
-              <code className="language-javascript">
-                {`<html style="height: 100%;background-color: white;">
+            <Code>
+              {`<html style="height: 100%;background-color: white;">
   <body>
     <div
       data-lyket-type="like"
@@ -133,9 +137,8 @@ export default function Post() {
     <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]></script>
   </body>
 </html>`}
-              </code>
-            </pre>
-            <h2>Use Github pages</h2>
+            </Code>
+            <h4>Use Github pages</h4>
             <p>
               Basically the rationale behind embedding in Notion is to host your
               own html containing the Lyket code and copy the link to that page
@@ -146,9 +149,8 @@ export default function Post() {
               as the buttons you want to see on Notion. Each html file should
               contain code something similar to this:
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`<html style="height: 100%;background-color: white;">
+            <Code>
+              {`<html style="height: 100%;background-color: white;">
   <body>
     <div
       data-lyket-type="like"
@@ -160,8 +162,7 @@ export default function Post() {
     <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]></script>
   </body>
 </html>`}
-              </code>
-            </pre>
+            </Code>
             <p>
               Do not remove the style otherwise you will see the default Notion
               background color

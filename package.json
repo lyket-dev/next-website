@@ -6,7 +6,7 @@
     "dev": "next dev -p 1234",
     "build": "rimraf out && next build",
     "start": "next start -p 4567",
-    "export": "next export && node nextjs_sitemap_generator.js",
+    "export": "yarn build && next export && node nextjs_sitemap_generator.js",
     "deploy": "yarn build && yarn export"
   },
   "dependencies": {
