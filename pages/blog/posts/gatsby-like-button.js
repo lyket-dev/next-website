@@ -13,7 +13,6 @@ export default function Post() {
       <Head>
         <title>Lyket - Add a like button to your Gatsby website</title>
         <meta
-          property="og:description"
           content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons to any Gatsby project in a matter of seconds"
           name="description"
         />
@@ -53,7 +52,9 @@ export default function Post() {
             </pre>
             <p>or</p>
             <pre>
-              <code className="language-javascript">npm install @lyket/react</code>
+              <code className="language-javascript">
+                npm install @lyket/react
+              </code>
             </pre>
             <h2>Configuration</h2>
 
