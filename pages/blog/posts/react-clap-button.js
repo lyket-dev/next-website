@@ -11,7 +11,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 
 export const meta = {
-  title: "How to add a clap button to a React website with Lyket"
+  title: "How to add a clap button to your website with Lyket"
 };
 
 export default function Post() {
@@ -68,13 +68,10 @@ export default function Post() {
 
       <div className="page">
         <section className="page__section">
+          <h2 className="page__title">Clap button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
-            <ClapButton
-              namespace="blog"
-              id="clap-button-react"
-              component={ClapButton.templates.Medium}
-            />
+            <ClapButton namespace="blog" id="clap-button-react" />
           </div>
           <p className="page__text"></p>
         </section>

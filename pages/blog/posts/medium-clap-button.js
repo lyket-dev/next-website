@@ -76,7 +76,7 @@ export default function Post() {
           <div className="half__reaction">
             <ClapButton
               namespace="blog"
-              id="clap-button-react"
+              id="medium-button-react"
               component={ClapButton.templates.Medium}
             />
           </div>
@@ -169,7 +169,7 @@ export default function Post() {
             </p>
             <div className="flex big">
               <h4>Click! →</h4>
-              <ClapButton namespace="blog" id="clap-button-react-example" />
+              <ClapButton namespace="blog" id="medium-button-react-example" />
             </div>
             <h4>Give your button the Medium clap button style!</h4>
             <p>
@@ -196,7 +196,7 @@ export default function Post() {
               <h4>Click! →</h4>
               <ClapButton
                 namespace="blog"
-                id="clap-button-react-example-twitter"
+                id="medium-button-react-example-twitter"
                 component={ClapButton.templates.Medium}
               />
             </div>
@@ -254,7 +254,7 @@ export default function Post() {
               >
                 <ClapButton
                   namespace="blog"
-                  id="clap-button-react-example-colors"
+                  id="medium-button-react-example-colors"
                 />
               </Provider>
             </div>
@@ -294,7 +294,7 @@ export default function Post() {
             </Code>
             <div className="center">
               <ClapButton
-                id="clap-button-react-example-custom"
+                id="medium-button-react-example-custom"
                 namespace="blog"
               >
                 {({ handlePress, totalClaps, userClaps, isLoading }) => {
@@ -344,7 +344,7 @@ export default function Post() {
               <h4>Click! →</h4>
               <ClapButton
                 namespace="blog"
-                id="clap-button-react-example-onpress"
+                id="medium-button-react-example-onpress"
                 onPress={openSubscribeModal}
               />
             </div>
