@@ -60,7 +60,7 @@ export default function Post() {
               src="https://www.youtube.com/embed/acvFpZULNH8"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
             <h4>As seen in the video</h4>
             <p>Lets's go through the video steps!</p>
