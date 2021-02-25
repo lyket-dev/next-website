@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Prism from "prismjs";
+// Do not delete
 import PrismJsx from "prismjs/components/prism-jsx.min";
 import Line from "prismjs/plugins/line-numbers/prism-line-numbers.js";
 

@@ -322,8 +322,8 @@ export default function Post() {
             <p>
               Once a visitor clapped at your content, you know you have their
               full attention, so why not use it as an occasion to{" "}
-              <stong>engage further with a call to action</stong>? Maybe you can
-              ask your visitors to{" "}
+              <strong>engage further with a call to action</strong>? Maybe you
+              can ask your visitors to{" "}
               <strong>subscribe to your newsletter after they clapped</strong>?
               Or ask to leave a more detailed feedback? Nothing easier!
             </p>

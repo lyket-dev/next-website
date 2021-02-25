@@ -58,7 +58,7 @@ export default function Post() {
               width="100%"
               height="400"
               src="https://www.youtube.com/embed/acvFpZULNH8"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -71,9 +71,9 @@ export default function Post() {
             </p>
             <Code>
               {`<div
-    data-lyket-type="like"
-    data-lyket-namespace="testing-widget"
-    data-lyket-id="everybody-like-now"
+  data-lyket-type="like"
+  data-lyket-namespace="testing-widget"
+  data-lyket-id="everybody-like-now"
 />
 
 <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa" />
@@ -106,9 +106,9 @@ export default function Post() {
 
 <!-- with namespace -->
 <div
-data-lyket-type="like"
-data-lyket-namespace="blogger"
-data-lyket-id="blogger-like-button"
+  data-lyket-type="like"
+  data-lyket-namespace="blogger"
+  data-lyket-id="blogger-like-button"
 ></div>`}
             </Code>
             <div className="flex center big">
@@ -149,8 +149,9 @@ data-lyket-id="blogger-like-button"
                 Your blog color palette to decorate the button's{" "}
                 <strong>background, font and active color</strong>, using the
                 "data-lyket-color-" attributes.
-                <Code>
-                  {`<!-- with non-default template -->
+              </li>
+              <Code>
+                {`<!-- with non-default template -->
 <div
   data-lyket-type="like"
   data-lyket-namespace="blogger"
@@ -160,49 +161,48 @@ data-lyket-id="blogger-like-button"
   data-lyket-color-text="grey"
   data-lyket-color-highlight="#ff00c3"
 ></div>`}
-                </Code>
-                <div className="center big">
-                  <Provider
-                    apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
-                    theme={{
-                      colors: {
-                        primary: "violet",
-                        background: "#333",
-                        text: "grey",
-                        highlight: "#ff00c3"
-                      }
-                    }}
-                  >
-                    <LikeButton
-                      id="blogger-like-button-colors"
-                      namespace="blog"
-                    />
-                  </Provider>
-                </div>
-              </li>
+              </Code>
+              <div className="center big">
+                <Provider
+                  apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                  theme={{
+                    colors: {
+                      primary: "violet",
+                      background: "#333",
+                      text: "grey",
+                      highlight: "#ff00c3"
+                    }
+                  }}
+                >
+                  <LikeButton
+                    id="blogger-like-button-colors"
+                    namespace="blog"
+                  />
+                </Provider>
+              </div>
               <li>
                 Choose a <strong>template</strong> from our{" "}
                 <Link href="/docs/template">
                   <a>template gallery</a>
                 </Link>{" "}
                 using the "data-lyket-template" attribute.
-                <Code>
-                  {`<!-- with non-default template -->
+              </li>
+              <Code>
+                {`<!-- with non-default template -->
 <div
   data-lyket-type="like"
   data-lyket-namespace="blogger"
   data-lyket-id="blogger-like-button-heart"
   data-lyket-template="twitter"
 ></div>`}
-                </Code>
-                <div className="center big">
-                  <LikeButton
-                    id="blogger-like-button-template"
-                    namespace="blog"
-                    component={LikeButton.templates.Twitter}
-                  />
-                </div>
-              </li>
+              </Code>
+              <div className="center big">
+                <LikeButton
+                  id="blogger-like-button-template"
+                  namespace="blog"
+                  component={LikeButton.templates.Twitter}
+                />
+              </div>
             </ul>
             <p>
               That's it! Easy, right? Write to us if you had any problems using
