@@ -57,7 +57,6 @@ export default function Post() {
       <Head>
         <title>React like/dislike button | Lyket</title>
         <meta
-          property="og:description"
           content="Lyket lets you add privacy compliant like dislike buttons to any React project in a matter of seconds"
           name="description"
         />
@@ -68,6 +67,7 @@ export default function Post() {
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">React like/dislike button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="like-dislike-button-react" />

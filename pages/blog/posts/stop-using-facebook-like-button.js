@@ -14,9 +14,12 @@ export default function Post() {
           Lyket - Stop using the Facebook like button, own your data!
         </title>
         <meta
-          property="og:description"
           content="Why is there even a Facebook like button on your website? Our API collects no personal information and don't sell it to any big corp. With Lyket you are the owner of your website data."
           name="description"
+        />
+        <meta
+          name="keywords"
+          content="Facebook like button, Facebook, like button"
         />
       </Head>
       <div className="page">

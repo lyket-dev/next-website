@@ -61,7 +61,6 @@ export default function Post() {
       <Head>
         <title>React like button | Lyket</title>
         <meta
-          property="og:description"
           content="Lyket is the ultimate tool to add like buttons to any React project in a matter of seconds"
           name="description"
         />
@@ -69,6 +68,7 @@ export default function Post() {
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">React like button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <LikeButton
@@ -79,7 +79,6 @@ export default function Post() {
           </div>
           <p className="page__text"></p>
         </section>
-        <div className="avatar"></div>
         <section className="page__section">
           <div className="markdown">
             <p>
@@ -151,7 +150,8 @@ export default function Post() {
               <strong>it will add one like</strong>. Click on it twice and the
               like will be removed, just like the Twitter heart.
             </p>
-            <div className="center big">
+            <div className="flex big">
+              <h4>Click! →</h4>
               <LikeButton namespace="blog" id="like-button-react-example" />
             </div>
             <h3>Changing templates</h3>
@@ -171,7 +171,8 @@ export default function Post() {
   component={LikeButton.templates.Twitter}
 />`}
             </Code>
-            <div className="center big">
+            <div className="flex big">
+              <h4>Click! →</h4>
               <LikeButton
                 namespace="blog"
                 id="like-button-react-example-twitter"
@@ -217,7 +218,8 @@ export default function Post() {
 </Provider>
   `}
             </Code>
-            <div className="center big">
+            <div className="flex big">
+              <h4>Click! →</h4>
               <Provider
                 apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
                 theme={{
@@ -261,35 +263,33 @@ export default function Post() {
         >
           🍕
         </button>
-        <div>Total likes: {totalLikes}</div>
+        <strong>Total likes: {totalLikes}</strong>
         {userLiked && <div>Thanks for liking pizza!</div>}
       </div>
     )
   }}
 </LikeButton>`}
             </Code>
-            <div className="center big">
-              <LikeButton
-                id="like-button-react-example-custom"
-                namespace="blog"
-              >
-                {({ handlePress, totalLikes, userLiked, isLoading }) => {
-                  return (
-                    <div>
+            <LikeButton id="like-button-react-example-custom" namespace="blog">
+              {({ handlePress, totalLikes, userLiked, isLoading }) => {
+                return (
+                  <div className="center">
+                    <div className="flex big">
+                      <h4>Click! →</h4>
                       <button
-                        className="big"
+                        className="huge"
                         onClick={handlePress}
                         disabled={isLoading}
                       >
                         🍕
                       </button>
-                      <div>Total likes: {totalLikes}</div>
-                      {userLiked && <div>Great! I like pizza as well!</div>}
                     </div>
-                  );
-                }}
-              </LikeButton>
-            </div>
+                    <strong>Total likes: {totalLikes}</strong>
+                    {userLiked && <div>Great! I like pizza as well!</div>}
+                  </div>
+                );
+              }}
+            </LikeButton>
             <p>Now you can click on pizza and see your score growing!</p>{" "}
             <p>Where? On the dashboard of course!</p>
             <p>
