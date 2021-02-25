@@ -1,29 +1,16 @@
 import React, { useState } from "react";
-import useAsyncEffect from "../../utils/useAsyncEffect";
-import ReactMarkdown from "react-markdown";
 import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Head from "next/head";
 import Link from "next/link";
+import { LikeButton, ClapButton, UpdownButton } from "@lyket/react";
 
 export default function Docs() {
-  const [markdown, markdownSet] = useState(null);
-  //
-  // useAsyncEffect(() => {
-  //   fetch(
-  //     "https://raw.githubusercontent.com/lyket-dev/lyket/master/packages/react/README.md"
-  //   )
-  //     .then(response => response.text())
-  //     .then(text => markdownSet(text));
-  // }, []);
-  // <ReactMarkdown source={markdown} className="markdown" />
-
   return (
     <>
       <Head>
-        <title>Lyket - Add like, clap and like/dislike buttons to React</title>
+        <title>Add like, clap and like/dislike buttons to React | Lyket</title>
         <meta
-          property="og:description"
           content="Lyket is a tool to instantly add like, applause and like/dislike on any React project."
           name="description"
         />
@@ -32,7 +19,7 @@ export default function Docs() {
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">clap & like button on react</h2>
+            <h2 className="page__kicker">clap & like button on React</h2>
             <h1 className="docs__title">React docs</h1>
             <QuickDocsMenu />
           </div>
@@ -41,30 +28,18 @@ export default function Docs() {
               <p>
                 Lyket is the ultimate tool to add like, applause and
                 like/dislike buttons, and{" "}
-                <strong>it gives its best with React</strong>!
-              </p>
-              <p>
-                The React library allows a{" "}
-                <strong>great deal of customization</strong> with just a few
-                lines of code and it's{" "}
+                <strong>it gives its best with React</strong>! The library
+                allows a <strong>great deal of customization</strong> with just
+                a few lines of code and it's{" "}
                 <strong>compatible with all React frameworks</strong> like
-                NextJS, Gatsby, create-react-app. This is the{" "}
-                <strong>full React documentation</strong> that you can also find
-                on the official OS repo on{" "}
-                <a
-                  href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
-                </a>
-                .
+                NextJS, Gatsby, create-react-app.
               </p>
               <p>
-                If you want to discover how to use the{" "}
+                If you want to find out how to use the{" "}
                 <strong>React library in detail</strong> you came to the right
-                place. If you prefer to learn with examples and ready-made
-                snippets to copy and paste, you can visit:
+                place. If you prefer to{" "}
+                <strong>learn with examples and ready-made snippets</strong> to
+                copy and paste, you can visit:
               </p>
               <ul>
                 <li>
@@ -83,16 +58,79 @@ export default function Docs() {
                   </Link>
                 </li>
               </ul>
-              <h4>Installation</h4>
+              <h4 id="how-buttons-work">How the buttons work</h4>
+              <p>
+                All Lyket buttons share these{" "}
+                <strong>basic behaviors and features:</strong>
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    As soon as a button component is mounted, a fetch request is
+                    made to retrieve info on the button that{" "}
+                    <strong>identifies with the ID and namespace</strong> that
+                    you provided.{" "}
+                    <strong>
+                      If no button is found, a new one will be created
+                    </strong>{" "}
+                    using the ID/namespace identifier.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Notice that{" "}
+                    <strong>
+                      the server will create a new button for every different
+                      and unique identifier
+                    </strong>
+                    , so if you change ID or namespace or type the new button
+                    won’t inherit the votes.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Every time a visitor interacts with a button, the button
+                    counter will update and{" "}
+                    <strong>Lyket will flag that the visitor has voted</strong>.
+                    Lyket uses an unique random ID stored in the visitor's
+                    browser localStorage to identify the visitor, with no need
+                    to signup or to use any third party service. To disable the
+                    session ID, and therefore use only the IP address to
+                    identify a user, set the disableSessionId prop to{" "}
+                    <em>true</em> in the Provider component.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lyket enforces a{" "}
+                    <strong>maximum number of sessions IDs per IP</strong>
+                    address to avoid receiving too many requests or DDoS
+                    attacks. The default is 3 sessions per IP. You can change
+                    this number by logging into your private area and edit the
+                    user settings.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    In the user settings you can also specify{" "}
+                    <strong>
+                      from which domains Lyket should accept requests
+                    </strong>{" "}
+                    using your personal API key. If left empty Lyket will accept
+                    requests coming from all domains.
+                  </p>
+                </li>
+              </ul>
+              <h4 id="installation">Installation</h4>
               <p>Well, Let's get started! To install the component run</p>
               <Code>yarn add @lyket/react</Code>
               <p>or</p>
               <Code>npm install @lyket/react</Code>
-              <h4>Provider</h4>
+              <h4 id="provider">Provider</h4>
               <p>
-                Add the Provider component top-level and configure it using your
-                personal public API key that you can get after registering to
-                Lyket
+                Add <strong>the Provider component top-level</strong> and
+                configure it using your personal public API key that you can get
+                after registering to Lyket
               </p>
               <Code>
                 {`import { Provider } from '@lyket/react';
@@ -116,63 +154,47 @@ ReactDOM.render(
               <ul>
                 <li>
                   <p>
-                    <strong>theme</strong>:{" "}
                     <strong>
-                      Record&lt;'colors' | 'fonts' | 'fontWeights',
-                      Record&lt;string, string&gt;&gt;
+                      theme: Record&lt;'colors' | 'fonts' , Record&lt;string,
+                      string&gt;&gt;
                     </strong>{" "}
-                    - Allows you to change the default buttons color scheme and
-                    font/fontWeights. It doesn't apply to all templates. Read
-                    more about it in the <em>Styling buttons</em> section at the
+                    - Allows you to change the default buttons colors and fonts.
+                    It doesn't apply to all templates. Read more about it in the{" "}
+                    <Link href="#styling">Styling buttons</Link> section at the
                     end of this document.
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>recaptchaSiteKey</strong>: <strong>string</strong> -
-                    If you enabled reCAPTCHA you need to provide your public
-                    key. Read more in the <em>ReCAPTCHA</em> section at the end
+                    <strong>recaptchaSiteKey: string</strong> - If you enabled
+                    reCAPTCHA in the private area's user settings, you need to
+                    provide your reCAPTCHA public key, otherwise your buttons
+                    will result as unauthorized. Read more in the{" "}
+                    <Link href="#recaptcha">reCAPTCHA</Link> section at the end
                     of this document.
                   </p>
                 </li>
+                <li>
+                  <p>
+                    <strong>disableSessionId: boolean</strong> -{" "}
+                    <strong>Default: false</strong> - If set to <em>true</em>{" "}
+                    Lyket won't store a unique session ID for your visitors
+                    making them anonymous. Lyket will then discriminate visitors
+                    (to tell if they already liked a button or not) only based
+                    on the IP address. Disabling the session ID can be useful if
+                    you don't want Lyket to result in your cookie detection
+                    software.
+                  </p>
+                </li>
               </ul>
-              <h4>The button components</h4>
+              <h4 id="buttons">The buttons</h4>
               <p>
                 Once you configured the Provider you can start adding buttons
-                anywhere in your app.
+                anywhere in your app. You can choose among{" "}
+                <strong>three different button types</strong> that have
+                different behaviors and purposes, but all share these required
+                and optional props:
               </p>
-              <p>
-                You can choose among three different button types that have
-                different behaviours and purposes, but they all share these
-                basic features and props:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    As soon as a button component is mounted, a fetch request is
-                    made to retrieve info on the button that identifies with id
-                    and namespace that you provided. If no button is found, a
-                    new one will be created using the id/namespace identifier.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Notice that the server will create a new button for every
-                    different and unique identifier, so if you change id or
-                    namespace or type the new button won’t inherit the votes.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Every time a user interacts with a button, the button
-                    counter will update and flag that the user has already
-                    voted. There is no need to signup or to use any third party
-                    service.
-                  </p>
-                </li>
-              </ul>
-              <h4>Button props</h4>
-              <p>All buttons share these required and optional props.</p>
               <h6>Required props</h6>
               <ul>
                 <li>
@@ -203,12 +225,12 @@ ReactDOM.render(
                 <li>
                   <p>
                     <strong>component</strong>: <strong>React.ReactNode</strong>{" "}
-                    - If this prop is not provided you will see the Simple
-                    template. To change the aspect from the default you can
-                    either choose one of the ready-made{" "}
-                    <strong>templates</strong> that Lyket provides or a{" "}
-                    <strong>custom component</strong> in the component
-                    attribute.
+                    - If this prop is not provided you will see{" "}
+                    <strong>the Simple template</strong>. To change the aspect
+                    of your buttons you can either choose one of the{" "}
+                    <Link href="#templates">ready-made templates</Link> or a{" "}
+                    <Link href="#custom">custom component</Link> and pass it
+                    through the component attribute.
                   </p>
                 </li>
                 <li>
@@ -224,13 +246,26 @@ ReactDOM.render(
                   </p>
                 </li>
               </ul>
-              <h4>Button types</h4>
-              <p>The three types of buttons are the following:</p>
-              <h4>Like Button</h4>
-              <p>Like buttons behave as Twitter "likes".</p>
+              <h4 id="Button types">Button types</h4>
               <p>
-                Users can only like once and a subsequent request from the same
-                user will remove the user's like.
+                The <strong>three types of buttons</strong> are the following:
+              </p>
+              <ul>
+                <li>
+                  <Link href="#like-button">Like Button</Link>
+                </li>
+                <li>
+                  <Link href="#updown-button">Updown Button</Link>
+                </li>
+                <li>
+                  <Link href="#clap-button">Clap Button</Link>
+                </li>
+              </ul>
+              <h5 id="like-button">Like Button</h5>
+              <p>Like buttons behave like Twitter like buttons.</p>
+              <p>
+                <strong>Visitors can only like once</strong> and a subsequent
+                request from the same visitor will remove the visitor's like.
               </p>
               <Code>
                 {`import { LikeButton } from '@lyket/react';
@@ -248,7 +283,11 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <h5>Optional props</h5>
+              <div className="flex big">
+                <quote>Try it! →</quote>
+                <LikeButton namespace="docs" id="react-like-button" />
+              </div>
+              <h6>Optional props</h6>
               <ul>
                 <li>
                   <p>
@@ -294,11 +333,12 @@ export BlogPost = ({ title, content }) => {
                   </ul>
                 </li>
               </ul>
-              <h4>Up/down Button</h4>
-              <p>Up/down buttons behave as Reddit like/dislike buttons.</p>
+              <h5 id="updown-button">Up/down Button</h5>
+              <p>Up/down buttons behave like Reddit like/dislike buttons.</p>
               <p>
-                Users can only like or dislike once and a subsequent action from
-                the same user will remove the user's like or dislike.
+                Visitors <strong>can only like or dislike once</strong> and a
+                subsequent action from the visitor will remove the visitor's
+                like or dislike.
               </p>
               <Code>
                 {`import { UpdownButton } from '@lyket/react';
@@ -316,7 +356,11 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <h5 id="optional-props-3">Optional props</h5>
+              <div className="flex big">
+                <quote>Try it! →</quote>
+                <UpdownButton namespace="docs" id="react-updown-button" />
+              </div>
+              <h6>Optional props</h6>
               <ul>
                 <li>
                   <p>
@@ -372,11 +416,13 @@ export BlogPost = ({ title, content }) => {
                 </li>
               </ul>
 
-              <h4>Clap Button</h4>
+              <h5 id="clap-button">Clap Button</h5>
+              <p>Clap buttons behave like Medium applauses.</p>
+
               <p>
-                Clap buttons behave like Medium applauses. Users can like
-                multiple times and every other call from the same user will
-                increment the claps number.
+                <strong>Visitors can like multiple times</strong> and every
+                other call from the same visitor will increment the claps number
+                indefinitely.
               </p>
               <Code>
                 {`import { ClapButton } from '@lyket/react';
@@ -391,7 +437,11 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <h5 id="optional-props-4">Optional props</h5>
+              <div className="flex big">
+                <quote>Try it! →</quote>
+                <ClapButton namespace="docs" id="react-clap-button" />
+              </div>
+              <h6 id="optional-props-4">Optional props</h6>
               <ul>
                 <li>
                   <p>
@@ -434,11 +484,14 @@ export BlogPost = ({ title, content }) => {
                   </ul>
                 </li>
               </ul>
-              <h4>Button Templates</h4>
+              <h4 id="templates">Button Templates</h4>
               <p>
-                Lyket provides a set of out-of-the-box templates. You can see
-                all the available templates on{" "}
-                <a href="https://lyket.dev/templates">lyket.dev/templates</a>
+                Lyket provides a set of{" "}
+                <strong>out-of-the-box templates</strong>. You can see all the
+                available templates in{" "}
+                <Link href="/templates">
+                  <a>the templates page</a>
+                </Link>
               </p>
               <p>
                 By default, ie. if you don't specify any template or custom
@@ -477,7 +530,7 @@ export BlogPost = ({ title, content }) => {
 export StandingOvation = () => {
   return (
     <>
-      <h4>Do you like pizza?</h4>
+      <h4 id="Do you like pizza?">Do you like pizza?</h4>
       <LikeButton
         id="do-you-like-pizza"
         component={ClapButton.templates.Twitter}
@@ -486,19 +539,21 @@ export StandingOvation = () => {
   );
 };`}
               </Code>
-              <h4>Custom Buttons</h4>
+              <h4 id="custom">Custom Buttons</h4>
               <p>
-                You may want to give a different flavour to a button, for
-                example using your logo as icon. You can do that by creating
-                your own component!
+                You may want to give a different flavour to a button,{" "}
+                <strong>for example using your company logo as the icon</strong>
+                . You can do that by{" "}
+                <strong>creating your own custom button</strong>!
               </p>
               <p>
-                Here is an example for each button type of passing a custom
-                component through children. You can pass a custom component also
-                through the component prop.
+                Here is an example for each button type of using a custom
+                component by passing it as <strong>"children"</strong>. You can
+                pass a custom component also{" "}
+                <strong>through the component prop</strong>.
               </p>
               <p>
-                <strong>Custom LikeButton</strong>
+                <h6>Custom Like Button</h6>
               </p>
               <Code>
                 {`import { LikeButton } from '@lyket/react';
@@ -506,7 +561,7 @@ export StandingOvation = () => {
 export Faq = () => {
   return (
     <>
-      <h4>Do you like pizza?</h4>
+      <h4 id="Do you like pizza?">Do you like pizza?</h4>
       <LikeButton
         id="do-you-like-pizza"
         namespace="faq"
@@ -521,10 +576,10 @@ export Faq = () => {
         }) => (
           <>
             <button onClick={handlePress} disabled={isLoading}>
-              Of course! 🍕🍕🍕
+              🍕
             </button>
             {isCounterVisible && <div>Total: {totalLikes}</div>}
-            {userLiked && <div>Thanks for your vote!</div>}
+            {userLiked && <div>Great! I like pizza as well!</div>}
           </>
         )}
       </LikeButton>
@@ -532,6 +587,29 @@ export Faq = () => {
   )
 };`}
               </Code>
+              <LikeButton
+                namespace="docs"
+                id="like-button-react-example-custom"
+              >
+                {({ handlePress, totalLikes, userLiked, isLoading }) => {
+                  return (
+                    <div className="center">
+                      <div className="flex big">
+                        <quote>Try! →</quote>
+                        <button
+                          className="huge"
+                          onClick={handlePress}
+                          disabled={isLoading}
+                        >
+                          🍕
+                        </button>
+                      </div>
+                      <strong>Total likes: {totalLikes}</strong>
+                      {userLiked && <div>Great! I like pizza as well!</div>}
+                    </div>
+                  );
+                }}
+              </LikeButton>
               <p>
                 <strong>Custom ClapButton</strong>
               </p>
@@ -541,7 +619,7 @@ export Faq = () => {
 export Faq = () => {
   return (
     <>
-      <h4>Do you like pizza?</h4>
+      <h4 id="Do you like pizza?">Do you like pizza?</h4>
       <ClapButton
         id="do-you-like-pizza"
         namespace="faq"
@@ -556,7 +634,7 @@ export Faq = () => {
         }) => (
           <>
             <button onClick={handlePress} disabled={isLoading}>
-              Of course! 🍕🍕🍕
+              👏
             </button>
             {isCounterVisible && <div>Total: {totalClaps}</div>}
             <div>You clapped {userClaps} times</div>
@@ -567,6 +645,29 @@ export Faq = () => {
   );
 };`}
               </Code>
+              <ClapButton
+                namespace="docs"
+                id="clap-button-react-example-custom"
+              >
+                {({ handlePress, totalClaps, userClaps, isLoading }) => {
+                  return (
+                    <div className="center">
+                      <div className="flex big">
+                        <quote>Try! →</quote>
+                        <button
+                          className="huge"
+                          onClick={handlePress}
+                          disabled={isLoading}
+                        >
+                          👏
+                        </button>
+                      </div>
+                      <div>Total claps: {totalClaps}</div>
+                      <div>You clapped {userClaps} times!</div>
+                    </div>
+                  );
+                }}
+              </ClapButton>
               <p>
                 <strong>Custom UpdownButton</strong>
               </p>
@@ -576,7 +677,7 @@ export Faq = () => {
 export Faq = () => {
   return (
     <>
-      <h4>Do you like pizza?</h4>
+      <h4 id="Do you like pizza?">Do you like pizza?</h4>
       <UpdownButton
         id="do-you-like-pizza"
         namespace="faq"
@@ -592,13 +693,13 @@ export Faq = () => {
         }) => (
           <>
             <button onClick={handlePressUp} disabled={isLoading}>
-              Of course! 🍕🍕🍕
+              + 🍕
             </button>
             <button onClick={handlePressDown} disabled={isLoading}>
-              I am a bad person
+              - 🍕
             </button>
-            {isCounterVisible && <p>Total: {totalScore}</p>}
-            <p>Your vote: {userVoteDirection}</p>
+            <div>Total votes: {totalScore}</div>
+            <div>{userVoteDirection > 0 ? ":D" : ":("}</div>
           </>
         )}
       </UpdownButton>
@@ -606,18 +707,56 @@ export Faq = () => {
   );
 };`}
               </Code>
-              <h4>Styling buttons</h4>
-              <h4>Resizing</h4>
+              <UpdownButton
+                namespace="docs"
+                id="like-dislike-button-react-example-custom"
+              >
+                {({
+                  handlePressUp,
+                  handlePressDown,
+                  totalScore,
+                  userVoteDirection,
+                  isLoading
+                }) => {
+                  return (
+                    <div className="center">
+                      <div className="flex big">
+                        <quote>Try! →</quote>
+                        <button
+                          className="big"
+                          onClick={handlePressUp}
+                          disabled={isLoading}
+                        >
+                          + 🍕
+                        </button>
+                        <span> or </span>
+                        <button
+                          className="big"
+                          onClick={handlePressDown}
+                          disabled={isLoading}
+                        >
+                          - 🍕
+                        </button>
+                      </div>
+                      <div>Total votes: {totalScore}</div>
+                      <div>{userVoteDirection > 0 ? ":D" : ":("}</div>
+                    </div>
+                  );
+                }}
+              </UpdownButton>
+              <h4 id="styling">Styling buttons</h4>
+              <h5>Resizing</h5>
               <p>
-                All buttons can be resized by wrapping them in a container and
-                changing the font-size.
+                All buttons can be resized by wrapping them in a container and{" "}
+                <strong>changing the font-size</strong>.
               </p>
-              <h4>Apply your color scheme and fonts</h4>
+              <h5>Apply your color scheme and fonts</h5>
               <p>
                 Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
-                library, allowing you to provide your own theme to the buttons
-                through the <strong>theme</strong> prop in the provider. Colors
-                support rgba, hex, and color names.
+                library, allowing you to provide{" "}
+                <strong>your own color palette</strong> to the buttons through
+                the <strong>theme</strong> prop in the provider. Colors support
+                rgba, hex, and color names.
               </p>
               <ul>
                 <li>
@@ -654,10 +793,6 @@ export Faq = () => {
     body: 'inherit',
     heading: 'inherit',
   },
-  fontWeights: {
-    body: 400,
-    bold: 700,
-  },
 };`}
               </Code>
               <p>
@@ -668,7 +803,7 @@ export Faq = () => {
                 Not all the templates support theming. Read the templates detail
                 to know which ones.
               </p>
-              <h4>reCAPTCHA</h4>
+              <h4 id="recaptcha">reCAPTCHA</h4>
               <p>
                 Lyket is integrated with Google reCAPTCHA V3 to handle malicious
                 use without interrupting <em>human</em> users. To enable it you

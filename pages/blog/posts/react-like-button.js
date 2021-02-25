@@ -151,7 +151,7 @@ export default function Post() {
               like will be removed, just like the Twitter heart.
             </p>
             <div className="flex big">
-              <h4>Click! →</h4>
+              <quote>Click! →</quote>
               <LikeButton namespace="blog" id="like-button-react-example" />
             </div>
             <h3>Changing templates</h3>
@@ -172,7 +172,7 @@ export default function Post() {
 />`}
             </Code>
             <div className="flex big">
-              <h4>Click! →</h4>
+              <quote>Click! →</quote>
               <LikeButton
                 namespace="blog"
                 id="like-button-react-example-twitter"
@@ -219,7 +219,7 @@ export default function Post() {
   `}
             </Code>
             <div className="flex big">
-              <h4>Click! →</h4>
+              <quote>Click! →</quote>
               <Provider
                 apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
                 theme={{
@@ -275,7 +275,7 @@ export default function Post() {
                 return (
                   <div className="center">
                     <div className="flex big">
-                      <h4>Click! →</h4>
+                      <quote>Click! →</quote>
                       <button
                         className="huge"
                         onClick={handlePress}
@@ -328,7 +328,7 @@ export default function Post() {
               subscription form!
             </p>
             <div className="flex big">
-              <h3>Click! →</h3>
+              <quote>Click! →</quote>
               <LikeButton
                 namespace="blog"
                 id="like-button-react-example-onpress"

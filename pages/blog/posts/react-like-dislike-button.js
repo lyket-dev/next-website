@@ -265,7 +265,7 @@ export default function Post() {
   id="pizza"
   namespace="great-things"
 >
-  {({ handlePressUp,handlePressUp, totalVotes, userVoteDirection, isLoading }) => {
+  {({ handlePressUp,handlePressUp, totalScore, userVoteDirection, isLoading }) => {
     return (
       <div>
         <button
@@ -283,7 +283,7 @@ export default function Post() {
         >
           - 🍕
         </button>
-        <div>Total votes: {totalVotes}</div>
+        <div>Total votes: {totalScore}</div>
         {userVoteDirection > 0 ? <div>More pizza!</div> : <div>Less pizza!</div>}
       </div>
     )
@@ -298,7 +298,7 @@ export default function Post() {
                 {({
                   handlePressUp,
                   handlePressDown,
-                  totalVotes,
+                  totalScore,
                   userVoteDirection,
                   isLoading
                 }) => {
@@ -319,7 +319,7 @@ export default function Post() {
                       >
                         - 🍕
                       </button>
-                      <div>Total votes: {totalVotes}</div>
+                      <div>Total votes: {totalScore}</div>
                       {userVoteDirection > 0 ? (
                         <div>More pizza!</div>
                       ) : (

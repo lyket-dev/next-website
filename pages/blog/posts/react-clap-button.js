@@ -242,28 +242,26 @@ export default function Post() {
   }}
 </ClapButton>`}
             </Code>
-            <div className="center big">
-              <ClapButton
-                id="clap-button-react-example-custom"
-                namespace="blog"
-              >
-                {({ handlePress, totalClaps, userClaps, isLoading }) => {
-                  return (
-                    <div>
+            <ClapButton id="clap-button-react-example-custom" namespace="blog">
+              {({ handlePress, totalClaps, userClaps, isLoading }) => {
+                return (
+                  <div className="center">
+                    <div className="flex big">
+                      <quote>Click! →</quote>
                       <button
-                        className="big"
+                        className="huge"
                         onClick={handlePress}
                         disabled={isLoading}
                       >
                         👏
                       </button>
-                      <div>Total claps: {totalClaps}</div>
-                      <div>You clapped {userClaps} times!</div>
                     </div>
-                  );
-                }}
-              </ClapButton>
-            </div>
+                    <div>Total claps: {totalClaps}</div>
+                    <div>You clapped {userClaps} times!</div>
+                  </div>
+                );
+              }}
+            </ClapButton>
             <h4>Engage your visitors!</h4>
             <p>
               Once a visitor liked your content, you know you have their
