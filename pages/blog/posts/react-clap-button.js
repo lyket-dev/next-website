@@ -79,34 +79,13 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              Clap buttons are simply great. They are{" "}
-              <strong>perfect for blogs and portfolios</strong> because content
-              writers can get a flood of positive reinforcement and visitors can
-              express all their appreciation. Medium uses them for every of
-              their blog post and they became quite succesful and popular.
+              Clap buttons are the{" "}
+              <strong>perfect solutions for blogs and portfolios</strong>{" "}
+              because content writers can get a flood of positive reinforcement
+              and visitors can express all their appreciation. Medium uses them
+              for every of their blog post and they became quite succesful and
+              popular.
             </p>
-            <p>
-              But if you ever tried to add a{" "}
-              <strong>clap button to your React</strong> project, I am sure you
-              encountered some difficulties.
-            </p>
-            <ul>
-              <li>
-                Store claps somewhere otherwise they will be gone after a simple
-                page refresh. So you need a{" "}
-                <strong>database and some architecture</strong>.
-              </li>
-              <li>
-                See <strong>who has already clapped</strong> and how many times,
-                so if somebody returns to the page they can still see their
-                claps.
-              </li>
-              <li>
-                Decide how to <strong>visualize</strong> and what to do with all
-                this appreciation tokens!
-              </li>
-            </ul>
-            <h3>Lyket solves all your problems</h3>
             <p>
               Lyket is the ultimate tool to add GDPR-compliant{" "}
               <strong>
@@ -153,7 +132,7 @@ export default function Post() {
             <div className="center big">
               <ClapButton namespace="blog" id="clap-button-react-example" />
             </div>
-            <h3>Changing templates</h3>
+            <h4>Changing templates</h4>
             <p>
               You can change the style by choosing one of the templates you can
               find in the{" "}
@@ -181,7 +160,7 @@ export default function Post() {
                 component={ClapButton.templates.Medium}
               />
             </div>
-            <h3>Changing colors</h3>
+            <h4>Changing colors</h4>
             <p>
               Some templates support color changing, for example the default
               one. You can set your own color palette by configuring the
@@ -285,7 +264,7 @@ export default function Post() {
                 }}
               </ClapButton>
             </div>
-            <h3>Engage your visitors!</h3>
+            <h4>Engage your visitors!</h4>
             <p>
               Once a visitor liked your content, you know you have their
               attention, so why not use it as an occasion to engage further with
@@ -307,14 +286,14 @@ export default function Post() {
               subscribe!
             </p>
             <div className="flex big">
-              <h3>Click! →</h3>
+              <h4>Click! →</h4>
               <ClapButton
                 namespace="blog"
                 id="clap-button-react-example-onpress"
                 onPress={openSubscribeModal}
               />
             </div>
-            <h3>Now you can just sit back and watch the numbers grow!</h3>{" "}
+            <h4>Now you can just sit back and watch the numbers grow!</h4>{" "}
             <p>Where? On the dashboard, of course!</p>
             <p>
               Once you are registered you can access your private area and see
@@ -332,7 +311,7 @@ export default function Post() {
               </Link>
               .
             </p>
-            <h3>The other button types</h3>
+            <h4>The other button types</h4>
             <p>
               Clap button is just one of the three kind of buttons that Lyket
               offers. Each button has a different behaviour and provides a
