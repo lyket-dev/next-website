@@ -209,7 +209,7 @@ export default function Docs() {
 ></div>`}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <LikeButton namespace="docs" id="widget-like-button" />
               </div>
               <h5 id="clap-button">Clap button</h5>
@@ -239,7 +239,7 @@ export default function Docs() {
 ></div>`}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <ClapButton namespace="docs" id="widget-clap-button" />
               </div>
               <h5 id="updown-button">Like/dislike button</h5>
@@ -270,7 +270,7 @@ export default function Docs() {
 ></div>`}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <UpdownButton namespace="docs" id="widget-updown-button" />
               </div>
               <h4 id="styling-the-buttons">Styling the buttons</h4>
@@ -316,7 +316,7 @@ export default function Docs() {
 `}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <Provider
                   apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
                   theme={{

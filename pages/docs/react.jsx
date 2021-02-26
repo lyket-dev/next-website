@@ -284,7 +284,7 @@ export BlogPost = ({ title, content }) => {
 };`}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <LikeButton namespace="docs" id="react-like-button" />
               </div>
               <h6>Optional props</h6>
@@ -357,7 +357,7 @@ export BlogPost = ({ title, content }) => {
 };`}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <UpdownButton namespace="docs" id="react-updown-button" />
               </div>
               <h6>Optional props</h6>
@@ -438,7 +438,7 @@ export BlogPost = ({ title, content }) => {
 };`}
               </Code>
               <div className="flex big">
-                <quote>Try it! →</quote>
+                <div className="try">Try it! →</div>
                 <ClapButton namespace="docs" id="react-clap-button" />
               </div>
               <h6 id="optional-props-4">Optional props</h6>
@@ -552,9 +552,7 @@ export StandingOvation = () => {
                 pass a custom component also{" "}
                 <strong>through the component prop</strong>.
               </p>
-              <p>
-                <h6>Custom Like Button</h6>
-              </p>
+              <h6>Custom Like Button</h6>
               <Code>
                 {`import { LikeButton } from '@lyket/react';
 
@@ -595,7 +593,7 @@ export Faq = () => {
                   return (
                     <div className="center">
                       <div className="flex big">
-                        <quote>Try! →</quote>
+                        <div className="try">Try! →</div>
                         <button
                           className="huge"
                           onClick={handlePress}
@@ -653,7 +651,7 @@ export Faq = () => {
                   return (
                     <div className="center">
                       <div className="flex big">
-                        <quote>Try! →</quote>
+                        <div className="try">Try! →</div>
                         <button
                           className="huge"
                           onClick={handlePress}
@@ -721,7 +719,7 @@ export Faq = () => {
                   return (
                     <div className="center">
                       <div className="flex big">
-                        <quote>Try! →</quote>
+                        <div className="try">Try! →</div>
                         <button
                           className="big"
                           onClick={handlePressUp}

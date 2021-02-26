@@ -247,7 +247,7 @@ export default function Post() {
                 return (
                   <div className="center">
                     <div className="flex big">
-                      <quote>Click! →</quote>
+                      <div className="try">Click! →</div>
                       <button
                         className="huge"
                         onClick={handlePress}

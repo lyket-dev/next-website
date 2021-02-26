@@ -5,7 +5,11 @@ import PrismJsx from "prismjs/components/prism-jsx.min";
 import Line from "prismjs/plugins/line-numbers/prism-line-numbers.js";
 
 export default function Code({ children }) {
-  useEffect(Prism.highlightAll, [children]);
+  useEffect(() => {
+    if (typeof document !== undefined && children !== null) {
+      Prism.highlightAll(children);
+    }
+  }, [children, Prism]);
 
   return (
     <pre className="language-jsx line-numbers">
