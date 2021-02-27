@@ -68,7 +68,7 @@ export default function Post() {
 
       <div className="page">
         <section className="page__section">
-          <h2 className="page__title">Clap button</h2>
+          <h2 className="page__kicker">Clap button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <ClapButton namespace="blog" id="clap-button-react" />
