@@ -2,6 +2,7 @@ import React from "react";
 import { LikeButton } from "@lyket/react";
 import Link from "next/link";
 import Head from "next/head";
+import Code from "components/Code";
 
 export const meta = {
   title: "How to add a like button to any Gatsby website with Lyket"
@@ -11,14 +12,19 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a like button to your Gatsby website</title>
+        <title>Add a like button to your Gatsby website | Lyket</title>
         <meta
-          content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons to any Gatsby project in a matter of seconds"
           name="description"
+          content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons to any Gatsby project in a matter of seconds"
+        />
+        <meta
+          name="keywords"
+          content="Gatsby like button, Gatsby, like button"
         />
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">Gatsby like button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <LikeButton
@@ -44,30 +50,23 @@ export default function Post() {
               start receiving feedback on your website!
             </p>
 
-            <h2>Installation using Gatsby</h2>
+            <h4>Installation using Gatsby</h4>
 
             <p>To install the Gatsby component run</p>
-            <pre>
-              <code className="language-javascript">yarn add @lyket/react</code>
-            </pre>
+            <Code>yarn add @lyket/react</Code>
             <p>or</p>
-            <pre>
-              <code className="language-javascript">
-                npm install @lyket/react
-              </code>
-            </pre>
-            <h2>Configuration</h2>
+            <Code>npm install @lyket/react</Code>
+            <h4>Configuration</h4>
 
-            <h3>Set up the provider</h3>
+            <h5>Setting up the provider</h5>
             <p>
               The provider is in charge of loading the client that will be used
               to make requests to Lyket's server using your personal public API
               key.
             </p>
 
-            <pre>
-              <code className="language-javascript">
-                {`import {Provider} from '@lyket/react';
+            <Code>
+              {`import {Provider} from '@lyket/react';
 
 GatsbyDOM.render(
   <Provider apiKey="[YOUR-API-KEY]">
@@ -75,8 +74,7 @@ GatsbyDOM.render(
   </Provider>,
   document.getElementById('root')
 );`}
-              </code>
-            </pre>
+            </Code>
 
             <h5>Required props</h5>
             <ul>
@@ -104,7 +102,7 @@ GatsbyDOM.render(
                 </p>
               </li>
             </ul>
-            <h3>Create a like button</h3>
+            <h5>Create a like button</h5>
             <p>
               When the Gatsby component is mounted, a fetch request is made to
               retrieve info about the like button with that certain id and
@@ -128,9 +126,8 @@ GatsbyDOM.render(
               "how-to-beat-me-at-chess", namespace "post" and a Twitter-like
               template.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+            <Code>
+              {`import { LikeButton } from '@lyket/react';
 
 export default BlogPost = ({ title, content }) => {
   return (
@@ -145,8 +142,7 @@ export default BlogPost = ({ title, content }) => {
     </div>
   );
 };`}
-              </code>
-            </pre>
+            </Code>
             <h5>Required like button props</h5>
             <ul>
               <li>
@@ -204,14 +200,13 @@ export default BlogPost = ({ title, content }) => {
               Import templates directly from the button component. Here is an
               example of using templates.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+            <Code>
+              {`import { LikeButton } from '@lyket/react';
 
 export default StandingOvation = () => {
   return (
     <>
-      <h2>Do you like pizza?</h2>
+      <h4>Do you like pizza?</h4>
       <LikeButton
         id="do-you-like-pizza"
         component={LikeButton.templates.Twitter}
@@ -219,8 +214,7 @@ export default StandingOvation = () => {
     </>
   );
 };`}
-              </code>
-            </pre>
+            </Code>
             <h4>Children or custom component</h4>
             <p>
               You may want to give a different aspect to a button, for example
@@ -232,14 +226,13 @@ export default StandingOvation = () => {
               You can pass a component also through the component prop. Here is
               an example
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
+            <Code>
+              {`import { LikeButton } from '@lyket/react';
 
 export default Faq = () => {
   return (
     <>
-      <h2>Do you like pizza?</h2>
+      <h4>Do you like pizza?</h4>
       <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
         ({ handlePress, totalLikes, userLiked, isLoading, isCounterVisible }) => {
           return (
@@ -254,16 +247,15 @@ export default Faq = () => {
     </>
   )
 };`}
-              </code>
-            </pre>
+            </Code>
 
-            <h2>Styling buttons</h2>
-            <h3>Resizing</h3>
+            <h4>Styling buttons</h4>
+            <h5>Resizing</h5>
             <p>
               Like buttons can be resized by wrapping them in a container and
               changing the font-size.
             </p>
-            <h3>Applying your own theme to the default template</h3>
+            <h5>Applying your own theme to the default template</h5>
             <p>
               Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
               library, allowing you to provide your own theme to the buttons
@@ -273,30 +265,28 @@ export default Faq = () => {
               These are the default values, you can change any of these
               parameters by passing your own object:
             </p>
-            <pre>
-              <code className="language-js">
-                {`const defaultTheme = {
-    colors: {
-      background: '#e0e0e0',
-      text: '#292929',
-      primary: '#22c1c3',
-      secondary: '#ff00c3',
-      accent: '#fcff4b',
-      highlight: '#e095ed',
-      muted: '#aaa',
-    },
-    fonts: {
-      body: 'inherit',
-      heading: 'inherit',
-      monospace: 'inherit',
-    },
-    fontWeights: {
-      body: 400,
-      bold: 700,
-    },
-  };`}
-              </code>
-            </pre>
+            <Code>
+              {`const defaultTheme = {
+  colors: {
+    background: '#e0e0e0',
+    text: '#292929',
+    primary: '#22c1c3',
+    secondary: '#ff00c3',
+    accent: '#fcff4b',
+    highlight: '#e095ed',
+    muted: '#aaa',
+  },
+  fonts: {
+    body: 'inherit',
+    heading: 'inherit',
+    monospace: 'inherit',
+  },
+  fontWeights: {
+    body: 400,
+    bold: 700,
+  },
+};`}
+            </Code>
             <p>
               The Provider component makes a deep merge, so you can overwrite
               the theme object totally or partially.
@@ -305,7 +295,7 @@ export default Faq = () => {
               There are a few templates that support theming. Read the templates
               detail to know which ones.
             </p>
-            <h2>reCAPTCHA</h2>
+            <h4>reCAPTCHA</h4>
             <p>
               Lyket is integrated with Google reCAPTCHA V3 to handle malicious
               use without interrupting <em>human</em> users. To enable it you
