@@ -114,7 +114,7 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
-              <h4>Installation</h4>
+              <h4 id="installation">Installation</h4>
               <p>
                 Implementing Lyket is quite simple, but you have to have a basic
                 knowledge of HTML to do that. In your HTML or your site builder
@@ -177,7 +177,7 @@ export default function Docs() {
                   </Code>
                 </li>
               </ul>
-              <h4>Buttons</h4>
+              <h4 id="buttons">Buttons</h4>
               <p>
                 There are three different button types that have different
                 behaviours.
