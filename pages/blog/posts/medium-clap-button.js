@@ -80,7 +80,6 @@ export default function Post() {
               component={ClapButton.templates.Medium}
             />
           </div>
-           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
@@ -90,8 +89,8 @@ export default function Post() {
               <strong>perfect for blogs and portfolios</strong> because content
               writers can get a <strong>flood of positive reinforcement</strong>{" "}
               and visitors can express all their appreciation. Medium uses them
-              for every of their blog post and they became quite succesful and
-              popular.
+              for all their blog posts and after that they became quite
+              successful and popular.
             </p>
             <p>
               But if you ever tried to create a <strong>clap button</strong>, I
@@ -99,7 +98,7 @@ export default function Post() {
             </p>
             <ul>
               <li>
-                You need to store claps somewhere otherwise they will be gone
+                You need to store claps somewhere, otherwise they will be gone
                 after a simple page refresh. So you need a{" "}
                 <strong>database and some architecture</strong>.
               </li>
@@ -178,7 +177,7 @@ export default function Post() {
               <Link href="/templates">
                 <a>templates section</a>
               </Link>
-              . For clap buttons we have the Medium template, that emulates the
+              . For clap buttons we have the Medium template, that emulates the{" "}
               <strong>Medium clap button</strong>. Let's try it out!
             </p>
             <Code>
@@ -202,10 +201,11 @@ export default function Post() {
             </div>
             <h4>Changing colors of the simple clap button</h4>
             <p>
-              If you want to have a <strong>clap button</strong> but you want it
-              to ghave your website's colors and style you can do it by using
-              the default template or any other template that support color
-              changing. You can set your own color palette by configuring the
+              If you want to have a <strong>Medium clap button</strong> but also
+              want it to have your website's colors and style you can do it by
+              using the default template or any other template that support
+              color changing. You can{" "}
+              <strong>set your own color palette</strong> by configuring the
               Provider. It supports rgba, hex, and color names.
             </p>
             <ul>
