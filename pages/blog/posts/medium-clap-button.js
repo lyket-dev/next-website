@@ -89,7 +89,7 @@ export default function Post() {
               <strong>perfect for blogs and portfolios</strong> because content
               writers can get a <strong>flood of positive reinforcement</strong>{" "}
               and visitors can express all their appreciation. Medium uses them
-              for all their blog posts and after that they became quite
+              for all their blog posts and, because of that, they became quite
               successful and popular.
             </p>
             <p>
@@ -103,13 +103,14 @@ export default function Post() {
                 <strong>database and some architecture</strong>.
               </li>
               <li>
-                See <strong>who has already clapped</strong> and how many times,
-                so if somebody returns to the page they can still see their
-                claps.
+                You need to see{" "}
+                <strong>if a visitor has already clapped</strong> and how many
+                times, so if somebody returns to the page they can still see
+                their claps.
               </li>
               <li>
-                Decide how to <strong>visualize</strong> and what to do with all
-                this appreciation tokens!
+                You have to decide how to <strong>visualize</strong> the data
+                and what to do with all this appreciation tokens!
               </li>
             </ul>
             <p>
@@ -123,7 +124,8 @@ export default function Post() {
               easily create a clap button <strong>using React</strong>.
             </p>
             <p>
-              If you are <strong>not using React</strong> you can check out our{" "}
+              If you are <strong>not a React user</strong> you can still do it
+              using our HTML + Javascript widget! Check it out our{" "}
               <Link href="/docs/widget">
                 <a>Widget documentation</a>
               </Link>{" "}
