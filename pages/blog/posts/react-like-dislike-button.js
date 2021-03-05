@@ -72,7 +72,6 @@ export default function Post() {
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="like-dislike-button-react" />
           </div>
-          <p className="page__text"></p>
         </section>
         <section className="page__section">
           <div className="markdown">

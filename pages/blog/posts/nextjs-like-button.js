@@ -27,7 +27,7 @@ export default function Post() {
               component={LikeButton.templates.Twitter}
             />
           </div>
-          <p className="page__text"></p>
+           
         </section>
         <div className="avatar"></div>
         <section className="page__section">

@@ -23,7 +23,7 @@ export default function Post() {
           <div className="half__reaction">
             <UpdownButton namespace="e-commerce" id="gatsby-e-commerce" />
           </div>
-          <p className="page__text"></p>
+           
         </section>
         <section className="page__section">
           <div className="markdown">

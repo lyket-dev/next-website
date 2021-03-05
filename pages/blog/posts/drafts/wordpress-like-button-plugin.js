@@ -30,7 +30,6 @@ export default function Post() {
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="wordpress-video-tutorial" />
           </div>
-          <p className="page__text"></p>
         </section>
         <section className="page__section">
           <div className="markdown">

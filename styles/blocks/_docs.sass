@@ -13,9 +13,8 @@
   text-align: center
 
 .docs__title
-  font-weight: 700
-  +font-size(alpha)
-  +heading-font-family
+  @extend .page__title
+  +margin-bottom(0)
 
 .docs__text
   +font-size(regular)

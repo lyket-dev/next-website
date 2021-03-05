@@ -80,7 +80,7 @@ export default function Post() {
               component={ClapButton.templates.Medium}
             />
           </div>
-          <p className="page__text"></p>
+           
         </section>
         <div className="avatar"></div>
         <section className="page__section">

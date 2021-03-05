@@ -73,7 +73,7 @@ export default function Post() {
           <div className="half__reaction">
             <ClapButton namespace="blog" id="clap-button-react" />
           </div>
-          <p className="page__text"></p>
+           
         </section>
         <div className="avatar"></div>
         <section className="page__section">

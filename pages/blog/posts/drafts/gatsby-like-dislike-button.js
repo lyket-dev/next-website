@@ -28,7 +28,7 @@ export default function Post() {
               component={UpdownButton.templates.Reddit}
             />
           </div>
-          <p className="page__text"></p>
+           
         </section>
         <div className="avatar"></div>
         <section className="page__section">

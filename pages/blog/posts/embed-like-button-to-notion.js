@@ -28,7 +28,7 @@ export default function Post() {
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="embed-on-notion" />
           </div>
-          <p className="page__text"></p>
+           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
