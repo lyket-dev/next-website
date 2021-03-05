@@ -16,11 +16,11 @@ export default function Post() {
         <title>Wordpress Like button | Lyket</title>
         <meta
           name="description"
-          content="Add a stylish and privacy-friendly Wordpress like button in a matter of seconds"
+          content="Add fresh and privacy-friendly Wordpress like buttons in a few seconds. Fully customizable and without login!"
         />
         <meta
           name="keywords"
-          content="Wordpress like button, Wordpress, like button"
+          content="Wordpress like button, Wordpress, like button, heart button"
         />
       </Head>
       <div className="page">
