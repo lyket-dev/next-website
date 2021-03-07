@@ -48,7 +48,7 @@ export default function Docs() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/posts/medium-clap-button">
+                  <Link href="/blog/posts/clap-button">
                     <a>How to add clap buttons to a React project</a>
                   </Link>
                 </li>

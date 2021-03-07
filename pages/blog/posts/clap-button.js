@@ -131,7 +131,7 @@ export default function Post() {
             <div className="center big">
               <ClapButton namespace="blog" id="clap-button-react-example" />
             </div>
-            <h4>Changing templates</h4>
+            <h4 id="medium">Use the Medium template</h4>
             <p>
               You can change the style by choosing one of the templates you can
               find in the{" "}
@@ -139,7 +139,7 @@ export default function Post() {
                 <a>templates section</a>
               </Link>
               . For clap buttons we have the Medium template, that emulates the
-              Medium clap button. Let's try it out!
+              <strong>Medium clap button</strong>. Let's try it out!
             </p>
             <Code>
               {`<ClapButton

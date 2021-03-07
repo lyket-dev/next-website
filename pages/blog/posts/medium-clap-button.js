@@ -85,103 +85,105 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <p>
-              <strong>Medium clap buttons</strong> are simply great. They are{" "}
-              <strong>perfect for blogs and portfolios</strong> because content
-              writers can get a <strong>flood of positive reinforcement</strong>{" "}
-              and visitors can express all their appreciation. Medium uses them
-              for all their blog posts and, because of that, they became quite
-              successful and popular.
+              Lyket wants to give you all the tools to customize and create the
+              perfect button for every situation. So we decided that we wanted
+              to allow our users to add the famous{" "}
+              <strong>Medium clap button on their own blog</strong>! Moreover
+              Lyket <strong>doesn't require visitors to sign-up</strong> like
+              Medium does, giving a even smoother user-experience.
+            </p>
+
+            <h4>Why a clap button?</h4>
+            <p>
+              <strong>Clap buttons behave differently from like buttons</strong>
+              , in fact you can click on a clap button as many time as you want
+              and <strong>the counter will keep on increasing</strong>.
             </p>
             <p>
-              But if you ever tried to create a <strong>clap button</strong>, I
-              am sure you faced some challenges.
+              The thing that a web designer must always keep in mind when
+              building a web page or an app is the{" "}
+              <strong>
+                goal that the user wants to achieve by interacting with your
+                product
+              </strong>
+              . It's the website builder's job then to{" "}
+              <strong>
+                translate their intentions and actions into buttons
+              </strong>
+              .
             </p>
-            <ul>
-              <li>
-                You need to store claps somewhere, otherwise they will be gone
-                after a simple page refresh. So you need a{" "}
-                <strong>database and some architecture</strong>.
-              </li>
-              <li>
-                You need to see{" "}
-                <strong>if a visitor has already clapped</strong> and how many
-                times, so if somebody returns to the page they can still see
-                their claps.
-              </li>
-              <li>
-                You have to decide how to <strong>visualize</strong> the data
-                and what to do with all this appreciation tokens!
-              </li>
-            </ul>
+            <p>
+              Applying a behavior to a button{" "}
+              <strong>
+                facilitates the interaction between your user and the button
+              </strong>{" "}
+              itself by returning feedback that allows the user a greater
+              understanding of the effectiveness of its action.
+            </p>
+            <p>
+              That is why{" "}
+              <strong>
+                Medium chose a different behavior for their buttons.
+              </strong>
+            </p>
+            <p>
+              Clap buttons <strong>give a different user-experience</strong> and
+              they are perfect for blogs in which the more feedback you can get,
+              the merrier!
+            </p>
             <p>
               Lyket is the ultimate tool to add{" "}
               <strong>Medium clap buttons to any website</strong> with minimal
               effort!
             </p>
-            <h4>Medium clap buttons with HTML</h4>
+            <h4>Medium clap buttons with Lyket</h4>
             <p>
-              In this tutorial I will give you a few examples on how you can
-              easily create a clap button <strong>using React</strong>.
+              Lyket took inspiration from Medium to create buttons that would
+              <strong>behave exactly like the Medium clap buttons</strong>, and
+              also look like them. You can create Medium clap buttons either if
+              you{" "}
+              <strong>use a website builder, like Wordpress, Webflow</strong> or
+              if you develop using{" "}
+              <strong>React or any other React based framework</strong>.
             </p>
+            <ul>
+              <li>
+                If you use HTML <strong>or a website builder</strong> you can
+                use use our HTML + Javascript widget! Check out the{" "}
+                <Link href="/docs/widget">
+                  <a>Widget documentation</a>
+                </Link>{" "}
+                and start creating{" "}
+                <strong>Medium clap buttons with simple HTML</strong>. To have
+                the perfect doppleganger you can{" "}
+                <strong>choose the Medium template</strong> that replicates
+                behavior and animation of the official Medium clap button.
+              </li>
+              <li>
+                <strong>If you use React</strong> you can follow the{" "}
+                <Link href="/blog/posts/clap-button">
+                  <a>clap button tutorial</a>
+                </Link>{" "}
+                and, if you want the exact copy, go straight to the{" "}
+                <Link href="/blog/posts/clap-button#medium">
+                  <a>Medium template button</a>
+                </Link>{" "}
+                part.
+              </li>
+            </ul>
             <p>
-              If you are <strong>not a React user</strong> you can still do it
-              using our HTML + Javascript widget! Check it out our{" "}
-              <Link href="/docs/widget">
-                <a>Widget documentation</a>
-              </Link>{" "}
-              and start creating{" "}
-              <strong>Medium clap buttons with simple HTML</strong>.
-            </p>
-            <h4>Medium clap buttons with React</h4>
-            <p>
-              Before going into details, be aware that in this tutorial we use a
-              test API key, so feel free to{" "}
-              <strong>copy and paste the snippets</strong>, but, remember to
-              register to Lyket to get your own key!
-            </p>
-            <p>
-              In the first example we create a{" "}
-              <strong>
-                clap button with id "medium-clap-button" under the
-                "my-blog-post" category
-              </strong>
-              . To do that we import the Provider component that configures
-              Lyket and the ClapButton component where we want our button to be.
-              Read more about the Provider component on the{" "}
-              <Link href="/docs/react">
-                <a>docs</a>
-              </Link>
-            </p>
-            <Code>
-              {`import { Provider, ClapButton } from "@lyket/react";
-
-  <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
-    <ClapButton
-      namespace="my-blog-post"
-      id="medium-clap-button"
-    />
-  </Provider>
-`}
-            </Code>
-            <p>
-              Try it out! It will add as many claps as the number of clicks.
-              There are no limits and{" "}
-              <strong>your fans can really hit it</strong>!
+              Either using HTML or React he result will be this. Let's try it
+              out!
             </p>
             <div className="flex big">
               <h4>Click! →</h4>
-              <ClapButton namespace="blog" id="medium-button-react-example" />
+              <ClapButton
+                namespace="blog"
+                id="medium-button-try"
+                component={ClapButton.templates.Medium}
+              />
             </div>
-            <h4>Give your button the Medium clap button style!</h4>
-            <p>
-              You can change the style by choosing one of the templates you can
-              find in the{" "}
-              <Link href="/templates">
-                <a>templates section</a>
-              </Link>
-              . For clap buttons we have the Medium template, that emulates the{" "}
-              <strong>Medium clap button</strong>. Let's try it out!
-            </p>
+            <p>We created this Medium clap button using this React code</p>
             <Code>
               {`<ClapButton
   namespace="my-blog-post"
@@ -189,157 +191,37 @@ export default function Post() {
   component={ClapButton.templates.Medium}
 />`}
             </Code>
-            <p>
-              You will get a clap button that looks and behaves just like
-              Medium's
-            </p>
-            <div className="flex big">
-              <h4>Click! →</h4>
-              <ClapButton
-                namespace="blog"
-                id="medium-button-react-example-twitter"
-                component={ClapButton.templates.Medium}
-              />
-            </div>
-            <h4>Changing colors of the simple clap button</h4>
-            <p>
-              If you want to have a <strong>Medium clap button</strong> but also
-              want it to have your website's colors and style you can do it by
-              using the default template or any other template that support
-              color changing. You can{" "}
-              <strong>set your own color palette</strong> by configuring the
-              Provider. It supports rgba, hex, and color names.
-            </p>
-            <ul>
-              <li>
-                <strong>background</strong> attribute controls the background
-                color of the inactive clap button
-              </li>
-              <li>
-                <strong>primary</strong> attribute will change the background
-                color of a clicked clap button
-              </li>
-              <li>
-                <strong>text</strong> attribute changes the font color.
-              </li>
-            </ul>
+            <p>Or in alternative using this HTML code</p>
             <Code>
-              {`import { Provider, ClapButton } from "@lyket/react";
-
-<Provider
-  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
-  theme={{
-    colors: {
-      background: "#b8fff3",
-      text: "violet",
-      primary: "rgba(255, 224, 138, 0.4)"
-    }
-  }}
->
-  <ClapButton
-    namespace="my-blog-post"
-    id="medium-clap-button"
-  />
-</Provider>`}
+              {`<div
+  data-lyket-type="clap"
+  data-lyket-namespace="blog"
+  data-lyket-id="medium-clap-button"
+  data-lyket-template="medium"
+></div>`}
             </Code>
-            <div className="flex big">
-              <h4>Click! →</h4>
-              <Provider
-                apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
-                theme={{
-                  colors: {
-                    background: "#b8fff3",
-                    text: "violet",
-                    primary: "rgba(255, 224, 138, 0.4)"
-                  }
-                }}
-              >
-                <ClapButton
-                  namespace="blog"
-                  id="medium-button-react-example-colors"
-                />
-              </Provider>
-            </div>
-            <h4>Creating your own button</h4>
+            <h4>Engage engage engage!</h4>
             <p>
-              You may want to have something{" "}
-              <strong>more unique than the Medium clap button</strong> to be
-              more consistent with your website, for example using your company
-              logo or a clap icon from your own icon set.
+              Medium catches the moment in which{" "}
+              <strong>a visitor claps to prompt them to sign-up</strong> to
+              their platform. Using Lyket does not require your visitors to
+              sing-up to Lyket -we are privacy friendly ;)-, but you can{" "}
+              <strong>prompt visitors for any action after they clapped</strong>
+              ! For example to <strong>subscribe to your newsletter</strong>, or
+              ask to leave a comment..
             </p>
-            <p>
-              No problem! Here is an example of using the{" "}
-              <strong>clapping hands emoji as a clap button</strong>.
-            </p>
-            <Code>
-              {`import { ClapButton } from '@lyket/react';
-
-<ClapButton
-  namespace="my-blog"
-  id="applause-now"
->
-  {({ handlePress, totalClaps, userClaps, isLoading }) => {
-    return (
-      <div>
-        <button
-          onClick={handlePress}
-          disabled={isLoading}
-        >
-        👏
-        </button>
-        <div>Total claps: {totalClaps}</div>
-        <div>You clapped {userClaps} times!</div>
-      </div>
-    )
-  }}
-</ClapButton>`}
-            </Code>
-            <div className="center">
-              <ClapButton
-                id="medium-button-react-example-custom"
-                namespace="blog"
-              >
-                {({ handlePress, totalClaps, userClaps, isLoading }) => {
-                  return (
-                    <>
-                      <div className="flex big">
-                        <h4>Click! →</h4>
-                        <button
-                          className="big"
-                          onClick={handlePress}
-                          disabled={isLoading}
-                          style={{ fontSize: "90px" }}
-                        >
-                          👏
-                        </button>
-                      </div>
-                      <div>Total claps: {totalClaps}</div>
-                      <div>You clapped {userClaps} times!</div>
-                    </>
-                  );
-                }}
-              </ClapButton>
-            </div>
-            <h4>Engage your visitors!</h4>
-            <p>
-              Once a visitor clapped at your content, you know you have their
-              full attention, so why not use it as an occasion to{" "}
-              <strong>engage further with a call to action</strong>? Maybe you
-              can ask your visitors to{" "}
-              <strong>subscribe to your newsletter after they clapped</strong>?
-              Or ask to leave a more detailed feedback? Nothing easier!
-            </p>
-            <p>You can use the onPress prop to do something like this:</p>
+            <p>With Lyket you can implement that with the onPress prop:</p>
             <Code>
               {`<ClapButton
   namespace="my-blog-post"
   id="medium-clap-button"
   onPress={openSubscribeModal}
+  component={ClapButton.templates.Medium}
 />`}
             </Code>
             {SubscribeDialog}
             <p>
-              Try to click on the button, it will open a dialog asking to
+              Try to click on the button, it will open a dialog asking you to
               subscribe!
             </p>
             <div className="flex big">
@@ -348,39 +230,20 @@ export default function Post() {
                 namespace="blog"
                 id="medium-button-react-example-onpress"
                 onPress={openSubscribeModal}
+                component={ClapButton.templates.Medium}
               />
             </div>
-            <h4>Now you can just sit back and watch the numbers grow!</h4>{" "}
+            <h4>Clap, like and like/dislike!</h4>
             <p>
-              Where? <strong>On the dashboard</strong>, of course!
+              We added a <strong>clap button</strong> behavior to the classic
+              buttons list, the like and like/dislike buttons, and added a
+              template to make it{" "}
+              <strong>look exactly like the actual Medium clap button</strong>,
+              but we did the same with other button types.
             </p>
             <p>
-              Once you are registered you can access your private area and see{" "}
-              <strong>statistics on all the buttons</strong> you created. If you
-              are already registered,{" "}
-              <a href="https://app.lyket.dev/dashboard">
-                why don't you take a look now?
-              </a>
-            </p>
-            <p>
-              For more{" "}
-              <strong>
-                details about creating Medium clap buttons with React
-              </strong>
-              , on how to customize them and style them, you can read our{" "}
-              <Link href="/docs/react">
-                <a>React documentation</a>
-              </Link>
-              .
-            </p>
-            <h4>The other button types</h4>
-            <p>
-              <strong>
-                Medium Clap button is just one of the three kind of buttons
-              </strong>{" "}
-              that Lyket offers. Each button has a different behaviour and
-              provides a different kind af feedback. Check out the other two
-              here:
+              If you are curious to see how the other buttons behave and look
+              you can check them out:
             </p>
             <ul>
               <li>

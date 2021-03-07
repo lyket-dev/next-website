@@ -382,7 +382,7 @@ export default function Post() {
             </p>
             <ul>
               <li>
-                <Link href="/blog/posts/medium-clap-button">
+                <Link href="/blog/posts/clap-button">
                   <a>How to create a React clap button</a>
                 </Link>
               </li>
