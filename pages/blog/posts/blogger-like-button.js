@@ -29,7 +29,6 @@ export default function Post() {
           <div className="half__reaction">
             <LikeButton namespace="blog" id="blogger-video-tutorial" />
           </div>
-           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
@@ -182,7 +181,7 @@ export default function Post() {
               </div>
               <li>
                 Choose a <strong>template</strong> from our{" "}
-                <Link href="/docs/template">
+                <Link href="/docs/templates">
                   <a>template gallery</a>
                 </Link>{" "}
                 using the "data-lyket-template" attribute.
