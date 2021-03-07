@@ -4,21 +4,23 @@ import Link from "next/link";
 import Head from "next/head";
 
 export const meta = {
-  title: "How to add a like button to any NextJS website with Lyket"
+  title: "Add a like button to your NextJS website with Lyket"
 };
 
 export default function Post() {
   return (
     <>
       <Head>
-        <title>Lyket - Add a like button to your NextJS website</title>
+        <title>Add a like button to your NextJS website | Lyket</title>
         <meta
-          content="Your NextJS website could use some loving? Lyket lets you add privacy compliant like buttons to any NextJS project in a matter of seconds"
+          content="Lyket lets you add privacy compliant like buttons to any NextJS project in a matter of seconds"
           name="description"
+          keywords="nextjs, like button, nextjs like button"
         />
       </Head>
       <div className="page">
         <section className="page__section">
+          <h2 className="page__kicker">NextJS like button</h2>
           <h1 className="page__title">{meta.title}</h1>
           <div className="half__reaction">
             <LikeButton
@@ -27,294 +29,61 @@ export default function Post() {
               component={LikeButton.templates.Twitter}
             />
           </div>
-           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
           <div className="markdown">
             <p>
-              Lyket is the ultimate tool to quickly implement GDPR-compliant
-              like buttons on any NextJS project, NextJS, NextJS, NextJS Native
-              and any other framework that uses NextJS. From the moment you
-              create the button our server will keep track of every visitor
-              interaction without storing their personal data.
+              With Lyket you can easily add like buttons on any NextJS project,
+              and they <strong>work with Server Side Rendering</strong>! In fact
+              if you disable Javascript on your NextJS page you are still be
+              able to see Lyket like buttons
             </p>
             <p>
-              To get started you just need to signup to Lyket and get your
-              personal public API key. It is just a matter of seconds then to
-              start receiving feedback on your website!
+              Create buttons just be adding an ID and a button type and we will
+              keep track of every visitor interaction without saving personal
+              data.
             </p>
 
-            <h2>Installation using NextJS</h2>
-
-            <p>To install the NextJS component run</p>
-            <pre>
-              <code className="language-javascript">yarn add @lyket/react</code>
-            </pre>
-            <p>or</p>
-            <pre>
-              <code className="language-javascript">
-                npm install @lyket/react
-              </code>
-            </pre>
-            <h2>Configuration</h2>
-
-            <h3>Set up the provider</h3>
+            <h4>Why NextJS</h4>
             <p>
-              The provider is in charge of loading the client that will be used
-              to make requests to Lyket's server using your personal public API
-              key.
-            </p>
-
-            <pre>
-              <code className="language-javascript">
-                {`import {Provider} from '@lyket/react';
-
-NextJSDOM.render(
-  <Provider apiKey="[YOUR-API-KEY]">
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);`}
-              </code>
-            </pre>
-
-            <h5>Required props</h5>
-            <ul>
-              <li>
-                <strong>apiKey</strong>: you can get your public API key by
-                registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
-              </li>
-            </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>theme</strong>: This prop allows you to provide your
-                  own style to the default theme. Read more about it in the{" "}
-                  <em>Styling like buttons</em> section at the end of this
-                  article
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>recaptchaSiteKey</strong>: if you enabled reCAPTCHA
-                  you need to provide your public key. Read more at the end of
-                  this document
-                </p>
-              </li>
-            </ul>
-            <h3>Create a like button</h3>
-            <p>
-              When the NextJS component is mounted, a fetch request is made to
-              retrieve info about the like button with that certain id and
-              namespace. If no button is found, a new resource is created with
-              the id/namespace identifier.
+              Next.js is a back-end JavaScript framework for React applications,
+              and allows for server side rendering (SSR), making the life of
+              every <strong>JAMstack developer better</strong>. With it's{" "}
+              <strong>Server Side Rendering technology</strong> it has disrupted
+              the way React based static website are created.
             </p>
             <p>
-              Notice that the server will create a new resource for every
-              different and unique identifier, so if you change id or namespace
-              the new button won’t inherit the votes.
+              With Next.js you can develop web applications, mobile apps,
+              desktops and progressive web apps: it is built according to the
+              principle of “Build once, run anywhere“.
             </p>
             <p>
-              Every time a user clicks on a button, the NextJS component will
-              update the likes counter and flag that the user has already voted.
-              Visitors don't have to signup to any third party service.
+              It is a framework that does not require any setup - it uses the
+              filesystem as an API. It also has built-in{" "}
+              <strong>support for TypeScript</strong>, which makes use of Babel.
+              Other features of Next.js are automatic code splitting, automatic
+              routing, <strong>hot reloading</strong> (only the modified code is
+              reloaded) and <strong>static export</strong> (with a single
+              command it can export a static site).
             </p>
             <p>
-              Like buttons behave like Twitter buttons. Users can only like once
-              and a subsequent call from the same user will remove the user's
-              like. Here is an example of a like button with id
-              "how-to-beat-me-at-chess", namespace "post" and a Twitter-like
-              template.
+              This created a new challenge for Saas developers, like Lyket, that
+              have to adapt to this new technology.
             </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
-
-export default BlogPost = ({ title, content }) => {
-  return (
-    <div>
-      {title}
-      <LikeButton
-        id="how-to-beat-me-at-chess"
-        namespace="post"
-        component={LikeButton.templates.Twitter}
-      />
-      {content}
-    </div>
-  );
-};`}
-              </code>
-            </pre>
-            <h5>Required like button props</h5>
-            <ul>
-              <li>
-                <strong>id</strong>: The API uses the ID to determine which
-                resource you want to interact with. It should be unique. It
-                accepts an alphanumeric string with maximum 50 characters.
-              </li>
-            </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>namespace</strong>: Giving a namespace is useful to
-                  keep buttons organized, and can be used to fetch statistics on
-                  your buttons filtering by namespace. Check the API docs for
-                  more information.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>hideCounterIfLessThan</strong>: You may not want to
-                  show a counter if you are not getting enough feedback. Specify
-                  the number of likes you want to receive before showing the
-                  counter.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>component</strong>: To change the aspect of the
-                  default button you can either provide one of the ready-made{" "}
-                  <strong>templates</strong> that Lyket provides or a{" "}
-                  <strong>custom NextJS component</strong> in the component
-                  attribute. Let's go deeper on this crucial prop.
-                </p>
-              </li>
-            </ul>
-            <h4>Templates</h4>
+            <h4>Installation using NextJS</h4>
             <p>
-              A number of like button templates are provided to use Lyket
-              out-of-the-box. You can see all the available options on{" "}
-              <Link href="/templates">
-                <a>the templates section</a>
+              First, signup to Lyket and{" "}
+              <strong>get your public API key</strong> that Lyket uses to make
+              every call to their servers
+            </p>
+            <p>
+              Then you can easily follow the steps in the official{" "}
+              <Link href="/docs/react">
+                <a>React documentation</a>
               </Link>
             </p>
-            <ul>
-              <li>
-                <strong>Simple</strong>: default LikeButton - supports themes
-                prop
-              </li>
-              <li>
-                <strong>Twitter</strong>: Twitter style LikeButton
-              </li>
-            </ul>
-            <p>
-              Import templates directly from the button component. Here is an
-              example of using templates.
-            </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
-
-export default StandingOvation = () => {
-  return (
-    <>
-      <h2>Do you like pizza?</h2>
-      <LikeButton
-        id="do-you-like-pizza"
-        component={LikeButton.templates.Twitter}
-      />
-    </>
-  );
-};`}
-              </code>
-            </pre>
-            <h4>Children or custom component</h4>
-            <p>
-              You may want to give a different aspect to a button, for example
-              using your logo as icon or add a callback after a user clicks. You
-              can do that by providing your own component!
-            </p>
-            <p>
-              Here are a few examples of using children for each button type.
-              You can pass a component also through the component prop. Here is
-              an example
-            </p>
-            <pre>
-              <code className="language-javascript">
-                {`import { LikeButton } from '@lyket/react';
-
-export default Faq = () => {
-  return (
-    <>
-      <h2>Do you like pizza?</h2>
-      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
-        {({ handlePress, totalLikes, userLiked, isLoading, isCounterVisible }) => {
-          return (
-            <>
-              <button onClick={handlePress} disabled={isLoading}>Of course! 🍕🍕🍕</button>
-              {isCounterVisible && <div>Total: {totalLikes}</div>}
-              {userLiked && <div>Thanks for your vote!</div>}
-            </>
-          )
-        }}
-      </LikeButton>
-    </>
-  )
-};`}
-              </code>
-            </pre>
-
-            <h2>Styling buttons</h2>
-            <h3>Resizing</h3>
-            <p>
-              Like buttons can be resized by wrapping them in a container and
-              changing the font-size.
-            </p>
-            <h3>Applying your own theme to the default template</h3>
-            <p>
-              Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
-              library, allowing you to provide your own theme to the buttons
-              through the <strong>theme</strong> prop in the provider.
-            </p>
-            <p>
-              These are the default values, you can change any of these
-              parameters by passing your own object:
-            </p>
-            <pre>
-              <code className="language-js">
-                {`const defaultTheme = {
-    colors: {
-      background: '#e0e0e0',
-      text: '#292929',
-      primary: '#22c1c3',
-      secondary: '#ff00c3',
-      accent: '#fcff4b',
-      highlight: '#e095ed',
-      muted: '#aaa',
-    },
-    fonts: {
-      body: 'inherit',
-      heading: 'inherit',
-      monospace: 'inherit',
-    },
-    fontWeights: {
-      body: 400,
-      bold: 700,
-    },
-  };`}
-              </code>
-            </pre>
-            <p>
-              The Provider component makes a deep merge, so you can overwrite
-              the theme object totally or partially.
-            </p>
-            <p>
-              There are a few templates that support theming. Read the templates
-              detail to know which ones.
-            </p>
-            <h2>reCAPTCHA</h2>
-            <p>
-              Lyket is integrated with Google reCAPTCHA V3 to handle malicious
-              use without interrupting <em>human</em> users. To enable it you
-              need to provide your Google reCAPTCHA secret key in the user
-              settings in the private area and add your recaptcha site key
-              through the recaptchaSiteKey prop in the Provider. The key will be
-              encrypted.
-            </p>
+            <p>Start receiving feedback on your NextJS website, now!</p>
           </div>
         </section>
       </div>

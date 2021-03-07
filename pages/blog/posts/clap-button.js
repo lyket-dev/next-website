@@ -63,7 +63,7 @@ export default function Post() {
           content="Lyket lets you add privacy compliant clap buttons to any website in a matter of seconds"
           name="description"
         />
-        <meta name="keywords" content="React clap button, clap button" />
+        <meta name="keywords" content="Clap button, applause button" />
       </Head>
 
       <div className="page">
@@ -73,7 +73,6 @@ export default function Post() {
           <div className="half__reaction">
             <ClapButton namespace="blog" id="clap-button-react" />
           </div>
-           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
