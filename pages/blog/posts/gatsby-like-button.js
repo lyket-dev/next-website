@@ -33,277 +33,114 @@ export default function Post() {
               component={LikeButton.templates.Twitter}
             />
           </div>
-           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
           <div className="markdown">
             <p>
               Lyket is the ultimate tool to quickly implement GDPR-compliant
-              like buttons on Gatsby. From the moment you create the button our
-              server will keep track of every visitor interaction without
-              storing their personal data.
+              <strong>like buttons on Gatsby</strong>. From the moment you
+              create the button our server will keep track of every visitor
+              interaction without storing their personal data.
             </p>
+            <h4>What is Gatsby?</h4>
             <p>
-              To get started you just need to signup to Lyket and get your
-              personal public API key. It is just a matter of seconds then to
-              start receiving feedback on your website!
-            </p>
-
-            <h4>Installation using Gatsby</h4>
-
-            <p>To install the Gatsby component run</p>
-            <Code>yarn add @lyket/react</Code>
-            <p>or</p>
-            <Code>npm install @lyket/react</Code>
-            <h4>Configuration</h4>
-
-            <h5>Setting up the provider</h5>
-            <p>
-              The provider is in charge of loading the client that will be used
-              to make requests to Lyket's server using your personal public API
-              key.
-            </p>
-
-            <Code>
-              {`import {Provider} from '@lyket/react';
-
-GatsbyDOM.render(
-  <Provider apiKey="[YOUR-API-KEY]">
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);`}
-            </Code>
-
-            <h5>Required props</h5>
-            <ul>
-              <li>
-                <strong>apiKey</strong>: you can get your public API key by
-                registering on{" "}
-                <a href={`${process.env.appBaseUrl}/signup`}>lyket.dev</a>
-              </li>
-            </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>theme</strong>: This prop allows you to provide your
-                  own style to the default theme. Read more about it in the{" "}
-                  <em>Styling like buttons</em> section at the end of this
-                  article
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>recaptchaSiteKey</strong>: if you enabled reCAPTCHA
-                  you need to provide your public key. Read more at the end of
-                  this document
-                </p>
-              </li>
-            </ul>
-            <h5>Create a like button</h5>
-            <p>
-              When the Gatsby component is mounted, a fetch request is made to
-              retrieve info about the like button with that certain id and
-              namespace. If no button is found, a new resource is created with
-              the id/namespace identifier.
-            </p>
-            <p>
-              Notice that the server will create a new resource for every
-              different and unique identifier, so if you change id or namespace
-              the new button won’t inherit the votes.
-            </p>
-            <p>
-              Every time a user clicks on a button, the Gatsby component will
-              update the likes counter and flag that the user has already voted.
-              Visitors don't have to signup to any third party service.
-            </p>
-            <p>
-              Like buttons behave like Twitter buttons. Users can only like once
-              and a subsequent call from the same user will remove the user's
-              like. Here is an example of a like button with id
-              "how-to-beat-me-at-chess", namespace "post" and a Twitter-like
-              template.
-            </p>
-            <Code>
-              {`import { LikeButton } from '@lyket/react';
-
-export default BlogPost = ({ title, content }) => {
-  return (
-    <div>
-      {title}
-      <LikeButton
-        id="how-to-beat-me-at-chess"
-        namespace="post"
-        component={LikeButton.templates.Twitter}
-      />
-      {content}
-    </div>
-  );
-};`}
-            </Code>
-            <h5>Required like button props</h5>
-            <ul>
-              <li>
-                <strong>id</strong>: The API uses the ID to determine which
-                resource you want to interact with. It should be unique. It
-                accepts an alphanumeric string with maximum 50 characters.
-              </li>
-            </ul>
-            <h5>Optional props</h5>
-            <ul>
-              <li>
-                <p>
-                  <strong>namespace</strong>: Giving a namespace is useful to
-                  keep buttons organized, and can be used to fetch statistics on
-                  your buttons filtering by namespace. Check the API docs for
-                  more information.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>hideCounterIfLessThan</strong>: You may not want to
-                  show a counter if you are not getting enough feedback. Specify
-                  the number of likes you want to receive before showing the
-                  counter.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>component</strong>: To change the aspect of the
-                  default button you can either provide one of the ready-made{" "}
-                  <strong>templates</strong> that Lyket provides or a{" "}
-                  <strong>custom Gatsby component</strong> in the component
-                  attribute. Let's go deeper on this crucial prop.
-                </p>
-              </li>
-            </ul>
-            <h4>Templates</h4>
-            <p>
-              A number of like button templates are provided to use Lyket
-              out-of-the-box. You can see all the available options on{" "}
-              <Link href="/templates">
-                <a>the templates section</a>
-              </Link>
+              Gatsby JS is an open source framework that is used for the
+              creation of highly performing websites through the React language.
+              We can therefore consider Gatsby a real "platform" able to help us
+              create any type of website through several very interesting
+              features:
             </p>
             <ul>
               <li>
-                <strong>Simple</strong>: default LikeButton - supports themes
-                prop
+                uses constantly updated and supporting technologies (React and
+                webpack) manages data through Graphql, a query-based API service
+                generates static files that can also be loaded onto a CDN
               </li>
               <li>
-                <strong>Twitter</strong>: Twitter style LikeButton
+                uses the JAMstack approach, the approach that therefore combines
+                Java Script, API and markup for the development of websites
+                (this is an effective return to static sites).
+              </li>
+              <li>
+                the sites generated are also PWAs (progressive Web App) offers
+                fast browsing using dns-prefetch, prefetch and preload.
               </li>
             </ul>
             <p>
-              Import templates directly from the button component. Here is an
-              example of using templates.
-            </p>
-            <Code>
-              {`import { LikeButton } from '@lyket/react';
-
-export default StandingOvation = () => {
-  return (
-    <>
-      <h4>Do you like pizza?</h4>
-      <LikeButton
-        id="do-you-like-pizza"
-        component={LikeButton.templates.Twitter}
-      />
-    </>
-  );
-};`}
-            </Code>
-            <h4>Children or custom component</h4>
-            <p>
-              You may want to give a different aspect to a button, for example
-              using your logo as icon or add a callback after a user clicks. You
-              can do that by providing your own component!
+              Using Gatsby JS to create very fast websites is very simple, it
+              can in fact read data from any source (CMS; static files etc),
+              analyze them and redirect them as static files that are managed by
+              React and placed on the server. The JAM Stack language is the real
+              added value of this platform because it allows the site to be
+              approached in a “split” and independent rather than centralized
+              way. As mentioned, JAM is an acronym that stands for Javascript,
+              API, Markup where Java represents the dynamic part that runs in
+              the client, the API the data read by Java and Markup the html
+              files that must be created during the development of the site.{" "}
             </p>
             <p>
-              Here are a few examples of using children for each button type.
-              You can pass a component also through the component prop. Here is
-              an example
+              Gatsby can integrate the main plugins that those who have already
+              had, for example, experience in Wordpress, surely know: Analytics,
+              Seo, Utilities etc.
             </p>
-            <Code>
-              {`import { LikeButton } from '@lyket/react';
-
-export default Faq = () => {
-  return (
-    <>
-      <h4>Do you like pizza?</h4>
-      <LikeButton id="do-you-like-pizza" namespace="faq" hideCounterIfLessThan={1}>
-        ({ handlePress, totalLikes, userLiked, isLoading, isCounterVisible }) => {
-          return (
-            <>
-              <button onClick={handlePress} disabled={isLoading}>Of course! 🍕🍕🍕</button>
-              {isCounterVisible && <div>Total: {totalLikes}</div>}
-              {userLiked && <div>Thanks for your vote!</div>}
-            </>
-          )
-        }
-      </LikeButton>
-    </>
-  )
-};`}
-            </Code>
-
-            <h4>Styling buttons</h4>
-            <h5>Resizing</h5>
+            <h4>Start a project with GatsbyJS</h4>
             <p>
-              Like buttons can be resized by wrapping them in a container and
-              changing the font-size.
-            </p>
-            <h5>Applying your own theme to the default template</h5>
-            <p>
-              Lyket uses the <a href="https://theme-ui.com/home">theme-ui</a>{" "}
-              library, allowing you to provide your own theme to the buttons
-              through the <strong>theme</strong> prop in the provider.
+              The Gatsbyjs.org website is very intuitive and guides anyone who
+              wants to approach this innovative coding language step by step.{" "}
             </p>
             <p>
-              These are the default values, you can change any of these
-              parameters by passing your own object:
-            </p>
-            <Code>
-              {`const defaultTheme = {
-  colors: {
-    background: '#e0e0e0',
-    text: '#292929',
-    primary: '#22c1c3',
-    secondary: '#ff00c3',
-    accent: '#fcff4b',
-    highlight: '#e095ed',
-    muted: '#aaa',
-  },
-  fonts: {
-    body: 'inherit',
-    heading: 'inherit',
-    monospace: 'inherit',
-  },
-  fontWeights: {
-    body: 400,
-    bold: 700,
-  },
-};`}
-            </Code>
-            <p>
-              The Provider component makes a deep merge, so you can overwrite
-              the theme object totally or partially.
+              There are two ways to get started with Gatsby: either by following
+              the{" "}
+              <strong>
+                step-by-step instructions to prepare for those with no Gatsby
+                experience or development
+              </strong>
+              , or via the <p>quick start</p> (for more experienced audience).
+              The tutorials found within the site are very descriptive and can
+              put anyone in a position to set up a high-performance site without
+              having a strong programming knowledge.
             </p>
             <p>
-              There are a few templates that support theming. Read the templates
-              detail to know which ones.
+              Finally, the site also hosts a very in-depth blog through to
+              become more familiar with the framework.
             </p>
-            <h4>reCAPTCHA</h4>
+            <h4>Add like buttons to your GatsbyJS website</h4>
             <p>
-              Lyket is integrated with Google reCAPTCHA V3 to handle malicious
-              use without interrupting <em>human</em> users. To enable it you
-              need to provide your Google reCAPTCHA secret key in the user
-              settings in the private area and add your recaptcha site key
-              through the recaptchaSiteKey prop in the Provider. The key will be
-              encrypted.
+              <strong>Gatsby is based on React</strong> so it integrates
+              perfectly with Lyket!
             </p>
+            <p>
+              Everything is explained in the{" "}
+              <Link href="/docs/react">
+                <a>React documentation</a>
+              </Link>{" "}
+              and everything applies smoothly to GatsbyJS without having to make
+              any change at all. T
+              <strong>hat's the magic of developing in React</strong> :D
+            </p>
+            <p>
+              You can customize your Gatsby buttons in the same way you can do
+              it for the React ones
+            </p>
+            Í<p>Check out these in-depth tutorials:</p>Í
+            <ul>
+              <li>
+                <Link href="/blog/posts/react-like-button">
+                  <a>How to create a React like button</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/posts/medium-clap-button">
+                  <a>How to create a React clap button</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/posts/react-like-dislike-button">
+                  <a>How to create a React like dislike button</a>
+                </Link>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
