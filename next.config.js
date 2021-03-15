@@ -14,6 +14,11 @@ module.exports = withReactSvg({
         source: "/blog/posts/react-clap-button",
         destination: "/blog/posts/clap-button",
         permanent: true
+      },
+      {
+        source: "/blog/posts/like-clap-button-on-worpress",
+        destination: "/blog/posts/wordpress-like-button",
+        permanent: true
       }
     ];
   },
