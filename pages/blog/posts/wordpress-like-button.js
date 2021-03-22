@@ -6,7 +6,7 @@ import Code from "components/Code";
 import TryIt from "components/TryIt";
 
 export const meta = {
-  title: "Add a Wordpress like button in a matter of seconds"
+  title: "Add a Wordpress like button in a matter of seconds",
 };
 
 export default function Post() {
@@ -172,7 +172,7 @@ export default function Post() {
 ></div>`}
             </Code>
             <p>
-              This code will generate this like button on you Wordpress website
+              This code will generate this like button on your Wordpress website
             </p>
             <TryIt>
               <LikeButton namespace="blog" id="wordpress-first-example" />
@@ -209,8 +209,8 @@ export default function Post() {
                   colors: {
                     background: "#b8fff3",
                     text: "violet",
-                    primary: "rgba(255, 224, 138, 0.4)"
-                  }
+                    primary: "rgba(255, 224, 138, 0.4)",
+                  },
                 }}
               >
                 <LikeButton namespace="blog" id="wordpress-example-colors" />
@@ -222,9 +222,9 @@ export default function Post() {
                 <a>widget documentation.</a>
               </Link>
             </p>
-            <h3 id="wordpress-heart-like-button">
+            <h4 id="wordpress-heart-like-button">
               Wordpress heart like button{" "}
-            </h3>
+            </h4>
             <p>
               Say you want to create a Twitter-like{" "}
               <strong>heart like button</strong>, nothing easier!
@@ -240,7 +240,7 @@ export default function Post() {
             </Code>
             <p>
               This code will generate the famous
-              <strong> heart shaped like button</strong> on you Wordpress
+              <strong> heart shaped like button</strong> on your Wordpress
               website!
             </p>
             <TryIt>
