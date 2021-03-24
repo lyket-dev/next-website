@@ -30,10 +30,10 @@ export const ApplauseSandbox = () => {
       <div className="flag__left">
         <h4 className="flag__title">Clap Buttons</h4>
         <div className="box__buttons">
+          <span>Change size:</span>
           <button onClick={() => fontSize < 60 && setFontSize(fontSize + 4)}>
             +
           </button>
-          <span>{fontSize}px</span>
           <button onClick={() => fontSize > 0 && setFontSize(fontSize - 4)}>
             -
           </button>
@@ -52,6 +52,14 @@ export const ApplauseSandbox = () => {
               component={ClapButton.templates.Medium}
             />
           </ButtonBox>
+
+          <ButtonBox name="Heart" fontSize={fontSize}>
+            <ClapButton
+              id="heart"
+              namespace="demo"
+              component={ClapButton.templates.Heart}
+            />
+          </ButtonBox>
         </div>
       </div>
     </Flag>
@@ -66,10 +74,10 @@ export const LikeSandbox = () => {
       <div className="flag__left">
         <h4 className="flag__title">Like Buttons</h4>
         <div className="box__buttons">
+          <span>Change size:</span>
           <button onClick={() => fontSize < 60 && setFontSize(fontSize + 4)}>
             +
           </button>
-          <span>{fontSize}px</span>
           <button onClick={() => fontSize > 0 && setFontSize(fontSize - 4)}>
             -
           </button>
@@ -87,6 +95,13 @@ export const LikeSandbox = () => {
               component={LikeButton.templates.Twitter}
             />
           </ButtonBox>
+          <ButtonBox name="Chevron" fontSize={fontSize}>
+            <LikeButton
+              id="chevron"
+              namespace="demo"
+              component={LikeButton.templates.Chevron}
+            />
+          </ButtonBox>
         </div>
       </div>
     </Flag>
@@ -101,10 +116,11 @@ export const UpdownSandbox = () => {
       <div className="flag__left">
         <h4 className="flag__title">Up/down Buttons</h4>
         <div className="box__buttons">
+          <span>Change size:</span>
+
           <button onClick={() => fontSize < 60 && setFontSize(fontSize + 4)}>
             +
           </button>
-          <span>{fontSize}px</span>
           <button onClick={() => fontSize > 0 && setFontSize(fontSize - 4)}>
             -
           </button>
@@ -112,14 +128,21 @@ export const UpdownSandbox = () => {
       </div>
       <div className="flag__right">
         <div className="box__container">
-          <ButtonBox name="Default" fontSize={fontSize}>
+          <ButtonBox name="Default" fontSize={fontSize - 6}>
             <UpdownButton id="default" namespace="demo" />
           </ButtonBox>
-          <ButtonBox name="Reddit" fontSize={fontSize}>
+          <ButtonBox name="Reddit" fontSize={fontSize - 6}>
             <UpdownButton
               id="reddit"
               namespace="demo"
               component={UpdownButton.templates.Reddit}
+            />
+          </ButtonBox>
+          <ButtonBox name="Chevron" fontSize={fontSize - 6}>
+            <UpdownButton
+              id="chevron"
+              namespace="demo"
+              component={UpdownButton.templates.Chevron}
             />
           </ButtonBox>
         </div>

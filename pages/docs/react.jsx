@@ -497,27 +497,42 @@ export BlogPost = ({ title, content }) => {
                 By default, ie. if you don't specify any template or custom
                 component, Lyket will show the Simple Template.
               </p>
+              <h6 id="like-templates">LikeButton Templates</h6>
               <ul>
                 <li>
-                  <strong>Simple</strong>: default LikeButton - supports custom
+                  <strong>Simple (default)</strong> - supports custom theme
+                </li>
+                <li>
+                  <strong>Twitter</strong>: Twitter style
+                </li>
+                <li>
+                  <strong>Chevron</strong>: Chevron style - supports custom
                   theme
                 </li>
+              </ul>
+              <h6 id="updown-templates">UpdownButton Templates</h6>
+              <ul>
                 <li>
-                  <strong>Twitter</strong>: Twitter style LikeButton
+                  <strong>Simple (default)</strong> - supports custom theme
                 </li>
                 <li>
-                  <strong>Simple</strong>: default UpdownButton - supports
-                  custom theme
+                  <strong>Reddit</strong>: Reddit style
                 </li>
                 <li>
-                  <strong>Reddit</strong>: Reddit style UpdownButton
-                </li>
-                <li>
-                  <strong>Simple</strong>: default ClapButton - supports custom
+                  <strong>Chevron</strong>: Chevron style - supports custom
                   theme
                 </li>
+              </ul>
+              <h6 id="clap-templates">ClapButton Templates</h6>
+              <ul>
                 <li>
-                  <strong>Medium</strong>: Medium style ClapButton
+                  <strong>Simple (default)</strong> - supports custom theme
+                </li>
+                <li>
+                  <strong>Medium</strong>: Medium style
+                </li>
+                <li>
+                  <strong>Heart</strong>: Heart style - supports custom theme
                 </li>
               </ul>
               <p>
@@ -756,6 +771,7 @@ export Faq = () => {
                 the <strong>theme</strong> prop in the provider. Colors support
                 rgba, hex, and color names.
               </p>
+              <h6>Button colors</h6>
               <ul>
                 <li>
                   <strong>primary</strong> - Changes the background color of the
@@ -770,13 +786,22 @@ export Faq = () => {
                   the inactive button.
                 </li>
                 <li>
-                  <strong>text</strong> - Changes the counter's text and the
-                  icon's color.
+                  <strong>text</strong> - Changes the counter text color.
+                </li>
+                <li>
+                  <strong>icon</strong> - Changes the icon's color.
                 </li>
                 <li>
                   <strong>highlight</strong> - Changes the animation color.
                 </li>
               </ul>
+              <h6>Button fonts</h6>
+              <ul>
+                <li>
+                  <strong>body</strong> - Changes counter font.
+                </li>
+              </ul>
+
               <p>These are the default values:</p>
               <Code>
                 {`const defaultTheme = {
@@ -786,10 +811,10 @@ export Faq = () => {
     background: 'transparent',
     text: '#292929',
     highlight: '#e095ed',
+    icon: '#292929',
   },
   fonts: {
     body: 'inherit',
-    heading: 'inherit',
   },
 };`}
               </Code>

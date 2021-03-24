@@ -1312,10 +1312,10 @@
   dependencies:
     stream "^0.0.2"
 
-"@lyket/react@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.4.1.tgz#0935cd4b633d7298fc2114f345bbb68c9019a2d4"
-  integrity sha512-6ybHIpI8dwq5ojLKyv6l6ZmejIKzGOV9AU5Bkj8mkOJ5Vg+sQfFfz6TVk6ncypE1lyE7/dhKZlT8uFmQj97pPw==
+"@lyket/react@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-1.4.2.tgz#68c725b510874319e690d9a86ed4899173224897"
+  integrity sha512-esZ+682Uk32Ow4zLktlVFbWIzz3qUNM+z8/EHQrPykCo1TtblIE3eJ/pVP/MU25ZMSIoLCANO36xJasT6KO6pg==
   dependencies:
     humps "^2.0.1"
     theme-ui "0.6.0-alpha.7"

@@ -212,36 +212,19 @@ export default function Docs() {
                 <div className="try">Try it! →</div>
                 <LikeButton namespace="docs" id="widget-like-button" />
               </div>
-              <h5 id="clap-button">Clap button</h5>
-              <p>
-                Clap buttons behave like Medium applauses. Users can like
-                multiple times and every other call from the same user will
-                increment the claps number.
-              </p>
-              <p>Use the data-lyket-type="clap" to create a clap button.</p>
-              <Code>
-                {`<!-- minimal settings -->
-<div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
-
-<!-- with namespace -->
-<div
-  data-lyket-type="clap"
-  data-lyket-id="my-second-post"
-  data-lyket-namespace="blog"
-></div>
-
-<!-- with non-default template -->
-<div
-  data-lyket-type="clap"
-  data-lyket-id="my-third-post"
-  data-lyket-namespace="blog"
-  data-lyket-template="medium"
-></div>`}
-              </Code>
-              <div className="flex big">
-                <div className="try">Try it! →</div>
-                <ClapButton namespace="docs" id="widget-clap-button" />
-              </div>
+              <h6 id="like-templates">Like button Templates</h6>
+              <ul>
+                <li>
+                  <strong>Simple (default)</strong> - supports custom theme
+                </li>
+                <li>
+                  <strong>Twitter</strong>: Twitter style
+                </li>
+                <li>
+                  <strong>Chevron</strong>: Chevron style - supports custom
+                  theme
+                </li>
+              </ul>
               <h5 id="updown-button">Like/dislike button</h5>
               <p>
                 Like/dislike buttons, or Updown buttons, behave like Reddit
@@ -273,6 +256,62 @@ export default function Docs() {
                 <div className="try">Try it! →</div>
                 <UpdownButton namespace="docs" id="widget-updown-button" />
               </div>
+              <h6 id="updown-templates">UpdownButton Templates</h6>
+              <ul>
+                <li>
+                  <strong>Simple (default)</strong> - supports custom theme
+                </li>
+                <li>
+                  <strong>Reddit</strong>: Reddit style
+                </li>
+                <li>
+                  <strong>Chevron</strong>: Chevron style - supports custom
+                  theme
+                </li>
+              </ul>
+
+              <h5 id="clap-button">Clap button</h5>
+              <p>
+                Clap buttons behave like Medium applauses. Users can like
+                multiple times and every other call from the same user will
+                increment the claps number.
+              </p>
+              <p>Use the data-lyket-type="clap" to create a clap button.</p>
+              <Code>
+                {`<!-- minimal settings -->
+<div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
+
+<!-- with namespace -->
+<div
+  data-lyket-type="clap"
+  data-lyket-id="my-second-post"
+  data-lyket-namespace="blog"
+></div>
+
+<!-- with non-default template -->
+<div
+  data-lyket-type="clap"
+  data-lyket-id="my-third-post"
+  data-lyket-namespace="blog"
+  data-lyket-template="medium"
+></div>`}
+              </Code>
+              <div className="flex big">
+                <div className="try">Try it! →</div>
+                <ClapButton namespace="docs" id="widget-clap-button" />
+              </div>
+              <h6 id="clap-templates">ClapButton Templates</h6>
+              <ul>
+                <li>
+                  <strong>Simple (default)</strong> - supports custom theme
+                </li>
+                <li>
+                  <strong>Medium</strong>: Medium style
+                </li>
+                <li>
+                  <strong>Heart</strong>: Heart style - supports custom theme
+                </li>
+              </ul>
               <h4 id="styling-the-buttons">Styling the buttons</h4>
               <p>
                 You can change the default colors by providing your own color
@@ -294,7 +333,11 @@ export default function Docs() {
                 </li>
                 <li>
                   <strong>data-lyket-color-text</strong> - Changes the counter's
-                  text and the inactive icon's color.
+                  text color.
+                </li>
+                <li>
+                  <strong>data-lyket-color-icon</strong> - Changes the icon's
+                  color.
                 </li>
                 <li>
                   <strong>data-lyket-color-highlight</strong> - Changes the
@@ -310,7 +353,8 @@ export default function Docs() {
   data-lyket-color-primary="#b8fff3"
   data-lyket-color-secondary="rgba(220, 234, 108, 0.6)"
   data-lyket-color-background="rgba(255, 224, 138, 0.4)"
-  data-lyket-color-text="violet"
+  data-lyket-color-text="black"
+  data-lyket-color-icon="violet"
   data-lyket-color-highlight="#ff00c3"
 ></div>
 `}
@@ -324,7 +368,8 @@ export default function Docs() {
                       primary: "#b8fff3",
                       secondary: "rgba(220, 234, 108, 0.6)",
                       background: "rgba(255, 224, 138, 0.4)",
-                      text: "violet",
+                      text: "black",
+                      icon: "violet",
                       highlight: "#ff00c3"
                     }
                   }}
