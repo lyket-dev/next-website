@@ -7,7 +7,6 @@ export default function App({ Component, pageProps }) {
   return (
     <Provider
       apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
-      recaptchaSiteKey="6Le0F6gZAAAAAJpX2mBwupNnmqYiPUHofHrjHpW7"
       theme={{
         colors: {
           primary: "#24fcc966",
