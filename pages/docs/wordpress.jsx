@@ -9,9 +9,9 @@ export default function Docs() {
   return (
     <>
       <Head>
-        <title>Beautiful like button HTML | Lyket</title>
+        <title>Lyket Wordpress like button plugin</title>
         <meta
-          content="Instantly add like, applause and like/dislike on any website with our super simple like button HTML widget!"
+          content="Create beautiful Wordpress like button with Lyket plugin!"
           name="description"
         />
       </Head>
@@ -19,35 +19,19 @@ export default function Docs() {
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">like button html</h2>
-            <h1 className="docs__title">HTML widget docs</h1>
+            <h2 className="page__kicker">Wordpress like button plugin</h2>
+            <h1 className="docs__title">
+              Create beautiful buttons with Lyket Wordpress like button plugin
+            </h1>
             <QuickDocsMenu />
           </div>
           <div className="docs">
             <div className="markdown">
               <p>
-                Lyket widget is a simple script that lets you embed Lyket in
-                your <strong>HTML, Wordpress, Webflow, Notion</strong> website
-                and more!
+                <strong>Lyket Wordpress like button plugin</strong> lets you
+                create beautiful like buttons in your <strong>Wordpress</strong>{" "}
+                website!
               </p>
-              <p>We have more framework-specific guides for:</p>
-              <ul>
-                <li>
-                  <Link href="/blog/posts/embed-like-button-to-notion">
-                    <a>How to add like buttons to Notion</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/posts/wordpress-like-button">
-                    <a>How to add like buttons to Wordpress</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/posts/blogger-like-button">
-                    <a>How to add like buttons to Blogger</a>
-                  </Link>
-                </li>
-              </ul>
               <h4 id="how-buttons-work">How the buttons work</h4>
               <p>
                 All Lyket buttons share these{" "}
@@ -56,14 +40,8 @@ export default function Docs() {
               <ul>
                 <li>
                   <p>
-                    As soon as a button component is mounted, a fetch request is
-                    made to retrieve info on the button that{" "}
-                    <strong>identifies with the ID and namespace</strong> that
-                    you provided.{" "}
-                    <strong>
-                      If no button is found, a new one will be created
-                    </strong>{" "}
-                    using the ID/namespace identifier.
+                    The plugin will create a button for all your pages and
+                    posts.
                   </p>
                 </li>
                 <li>
@@ -113,9 +91,9 @@ export default function Docs() {
               </ul>
               <h4 id="installation">Installation</h4>
               <p>
-                Implementing Lyket is really simple, but you have to have a
-                basic knowledge of HTML to do that. In your HTML or your site
-                builder (Wordpress, Webflow or else){" "}
+                Implementing Lyket is quite simple, but you have to have a basic
+                knowledge of HTML to do that. In your HTML or your site builder
+                (Wordpress, Webflow or else){" "}
                 <strong>
                   add the script you find below in the &lt;footer&gt; or in the
                   &lt;header&gt;
@@ -125,22 +103,15 @@ export default function Docs() {
                   adding a &lt;div&gt; element with a data-lyket-type and
                   data-lyket-id
                 </strong>{" "}
-                anywhere in your code.
-              </p>
-              <p>
-                If you are using a site builder, look for a <em>custom HTML</em>{" "}
-                block and add the same HTML code.
+                anywhere in your code. Use custom HTML to do that with a site
+                builder.
               </p>
               <p>
                 <strong>Important</strong>: Lyket needs to verify your identity
                 when creating and storing button counters. To do that it
                 requires that you provide in the top-level script an unique
                 alpha-numeric value, <strong>the API key</strong>, that you can
-                get{" "}
-                <a href="https://app.lyket.dev/signup">
-                  by registering to Lyket
-                </a>
-                .
+                get <a href="https://app.lyket.dev">by registering to Lyket</a>.
               </p>
               <p>
                 Replace "[YOUR-API-KEY]" in the code with your personal key.
