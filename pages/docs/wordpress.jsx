@@ -3,6 +3,8 @@ import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
+
 import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
 
 export default function Docs() {
@@ -33,6 +35,35 @@ export default function Docs() {
                 website!
               </p>
               <p>
+                You can then see the buttons statistics on your private area, in
+                your own <strong>dashboard</strong>
+              </p>
+              <p>
+                One of the <strong>biggest perks</strong> of using Lyket is that
+                your <strong>visitors don't need to login</strong> to leave a
+                token of appreciation, still Lyket is able to detect if a
+                visitor has already liked your content.
+              </p>
+              <p>
+                This is both great for user experience and for{" "}
+                <strong>privacy concerns</strong>, because your visitors don't
+                have to identify and their data remain in their own hands!
+              </p>
+              <p>
+                To learn more about how we value privacy, how visitors are
+                recognized and how you can change the privacy settings, read our{" "}
+                <Link href="/docs/widget">
+                  <a>documentation.</a>
+                </Link>
+              </p>
+              <div className="flex big">
+                <div className="try">Try it! →</div>
+                <LikeButton
+                  namespace="docs"
+                  id="wordpress-plugin-like-button"
+                />
+              </div>
+              <p>
                 You can find Lyket like buttons official Lyket plugin in the{" "}
                 <a
                   href="https://wordpress.org/plugins/search/lyket"
@@ -40,256 +71,232 @@ export default function Docs() {
                 >
                   Wordpress plugin directory
                 </a>
+                . Since you are there don't forget to...
               </p>
-              <h4 id="installation">Installation</h4>
+              <div className="center">
+                <a
+                  className="button"
+                  href="https://wordpress.org/plugins/lyket-like-buttons/#reviews"
+                  target="_blank"
+                >
+                  Leave us a review ♥
+                </a>
+              </div>
               <p>
                 Implementing Lyket is quite simple. Let's go through all the
                 steps!
               </p>
-              <ol>
-                <li>
-                  First install the like button plugin from the{" "}
-                  <a
-                    href="https://wordpress.org/plugins/search/lyket"
-                    target="_blank"
-                  >
-                    Wordpress plugin directory
-                  </a>
-                  or search for <strong>keyword "Lyket"</strong>, or{" "}
-                  <strong>"like button" tag</strong> in the "Add new" search
-                  form
-                </li>
-                <li></li>
-                <li></li>
-              </ol>
+              <h4 id="installation">1. Install the plugin</h4>
               <p>
-                <strong>Important</strong>: Lyket needs to verify your identity
-                when creating and storing button counters. To do that it
-                requires that you provide in the top-level script an unique
-                alpha-numeric value, <strong>the API key</strong>, that you can
-                get <a href="https://app.lyket.dev">by registering to Lyket</a>.
+                First install the like button plugin from the{" "}
+                <a
+                  href="https://wordpress.org/plugins/search/lyket"
+                  target="_blank"
+                >
+                  Wordpress plugin directory
+                </a>
+                or search for <strong>keyword "Lyket"</strong>, or{" "}
+                <strong>"like button" tag</strong> in the "Add new" search form.
               </p>
+              <img
+                src="/assets/wp/wordpress-like-button-search.png"
+                alt="wordpress-like-button-search"
+              />
               <p>
-                Replace "[YOUR-API-KEY]" in the code with your personal key.
+                When installed you will see the settings menu on your Wordpress
+                sidebar.
               </p>
-              <Code>
-                &lt;script
-                src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
-              </Code>
-
-              <h6>Optional parameters</h6>
-              <p>You can provide additional parameters to the script:</p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>recaptchaSiteKey: string</strong> - If you enabled
-                    reCAPTCHA in the private area's user settings, you will need
-                    to insert your reCAPTCHA public key in Lyket script,
-                    otherwise your buttons will result as unauthorized. Read
-                    more in the <Link href="#recaptcha">reCAPTCHA</Link> section
-                    at the end of this document.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>disableSessionId</strong> - If added to script{" "}
-                    <strong>Lyket won't store a unique session ID</strong> for
-                    your visitors making them anonymous. Lyket will then
-                    discriminate visitors (to tell if they already liked a
-                    button or not) only based on the IP address. Disabling the
-                    session ID can be useful if you don't want Lyket to result
-                    in your cookie detection software.
-                  </p>
-                  <Code>
-                    {`<script
-  src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]&disableSessionId"
->
-</script>`}
-                  </Code>
-                </li>
-              </ul>
-              <h4 id="buttons">Buttons</h4>
+              <h4 id="registration">2. Registrate to Lyket</h4>
               <p>
-                There are three different button types that have different
-                behaviours.
+                To registrate, navigate to{" "}
+                <a href="https://app.lyket.dev" target="_blank">
+                  Lyket registration page
+                </a>{" "}
+                and copy the alpha-numeric key that you will get after
+                registration, <strong>the API key</strong>.
               </p>
-              <h5>Like button</h5>
+              <img
+                src="/assets/wp/wordpress-like-button-api-key.png"
+                alt="wordpress-like-button-api-key"
+              />
+              <h4 id="authorize">3. Authorize Lyket</h4>
+              <p>
+                If you click on the menu button in the Wordpress sidebar you
+                will see the user settings page. This is where you need to
+                insert the API key you copied in the settings page
+              </p>
+              <img
+                src="/assets/wp/wordpress-like-button-registration.png"
+                alt="wordpress-like-button-registration"
+              />
+              <h4 id="buttons">4. Choose a button type</h4>
+              <p>
+                With our like button plugin you can create{" "}
+                <strong>like, clap and like/dislike</strong> buttons for pages
+                and posts. Remember to enable buttons to see them in your pages
+                and posts!
+              </p>
+              <div className="flex">
+                <div>
+                  <img
+                    className="flex__item"
+                    src="/assets/wp/wordpress-like-button-enable-buttons.png"
+                    alt="wordpress-like-button-enable-buttons"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="flex__item"
+                    src="/assets/wp/wordpress-like-button-type-buttons.png"
+                    alt="wordpress-like-button-type-buttons"
+                  />
+                </div>
+              </div>
+              <p>
+                Each button type has different behaviors, styles and
+                out-of-the-box templates, let's have a look at them, one by one!
+              </p>
+              <h3>Like button</h3>
               <p>
                 Like buttons behave like Twitter buttons. Users can only like
                 once and a subsequent call from the same user will remove the
                 user's like.
               </p>
-              <p>Use the data-lyket-type="like" to create a like button.</p>
-              <Code>
-                {`<!-- minimal settings -->
-<div data-lyket-type="like" data-lyket-id="my-first-post"></div>
-
-<!-- with namespace -->
-<div
-  data-lyket-type="like"
-  data-lyket-id="my-second-post"
-  data-lyket-namespace="blog"
-></div>
-
-<!-- with non-default template -->
-<div
-  data-lyket-type="like"
-  data-lyket-id="my-third-post"
-  data-lyket-namespace="blog"
-  data-lyket-template="twitter"
-></div>`}
-              </Code>
-              <div className="flex big">
-                <div className="try">Try it! →</div>
-                <LikeButton namespace="docs" id="widget-like-button" />
-              </div>
-              <h6 id="like-templates">Like button Templates</h6>
               <ul>
                 <li>
-                  <strong>Simple (default)</strong> - supports custom theme
+                  <strong>Simple: </strong>
+                  <span className="inline-buttons h-space">
+                    <LikeButton namespace="docs" id="inline-simple" />
+                  </span>
                 </li>
                 <li>
-                  <strong>Twitter</strong>: Twitter style
+                  <strong>Twitter: </strong>
+                  <span className="inline-buttons h-space">
+                    <LikeButton
+                      namespace="docs"
+                      id="inline-twitter"
+                      component={LikeButton.templates.Twitter}
+                    />
+                  </span>
                 </li>
                 <li>
-                  <strong>Chevron</strong>: Chevron style - supports custom
-                  theme
+                  <strong>Chevron: </strong>
+                  <span className="inline-buttons h-space">
+                    <LikeButton
+                      namespace="docs"
+                      id="inline-chevron"
+                      component={LikeButton.templates.Chevron}
+                    />
+                  </span>
                 </li>
               </ul>
-              <h5 id="updown-button">Like/dislike button</h5>
+              <h3 id="updown-button">Like/dislike button</h3>
               <p>
                 Like/dislike buttons, or Updown buttons, behave like Reddit
                 buttons. Visitors can only like or dislike once and a subsequent
                 call from the same visitor will remove the visitor's vote or
                 unvote.
               </p>
-              <p>Use the data-lyket-type="updown" to create a updown button.</p>
-              <Code>
-                {`<!-- minimal settings -->
-<div data-lyket-type="updown" data-lyket-id="my-first-post"></div>
-
-<!-- with namespace -->
-<div
-  data-lyket-type="updown"
-  data-lyket-id="my-second-post"
-  data-lyket-namespace="blog"
-></div>
-
-<!-- with non-default template -->
-<div
-  data-lyket-type="updown"
-  data-lyket-id="my-third-post"
-  data-lyket-namespace="blog"
-  data-lyket-template="reddit"
-></div>`}
-              </Code>
-              <div className="flex big">
-                <div className="try">Try it! →</div>
-                <UpdownButton namespace="docs" id="widget-updown-button" />
-              </div>
               <h6 id="updown-templates">UpdownButton Templates</h6>
               <ul>
                 <li>
-                  <strong>Simple (default)</strong> - supports custom theme
+                  <strong>Simple:</strong>{" "}
+                  <span className="inline-buttons h-space">
+                    <UpdownButton namespace="docs" id="inline-simple" />
+                  </span>
+                </li>
+                <li display="flex">
+                  <strong>Reddit:</strong>{" "}
+                  <span className="inline-buttons h-space">
+                    <UpdownButton
+                      namespace="docs"
+                      id="inline-reddit"
+                      component={UpdownButton.templates.Reddit}
+                    />
+                  </span>
                 </li>
                 <li>
-                  <strong>Reddit</strong>: Reddit style
-                </li>
-                <li>
-                  <strong>Chevron</strong>: Chevron style - supports custom
-                  theme
+                  <strong>Chevron</strong>{" "}
+                  <span className="inline-buttons h-space">
+                    <UpdownButton
+                      namespace="docs"
+                      id="inline-chevron"
+                      component={UpdownButton.templates.Chevron}
+                    />
+                  </span>
                 </li>
               </ul>
 
-              <h5 id="clap-button">Clap button</h5>
+              <h3 id="clap-button">Clap button</h3>
               <p>
                 Clap buttons behave like Medium applauses. Users can like
                 multiple times and every other call from the same user will
                 increment the claps number.
               </p>
-              <p>Use the data-lyket-type="clap" to create a clap button.</p>
-              <Code>
-                {`<!-- minimal settings -->
-<div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
-
-<!-- with namespace -->
-<div
-  data-lyket-type="clap"
-  data-lyket-id="my-second-post"
-  data-lyket-namespace="blog"
-></div>
-
-<!-- with non-default template -->
-<div
-  data-lyket-type="clap"
-  data-lyket-id="my-third-post"
-  data-lyket-namespace="blog"
-  data-lyket-template="medium"
-></div>`}
-              </Code>
-              <div className="flex big">
-                <div className="try">Try it! →</div>
-                <ClapButton namespace="docs" id="widget-clap-button" />
-              </div>
               <h6 id="clap-templates">ClapButton Templates</h6>
               <ul>
                 <li>
-                  <strong>Simple (default)</strong> - supports custom theme
+                  <strong>Simple:</strong>{" "}
+                  <ClapButton namespace="docs" id="inline-simple" />
                 </li>
                 <li>
-                  <strong>Medium</strong>: Medium style
+                  <strong>Medium:</strong>
+                  <span className="inline-buttons h-space">
+                    <ClapButton
+                      namespace="docs"
+                      id="inline-medium"
+                      component={ClapButton.templates.Medium}
+                    />
+                  </span>
                 </li>
                 <li>
-                  <strong>Heart</strong>: Heart style - supports custom theme
+                  <strong>Heart:</strong>{" "}
+                  <span className="inline-buttons h-space">
+                    <ClapButton
+                      namespace="docs"
+                      id="inline-heart"
+                      component={ClapButton.templates.Heart}
+                    />
+                  </span>
                 </li>
               </ul>
-              <h4 id="styling-the-buttons">Styling the buttons</h4>
+              <h4 id="styling-the-buttons">5. Style the buttons</h4>
               <p>
-                You can change the default colors by providing your own color
-                scheme. The color scheme does not apply on buttons with
-                non-default templates.
+                You can change the default colors for{" "}
+                <strong>page and posts</strong> separately, and see the live
+                preview of your changes before saving in the{" "}
+                <strong>preview window</strong> on top!
               </p>
+              <img
+                src="/assets/wp/wordpress-like-button-page-buttons.png"
+                alt="wordpress-like-button-page-buttons"
+              />
               <ul>
                 <li>
-                  <strong>data-lyket-color-primary</strong> - Changes the color
+                  <strong>Pressed like button color</strong> - Changes the color
                   of the "like" button, when user has liked.
                 </li>
                 <li>
-                  <strong>data-lyket-color-secondary</strong> - Changes the
+                  <strong>Pressed dislike button color</strong> - Changes the
                   color of the "dislike" button, when user has disliked.
                 </li>
                 <li>
-                  <strong>data-lyket-color-background</strong> - Changes the
+                  <strong>Inactive button color</strong> - Changes the
                   background color of the inactive button.
                 </li>
                 <li>
-                  <strong>data-lyket-color-text</strong> - Changes the counter's
+                  <strong>Counter font color</strong> - Changes the counter's
                   text color.
                 </li>
                 <li>
-                  <strong>data-lyket-color-icon</strong> - Changes the icon's
-                  color.
+                  <strong>Icon color</strong> - Changes the icon's color.
                 </li>
                 <li>
-                  <strong>data-lyket-color-highlight</strong> - Changes the
-                  animation's color.
+                  <strong>Animation color</strong> - Changes the animation's
+                  color.
                 </li>
               </ul>
-              <p>Here is an example for an Updown button</p>
-              <Code>
-                {`<!-- button with color scheme -->
-<div
-  data-lyket-type="updown"
-  data-lyket-id="my-first-post"
-  data-lyket-color-primary="#b8fff3"
-  data-lyket-color-secondary="rgba(220, 234, 108, 0.6)"
-  data-lyket-color-background="rgba(255, 224, 138, 0.4)"
-  data-lyket-color-text="black"
-  data-lyket-color-icon="violet"
-  data-lyket-color-highlight="#ff00c3"
-></div>
-`}
-              </Code>
+              <p>Let's see an example for a like/dislike button</p>
               <div className="flex big">
                 <div className="try">Try it! →</div>
                 <Provider
@@ -305,111 +312,25 @@ export default function Docs() {
                     }
                   }}
                 >
-                  <UpdownButton namespace="docs" id="widget-like-colors" />
+                  <UpdownButton namespace="docs" id="plugin-like-colors" />
                 </Provider>
               </div>
-              <h4>Other props</h4>
-              <ul>
-                <li>
-                  <p>
-                    <strong>data-lyket-show-counter-from</strong>:{" "}
-                    <strong>string</strong> - Number of likes required to show
-                    the counter.
-                  </p>
-                </li>
-              </ul>
-              <Code>
-                {`<!-- button with hidden counter -->
-<div
-  data-lyket-type="updown"
-  data-lyket-id="my-first-post"
-  data-lyket-show-counter-from="4"
-></div>
-`}
-              </Code>
-              <h4>Button Templates</h4>
+              <h5 id="clap-button">Leave us a review</h5>
               <p>
-                Browse our{" "}
-                <Link href="/templates">
-                  <a>templates gallery</a>
-                </Link>{" "}
-                to choose your favourite template!
+                Lyket is rather new and still needs some support! Be sure to
+                leave us a review if you liked our plugin
               </p>
-              <p>
-                Do you have an idea for the perfect clap or like button?{" "}
-                <a href="mailto:write@lyket.dev">Write to us</a> explaining your
-                idea or make a pull request to our open-source{" "}
+              <div className="center">
                 <a
-                  href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
+                  className="button"
+                  href="https://wordpress.org/plugins/lyket-like-buttons/#reviews"
                   target="_blank"
                 >
-                  Github repository
-                </a>{" "}
-              </p>
-              <h4 id="recaptcha">reCAPTCHA</h4>
-              <p>
-                Lyket is integrated with Google reCAPTCHA V3 to handle malicious
-                use without interrupting <em>human</em> users. To enable it you
-                need to provide your Google reCAPTCHA secret key in the user
-                settings in the private area and add your recaptcha site key
-                through the recaptchaSiteKey prop in the Provider. The key will
-                be encrypted.
-              </p>
+                  Leave us a review!
+                </a>
+              </div>
             </div>
           </div>
-          <h4 id="how-buttons-work">How the buttons work</h4>
-          <p>
-            All Lyket buttons share these{" "}
-            <strong>basic behaviors and features:</strong>
-          </p>
-          <ul>
-            <li>
-              <p>
-                The plugin will create a button for all your pages and posts.
-              </p>
-            </li>
-            <li>
-              <p>
-                Notice that{" "}
-                <strong>
-                  the server will create a new button for every different and
-                  unique identifier
-                </strong>
-                , so if you change ID or namespace or type the new button won’t
-                inherit the votes.
-              </p>
-            </li>
-            <li>
-              <p>
-                Every time a visitor interacts with a button, the button counter
-                will update and{" "}
-                <strong>Lyket will flag that the visitor has voted</strong>.
-                Lyket uses an unique random ID stored in the visitor's browser
-                localStorage to identify the visitor, with no need to signup or
-                to use any third party service. To disable the session ID, and
-                therefore use only the IP address to identify a user, set the
-                disableSessionId prop to <em>true</em> in the Provider
-                component.
-              </p>
-            </li>
-            <li>
-              <p>
-                Lyket enforces a{" "}
-                <strong>maximum number of sessions IDs per IP</strong>
-                address to avoid receiving too many requests or DDoS attacks.
-                The default is 3 sessions per IP. You can change this number by
-                logging into your private area and edit the user settings.
-              </p>
-            </li>
-            <li>
-              <p>
-                In the user settings you can also specify{" "}
-                <strong>from which domains Lyket should accept requests</strong>{" "}
-                using your personal API key. If left empty Lyket will accept
-                requests coming from all domains.
-              </p>
-            </li>
-          </ul>
         </section>
       </div>
     </>

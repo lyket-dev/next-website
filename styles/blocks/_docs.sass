@@ -3,18 +3,25 @@
 
 .docs__title__container
   position: relative
-  max-width: 85%
+  max-width: 98%
   margin: 0 auto
   background: white
   border-radius: 10px
   background-color: white
-  +padding(4)
+  +padding(2)
   +padding-top(6)
   text-align: center
 
 .docs__title
-  @extend .page__title
-  +margin-bottom(0)
+  text-align: center
+  position: relative
+  font-weight: 700
+  +font-size(alpha)
+  +heading-font-family
+  background: white
+  border-radius: 10px
+  +padding-top(4)
+  line-height: 1.2
 
 .docs__text
   +font-size(regular)
@@ -87,8 +94,9 @@
 
   .docs__title
     +font-size(big)
-    +padding(4)
-
+    +horizontal-padding(4)
+    max-width: 750px
+    margin: 0 auto
 
   .docs__link
     +margin-top(2)
@@ -98,3 +106,14 @@
     margin: 0 auto
     +font-size(gamma)
     +margin-bottom(3)
+
+  .docs__title__container
+    position: relative
+    max-width: 85%
+    margin: 0 auto
+    background: white
+    border-radius: 10px
+    background-color: white
+    +padding(4)
+    +padding-top(6)
+    text-align: center

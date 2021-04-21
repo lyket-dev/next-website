@@ -6,7 +6,7 @@ import Code from "components/Code";
 import TryIt from "components/TryIt";
 
 export const meta = {
-  title: "Add a Wordpress like button in a matter of seconds",
+  title: "Add a Wordpress like button in a matter of seconds"
 };
 
 export default function Post() {
@@ -75,6 +75,41 @@ export default function Post() {
             <p>
               You can then see the buttons statistics on your private area, in
               your own <strong>dashboard</strong>
+            </p>
+            <h4 id="wordpress-like-button-tutorial">
+              The official Lyket like button plugin is out!
+            </h4>
+            <p>
+              Finally our official Lyket like button Wordpress plugin is out!
+            </p>
+            <p>
+              Read our <Link href="/docs/wordpress">documentation</Link>, to
+              know more about the Wordpress like button plugin and see it in
+              action!
+            </p>
+            <p>
+              To install the plugin go to the{" "}
+              <a
+                href="https://wordpress.org/plugins/search/lyket"
+                target="_blank"
+              >
+                Wordpress plugin directory
+              </a>{" "}
+              or search for <strong>the keyword "Lyket"</strong>, or{" "}
+              <strong>the "like button" tag</strong> in the "Add new" search
+              form.
+            </p>
+            <p>And since you are there don't forget to...</p>
+            <p>
+              <div className="center">
+                <a
+                  className="button"
+                  href="https://wordpress.org/plugins/lyket-like-buttons/#reviews"
+                  target="_blank"
+                >
+                  Leave us a review ♥
+                </a>
+              </div>
             </p>
             <h3 id="wordpress-like-button-withut-login">
               Wordpress like button without login
@@ -209,8 +244,8 @@ export default function Post() {
                   colors: {
                     background: "#b8fff3",
                     text: "violet",
-                    primary: "rgba(255, 224, 138, 0.4)",
-                  },
+                    primary: "rgba(255, 224, 138, 0.4)"
+                  }
                 }}
               >
                 <LikeButton namespace="blog" id="wordpress-example-colors" />

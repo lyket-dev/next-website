@@ -2,7 +2,7 @@
   display: flex
   justify-content: center
   align-items: center
-  +margin-bottom(6)
+  +vertical-margin(6)
   span
     +horizontal-margin(2)
 
@@ -34,4 +34,6 @@
   &:after
     width: 100%
 
-@media only screen and (min-width: 1000px)
+@media only screen and (max-width: 1000px)
+  .menu
+    display: block

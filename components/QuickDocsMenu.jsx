@@ -12,6 +12,10 @@ export default function QuickDocsMenu() {
         <a className="menu__link">Widget</a>
       </ActiveLink>
       <span>|</span>
+      <ActiveLink href="/docs/wordpress">
+        <a className="menu__link">Wordpress</a>
+      </ActiveLink>
+      <span>|</span>
       <ActiveLink href="/docs/api">
         <a className="menu__link">API</a>
       </ActiveLink>

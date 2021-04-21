@@ -65,6 +65,11 @@
     width: 100%
     box-shadow: 2px 14px 15px #ddd
 
+  img
+    +margin-bottom(4)
+    width: 90%
+    box-shadow: 2px 14px 15px #ddd
+
   strong
     font-weight: 600
 
@@ -83,7 +88,7 @@
     align-items: center
     justify-content: center
     +margin-bottom(4)
-    +margin-bottom(4)
+
   .flex > *
     margin: 0
     +horizontal-margin(2)
@@ -95,7 +100,10 @@
     +font-size(huge)
 
   .inline-buttons
-    +font-size(milli)
+    +font-size(smallprint)
+
+  .h-space
+    +horizontal-margin(2)
 
 .language-html
   overflow: scroll
@@ -109,6 +117,7 @@
     .huge
       +font-size(big)
 
+
 @media only screen and (max-width: 500px)
   .markdown
     .big
@@ -116,3 +125,12 @@
 
     .huge
       +font-size(big)
+
+    .flex
+      display: block
+      text-align: center
+
+    .flex > *
+      margin: 0
+      +horizontal-margin(0)
+      +margin-bottom(2)
