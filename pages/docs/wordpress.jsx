@@ -21,7 +21,7 @@ export default function Docs() {
           <div className="docs__title__container">
             <h2 className="page__kicker">Wordpress like button plugin</h2>
             <h1 className="docs__title">
-              Create beautiful buttons with Lyket Wordpress like button plugin
+              Create beautiful buttons with Lyket - Wordpress like button plugin
             </h1>
             <QuickDocsMenu />
           </div>
@@ -29,83 +29,39 @@ export default function Docs() {
             <div className="markdown">
               <p>
                 <strong>Lyket Wordpress like button plugin</strong> lets you
-                create beautiful like buttons in your <strong>Wordpress</strong>{" "}
+                create beautiful like buttons on your <strong>Wordpress</strong>{" "}
                 website!
               </p>
-              <h4 id="how-buttons-work">How the buttons work</h4>
               <p>
-                All Lyket buttons share these{" "}
-                <strong>basic behaviors and features:</strong>
+                You can find Lyket like buttons official Lyket plugin in the{" "}
+                <a
+                  href="https://wordpress.org/plugins/search/lyket"
+                  target="_blank"
+                >
+                  Wordpress plugin directory
+                </a>
               </p>
-              <ul>
-                <li>
-                  <p>
-                    The plugin will create a button for all your pages and
-                    posts.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Notice that{" "}
-                    <strong>
-                      the server will create a new button for every different
-                      and unique identifier
-                    </strong>
-                    , so if you change ID or namespace or type the new button
-                    won’t inherit the votes.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Every time a visitor interacts with a button, the button
-                    counter will update and{" "}
-                    <strong>Lyket will flag that the visitor has voted</strong>.
-                    Lyket uses an unique random ID stored in the visitor's
-                    browser localStorage to identify the visitor, with no need
-                    to signup or to use any third party service. To disable the
-                    session ID, and therefore use only the IP address to
-                    identify a user, set the disableSessionId prop to{" "}
-                    <em>true</em> in the Provider component.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Lyket enforces a{" "}
-                    <strong>maximum number of sessions IDs per IP</strong>
-                    address to avoid receiving too many requests or DDoS
-                    attacks. The default is 3 sessions per IP. You can change
-                    this number by logging into your private area and edit the
-                    user settings.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    In the user settings you can also specify{" "}
-                    <strong>
-                      from which domains Lyket should accept requests
-                    </strong>{" "}
-                    using your personal API key. If left empty Lyket will accept
-                    requests coming from all domains.
-                  </p>
-                </li>
-              </ul>
               <h4 id="installation">Installation</h4>
               <p>
-                Implementing Lyket is quite simple, but you have to have a basic
-                knowledge of HTML to do that. In your HTML or your site builder
-                (Wordpress, Webflow or else){" "}
-                <strong>
-                  add the script you find below in the &lt;footer&gt; or in the
-                  &lt;header&gt;
-                </strong>
-                , then start creating buttons just by{" "}
-                <strong>
-                  adding a &lt;div&gt; element with a data-lyket-type and
-                  data-lyket-id
-                </strong>{" "}
-                anywhere in your code. Use custom HTML to do that with a site
-                builder.
+                Implementing Lyket is quite simple. Let's go through all the
+                steps!
               </p>
+              <ol>
+                <li>
+                  First install the like button plugin from the{" "}
+                  <a
+                    href="https://wordpress.org/plugins/search/lyket"
+                    target="_blank"
+                  >
+                    Wordpress plugin directory
+                  </a>
+                  or search for <strong>keyword "Lyket"</strong>, or{" "}
+                  <strong>"like button" tag</strong> in the "Add new" search
+                  form
+                </li>
+                <li></li>
+                <li></li>
+              </ol>
               <p>
                 <strong>Important</strong>: Lyket needs to verify your identity
                 when creating and storing button counters. To do that it
@@ -401,6 +357,59 @@ export default function Docs() {
               </p>
             </div>
           </div>
+          <h4 id="how-buttons-work">How the buttons work</h4>
+          <p>
+            All Lyket buttons share these{" "}
+            <strong>basic behaviors and features:</strong>
+          </p>
+          <ul>
+            <li>
+              <p>
+                The plugin will create a button for all your pages and posts.
+              </p>
+            </li>
+            <li>
+              <p>
+                Notice that{" "}
+                <strong>
+                  the server will create a new button for every different and
+                  unique identifier
+                </strong>
+                , so if you change ID or namespace or type the new button won’t
+                inherit the votes.
+              </p>
+            </li>
+            <li>
+              <p>
+                Every time a visitor interacts with a button, the button counter
+                will update and{" "}
+                <strong>Lyket will flag that the visitor has voted</strong>.
+                Lyket uses an unique random ID stored in the visitor's browser
+                localStorage to identify the visitor, with no need to signup or
+                to use any third party service. To disable the session ID, and
+                therefore use only the IP address to identify a user, set the
+                disableSessionId prop to <em>true</em> in the Provider
+                component.
+              </p>
+            </li>
+            <li>
+              <p>
+                Lyket enforces a{" "}
+                <strong>maximum number of sessions IDs per IP</strong>
+                address to avoid receiving too many requests or DDoS attacks.
+                The default is 3 sessions per IP. You can change this number by
+                logging into your private area and edit the user settings.
+              </p>
+            </li>
+            <li>
+              <p>
+                In the user settings you can also specify{" "}
+                <strong>from which domains Lyket should accept requests</strong>{" "}
+                using your personal API key. If left empty Lyket will accept
+                requests coming from all domains.
+              </p>
+            </li>
+          </ul>
         </section>
       </div>
     </>
