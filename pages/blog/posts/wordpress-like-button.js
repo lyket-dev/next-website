@@ -83,9 +83,15 @@ export default function Post() {
               Finally our official Lyket like button Wordpress plugin is out!
             </p>
             <p>
-              Read our <Link href="/docs/wordpress">documentation</Link>, to
-              know more about the Wordpress like button plugin and see it in
-              action!
+              Read our{" "}
+              <Link
+                href="/docs/wordpress
+              "
+              >
+                documentation
+              </Link>
+              , to know more about the Wordpress like button plugin and see it
+              in action!
             </p>
             <p>
               To install the plugin go to the{" "}
