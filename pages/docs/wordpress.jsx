@@ -10,9 +10,9 @@ export default function Docs() {
   return (
     <>
       <Head>
-        <title>Lyket Wordpress like button plugin</title>
+        <title>Wordpress like button plugin | Lyket</title>
         <meta
-          content="Create beautiful Wordpress like button with Lyket plugin!"
+          content="Create beautiful Wordpress like buttons, clap buttons or like/dislike buttons with Lyket like buttons plugin!"
           name="description"
         />
       </Head>

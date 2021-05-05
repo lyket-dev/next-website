@@ -35,7 +35,7 @@ export default function Post() {
           <div className="markdown">
             <p>
               Creating a blog with{" "}
-              <strong>Blogger is really a piece of cake</strong> but
+              <strong>Blogger is really a piece of cake</strong>, but
               unfortunately there is no out-of-the-box way to{" "}
               <strong>add a Blogger like button</strong>, or, a{" "}
               <strong>Medium-like clap button</strong>.
@@ -45,7 +45,7 @@ export default function Post() {
               <strong>
                 Lyket is a new tool that integrates perfectly with Blogger
               </strong>{" "}
-              to let you add like buttons on all of your blogs in a matter of
+              to let you add like buttons on any of your blogs in a matter of
               seconds.
             </p>
             <p>

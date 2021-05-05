@@ -9,6 +9,7 @@ sitemap({
   targetDirectory: "out/",
   nextConfigPath: __dirname + "/next.config.js",
   ignoreIndexFiles: true,
+  allowFileExtensions: true,
   ignoredPaths: ["drafts"],
   sitemapStylesheet: [
     {
