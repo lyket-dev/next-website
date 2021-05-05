@@ -38,8 +38,13 @@ export default function Docs() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/docs/wordpress">
+                    <a>Wordpress like button plugin</a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/blog/posts/wordpress-like-button">
-                    <a>How to add like buttons to Wordpress</a>
+                    <a>How to add Lyket widget to Wordpress</a>
                   </Link>
                 </li>
                 <li>
