@@ -86,7 +86,7 @@ export default function Post() {
               that you can <strong>copy and paste directly in your code</strong>{" "}
               to see the magic happen.
             </p>
-            <h3>What Lyket can do</h3>
+            <h4>What Lyket can do</h4>
             <p>
               If you were trying to implement a feedback system by yourself in
               your React project, you would need to be aware of three main
@@ -116,7 +116,7 @@ export default function Post() {
               Moreover you don't have to worry about privacy because Lyket does
               not store sensible data making it <strong>GDPR-compliant</strong>.
             </p>
-            <h3>A simple like/dislike button</h3>
+            <h4>A simple like/dislike button</h4>
             <p>
               Let's start with the the <strong>minimal configuration</strong>.
               You can copy and paste this snippet into your code or you can see
@@ -159,7 +159,7 @@ export default function Post() {
                 id="like-dislike-button-react-example"
               />
             </div>
-            <h3>Changing templates</h3>
+            <h4>Changing templates</h4>
             <p>
               Speaking about Reddit, you can change the like/dislike button
               style by choosing one of the templates you can find in the{" "}
@@ -183,7 +183,7 @@ export default function Post() {
                 component={UpdownButton.templates.Reddit}
               />
             </div>
-            <h3>Changing colors</h3>
+            <h4>Changing colors</h4>
             <p>
               Some templates support color changing, for example the default
               one, so you can <strong>use your own color palette</strong>! You
@@ -247,7 +247,7 @@ export default function Post() {
                 />
               </Provider>
             </div>
-            <h2>Creating your own button</h2>
+            <h4>Creating your own button</h4>
             <p>
               You may want to give a like/dislike button to be more consistent
               with your website, for example use your own logo an icon from your
@@ -367,14 +367,14 @@ export default function Post() {
               subscription form!
             </p>
             <div className="flex big">
-              <h3>Click! →</h3>
+              <h4>Click! →</h4>
               <UpdownButton
                 namespace="blog"
                 id="like-dislike-button-react-example-onpress"
                 onPressUp={openSubscribeModal}
               />
             </div>
-            <h3>The other button types</h3>
+            <h4>The other button types</h4>
             <p>
               Like/dislike button is just one of the three kind of buttons that
               Lyket offers. Each button has a different behaviour and can get

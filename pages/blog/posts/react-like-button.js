@@ -77,7 +77,6 @@ export default function Post() {
               component={LikeButton.templates.Twitter}
             />
           </div>
-           
         </section>
         <section className="page__section">
           <div className="markdown">
@@ -104,7 +103,7 @@ export default function Post() {
                 with all this data!
               </li>
             </ul>
-            <h3>Lyket in action!</h3>
+            <h4>Lyket in action!</h4>
             <p>
               Lyket takes care of all these nuisances for you! It lets you add
               GDPR-compliant{" "}
@@ -154,7 +153,7 @@ export default function Post() {
               <div className="try">Click! →</div>
               <LikeButton namespace="blog" id="like-button-react-example" />
             </div>
-            <h3>Changing templates</h3>
+            <h4>Changing templates</h4>
             <p>
               Speaking about Twitter, you can change the like button style by
               choosing one of the templates you can find in the{" "}
@@ -179,7 +178,7 @@ export default function Post() {
                 component={LikeButton.templates.Twitter}
               />
             </div>
-            <h3>Changing colors</h3>
+            <h4>Changing like buttons colors</h4>
             <p>
               Some templates support color changing, for example the default
               one, so you can use your own color palette! You can do that by
@@ -236,7 +235,7 @@ export default function Post() {
                 />
               </Provider>
             </div>
-            <h2>Creating your own button</h2>
+            <h4>Creating your own button</h4>
             <p>
               You may want to give a like button to be more consistent with your
               website, for example use your own logo an icon from your own icon
@@ -305,7 +304,7 @@ export default function Post() {
               </Link>
               .
             </p>
-            <h3>Engage your visitors!</h3>
+            <h4>Engage your visitors!</h4>
             <p>
               Once you have the buttons where you want them to be, for example
               in your blog posts, or in your documentation, you can start
@@ -335,7 +334,7 @@ export default function Post() {
                 onPress={openSubscribeModal}
               />
             </div>
-            <h3>The other button types</h3>
+            <h4>The other button types</h4>
             <p>
               Like button is just one of the three kind of buttons that Lyket
               offers. Each button has a different behaviour and can get you a
