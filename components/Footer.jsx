@@ -44,7 +44,8 @@ export default function Footer() {
           </li>
         </ul>
         <ul className="footer__list">
-          <li className="footer__item">Copyright Lyket 2021</li>•
+          <li className="footer__item">Copyright Lyket 2021</li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/privacy">
               <a className="footer__link">Privacy Policy</a>
@@ -53,7 +54,7 @@ export default function Footer() {
               <a className="footer__link">Blog</a>
             </Link>
           </li>
-          •
+          <li className="footer__dot">•</li>
           <li className="footer__link">
             <a
               href="https://twitter.com/LyketDev"

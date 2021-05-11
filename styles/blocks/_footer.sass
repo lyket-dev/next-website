@@ -12,8 +12,10 @@
   font-weight: 400
 
 .footer__list
-  display: flex
-  justify-content: center
+  +margin-bottom(2)
+
+.footer__dot
+  display: none
 
 .footer__icon
   fill: white
@@ -32,3 +34,10 @@
 @media only screen and (min-width: 1000px)
   .footer
     +vertical-padding(4)
+
+  .footer__list
+    display: flex
+    justify-content: center
+
+  .footer__dot
+    display: block

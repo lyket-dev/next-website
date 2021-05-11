@@ -9,6 +9,7 @@ import Support from "public/icons/outline/support.svg";
 import Mail from "public/icons/outline/mail.svg";
 import Shield from "public/icons/outline/shield-check.svg";
 import ImEx from "public/icons/outline/upload.svg";
+import Link from "next/link";
 
 export default function Privacy() {
   return (
@@ -17,11 +18,12 @@ export default function Privacy() {
         <div className="page__title">
           <h1>Pricing</h1>
         </div>
-        <p className="page__text">
-          We want to offer a simple pricing model that grows with your project
-          with a free tier that lets you experiment with Lyket and a flat one
-          for more professional use.
-        </p>
+        <div className="text__center">
+          <p className="page__text">
+            We offer a simple pricing model that{" "}
+            <strong>grows with your project</strong>.
+          </p>
+        </div>
       </section>
       <section className="section--primary">
         <div className="section__container">
@@ -34,7 +36,7 @@ export default function Privacy() {
               <p className="ternary__text">
                 Up to <strong>1,000 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">0$</p>
+              <p className="ternary__huge">0€</p>
             </div>
             <div className="ternary__item">
               <div className="ternary__title">
@@ -50,13 +52,16 @@ export default function Privacy() {
             <div className="ternary__item">
               <div className="ternary__title">
                 <Custom className="icon--small" />
-                <h4>FLAT</h4>
+                <h4>BUSINESS</h4>
               </div>
               <p className="ternary__text">
-                <strong>No limits</strong>
+                <strong>Custom limits and custom pricing</strong>
               </p>
-              <p className="ternary__huge">10€/month</p>
-              <p className="ternary__text">billed yearly</p>
+              <p className="ternary__huge">
+                <Link href="/contact">
+                  <a>Contact us!</a>
+                </Link>{" "}
+              </p>
             </div>
           </div>
           <div className="ternary__title">
