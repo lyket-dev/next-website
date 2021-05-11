@@ -12,7 +12,7 @@ export default function Docs() {
           <h1 className="docs__title">API docs</h1>
           <QuickDocsMenu />
         </div>
-        <div className="docs">
+        <div className="api">
           <SwaggerUI url={`${process.env.apiBaseUrl}/schema`} />
         </div>
       </section>
