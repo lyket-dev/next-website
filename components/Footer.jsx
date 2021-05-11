@@ -12,31 +12,37 @@ export default function Footer() {
               <a className="footer__link">Templates</a>
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/docs/react">
               <a className="footer__link">React Docs</a>
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/docs/widget">
               <a className="footer__link">Widget Docs</a>
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/docs/wordpress">
               <a className="footer__link">Wordpress Docs</a>
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/docs/api">
               <a className="footer__link">API Docs</a>
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/pricing">
               <a className="footer__link">Pricing</a>
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/contact">
               <a className="footer__link">Contact us</a>
