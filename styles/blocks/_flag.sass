@@ -1,4 +1,6 @@
 .flag
+  display: flex
+  flex-direction: column
   text-align: left
   position: relative
 
@@ -12,10 +14,9 @@
   box-shadow: 2px 14px 15px #ddd
 
 .flag__item, .flag__image__container
-  max-width: 90%
-  margin: 0 auto
+  // max-width: 90%
+  // margin: 0 auto
   text-align: center
-  +margin-bottom(2)
 
 .flag__right, .flag__left
   @extend .flag__item
@@ -28,8 +29,8 @@
 
 @media only screen and (min-width: 1000px)
   .flag
-    display: flex
     align-items: center
+    flex-direction: row
 
   .flag__image__container
     flex-grow: 0

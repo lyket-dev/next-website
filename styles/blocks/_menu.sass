@@ -2,7 +2,6 @@
   display: flex
   justify-content: center
   align-items: center
-  +vertical-margin(6)
   span
     +horizontal-margin(2)
 
@@ -36,4 +35,12 @@
 
 @media only screen and (max-width: 1000px)
   .menu
-    display: block
+    +font-size(smallprint)
+    span
+      +horizontal-margin(0.5)
+
+@media only screen and (max-width: 350px)
+  .menu
+    +font-size(milli)
+    span
+      +horizontal-margin(0.2)

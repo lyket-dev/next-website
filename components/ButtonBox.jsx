@@ -4,7 +4,10 @@ import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
 const ButtonBox = ({ children, name, fontSize }) => {
   return (
     <div className="box">
-      <div className="box__button" style={{ fontSize: `${fontSize}px` }}>
+      <div
+        className="box__button__container"
+        style={{ fontSize: `${fontSize}px` }}
+      >
         {children}
       </div>
       <p className="box__title">{name}</p>

@@ -21,7 +21,9 @@ export default function Docs() {
           <div className="docs__title__container">
             <h2 className="page__kicker">like button html</h2>
             <h1 className="docs__title">HTML widget docs</h1>
-            <QuickDocsMenu />
+            <div className="docs__menu__container">
+              <QuickDocsMenu />
+            </div>
           </div>
           <div className="docs">
             <div className="markdown">

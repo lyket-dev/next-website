@@ -24,7 +24,9 @@ export default function Docs() {
             <h1 className="docs__title">
               Create beautiful buttons with Lyket - Wordpress like button plugin
             </h1>
-            <QuickDocsMenu />
+            <div className="docs__menu__container">
+              <QuickDocsMenu />
+            </div>
           </div>
           <div className="docs">
             <div className="markdown">

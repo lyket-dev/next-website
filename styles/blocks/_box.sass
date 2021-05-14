@@ -1,5 +1,5 @@
 .box
-  padding: 20px
+  +margin-bottom(3)
   min-width: 200px
   text-align: center
 
@@ -8,14 +8,13 @@
   border: 2px dashed $base-body-color
 
 .box__container
-  +margin-bottom(1)
+  +margin-bottom(3)
 
 .box__title
-  +margin-bottom(1)
   font-weight: 500
 
-.box__button
-  +margin-bottom(3)
+.box__button__container
+  +margin-bottom(1)
 
 .box__buttons
   word-wrap: no-wrap
@@ -32,7 +31,17 @@
 
 
 @media only screen and (min-width: 600px)
+  .box
+    +margin-bottom(0)
+
   .box__container
     display: flex
     margin-bottom: 0
     justify-content: center
+
+  .box__button__container
+    +margin-bottom(2)
+    min-height: 95px
+    position: relative
+    > div
+      +center

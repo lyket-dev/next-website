@@ -26,6 +26,8 @@
     p
       font-weight: normal
       line-height: 1.2
+      +font-size(regular)
+      
     &:last-child
       margin-bottom: 0
     strong
@@ -149,3 +151,8 @@
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     text-decoration: none
+
+  .navbar__pane
+    .navbar__pane__link
+      p
+        +font-size(regular)

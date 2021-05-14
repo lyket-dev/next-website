@@ -3,14 +3,17 @@
 
 .docs__title__container
   position: relative
-  max-width: 98%
-  margin: 0 auto
+  // max-width: 98%
+  // margin: 0 auto
   background: white
   border-radius: 10px
   background-color: white
-  +padding(2)
+  +horizontal-padding(1)
   +padding-top(6)
   text-align: center
+
+.docs__menu__container
+  +vertical-padding(6)
 
 .docs__title
   text-align: center
@@ -84,13 +87,16 @@
     +font-size(gamma)
     font-weight: bold
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 900px)
   .docs
     +font-size(gamma)
 
   .docs__container
     padding: 100px 0
     max-width: 950px
+
+  .docs__menu__container
+    +vertical-padding(4)
 
   .docs__title
     +font-size(big)

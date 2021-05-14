@@ -10,7 +10,9 @@ export default function Docs() {
         <div className="docs__title__container">
           <h2 className="page__kicker">clap & like button API</h2>
           <h1 className="docs__title">API docs</h1>
-          <QuickDocsMenu />
+          <div className="space--both-6">
+            <QuickDocsMenu />
+          </div>
         </div>
         <div className="api">
           <SwaggerUI url={`${process.env.apiBaseUrl}/schema`} />

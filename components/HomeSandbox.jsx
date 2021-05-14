@@ -16,38 +16,40 @@ const HomeSandbox = () => {
 
   return (
     <>
-      <div className="menu">
-        <button
-          className={`menu__link${selected === "clap" ? " active" : " "}`}
-          onClick={e => {
-            e.preventDefault();
-            setButton("clap");
-          }}
-        >
-          Clap
-        </button>
-        <span>|</span>
+      <div className="space--bottom-4">
+        <div className="menu">
+          <button
+            className={`menu__link${selected === "clap" ? " active" : " "}`}
+            onClick={e => {
+              e.preventDefault();
+              setButton("clap");
+            }}
+          >
+            Clap
+          </button>
+          <span>|</span>
 
-        <button
-          className={`menu__link${selected === "like" ? " active" : " "}`}
-          onClick={e => {
-            e.preventDefault();
-            setButton("like");
-          }}
-        >
-          Like
-        </button>
-        <span>|</span>
+          <button
+            className={`menu__link${selected === "like" ? " active" : " "}`}
+            onClick={e => {
+              e.preventDefault();
+              setButton("like");
+            }}
+          >
+            Like
+          </button>
+          <span>|</span>
 
-        <button
-          className={`menu__link${selected === "updown" ? " active" : " "}`}
-          onClick={e => {
-            e.preventDefault();
-            setButton("updown");
-          }}
-        >
-          Updown
-        </button>
+          <button
+            className={`menu__link${selected === "updown" ? " active" : " "}`}
+            onClick={e => {
+              e.preventDefault();
+              setButton("updown");
+            }}
+          >
+            Updown
+          </button>
+        </div>
       </div>
       <div className="flag">
         {showConfetti && (

@@ -21,7 +21,9 @@ export default function Docs() {
           <div className="docs__title__container">
             <h2 className="page__kicker">clap & like button on React</h2>
             <h1 className="docs__title">React docs</h1>
-            <QuickDocsMenu />
+            <div className="docs__menu__container">
+              <QuickDocsMenu />
+            </div>
           </div>
           <div className="docs">
             <div className="markdown">
@@ -455,29 +457,28 @@ export BlogPost = ({ title, content }) => {
                   </p>
                   <ul>
                     <li>
-                      <strong>id</strong>: <strong>string</strong>
+                      <strong>id</strong>: string
                     </li>
                     <li>
-                      <strong>type</strong>: <strong>clap_button</strong>
+                      <strong>type</strong>: clap_button
                     </li>
                     <li>
-                      <strong>attributes</strong>: <strong>Object</strong>
+                      <strong>attributes</strong>: Object
                       <ul>
                         <li>
-                          <strong>namespace</strong>: <strong>string</strong>
+                          <strong>namespace</strong>: string
                         </li>
                         <li>
-                          <strong>namespaceRank</strong>:{" "}
-                          <strong>number</strong>
+                          <strong>namespaceRank</strong>: number
                         </li>
                         <li>
-                          <strong>totalClaps</strong>: <strong>number</strong>
+                          <strong>totalClaps</strong>: number
                         </li>
                         <li>
-                          <strong>totalRank</strong>: <strong>number</strong>
+                          <strong>totalRank</strong>: number
                         </li>
                         <li>
-                          <strong>userClaps</strong>: <strong>number</strong>
+                          <strong>userClaps</strong>: number
                         </li>
                       </ul>
                     </li>
