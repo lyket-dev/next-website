@@ -31,7 +31,7 @@ export default function Privacy() {
             <div className="ternary__item">
               <div className="ternary__title">
                 <Beaker className="icon--small" />
-                <h4>FREE</h4>
+                <h4>Free</h4>
               </div>
               <p className="ternary__text">
                 Up to <strong>1,000 pageviews</strong> per month
@@ -41,7 +41,7 @@ export default function Privacy() {
             <div className="ternary__item">
               <div className="ternary__title">
                 <Case className="icon--small" />
-                <h4>PRO</h4>
+                <h4>Basic</h4>
               </div>
               <p className="ternary__text">
                 Up to <strong>50,000 pageviews</strong> per month
@@ -52,7 +52,7 @@ export default function Privacy() {
             <div className="ternary__item">
               <div className="ternary__title">
                 <Custom className="icon--small" />
-                <h4>BUSINESS</h4>
+                <h4>Business</h4>
               </div>
               <p className="ternary__text">
                 <strong>Custom limits and custom pricing</strong>
