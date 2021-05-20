@@ -117,7 +117,7 @@ export const UpdownSandbox = () => {
   return (
     <Flag>
       <div className="flag__left">
-        <h4 className="flag__title">Up/down Buttons</h4>
+        <h4 className="flag__title">Like/dislike Buttons</h4>
         <div className="box__buttons">
           <span>Change size:</span>
 

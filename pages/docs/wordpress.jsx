@@ -3,6 +3,11 @@ import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Link from "next/link";
 import Head from "next/head";
+import {
+  ApplauseSandbox,
+  LikeSandbox,
+  UpdownSandbox
+} from "components/ButtonBox";
 
 import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
 
@@ -35,20 +40,30 @@ export default function Docs() {
                 create beautiful like buttons on your <strong>Wordpress</strong>{" "}
                 website!
               </p>
-              <p>
-                You can then see the buttons statistics on your private area, in
-                your own <strong>dashboard</strong>
-              </p>
+              <div className="center">
+                <a
+                  className="button"
+                  href="https://wordpress.org/plugins/lyket-like-buttons"
+                  target="_blank"
+                >
+                  See it now on Wordpress!
+                </a>
+              </div>
+              <LikeSandbox />
+              <UpdownSandbox />
+              <ApplauseSandbox />
+              <h4 id="features">Lyket plugin features</h4>
               <p>
                 One of the <strong>biggest perks</strong> of using Lyket is that
-                your <strong>visitors don't need to login</strong> to leave a
-                token of appreciation, still Lyket is able to detect if a
-                visitor has already liked your content.
+                while your website <strong>users don't need to login</strong> to
+                leave a "like", Lyket is still able to detect if a user has
+                already liked your content.
               </p>
               <p>
                 This is both great for user experience and for{" "}
-                <strong>privacy concerns</strong>, because your visitors don't
-                have to identify and their data remain in their own hands!
+                <strong>privacy reasons</strong>, because your visitors don't
+                have to identify, their data is not stored anywhwere and not
+                sold to third parts!
               </p>
               <p>
                 To learn more about how we value privacy, how visitors are
@@ -57,13 +72,11 @@ export default function Docs() {
                   <a>documentation.</a>
                 </Link>
               </p>
-              <div className="flex big">
-                <div className="try">Try it! →</div>
-                <LikeButton
-                  namespace="docs"
-                  id="wordpress-plugin-like-button"
-                />
-              </div>
+              <p>
+                On the other hand, Lyket gives you everything you need to
+                <strong>monitor user feedback</strong>! In your private area you
+                can see all buttons statistics, and manage user settings.
+              </p>
               <p>
                 You can find Lyket like buttons official Lyket plugin in the{" "}
                 <a
@@ -83,6 +96,9 @@ export default function Docs() {
                   Leave us a review ♥
                 </a>
               </div>
+              <h4 id="get-lyket-like-buttons-plugin">
+                Get Lyket on Wordpress!
+              </h4>
               <p>
                 Implementing Lyket is quite simple. Let's go through all the
                 steps!
