@@ -94,9 +94,9 @@ export default function Post() {
             <p>
               At the end of each <strong>article or showcase</strong>, the
               visitor will be able to express their satisfaction by choosing a
-              number of stars (or harts or anything else :D). This{" "}
-              <strong>evaluation method</strong> is inherited from travel
-              portals where hotels and restaurants can be reviewed.
+              number of stars (or hearts or anything else :D). This{" "}
+              <strong>successful user feedback method</strong> is inherited from
+              travel portals, where hotels and restaurants can be reviewed.
             </p>
             <p>
               There are a lot of great <strong>React rating components</strong>{" "}
@@ -106,18 +106,18 @@ export default function Post() {
               <strong>API that keeps track of votes</strong>,{" "}
               <strong>you have to store ratings in a database</strong>, or
               otherwise you will have no way to{" "}
-              <strong>remember which visitor has already voted</strong>, like
-              most of the websites around do!
+              <strong>remember which visitor has already voted</strong>. Most of
+              the websites around do exactly like that!
             </p>
             <p>
               Don't believe me? I will prove it to you! Try navigating to your
               favourite cooking recipies website, leave a rating, and then
               refresh the page. Are you able to vote again? That is because good
-              looking React rating components are not enough! Maybe it didn't
+              looking React rating components are not enough! -- Maybe it didn't
               happen for your favourite website, but I assure you that it
-              happens most of the times!
+              happens most of the times! ;)
             </p>
-            <h3>Lyket keeps track of ratings for you</h3>
+            <h3>Lyket keeps track of user ratings for you</h3>
             <p>
               This is where Lyket comes to help! It takes care of all the above
               nuisances for you, provides an <strong>easy to install</strong>{" "}
@@ -127,17 +127,23 @@ export default function Post() {
               <strong>
                 any React project, including NextJS, Gatsby, React Native
               </strong>
-              . Moreover it shows you all the ratings{" "}
+              . Moreover, you can see all the ratings{" "}
               <strong>ordered by most voted</strong> on your personal dashboard.
             </p>
-            <h4>Important notice</h4>
+            <h4>Important notice!</h4>
             <p>
               <strong>
                 Lyket React Rating component is not available yet!
               </strong>{" "}
               We are still working on it, but it will be available soon! If you
-              want to know an ETA, simply contact us in the contact page :)
+              are interested or you want to know an ETA, simply contact us in
+              the contact page :)
             </p>
+            <div className="center">
+              <Link href="/contact">
+                <a className="button">Contact us</a>
+              </Link>
+            </div>
             <h4>How Lyket React Rating component will work</h4>
             <p>
               Here is an example of how it will work. With just a{" "}
