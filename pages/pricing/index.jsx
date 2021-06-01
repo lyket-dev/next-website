@@ -31,12 +31,12 @@ export default function Privacy() {
             <div className="ternary__item">
               <div className="ternary__title">
                 <Beaker className="icon--small" />
-                <h4>Free</h4>
+                <h4>Test</h4>
               </div>
               <p className="ternary__text">
-                Up to <strong>1,000 pageviews</strong> per month
+                Up to <strong>300 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">0€</p>
+              <p className="ternary__huge">Free</p>
             </div>
             <div className="ternary__item">
               <div className="ternary__title">
@@ -44,9 +44,9 @@ export default function Privacy() {
                 <h4>Basic</h4>
               </div>
               <p className="ternary__text">
-                Up to <strong>50,000 pageviews</strong> per month
+                Up to <strong>3,000 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">3€/month</p>
+              <p className="ternary__huge">5€/month</p>
               <p className="ternary__text">billed yearly</p>
             </div>
             <div className="ternary__item">
@@ -55,14 +55,21 @@ export default function Privacy() {
                 <h4>Business</h4>
               </div>
               <p className="ternary__text">
-                <strong>Custom limits and custom pricing</strong>
+                Up to <strong>50,000 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">
+              <p className="ternary__huge">12€/month</p>
+              <p className="ternary__text">billed monthly</p>
+            </div>
+          </div>
+          <div className="text__center">
+            <p className="page__text">
+              <strong>
+                Need more pageviews?{" "}
                 <Link href="/contact">
                   <a>Contact us!</a>
-                </Link>{" "}
-              </p>
-            </div>
+                </Link>
+              </strong>
+            </p>
           </div>
           <div className="ternary__title">
             <a className="button" href={`${process.env.appBaseUrl}/signup`}>
@@ -139,7 +146,7 @@ export default function Privacy() {
               <div className="stripe__container">
                 <h6 className="stripe__title">Import-export data</h6>
                 <p className="stripe__text">
-                  Easily import your data from Medium or export to csv.[WIP]
+                  Easily import your data from Medium or export to csv.
                 </p>
               </div>
             </div>
