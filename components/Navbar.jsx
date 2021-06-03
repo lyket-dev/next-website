@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Menu from "public/icons/menu.svg";
 import Close from "public/icons/close.svg";
+import Arrow from "public/icons/outline/arrow-right.svg";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
@@ -70,6 +71,7 @@ export default function Navbar() {
         <li className="navbar__item">
           <a className="button" href={`${process.env.appBaseUrl}/signup`}>
             Register
+            <Arrow />
           </a>
         </li>
       </ul>

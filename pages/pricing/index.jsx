@@ -9,6 +9,7 @@ import Support from "public/icons/outline/support.svg";
 import Mail from "public/icons/outline/mail.svg";
 import Shield from "public/icons/outline/shield-check.svg";
 import ImEx from "public/icons/outline/upload.svg";
+import Arrow from "public/icons/outline/arrow-right.svg";
 import Link from "next/link";
 
 export default function Privacy() {
@@ -62,7 +63,7 @@ export default function Privacy() {
             </div>
           </div>
           <div className="text__center">
-            <p className="page__text">
+            <p className="ternary__text">
               <strong>
                 Need more pageviews?{" "}
                 <Link href="/contact">
@@ -71,9 +72,10 @@ export default function Privacy() {
               </strong>
             </p>
           </div>
-          <div className="ternary__title">
+          <div className="ternary__text">
             <a className="button" href={`${process.env.appBaseUrl}/signup`}>
               GET STARTED!
+              <Arrow />
             </a>
           </div>
           <h2 className="page__title">What you get</h2>
