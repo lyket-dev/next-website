@@ -34,7 +34,7 @@ export default function Privacy() {
                 <h4>Test</h4>
               </div>
               <p className="ternary__text">
-                Up to <strong>300 pageviews</strong> per month
+                Up to <strong>500 pageviews</strong> per month
               </p>
               <p className="ternary__huge">Free</p>
             </div>
