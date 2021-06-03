@@ -45,9 +45,9 @@ export default function Privacy() {
                 <h4>Basic</h4>
               </div>
               <p className="ternary__text">
-                Up to <strong>3,000 pageviews</strong> per month
+                Up to <strong>5,000 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">3€/month</p>
+              <p className="ternary__huge">4€/month</p>
               <p className="ternary__text">billed yearly</p>
             </div>
             <div className="ternary__item">
@@ -58,7 +58,7 @@ export default function Privacy() {
               <p className="ternary__text">
                 Up to <strong>50,000 pageviews</strong> per month
               </p>
-              <p className="ternary__huge">12€/month</p>
+              <p className="ternary__huge">10€/month</p>
               <p className="ternary__text">billed monthly</p>
             </div>
           </div>
