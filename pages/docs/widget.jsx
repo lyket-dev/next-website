@@ -9,9 +9,9 @@ export default function Docs() {
   return (
     <>
       <Head>
-        <title>Beautiful like button HTML | Lyket</title>
+        <title>Like button HTML | Lyket</title>
         <meta
-          content="Instantly add like, applause and like/dislike on any website with our super simple like button HTML widget!"
+          content="Instantly add like, clap and like/dislike buttons on any web project with our super simple like button HTML widget!"
           name="description"
         />
       </Head>
@@ -20,7 +20,7 @@ export default function Docs() {
         <section className="page__section">
           <div className="docs__title__container">
             <h2 className="page__kicker">like button html</h2>
-            <h1 className="docs__title">HTML widget docs</h1>
+            <h1 className="docs__title">HTML docs</h1>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>
@@ -28,9 +28,21 @@ export default function Docs() {
           <div className="docs">
             <div className="markdown">
               <p>
-                Lyket widget is a simple script that lets you embed Lyket in
-                your <strong>HTML, Wordpress, Webflow, Notion</strong> website
-                and more!
+                Lyket can be easily embedded on any website or app by using a
+                simple HTML + Javascript snippet.
+              </p>
+              <p>
+                Just by adding a few lines of code you will see beautiful like,
+                clap or like/dislike buttons! Something like this:
+              </p>
+              <div className="half__reaction">
+                <UpdownButton namespace="docs" id="widget-main" />
+              </div>
+              <p>
+                This is very powerful because it works, not only in a{" "}
+                <strong>HTML website</strong>, but also on any platform or
+                framework that supports custom HTML/Javascript injection, like{" "}
+                <strong>Wordpress, Webflow, Notion</strong> and more!
               </p>
               <p>We have more framework-specific guides for:</p>
               <ul>
@@ -56,6 +68,12 @@ export default function Docs() {
                 </li>
               </ul>
               <h4 id="how-buttons-work">How the buttons work</h4>
+              <p>
+                First, an introduction on how Lyket buttons work and how you can
+                get the best out of them. If you prefer to see a few examples on
+                how to integrate the HTML like buttons in your website, simply
+                scroll down.
+              </p>
               <p>
                 All Lyket buttons share these{" "}
                 <strong>basic behaviors and features:</strong>
@@ -113,8 +131,8 @@ export default function Docs() {
                     <strong>
                       from which domains Lyket should accept requests
                     </strong>{" "}
-                    using your personal API key. If left empty Lyket will accept
-                    requests coming from all domains.
+                    using your personal public API key. If left empty Lyket will
+                    accept requests coming from all domains.
                   </p>
                 </li>
               </ul>
@@ -150,7 +168,8 @@ export default function Docs() {
                 .
               </p>
               <p>
-                Replace "[YOUR-API-KEY]" in the code with your personal key.
+                Replace "[YOUR-API-KEY]" in the code with your personal public
+                API key.
               </p>
               <Code>
                 &lt;script

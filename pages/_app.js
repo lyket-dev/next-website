@@ -7,6 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <Provider
       apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+      baseUrl={process.env.apiBaseUrl}
       theme={{
         colors: {
           primary: "#24fcc966",

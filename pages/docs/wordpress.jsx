@@ -26,9 +26,7 @@ export default function Docs() {
         <section className="page__section">
           <div className="docs__title__container">
             <h2 className="page__kicker">Wordpress like button plugin</h2>
-            <h1 className="docs__title">
-              Create beautiful buttons with Lyket - Wordpress like button plugin
-            </h1>
+            <h1 className="docs__title">Wordpress like button plugin docs</h1>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>
