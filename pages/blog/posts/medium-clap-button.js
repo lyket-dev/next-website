@@ -151,7 +151,7 @@ export default function Post() {
                 If you use HTML <strong>or a website builder</strong> you can
                 use use our HTML + Javascript widget! Check out the{" "}
                 <Link href="/docs/html">
-                  <a>Widget documentation</a>
+                  <a>HTML widget documentation</a>
                 </Link>{" "}
                 and start creating{" "}
                 <strong>Medium clap buttons with simple HTML</strong>. To have

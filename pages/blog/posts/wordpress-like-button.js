@@ -260,7 +260,7 @@ export default function Post() {
             <p>
               You can read more on how to customize the buttons in the{" "}
               <Link href="/docs/html">
-                <a>widget documentation.</a>
+                <a>HTML widget documentation.</a>
               </Link>
             </p>
             <h4 id="wordpress-heart-like-button">
@@ -319,7 +319,7 @@ export default function Post() {
             <p>
               To choose and customize the buttons follow the{" "}
               <Link href="/docs/html">
-                <a>widget documentation.</a>
+                <a>HTML widget documentation.</a>
               </Link>
             </p>
             <p>

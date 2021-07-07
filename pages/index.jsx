@@ -7,6 +7,8 @@ import Bolt from "public/icons/outline/lightning-bolt.svg";
 import Shield from "public/icons/outline/shield-check.svg";
 import Lock from "public/icons/outline/lock-closed.svg";
 import Price from "public/icons/outline/currency-dollar.svg";
+import Tag from "public/icons/outline/tag.svg";
+import Trending from "public/icons/outline/trending-up.svg";
 import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
 
 export default function Home() {
@@ -25,8 +27,8 @@ export default function Home() {
           </div>
           <div>
             <p className="header__subtitle">
-              Engage your audience with fresh out-of-the-box{" "}
-              <strong>clap and like buttons</strong>
+              Engage your users with fresh out-of-the-box{" "}
+              <strong>clap and like buttons</strong> and rank your content!
             </p>
             <div className="section--center">
               <a
@@ -38,7 +40,8 @@ export default function Home() {
             </div>
             <div className="check">
               <p className="check__text">1 minute setup</p>
-              <p className="check__text">Free forever plan</p>
+              <p className="check__text">Free plan</p>
+              <p className="check__text">No credit card needed</p>
               <p className="check__text">No trial</p>
             </div>
           </div>
@@ -214,6 +217,26 @@ export default function Home() {
           <div className="stripes">
             <div className="stripe__item">
               <div className="stripe__left">
+                <Bolt className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Fastest implementation</h6>
+                <p className="stripe__text">
+                  By using our{" "}
+                  <Link href="/docs/react">
+                    <a>React component</a>
+                  </Link>{" "}
+                  or our{" "}
+                  <Link href="/docs/html">
+                    <a>HTML widget</a>
+                  </Link>{" "}
+                  , you just need to choose a style, provide an identifier for
+                  your button and <strong>you are done!</strong>
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
                 <Lock className="icon" />
               </div>
               <div className="stripe__container">
@@ -221,20 +244,43 @@ export default function Home() {
                 <p className="stripe__text">
                   Most feedback services require visitors to sign up and that
                   can <strong>discourage interaction</strong> +{" "}
-                  <strong>is bad for privacy concerns</strong>.
+                  <strong>is bad for privacy concerns</strong>.{" "}
+                  <Link href="/blog/posts/stop-using-facebook-like-button">
+                    <a>Read more</a>
+                  </Link>
                 </p>
               </div>
             </div>
             <div className="stripe__item">
               <div className="stripe__left">
-                <Bolt className="icon" />
+                <Trending className="icon" />
               </div>
               <div className="stripe__container">
-                <h6 className="stripe__title">Fastest implementation</h6>
+                <h6 className="stripe__title">Ranking API</h6>
                 <p className="stripe__text">
-                  By using our React component or widget you just need to choose
-                  a style, provide an identifier for your button and{" "}
-                  <strong>you are done!</strong>
+                  In addition to our score keeping system, we provide{" "}
+                  <strong>updated and detailed rankings</strong> for all of your
+                  buttons.{" "}
+                  <Link href="/docs/api#ranking-api">
+                    <a>Read more</a>
+                  </Link>
+                </p>
+              </div>
+            </div>
+            <div className="stripe__item">
+              <div className="stripe__left">
+                <Tag className="icon" />
+              </div>
+              <div className="stripe__container">
+                <h6 className="stripe__title">Nice, functional and tidy</h6>
+                <p className="stripe__text">
+                  When you have hundreds of buttons it is hard keep your data in
+                  order. That is why we prioritize categorization! Each button
+                  can have one broad{" "}
+                  <strong>category, and multiple tags</strong>.{" "}
+                  <Link href="/docs/api#buttons-api">
+                    <a>Read more</a>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -260,8 +306,12 @@ export default function Home() {
                 <p className="stripe__text">
                   We offer a simple pricing that{" "}
                   <strong>scales with your project</strong>, including a free
-                  forever plan for small/hobby websites.
+                  plan for test/hobby projects.{" "}
+                  <strong>No credit card needed!</strong>
                 </p>
+                <Link href="/pricing">
+                  <a>Visit our pricing page</a>
+                </Link>
               </div>
             </div>
           </div>

@@ -137,7 +137,7 @@ export default function Post() {
               <strong>Lyket is super simple to customize</strong>. The best way
               to do it is by following the instructions you can find in the{" "}
               <Link href="/docs/html">
-                <a>official widget documentation.</a>
+                <a>official HTML widget documentation.</a>
               </Link>
             </p>
             <p>
