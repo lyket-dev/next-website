@@ -39,7 +39,7 @@ export default function Window({ currentButton }) {
             setType("html");
           }}
         >
-          Widget
+          HTML
         </a>
         <a
           className={`window__link${type === "react" ? " active" : " "}`}

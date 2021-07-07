@@ -9,8 +9,8 @@ export default function DemoNav() {
         <Link href="/react">
           <a className="">React</a>
         </Link>
-        <Link href="/widget">
-          <a className="">Widget</a>
+        <Link href="/html">
+          <a className="">HTML</a>
         </Link>
         <Link href="/api">
           <a className="">API</a>

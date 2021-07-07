@@ -24,7 +24,6 @@ export default function Post() {
           <div className="half__reaction">
             <UpdownButton namespace="blog" id="embed-on-wordpress" />
           </div>
-           
         </section>
         <div className="avatar"></div>
         <section className="page__section">
@@ -103,8 +102,8 @@ export default function Post() {
             ></video>
             <p>
               To choose and customize the buttons follow the{" "}
-              <Link href="/docs/widget">
-                <a>widget documentation</a>
+              <Link href="/docs/html">
+                <a>HTML documentation</a>
               </Link>
               . And that's it!
             </p>

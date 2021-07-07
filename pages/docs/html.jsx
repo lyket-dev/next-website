@@ -4,6 +4,7 @@ import Code from "components/Code";
 import Link from "next/link";
 import Head from "next/head";
 import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
+import Anchor from "components/Anchor";
 
 export default function Docs() {
   return (
@@ -19,7 +20,7 @@ export default function Docs() {
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">like button html</h2>
+            <h2 className="page__kicker">like button HTML</h2>
             <h1 className="docs__title">HTML docs</h1>
             <div className="docs__menu__container">
               <QuickDocsMenu />
@@ -41,7 +42,7 @@ export default function Docs() {
               <p>
                 This is very powerful because it works, not only in a{" "}
                 <strong>HTML website</strong>, but also on any platform or
-                framework that supports custom HTML/Javascript injection, like{" "}
+                framework that supports custom HTML/Javascript injections, like{" "}
                 <strong>Wordpress, Webflow, Notion</strong> and more!
               </p>
               <p>We have more framework-specific guides for:</p>
@@ -67,12 +68,15 @@ export default function Docs() {
                   </Link>
                 </li>
               </ul>
-              <h4 id="how-buttons-work">How the buttons work</h4>
+              <Anchor slug="how-buttons-work">
+                <h4>How the buttons work</h4>
+              </Anchor>
               <p>
-                First, an introduction on how Lyket buttons work and how you can
-                get the best out of them. If you prefer to see a few examples on
-                how to integrate the HTML like buttons in your website, simply
-                scroll down.
+                First, an introduction on what happens when you add the
+                Javascript snippet and the HTML tag containing the button's
+                attributes, and how you can get the best out of Lyket. If you
+                prefer to see a few examples on how to integrate our HTML like
+                buttons in your website, simply scroll down.
               </p>
               <p>
                 All Lyket buttons share these{" "}
@@ -81,48 +85,41 @@ export default function Docs() {
               <ul>
                 <li>
                   <p>
-                    As soon as a button component is mounted, a fetch request is
-                    made to retrieve info on the button that{" "}
-                    <strong>identifies with the ID and namespace</strong> that
-                    you provided.{" "}
+                    As soon as your page is loaded, a request is made to
+                    retrieve info on the button that{" "}
+                    <strong>
+                      identifies with the combination of the "data-lyket-id",
+                      "data-lyket-namespace" and "data-lyket-type"
+                    </strong>{" "}
+                    that you provided.{" "}
                     <strong>
                       If no button is found, a new one will be created
                     </strong>{" "}
-                    using the ID/namespace identifier.
+                    using that type/namespace/ID identifier.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Notice that{" "}
-                    <strong>
-                      the server will create a new button for every different
-                      and unique identifier
-                    </strong>
-                    , so if you change ID or namespace or type the new button
-                    won’t inherit the votes.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Every time a visitor interacts with a button, the button
+                    Every time a user interacts with your button, the button
                     counter will update and{" "}
-                    <strong>Lyket will flag that the visitor has voted</strong>.
-                    Lyket uses an unique random ID stored in the visitor's
-                    browser localStorage to identify the visitor, with no need
-                    to signup or to use any third party service. To disable the
-                    session ID, and therefore use only the IP address to
-                    identify a user, set the disableSessionId prop to{" "}
+                    <strong>Lyket will flag that that user has voted</strong>.
+                    To do that, Lyket uses a unique random ID associated with
+                    the user's browser. This makes possible to recognise a user
+                    with no need to signup or to use any third party service. To
+                    disable the session ID, and therefore use only the IP
+                    address to identify a user, set the disableSessionId prop to{" "}
                     <em>true</em> in the Provider component.
                   </p>
                 </li>
                 <li>
                   <p>
                     Lyket enforces a{" "}
-                    <strong>maximum number of sessions IDs per IP</strong>
-                    address to avoid receiving too many requests or DDoS
-                    attacks. The default is 3 sessions per IP. You can change
-                    this number by logging into your private area and edit the
-                    user settings.
+                    <strong>
+                      maximum number of browser sessions IDs per IP address
+                    </strong>
+                    , to avoid receiving too many requests or DDoS attacks. The
+                    default is 3 sessions per IP. You can change this number by
+                    logging into your private area and edit the user settings.
                   </p>
                 </li>
                 <li>
@@ -136,7 +133,9 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
-              <h4 id="installation">Installation</h4>
+              <Anchor slug="installation">
+                <h4>Installation</h4>
+              </Anchor>
               <p>
                 Implementing Lyket is really simple, but you have to have a
                 basic knowledge of HTML to do that. In your HTML or your site
@@ -149,19 +148,20 @@ export default function Docs() {
                 <strong>
                   adding a &lt;div&gt; element with a data-lyket-type and
                   data-lyket-id
-                </strong>{" "}
-                anywhere in your code.
+                </strong>
+                .
               </p>
               <p>
-                If you are using a site builder, look for a <em>custom HTML</em>{" "}
-                block and add the same HTML code.
+                If you are using a site builder, look on the documentation for{" "}
+                <strong>how to add a custom HTML block</strong> and use the same
+                HTML code to create a button.
               </p>
               <p>
                 <strong>Important</strong>: Lyket needs to verify your identity
                 when creating and storing button counters. To do that it
-                requires that you provide in the top-level script an unique
-                alpha-numeric value, <strong>the API key</strong>, that you can
-                get{" "}
+                requires that you provide in a top-level script an unique
+                alpha-numeric value, <strong>the public API key</strong>, that
+                you can get{" "}
                 <a href="https://app.lyket.dev/signup">
                   by registering to Lyket
                 </a>
@@ -181,19 +181,11 @@ export default function Docs() {
               <ul>
                 <li>
                   <p>
-                    <strong>recaptchaSiteKey: string</strong> - If you enabled
-                    reCAPTCHA in the private area's user settings, you will need
-                    to insert your reCAPTCHA public key in Lyket script,
-                    otherwise your buttons will result as unauthorized. Read
-                    more in the <Link href="#recaptcha">reCAPTCHA</Link> section
-                    at the end of this document.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>disableSessionId</strong> - If added to script{" "}
-                    <strong>Lyket won't store a unique session ID</strong> for
-                    your visitors making them anonymous. Lyket will then
+                    <strong>disableSessionId</strong> - If added to the script,{" "}
+                    <strong>
+                      Lyket WON'T store a unique browser session ID
+                    </strong>{" "}
+                    for your visitors making them anonymous. Lyket will then
                     discriminate visitors (to tell if they already liked a
                     button or not) only based on the IP address. Disabling the
                     session ID can be useful if you don't want Lyket to result
@@ -206,19 +198,36 @@ export default function Docs() {
 </script>`}
                   </Code>
                 </li>
+                <li>
+                  <p>
+                    <strong>recaptchaSiteKey: string</strong> - If you enabled
+                    reCAPTCHA in the private area's user settings, you will need
+                    to insert your reCAPTCHA public key in Lyket script,
+                    otherwise your buttons will result as unauthorized. Read
+                    more in the <Link href="#recaptcha">reCAPTCHA</Link> section
+                    at the end of this document.
+                  </p>
+                </li>
               </ul>
-              <h4 id="buttons">Buttons</h4>
+              <Anchor slug="html-buttons">
+                <h4>Buttons</h4>
+              </Anchor>
               <p>
-                There are three different button types that have different
-                behaviours.
+                There are three different button types that have their own
+                behaviours and properties. Each one of them can be used in
+                different contexts and to achieve different results!
               </p>
-              <h5>Like button</h5>
+              <Anchor slug="html-like-button">
+                <h5>Like button</h5>
+              </Anchor>
               <p>
-                Like buttons behave like Twitter buttons. Users can only like
-                once and a subsequent call from the same user will remove the
-                user's like.
+                Like buttons behave like <em>Twitter buttons</em>. Users can
+                only like once, and a subsequent call from the same user will
+                remove the user's like.
               </p>
-              <p>Use the data-lyket-type="like" to create a like button.</p>
+              <p>
+                Use the <em>data-lyket-type="like"</em> to create a like button.
+              </p>
               <Code>
                 {`<!-- minimal settings -->
 <div data-lyket-type="like" data-lyket-id="my-first-post"></div>
@@ -238,11 +247,13 @@ export default function Docs() {
   data-lyket-template="twitter"
 ></div>`}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <LikeButton namespace="docs" id="widget-like-button" />
               </div>
-              <h6 id="like-templates">Like button Templates</h6>
+              <Anchor slug="like-templates">
+                <h6>Like button Templates</h6>
+              </Anchor>
               <ul>
                 <li>
                   <strong>Simple (default)</strong> - supports custom theme
@@ -255,14 +266,19 @@ export default function Docs() {
                   theme
                 </li>
               </ul>
-              <h5 id="updown-button">Like/dislike button</h5>
+              <Anchor slug="html-like-dislike-button">
+                <h5>Like/dislike button</h5>
+              </Anchor>
               <p>
                 Like/dislike buttons, or Updown buttons, behave like Reddit
                 buttons. Visitors can only like or dislike once and a subsequent
                 call from the same visitor will remove the visitor's vote or
                 unvote.
               </p>
-              <p>Use the data-lyket-type="updown" to create a updown button.</p>
+              <p>
+                Use the <em>data-lyket-type="updown"</em> to create a
+                like/dislike button.
+              </p>
               <Code>
                 {`<!-- minimal settings -->
 <div data-lyket-type="updown" data-lyket-id="my-first-post"></div>
@@ -282,11 +298,13 @@ export default function Docs() {
   data-lyket-template="reddit"
 ></div>`}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <UpdownButton namespace="docs" id="widget-updown-button" />
               </div>
-              <h6 id="updown-templates">UpdownButton Templates</h6>
+              <Anchor slug="updown-templates">
+                <h6>UpdownButton Templates</h6>
+              </Anchor>
               <ul>
                 <li>
                   <strong>Simple (default)</strong> - supports custom theme
@@ -300,13 +318,17 @@ export default function Docs() {
                 </li>
               </ul>
 
-              <h5 id="clap-button">Clap button</h5>
+              <Anchor slug="html-clap-button">
+                <h5>Clap button</h5>
+              </Anchor>
               <p>
-                Clap buttons behave like Medium applauses. Users can like
-                multiple times and every other call from the same user will
-                increment the claps number.
+                Clap buttons behave like <em>Medium applauses</em>. Users can
+                like multiple times and every other interaction from the same
+                user will increment the claps number.
               </p>
-              <p>Use the data-lyket-type="clap" to create a clap button.</p>
+              <p>
+                Use the <em>data-lyket-type="clap"</em> to create a clap button.
+              </p>
               <Code>
                 {`<!-- minimal settings -->
 <div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
@@ -326,11 +348,13 @@ export default function Docs() {
   data-lyket-template="medium"
 ></div>`}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <ClapButton namespace="docs" id="widget-clap-button" />
               </div>
-              <h6 id="clap-templates">ClapButton Templates</h6>
+              <Anchor slug="clap-templates">
+                <h6>ClapButton Templates</h6>
+              </Anchor>
               <ul>
                 <li>
                   <strong>Simple (default)</strong> - supports custom theme
@@ -342,24 +366,29 @@ export default function Docs() {
                   <strong>Heart</strong>: Heart style - supports custom theme
                 </li>
               </ul>
-              <h4 id="styling-the-buttons">Styling the buttons</h4>
+              <Anchor slug="styling-the-buttons">
+                <h4>Styling the buttons</h4>
+              </Anchor>
               <p>
-                You can change the default colors by providing your own color
-                scheme. The color scheme does not apply on buttons with
-                non-default templates.
+                You can <strong>change the default colors</strong> and provide
+                favourite color scheme, just by adding a few attributes to your
+                HTML element. Be aware that color scheme does not apply to every
+                template, so be sure to select your template accordingly!
               </p>
+              <p>Attributes to change the template colors:</p>
               <ul>
                 <li>
                   <strong>data-lyket-color-primary</strong> - Changes the color
-                  of the "like" button, when user has liked.
+                  of the button, when user has clicked on it.
                 </li>
                 <li>
                   <strong>data-lyket-color-secondary</strong> - Changes the
-                  color of the "dislike" button, when user has disliked.
+                  color of the downvote button, when user has clicked on it.
                 </li>
                 <li>
                   <strong>data-lyket-color-background</strong> - Changes the
-                  background color of the inactive button.
+                  background color of the inactive button (the user still hasn't
+                  clicked on it).
                 </li>
                 <li>
                   <strong>data-lyket-color-text</strong> - Changes the counter's
@@ -372,6 +401,10 @@ export default function Docs() {
                 <li>
                   <strong>data-lyket-color-highlight</strong> - Changes the
                   animation's color.
+                </li>
+                <li>
+                  <strong>data-lyket-font-family</strong> - Changes the font
+                  family.
                 </li>
               </ul>
               <p>Here is an example for an Updown button</p>
@@ -386,10 +419,11 @@ export default function Docs() {
   data-lyket-color-text="black"
   data-lyket-color-icon="violet"
   data-lyket-color-highlight="#ff00c3"
+  data-lyket-font-family="monospace"
 ></div>
 `}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <Provider
                   apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
@@ -401,13 +435,16 @@ export default function Docs() {
                       text: "black",
                       icon: "violet",
                       highlight: "#ff00c3"
-                    }
+                    },
+                    fonts: { body: "monospace" }
                   }}
                 >
                   <UpdownButton namespace="docs" id="widget-like-colors" />
                 </Provider>
               </div>
-              <h4>Other props</h4>
+              <Anchor slug="other-props">
+                <h4>Other props</h4>
+              </Anchor>
               <ul>
                 <li>
                   <p>
@@ -445,7 +482,9 @@ export default function Docs() {
                   Github repository
                 </a>{" "}
               </p>
-              <h4 id="recaptcha">reCAPTCHA</h4>
+              <Anchor slug="recaptcha">
+                <h4>reCAPTCHA</h4>
+              </Anchor>
               <p>
                 Lyket is integrated with Google reCAPTCHA V3 to handle malicious
                 use without interrupting <em>human</em> users. To enable it you

@@ -150,7 +150,7 @@ export default function Post() {
               <li>
                 If you use HTML <strong>or a website builder</strong> you can
                 use use our HTML + Javascript widget! Check out the{" "}
-                <Link href="/docs/widget">
+                <Link href="/docs/html">
                   <a>Widget documentation</a>
                 </Link>{" "}
                 and start creating{" "}
@@ -175,7 +175,7 @@ export default function Post() {
               Either using HTML or React he result will be this. Let's try it
               out!
             </p>
-            <div className="flex big">
+            <div className="flex-center big">
               <h4>Click! →</h4>
               <ClapButton
                 namespace="blog"
@@ -224,7 +224,7 @@ export default function Post() {
               Try to click on the button, it will open a dialog asking you to
               subscribe!
             </p>
-            <div className="flex big">
+            <div className="flex-center big">
               <h4>Click! →</h4>
               <ClapButton
                 namespace="blog"

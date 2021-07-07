@@ -245,7 +245,7 @@ export default function Post() {
               {({ handlePress, totalClaps, userClaps, isLoading }) => {
                 return (
                   <div className="center">
-                    <div className="flex big">
+                    <div className="flex-center big">
                       <div className="try">Click! →</div>
                       <button
                         className="huge"
@@ -282,7 +282,7 @@ export default function Post() {
               Try to click on the button, it will open a dialog asking to
               subscribe!
             </p>
-            <div className="flex big">
+            <div className="flex-center big">
               <h4>Click! →</h4>
               <ClapButton
                 namespace="blog"

@@ -181,7 +181,7 @@ export default function Home() {
                   all website builders that support custom HTML embedding -
                   Wordpress, Wix, Webflow and more!
                 </p>
-                <Link href="docs/widget">
+                <Link href="docs/html">
                   <a className="button--small">Read the docs</a>
                 </Link>
               </div>

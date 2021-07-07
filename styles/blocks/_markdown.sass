@@ -83,15 +83,22 @@
     text-align: center
     +margin-bottom(4)
 
-  .flex
+  .flex-center
     display: flex
     align-items: center
     justify-content: center
     +margin-bottom(4)
 
-  .flex > *
+  .flex-center > *
     margin: 0
     +horizontal-margin(2)
+
+  .flex-left
+    display: flex
+    align-items: center
+
+  .flex-left > *
+    +margin-right(2)
 
   .big
     +font-size(big)

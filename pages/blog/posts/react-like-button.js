@@ -149,7 +149,7 @@ export default function Post() {
               <strong>it will add one like</strong>. Click on it twice and the
               like will be removed, just like the Twitter heart.
             </p>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <LikeButton namespace="blog" id="like-button-react-example" />
             </div>
@@ -170,7 +170,7 @@ export default function Post() {
   component={LikeButton.templates.Twitter}
 />`}
             </Code>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <LikeButton
                 namespace="blog"
@@ -217,7 +217,7 @@ export default function Post() {
 </Provider>
   `}
             </Code>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <Provider
                 apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
@@ -273,7 +273,7 @@ export default function Post() {
               {({ handlePress, totalLikes, userLiked, isLoading }) => {
                 return (
                   <div className="center">
-                    <div className="flex big">
+                    <div className="flex-center big">
                       <div className="try">Click! →</div>
                       <button
                         className="huge"
@@ -326,7 +326,7 @@ export default function Post() {
               Try to click on the button! It will open a dialog with the
               subscription form!
             </p>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <LikeButton
                 namespace="blog"

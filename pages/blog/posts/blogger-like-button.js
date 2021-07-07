@@ -110,7 +110,7 @@ export default function Post() {
   data-lyket-id="blogger-like-button"
 ></div>`}
             </Code>
-            <div className="flex center big">
+            <div className="flex-center center big">
               <LikeButton id="blogger-like-button" />
             </div>
             <p>
@@ -136,7 +136,7 @@ export default function Post() {
               Let's go back to our button.{" "}
               <strong>Lyket is super simple to customize</strong>. The best way
               to do it is by following the instructions you can find in the{" "}
-              <Link href="/docs/widget">
+              <Link href="/docs/html">
                 <a>official widget documentation.</a>
               </Link>
             </p>

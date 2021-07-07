@@ -66,7 +66,7 @@ export default function Docs() {
               <p>
                 To learn more about how we value privacy, how visitors are
                 recognized and how you can change the privacy settings, read our{" "}
-                <Link href="/docs/widget">
+                <Link href="/docs/html">
                   <a>documentation.</a>
                 </Link>
               </p>
@@ -151,17 +151,17 @@ export default function Docs() {
                 and posts. Remember to enable buttons to see them in your pages
                 and posts!
               </p>
-              <div className="flex">
+              <div className="flex-center">
                 <div>
                   <img
-                    className="flex__item"
+                    className="flex-center__item"
                     src="/assets/wp/wordpress-like-button-enable-buttons.png"
                     alt="wordpress-like-button-enable-buttons"
                   />
                 </div>
                 <div>
                   <img
-                    className="flex__item"
+                    className="flex-center__item"
                     src="/assets/wp/wordpress-like-button-type-buttons.png"
                     alt="wordpress-like-button-type-buttons"
                   />
@@ -220,7 +220,7 @@ export default function Docs() {
                     <UpdownButton namespace="docs" id="inline-simple" />
                   </span>
                 </li>
-                <li display="flex">
+                <li display="flex-center">
                   <strong>Reddit:</strong>{" "}
                   <span className="inline-buttons h-space">
                     <UpdownButton
@@ -275,7 +275,7 @@ export default function Docs() {
                   </span>
                 </li>
               </ul>
-              <h4 id="styling-the-buttons">5. Style the buttons</h4>
+              <h4 id="styling-the-buttons">Style the buttons</h4>
               <p>
                 You can change the default colors for{" "}
                 <strong>page and posts</strong> separately, and see the live
@@ -312,7 +312,7 @@ export default function Docs() {
                 </li>
               </ul>
               <p>Let's see an example for a like/dislike button</p>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <Provider
                   apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="

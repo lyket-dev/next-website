@@ -16,6 +16,11 @@ module.exports = withReactSvg({
         permanent: true
       },
       {
+        source: "/docs/widget",
+        destination: "/docs/html",
+        permanent: true
+      },
+      {
         source: "/blog/posts/like-clap-button-on-worpress",
         destination: "/blog/posts/wordpress-like-button",
         permanent: true

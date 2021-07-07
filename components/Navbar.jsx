@@ -37,10 +37,10 @@ export default function Navbar() {
                   <p>Add like buttons in a React project</p>
                 </a>
               </Link>
-              <Link href="/docs/widget">
+              <Link href="/docs/html">
                 <a className="navbar__pane__link">
-                  <strong>Widget</strong>
-                  <p>Add like buttons to any website</p>
+                  <strong>HTML</strong>
+                  <p>Add HTML like buttons to any website</p>
                 </a>
               </Link>
               <Link href="/docs/wordpress">

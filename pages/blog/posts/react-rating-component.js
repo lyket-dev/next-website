@@ -172,7 +172,7 @@ export default function Post() {
   </Provider>
 `}
             </Code>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <StarRatings
                 rating={rating}
@@ -239,7 +239,7 @@ export default function Post() {
 </Provider>
   `}
             </Code>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <StarRatings
                 rating={rating}
@@ -285,7 +285,7 @@ export default function Post() {
   }}
 </Rating>`}
             </Code>
-            <div className="flex big">
+            <div className="flex-center big">
               <div className="try">Click! →</div>
               <StarRatings
                 rating={rating}

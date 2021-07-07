@@ -285,7 +285,7 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <LikeButton namespace="docs" id="react-like-button" />
               </div>
@@ -358,7 +358,7 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <UpdownButton namespace="docs" id="react-updown-button" />
               </div>
@@ -439,7 +439,7 @@ export BlogPost = ({ title, content }) => {
   );
 };`}
               </Code>
-              <div className="flex big">
+              <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <ClapButton namespace="docs" id="react-clap-button" />
               </div>
@@ -608,7 +608,7 @@ export Faq = () => {
                 {({ handlePress, totalLikes, userLiked, isLoading }) => {
                   return (
                     <div className="center">
-                      <div className="flex big">
+                      <div className="flex-center big">
                         <div className="try">Try! →</div>
                         <button
                           className="huge"
@@ -666,7 +666,7 @@ export Faq = () => {
                 {({ handlePress, totalClaps, userClaps, isLoading }) => {
                   return (
                     <div className="center">
-                      <div className="flex big">
+                      <div className="flex-center big">
                         <div className="try">Try! →</div>
                         <button
                           className="huge"
@@ -734,7 +734,7 @@ export Faq = () => {
                 }) => {
                   return (
                     <div className="center">
-                      <div className="flex big">
+                      <div className="flex-center big">
                         <div className="try">Try! →</div>
                         <button
                           className="big"

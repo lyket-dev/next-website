@@ -8,8 +8,8 @@ export default function QuickDocsMenu() {
         <a className="menu__link">React</a>
       </ActiveLink>
       <span>|</span>
-      <ActiveLink href="/docs/widget">
-        <a className="menu__link">Widget</a>
+      <ActiveLink href="/docs/html">
+        <a className="menu__link">HTML</a>
       </ActiveLink>
       <span>|</span>
       <ActiveLink href="/docs/wordpress">

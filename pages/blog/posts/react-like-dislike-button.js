@@ -366,7 +366,7 @@ export default function Post() {
               Try to click on the button! It will open a dialog with the
               subscription form!
             </p>
-            <div className="flex big">
+            <div className="flex-center big">
               <h4>Click! →</h4>
               <UpdownButton
                 namespace="blog"
