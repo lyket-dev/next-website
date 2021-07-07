@@ -22,7 +22,12 @@ export default function Privacy() {
         <div className="text__center">
           <p className="page__text">
             We offer a simple pricing model that{" "}
-            <strong>grows with your project</strong>.
+            <strong>grows with your project</strong>. You can start with a{" "}
+            <strong>test project for free</strong>,{" "}
+            <strong>without time limitation</strong>, and{" "}
+            <strong>we will not ask you for a credit card</strong>! Be aware
+            that the free plan includes up to 500 pageviews per month, once the
+            limit is reached the free plan will not available anymore!
           </p>
         </div>
       </section>
