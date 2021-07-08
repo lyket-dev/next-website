@@ -34,7 +34,7 @@ export default function Docs() {
         <section className="page__section">
           <div className="docs__title__container">
             <h2 className="page__kicker">like buttons & ranking API</h2>
-            <h1 className="docs__title">buttons & ranking API</h1>
+            <h1 className="docs__title">Buttons & ranking API</h1>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>
