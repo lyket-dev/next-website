@@ -245,7 +245,7 @@ export default function Post() {
             </Code>
             <TryIt>
               <Provider
-                apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                apiKey={process.env.lyketPublicApiKey}
                 theme={{
                   colors: {
                     background: "#b8fff3",

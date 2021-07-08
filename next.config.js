@@ -6,7 +6,8 @@ module.exports = withReactSvg({
   include: path.resolve(__dirname, "public/icons"),
   env: {
     appBaseUrl: process.env.APP_BASE_URL,
-    apiBaseUrl: process.env.API_BASE_URL
+    apiBaseUrl: process.env.API_BASE_URL,
+    lyketPublicApiKey: process.env.LYKET_PUBLIC_API_KEY
   },
   async redirects() {
     return [

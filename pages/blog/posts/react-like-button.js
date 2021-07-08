@@ -220,7 +220,8 @@ export default function Post() {
             <div className="flex-center big">
               <div className="try">Click! →</div>
               <Provider
-                apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                apiKey={process.env.lyketPublicApiKey}
+                baseUrl={process.env.apiBaseUrl}
                 theme={{
                   colors: {
                     background: "#b8fff3",

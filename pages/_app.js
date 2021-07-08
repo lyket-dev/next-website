@@ -6,7 +6,7 @@ import { Provider } from "@lyket/react";
 export default function App({ Component, pageProps }) {
   return (
     <Provider
-      apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+      apiKey={process.env.lyketPublicApiKey}
       baseUrl={process.env.apiBaseUrl}
       theme={{
         colors: {

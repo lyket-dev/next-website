@@ -231,7 +231,8 @@ export default function Post() {
             </pre>
             <div className="center big">
               <Provider
-                apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                apiKey={process.env.lyketPublicApiKey}
+                baseUrl={process.env.apiBaseUrl}
                 theme={{
                   colors: {
                     background: "rgba(255, 224, 138, 0.4)",

@@ -1,0 +1,36 @@
+img.ranking__image
+  box-shadow: none
+  margin: 0 auto
+  +margin-bottom(1)
+  height: 100px
+  width: auto
+  display: block
+
+.ranking__element
+  text-align: center
+  +margin-bottom(2)
+
+
+@media only screen and (min-width: 740px)
+  .ranking__flex
+    display: flex
+    align-items: center
+    justify-content: center
+    +margin-bottom(4)
+
+  .ranking__flex > *
+    +horizontal-margin(2)
+
+  .ranking__element
+    +margin-bottom(0)
+
+@media only screen and (min-width: 1300px)
+  img.ranking__image
+    +margin-bottom(2)
+    height: 130px
+
+  .ranking__flex
+    font-size: 30px
+
+  .ranking__flex > *
+    +horizontal-margin(4)

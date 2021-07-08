@@ -5,7 +5,7 @@ export async function rankLikeButtonsByNamespace({ namespace, type }) {
 
   const response = await fetch(url, {
     headers: {
-      authorization: "Bearer Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+      authorization: `Bearer ${process.env.lyketPublicApiKey}`
     }
   });
 

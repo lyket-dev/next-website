@@ -315,7 +315,7 @@ export default function Docs() {
               <div className="flex-center big">
                 <div className="try">Try it! →</div>
                 <Provider
-                  apiKey="Xkp5R0w+6uY+OftTTVEQ2BkiwUw="
+                  apiKey={process.env.lyketPublicApiKey}
                   theme={{
                     colors: {
                       primary: "#b8fff3",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Decorator from "components/Decorator";
 import HomeSandbox from "components/HomeSandbox";
+import Ranking from "components/Ranking";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Bolt from "public/icons/outline/lightning-bolt.svg";
@@ -88,26 +89,27 @@ export default function Home() {
           </h3>
           <div className="half">
             <div className="half__left half__shadow">
-              <p className="half__title">
-                Are your readers enjoying the latest blog post?
+              <p className="half__title ">
+                Need immediate feedback for your e-commerce?
               </p>
               <p className="half__text">
-                Comments can lead to useless polemics, while a{" "}
-                <strong>simple clap button</strong> can make your blog feel
-                alive!
+                Know immediately which are the{" "}
+                <strong>most liked products in your catalog</strong> by letting
+                your users leave a token of appreciation!
               </p>
             </div>
             <div className="half__right">
               <div className="half__reaction">
-                <ClapButton
-                  id="blog"
+                <LikeButton
+                  id="portfolio"
                   namespace="homepage"
-                  component={ClapButton.templates.Medium}
+                  component={LikeButton.templates.Twitter}
                 />
               </div>
             </div>
-            <div className="half__line--green" />
+            <div className="half__line--yellow" />
           </div>
+
           <div className="half">
             <div className="half__line--pink" />
             <div className="half__left">
@@ -132,26 +134,44 @@ export default function Home() {
           </div>
           <div className="half">
             <div className="half__left half__shadow">
-              <p className="half__title ">
-                Your portfolio could use some lovin'?
+              <p className="half__title">
+                Are your readers enjoying the latest blog post?
               </p>
               <p className="half__text">
-                All social-networks alike are windows to{" "}
-                <strong>expose your work</strong>. Your website should{" "}
-                <strong>behave in the same way!</strong>
+                Comments can lead to useless polemics, while a{" "}
+                <strong>simple clap button</strong> can make your blog feel
+                alive!
               </p>
             </div>
             <div className="half__right">
               <div className="half__reaction">
-                <LikeButton
-                  id="portfolio"
+                <ClapButton
+                  id="blog"
                   namespace="homepage"
-                  component={LikeButton.templates.Twitter}
+                  component={ClapButton.templates.Medium}
                 />
               </div>
             </div>
-            <div className="half__line--yellow" />
+            <div className="half__line--green" />
           </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="section__container">
+          <h3 className="section__title">
+            <Decorator
+              fulltext="Give me the most voted buttons!"
+              toDecorate="most voted"
+              color="blue"
+            />
+            <p className="section__subtitle">
+              Lyket is not only in charge of counting votes. It also{" "}
+              <strong>keeps updated rankings for all of your buttons</strong>!
+              Vote your favourite old school console in this example to see
+              ranking in action!
+            </p>
+          </h3>
+          <Ranking />
         </div>
       </section>
       {false && (
@@ -278,7 +298,7 @@ export default function Home() {
                   order. That is why we prioritize categorization! Each button
                   can have one broad{" "}
                   <strong>category, and multiple tags</strong>.{" "}
-                  <Link href="/docs/api#buttons-api">
+                  <Link href="/docs/api#categorization">
                     <a>Read more</a>
                   </Link>
                 </p>
