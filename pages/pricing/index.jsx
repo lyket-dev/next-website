@@ -25,9 +25,12 @@ export default function Privacy() {
             <strong>grows with your project</strong>. You can start with a{" "}
             <strong>test project for free</strong>,{" "}
             <strong>without time limitation</strong>, and{" "}
-            <strong>we will not ask you for a credit card</strong>! Be aware
-            that the free plan includes up to 500 pageviews per month, once the
-            limit is reached the free plan will not available anymore!
+            <strong>we will not ask you for a credit card</strong>!
+          </p>
+          <p className="page__text">
+            Be aware that the free plan includes 500 pageviews per month but,
+            once the limit is reached, the free plan will not be available
+            anymore!
           </p>
         </div>
       </section>
