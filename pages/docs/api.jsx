@@ -3,6 +3,7 @@ import QuickDocsMenu from "components/QuickDocsMenu";
 import SwaggerUI from "swagger-ui-react";
 import Head from "next/head";
 import Anchor from "components/Anchor";
+import Ranking from "components/Ranking";
 import Code from "components/Code";
 import Link from "next/link";
 
@@ -32,8 +33,8 @@ export default function Docs() {
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">buttons & ranking API</h2>
-            <h1 className="docs__title">Lyket buttons & ranking API</h1>
+            <h2 className="page__kicker">like buttons & ranking API</h2>
+            <h1 className="docs__title">buttons & ranking API</h1>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>
@@ -147,6 +148,11 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
+              <p>
+                For example, let's see wich one of these vintage consoles get
+                the most votes!
+              </p>
+              <Ranking />
               <Anchor slug="schema">
                 <h4>Schema</h4>
               </Anchor>
