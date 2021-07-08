@@ -23,7 +23,7 @@ const Ranking = () => {
     });
 
     setSortingArray(rank);
-  }, [setSortingArray, dummy]);
+  }, [setSortingArray, dummy, selected]);
 
   return (
     <>
