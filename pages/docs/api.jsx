@@ -47,6 +47,36 @@ export default function Docs() {
                 information on all the available endpoints to use Lyket at its
                 best!
               </p>
+              <Anchor slug="authorization">
+                <h4>Authorization</h4>
+              </Anchor>
+              <p>
+                Lyket endpoints are accessible to all who have access to the
+                public API key. Simply{" "}
+                <strong>
+                  use your personal public API key in the HTTP Authorization
+                  request header
+                </strong>{" "}
+                to authorize your requests.
+              </p>
+              <Code>
+                {`curl
+\ -X 'GET' 'http://api.lyket.dev/v1/like-buttons/shirts/model-123'
+\ -H 'accept: application/json'
+\ -H 'Authorization: Bearer xxx'`}
+              </Code>
+              <p>
+                Be aware that{" "}
+                <strong>
+                  not all endpoints are accessible with the public key
+                </strong>
+                . For write actions, like adding tags, you need to{" "}
+                <strong>
+                  provide your secret key that you shall never share or expose
+                  publicly
+                </strong>
+                .
+              </p>
               <Anchor slug="buttons-api">
                 <h4>Buttons API</h4>
               </Anchor>
@@ -58,7 +88,7 @@ export default function Docs() {
                 according to the type, the ID and the namespace you provided.
               </p>
               <p>So, for example, if you make this request:</p>
-              <Code>GET /like-buttons/dinosaurs/t-rex</Code>
+              <Code>GET /v1/like-buttons/dinosaurs/t-rex</Code>
               <p>
                 Lyket will look for a button that is of type <em>like</em>, has
                 been categorized as part of <em>dinosaurs</em>, and has the ID{" "}
@@ -66,13 +96,13 @@ export default function Docs() {
               </p>
               <p>
                 If no corresponding button is found, Lyket will create a new
-                button with these attributes. In the meantime it will start
+                button with these attributes. In the meantime it will start{" "}
                 <strong>tracking its score</strong>, the{" "}
-                <strong>number of votes</strong> it has received and its{" "}
+                <strong>number of votes</strong> it receives and its{" "}
                 <strong>
-                  position in different types of{" "}
+                  position in different types of rankings.{" "}
                   <Link href="#ranking-api">
-                    <a>rankings</a>
+                    <a>Read more about rankings</a>
                   </Link>
                 </strong>
                 .
@@ -109,6 +139,61 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
+              <Anchor slug="categorization">
+                <h4>Categorization</h4>
+              </Anchor>
+              <p>
+                Lyket allows you to categorize and organize buttons in{" "}
+                <strong>two ways</strong>.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    The first one is by providing a main and broad category for
+                    your buttons, <strong>the namespace</strong>. The namespace
+                    was envisioned to be the{" "}
+                    <strong>main container of a group of buttons</strong>.
+                  </p>
+                  <p>
+                    For example if you are using Lyket for your e-commerce, and
+                    you want to track user feedback for your shirts, you can
+                    choose the <em>shirts</em> namespace, and the hat model as
+                    ID. In this way you will be able to see all your shirt
+                    products <strong>grouped in your dashboard</strong>, and get
+                    the{" "}
+                    <strong>
+                      shirts ranking ordered by the most voted models
+                    </strong>
+                    .{" "}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The second one is by{" "}
+                    <strong>attaching tags to your buttons</strong>. Tags are
+                    useful if you want to{" "}
+                    <strong>
+                      give more specific attributes to your buttons
+                    </strong>{" "}
+                    and work very well in combination with namespace.
+                  </p>{" "}
+                  <p>
+                    For example if you want to be more descriptive with your
+                    shirts, you can attach a brand and color tag to your shirts.
+                    By doing that you can then get the current{" "}
+                    <strong>shirts ranking filtered by tags</strong> - ie.
+                    ranking of the most voted shirts that are <em>red</em> and{" "}
+                    <em>long</em>
+                  </p>
+                  <p>
+                    <strong>Important! </strong>Since adding tags is a write
+                    action, <strong>you cannot use your public API key</strong>{" "}
+                    to call the <em>add-tags</em> endpoint. Use your secret key
+                    instead!- the one starting with <em>st_</em>.
+                  </p>
+                </li>
+              </ul>
+
               <Anchor slug="ranking-api">
                 <h3>Ranking API</h3>
               </Anchor>
@@ -128,6 +213,7 @@ export default function Docs() {
                     Returns the current ranking of all buttons with the same
                     type.
                   </p>
+                  <Code>GET /v1/rank/like-buttons</Code>
                 </li>
                 <li>
                   <Anchor slug="ranking-by-category">
@@ -137,6 +223,7 @@ export default function Docs() {
                     Returns the current ranking of all buttons with the same
                     type and category
                   </p>
+                  <Code>GET /v1/rank/like-buttons/shirts</Code>
                 </li>
                 <li>
                   <Anchor slug="ranking-by-tags">
@@ -146,6 +233,7 @@ export default function Docs() {
                     Returns the current ranking of all buttons with the same
                     type and the combination of provided tags
                   </p>
+                  <Code>GET /v1/rank/like-buttons/shirts?tags=red,long</Code>
                 </li>
               </ul>
               <p>

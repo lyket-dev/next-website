@@ -487,11 +487,28 @@ export default function Docs() {
               </Anchor>
               <p>
                 Lyket is integrated with Google reCAPTCHA V3 to handle malicious
-                use without interrupting <em>human</em> users. To enable it you
-                need to provide your Google reCAPTCHA secret key in the user
-                settings in the private area and add your recaptcha site key
-                through the recaptchaSiteKey prop in the Provider. The key will
-                be encrypted.
+                use without interrupting <em>human</em> users. To enable it, you
+                need first to insert your Google reCAPTCHA secret key{" "}
+                <a href="https://app.lyket.dev/user-settings">
+                  in the user settings of your private area
+                </a>
+                . Then you need to pass the reCAPTCHA site key in the Javascript
+                script, like this.
+              </p>
+              <Code>
+                {`<!-- Client-side reCAPTCHA site key -->
+
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]&recaptchaSiteKey=[YOUR-RECAPTCHA-SITE-KEY]"></script>`}
+              </Code>
+              <p>
+                In this way each time a user interacts with a button an
+                "invisible" reCAPTCHA check will be performed, keeping your
+                website safe.
+              </p>
+              <p>
+                Be aware that if you only set reCAPTCHA secret key in the user
+                settings while not providing the site key in your script, the
+                buttons won't work.
               </p>
             </div>
           </div>

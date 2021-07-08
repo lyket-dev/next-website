@@ -836,6 +836,16 @@ export Faq = () => {
                 through the recaptchaSiteKey prop in the Provider. The key will
                 be encrypted.
               </p>
+              <p>
+                In this way each time a user interacts with a button an
+                "invisible" reCAPTCHA check will be performed, keeping your
+                website safe.
+              </p>
+              <p>
+                Be aware that if you only set reCAPTCHA secret key in the user
+                settings while not passing the reCAPTCHA site key in your
+                Provider, the buttons won't work.
+              </p>
             </div>
           </div>
         </section>
