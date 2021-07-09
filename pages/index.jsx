@@ -294,9 +294,9 @@ export default function Home() {
               <div className="stripe__container">
                 <h6 className="stripe__title">Nice, functional and tidy</h6>
                 <p className="stripe__text">
-                  When you have hundreds of buttons it is hard keep your data in
-                  order. That is why we prioritize categorization! Each button
-                  can have one broad{" "}
+                  When you have hundreds of buttons, it is hard keeping your
+                  data in order. That is why we prioritize categorization! Each
+                  button can have one broad{" "}
                   <strong>category, and multiple tags</strong>.{" "}
                   <Link href="/docs/api#categorization">
                     <a>Read more</a>

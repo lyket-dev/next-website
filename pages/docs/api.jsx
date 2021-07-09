@@ -47,8 +47,8 @@ export default function Docs() {
                 information on all the available endpoints to use Lyket at its
                 best!
               </p>
-              <Anchor slug="authorization">
-                <h4>Authorization</h4>
+              <Anchor slug="authentication">
+                <h4>Authentication</h4>
               </Anchor>
               <p>
                 Lyket endpoints are accessible to all who have access to the
@@ -57,7 +57,7 @@ export default function Docs() {
                   use your personal public API key in the HTTP Authorization
                   request header
                 </strong>{" "}
-                to authorize your requests.
+                to authenticate your requests.
               </p>
               <Code>
                 {`curl
