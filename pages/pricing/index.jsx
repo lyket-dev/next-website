@@ -28,9 +28,11 @@ export default function Privacy() {
             <strong>we will not ask you for a credit card</strong>!
           </p>
           <p className="page__text">
-            Be aware that the free plan includes 500 pageviews per month but,
-            once the limit is reached, the free plan will not be available
-            anymore!
+            * Be aware that{" "}
+            <strong>
+              the free plan is resetting the pageviews counter every month
+            </strong>{" "}
+            but if one month you reach the limit, it won't be available anymore!
           </p>
         </div>
       </section>
@@ -43,7 +45,7 @@ export default function Privacy() {
                 <h4>Test</h4>
               </div>
               <p className="ternary__text">
-                Up to <strong>500 pageviews</strong> per month
+                Up to <strong>500 pageviews</strong> per month *
               </p>
               <p className="ternary__huge">Free</p>
             </div>
