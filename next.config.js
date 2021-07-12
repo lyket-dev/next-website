@@ -17,13 +17,13 @@ module.exports = withReactSvg({
         permanent: true
       },
       {
-        source: "/docs/widget",
-        destination: "/docs/html",
+        source: "/blog/posts/like-clap-button-on-worpress",
+        destination: "/blog/posts/wordpress-like-button",
         permanent: true
       },
       {
-        source: "/blog/posts/like-clap-button-on-worpress",
-        destination: "/blog/posts/wordpress-like-button",
+        source: "/docs/widget",
+        destination: "/docs/html",
         permanent: true
       }
     ];
