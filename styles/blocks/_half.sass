@@ -67,12 +67,31 @@
   +margin-bottom(6)
   +font-size(alpha)
 
-@media only screen and (min-width: 1000px)
+.half__kicker
+  +font-size(regular)
+  font-weight: bold
+  color: $light-body-color
+  text-transform: uppercase
+  +margin-bottom(1)
+
+.half__arrow
+  position: absolute
+  bottom: -10px
+  right: -25px
+  height: 100px
+
+.half__image__container
+  position: relative
+
+@media only screen and (min-width: 900px)
   .half
     flex-direction: row
     align-items: center
     flex-basis: 50%
     +font-size(gamma)
+
+  .half__kicker
+    text-align: left
 
   .half__title
     font-size: 32px
@@ -107,3 +126,9 @@
   .half__shadow
     +padding(7)
     box-shadow: $shadow
+
+  .half__arrow
+    position: absolute
+    bottom: -30px
+    right: -45px
+    height: 150px

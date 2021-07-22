@@ -28,8 +28,9 @@ export default function Home() {
           </div>
           <div>
             <p className="header__subtitle">
-              Engage your users with fresh out-of-the-box{" "}
-              <strong>clap and like buttons</strong> and rank your content!
+              Get <strong>immediate, no filter feedbacks</strong> with our{" "}
+              <strong>like buttons</strong> to know exactly how to delight your
+              customers and followers!
             </p>
             <div className="section--center">
               <a
@@ -43,7 +44,6 @@ export default function Home() {
               <p className="check__text">1 minute setup</p>
               <p className="check__text">Free plan</p>
               <p className="check__text">No credit card needed</p>
-              <p className="check__text">No trial</p>
             </div>
           </div>
           {false && (
@@ -82,24 +82,31 @@ export default function Home() {
         <div className="section__container">
           <h3 className="section__title">
             <Decorator
-              fulltext="Bring your content to life!"
-              toDecorate="to life!"
+              fulltext="We can help you get the feedback you need!"
+              toDecorate="feedback you need!"
               color="yellow"
             />
           </h3>
           <div className="half">
             <div className="half__left half__shadow">
-              <p className="half__title ">
-                Need immediate feedback for your e-commerce?
-              </p>
+              <h2 className="half__kicker">For e-commerce</h2>
+              <p className="half__title ">What are you best products?</p>
               <p className="half__text">
                 Know immediately which are the{" "}
-                <strong>most liked products in your catalog</strong> by letting
-                your users leave a token of appreciation!
+                <strong>most wanted products in your catalog</strong> by letting
+                your users leave a like!
               </p>
             </div>
             <div className="half__right">
               <div className="half__reaction">
+                <div className="half__image__container">
+                  <img className="half__arrow" src="/assets/arrow-down.png" />
+                  <img
+                    src="/assets/like-button-ecommerce.jpg"
+                    alt="like-button-ecommerce"
+                    title="like-button-ecommerce"
+                  />
+                </div>
                 <LikeButton
                   id="portfolio"
                   namespace="homepage"
@@ -107,44 +114,21 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="half__line--yellow" />
+            <div className="half__line--green" />
           </div>
 
           <div className="half">
             <div className="half__line--pink" />
             <div className="half__left">
               <div className="half__reaction">
-                <UpdownButton
-                  id="docs"
-                  namespace="homepage"
-                  component={UpdownButton.templates.Reddit}
-                />
-              </div>
-            </div>
-            <div className="half__right half__shadow">
-              <p className="half__title">
-                Are your users happy with the new documentation?
-              </p>
-              <p className="half__text">
-                When providing a service you need more than just positive
-                reinforcement, <strong>critics can be even more crucial</strong>
-                !
-              </p>
-            </div>
-          </div>
-          <div className="half">
-            <div className="half__left half__shadow">
-              <p className="half__title">
-                Are your readers enjoying the latest blog post?
-              </p>
-              <p className="half__text">
-                Comments can lead to useless polemics, while a{" "}
-                <strong>simple clap button</strong> can make your blog feel
-                alive!
-              </p>
-            </div>
-            <div className="half__right">
-              <div className="half__reaction">
+                <div className="half__image__container">
+                  <img className="half__arrow" src="/assets/arrow-down.png" />
+                  <img
+                    src="/assets/like-buttons-blog.jpg"
+                    alt="like-button-blog"
+                    title="like-button-blog"
+                  />
+                </div>
                 <ClapButton
                   id="blog"
                   namespace="homepage"
@@ -152,7 +136,52 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="half__line--green" />
+            <div className="half__right half__shadow">
+              <h2 className="half__kicker">For bloggers</h2>
+              <p className="half__title">
+                What articles your readers love the most?
+              </p>
+              <p className="half__text">
+                Comments can lead to useless polemics, while a{" "}
+                <strong>simple like button</strong> can make your blog feel
+                alive!
+              </p>
+            </div>
+          </div>
+          <div className="half">
+            <div className="half__left half__shadow">
+              <h2 className="half__kicker">For developers</h2>
+              <p className="half__title">User feedback at your fingertips</p>
+              <div className="half__text">
+                Quickly implement buttons thanks to our{" "}
+                <strong>
+                  <Link href="/docs/react" title="react-like-button">
+                    out-of-the-box integrations
+                  </Link>
+                </strong>{" "}
+                and fetch your buttons data thanks to our{" "}
+                <strong>
+                  <Link href="/docs/api" title="like-button-api">
+                    rocket fast API
+                  </Link>
+                </strong>
+                !
+              </div>
+            </div>
+            <div className="half__right">
+              <div className="half__reaction">
+                <div className="half__image__container">
+                  <img className="half__arrow" src="/assets/arrow-down.png" />
+                  <img
+                    src="/assets/like-buttons-docs.jpg"
+                    alt="like-button-docs"
+                    title="like-button-docs"
+                  />
+                </div>
+                <UpdownButton id="docs" namespace="homepage" />
+              </div>
+            </div>
+            <div className="half__line--yellow" />
           </div>
         </div>
       </section>
