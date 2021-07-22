@@ -37,7 +37,7 @@ export default function Home() {
                 className="button--big button--center"
                 href={`${process.env.appBaseUrl}/signup`}
               >
-                Register for free
+                Try it for free
               </a>
             </div>
             <div className="check">
@@ -65,16 +65,18 @@ export default function Home() {
       </section>
       <section className="section--gradient">
         <div className="section__container">
-          <h3 className="section__title">
-            <Decorator
-              fulltext="Easier done than said!"
-              toDecorate="done than said!"
-              color="yellow"
-            />
+          <div className="section__title">
+            <h3>
+              <Decorator
+                fulltext="Easier done than said!"
+                toDecorate="done than said!"
+                color="yellow"
+              />
+            </h3>
             <p className="section__subtitle">
               Choose a button, then copy & paste the code to see how easy it is
             </p>
-          </h3>
+          </div>
           <HomeSandbox />
         </div>
       </section>
@@ -102,7 +104,7 @@ export default function Home() {
                 <div className="half__image__container">
                   <img className="half__arrow" src="/assets/arrow-down.png" />
                   <img
-                    src="/assets/like-button-ecommerce.jpg"
+                    src="/assets/like-button-ecommerce.png"
                     alt="like-button-ecommerce"
                     title="like-button-ecommerce"
                   />
@@ -124,7 +126,7 @@ export default function Home() {
                 <div className="half__image__container">
                   <img className="half__arrow" src="/assets/arrow-down.png" />
                   <img
-                    src="/assets/like-buttons-blog.jpg"
+                    src="/assets/like-button-blog.png"
                     alt="like-button-blog"
                     title="like-button-blog"
                   />
@@ -173,9 +175,9 @@ export default function Home() {
                 <div className="half__image__container">
                   <img className="half__arrow" src="/assets/arrow-down.png" />
                   <img
-                    src="/assets/like-buttons-docs.jpg"
-                    alt="like-button-docs"
-                    title="like-button-docs"
+                    src="/assets/like-buttons-api.png"
+                    alt="like-button-api"
+                    title="like-button-api"
                   />
                 </div>
                 <UpdownButton id="docs" namespace="homepage" />
@@ -187,19 +189,21 @@ export default function Home() {
       </section>
       <section className="section">
         <div className="section__container">
-          <h3 className="section__title">
-            <Decorator
-              fulltext="Give me the most voted buttons!"
-              toDecorate="most voted"
-              color="blue"
-            />
+          <div className="section__title">
+            <h3>
+              <Decorator
+                fulltext="Can I sort my content using likes?"
+                toDecorate="sort my content"
+                color="blue"
+              />
+            </h3>
             <p className="section__subtitle">
               Lyket is not only in charge of counting votes. It also{" "}
               <strong>keeps updated rankings for all of your buttons</strong>!
               Vote your favourite old school console in this example to see
               ranking in action!
             </p>
-          </h3>
+          </div>
           <Ranking />
         </div>
       </section>
