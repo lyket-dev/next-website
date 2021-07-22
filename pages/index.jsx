@@ -86,7 +86,7 @@ export default function Home() {
             <Decorator
               fulltext="We can help you get the feedback you need!"
               toDecorate="feedback you need!"
-              color="yellow"
+              color="red"
             />
           </h3>
           <div className="half">
