@@ -92,7 +92,7 @@ export default function Home() {
           <div className="half">
             <div className="half__left half__shadow">
               <h2 className="half__kicker">For your e-commerce</h2>
-              <p className="half__title ">What are you best products?</p>
+              <p className="half__title ">What are your best products?</p>
               <p className="half__text">
                 Know immediately which are the{" "}
                 <strong>most wanted products in your catalog</strong> by letting
