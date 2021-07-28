@@ -37,7 +37,7 @@ export default function Navbar() {
                   <p>Add like buttons in a React project</p>
                 </a>
               </Link>
-              <Link href="/docs/html">
+              <Link href="/docs/html" title="Like button HTML">
                 <a className="navbar__pane__link">
                   <strong>HTML</strong>
                   <p>Add HTML like buttons to any website</p>

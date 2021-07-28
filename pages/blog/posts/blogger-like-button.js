@@ -136,7 +136,7 @@ export default function Post() {
               Let's go back to our button.{" "}
               <strong>Lyket is super simple to customize</strong>. The best way
               to do it is by following the instructions you can find in the{" "}
-              <Link href="/docs/html">
+              <Link href="/docs/html" title="Like button HTML">
                 <a>official HTML widget documentation.</a>
               </Link>
             </p>

@@ -102,7 +102,7 @@ export default function Post() {
             ></video>
             <p>
               To choose and customize the buttons follow the{" "}
-              <Link href="/docs/html">
+              <Link href="/docs/html" title="Like button HTML">
                 <a>HTML documentation</a>
               </Link>
               . And that's it!

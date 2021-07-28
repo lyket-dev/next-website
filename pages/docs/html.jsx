@@ -15,13 +15,14 @@ export default function Docs() {
           content="Instantly add like, clap and like/dislike buttons on any web project with our super simple like button HTML widget!"
           name="description"
         />
+        <meta name="keywords" content="like button HTML, HTML like button" />
       </Head>
       <div className="page">
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">like button HTML</h2>
-            <h1 className="docs__title">HTML docs</h1>
+            <h1 className="page__kicker">Like button HTML</h1>
+            <h2 className="docs__title">HTML widget docs</h2>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>
@@ -48,38 +49,53 @@ export default function Docs() {
               <p>We have more framework-specific guides for:</p>
               <ul>
                 <li>
-                  <Link href="/blog/posts/embed-like-button-to-notion">
-                    <a>How to add like buttons to Notion</a>
+                  <Link
+                    href="/blog/posts/embed-like-button-to-notion"
+                    title="How to add HTML like buttons to Notion"
+                  >
+                    <a>How to add HTML like buttons to Notion</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/docs/wordpress">
+                  <Link
+                    href="/docs/wordpress"
+                    title="Wordpress like button plugin"
+                  >
                     <a>Wordpress like button plugin</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/posts/wordpress-like-button">
-                    <a>How to add Lyket widget to Wordpress</a>
+                  <Link
+                    href="/blog/posts/wordpress-like-button"
+                    title="How to add HTML like buttons to Wordpress"
+                  >
+                    <a>How to add HTML like buttons to Wordpress</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/posts/blogger-like-button">
-                    <a>How to add like buttons to Blogger</a>
+                  <Link
+                    href="/blog/posts/blogger-like-button"
+                    title="How to add HTML like buttons to Blogger"
+                  >
+                    <a>How to add HTML like buttons to Blogger</a>
                   </Link>
                 </li>
               </ul>
-              <Anchor slug="how-buttons-work">
-                <h4>How the buttons work</h4>
+              <Anchor
+                slug="how-buttons-work"
+                keyword="How the like buttons work in HTML"
+              >
+                <h2>How the like buttons work in HTML</h2>
               </Anchor>
               <p>
                 First, an introduction on what happens when you add the
-                Javascript snippet and the HTML tag containing the button's
+                Javascript snippet and the HTML tag containing the like button's
                 attributes, and how you can get the best out of Lyket. If you
                 prefer to see a few examples on how to integrate our HTML like
                 buttons in your website, simply scroll down.
               </p>
               <p>
-                All Lyket buttons share these{" "}
+                All Lyket like buttons share these{" "}
                 <strong>basic behaviors and features:</strong>
               </p>
               <ul>
@@ -133,18 +149,17 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
-              <Anchor slug="installation">
-                <h4>Installation</h4>
+              <Anchor slug="installation" keyword="Install like button HTML">
+                <h4>
+                  How to add like buttons to your HTML site or website builder
+                </h4>
               </Anchor>
               <p>
-                Implementing Lyket is really simple, but you have to have a
-                basic knowledge of HTML to do that. In your HTML or your site
-                builder (Wordpress, Webflow or else){" "}
-                <strong>
-                  add the script you find below in the &lt;footer&gt; or in the
-                  &lt;header&gt;
-                </strong>
-                , then start creating buttons just by{" "}
+                Adding Lyket like buttons is really simple, but you have to have
+                a basic knowledge of HTML to do that. In your{" "}
+                <strong>HTML or your site builder</strong> (Wordpress, Webflow
+                or else) add the script you find below in the &lt;footer&gt; or
+                in the &lt;header&gt;, then start creating buttons just by{" "}
                 <strong>
                   adding a &lt;div&gt; element with a data-lyket-type and
                   data-lyket-id
@@ -209,16 +224,19 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
-              <Anchor slug="html-buttons">
-                <h4>Buttons</h4>
+              <Anchor slug="html-buttons" keyword="Like button HTML">
+                <h4>All Lyket's HTML like buttons</h4>
               </Anchor>
               <p>
                 There are three different button types that have their own
                 behaviours and properties. Each one of them can be used in
-                different contexts and to achieve different results!
+                <strong>
+                  different contexts and to achieve different results
+                </strong>
+                !
               </p>
-              <Anchor slug="html-like-button">
-                <h5>Like button</h5>
+              <Anchor slug="html-like-button" keyword="Like button in HTML">
+                <h5>Like button in HTML</h5>
               </Anchor>
               <p>
                 Like buttons behave like <em>Twitter buttons</em>. Users can
@@ -251,8 +269,11 @@ export default function Docs() {
                 <div className="try">Try it! →</div>
                 <LikeButton namespace="docs" id="widget-like-button" />
               </div>
-              <Anchor slug="like-templates">
-                <h6>Like button Templates</h6>
+              <Anchor
+                slug="like-templates"
+                keyword="Like button HTML Templates"
+              >
+                <h2>Like button HTML Templates</h2>
               </Anchor>
               <ul>
                 <li>
@@ -266,8 +287,11 @@ export default function Docs() {
                   theme
                 </li>
               </ul>
-              <Anchor slug="html-like-dislike-button">
-                <h5>Like/dislike button</h5>
+              <Anchor
+                slug="html-like-dislike-button"
+                keyword="Like dislike button HTML"
+              >
+                <h5>Like/dislike button HTML</h5>
               </Anchor>
               <p>
                 Like/dislike buttons, or Updown buttons, behave like Reddit
@@ -302,8 +326,11 @@ export default function Docs() {
                 <div className="try">Try it! →</div>
                 <UpdownButton namespace="docs" id="widget-updown-button" />
               </div>
-              <Anchor slug="updown-templates">
-                <h6>UpdownButton Templates</h6>
+              <Anchor
+                slug="updown-templates"
+                keyword="Like/dislike buttons HTML"
+              >
+                <h6>Like/dislike buttons HTML Templates</h6>
               </Anchor>
               <ul>
                 <li>
@@ -318,8 +345,8 @@ export default function Docs() {
                 </li>
               </ul>
 
-              <Anchor slug="html-clap-button">
-                <h5>Clap button</h5>
+              <Anchor slug="html-clap-button" keyword="Clap button HTML">
+                <h5>Clap button HTML</h5>
               </Anchor>
               <p>
                 Clap buttons behave like <em>Medium applauses</em>. Users can
@@ -352,8 +379,11 @@ export default function Docs() {
                 <div className="try">Try it! →</div>
                 <ClapButton namespace="docs" id="widget-clap-button" />
               </div>
-              <Anchor slug="clap-templates">
-                <h6>ClapButton Templates</h6>
+              <Anchor
+                slug="clap-templates"
+                keyword="Clap button HTML Templates"
+              >
+                <h6>Clap button HTML Templates</h6>
               </Anchor>
               <ul>
                 <li>
@@ -366,7 +396,7 @@ export default function Docs() {
                   <strong>Heart</strong>: Heart style - supports custom theme
                 </li>
               </ul>
-              <Anchor slug="styling-the-buttons">
+              <Anchor slug="styling-the-buttons" keyword="Like button HTML">
                 <h4>Styling the buttons</h4>
               </Anchor>
               <p>
@@ -435,15 +465,15 @@ export default function Docs() {
                       background: "rgba(255, 224, 138, 0.4)",
                       text: "black",
                       icon: "violet",
-                      highlight: "#ff00c3"
+                      highlight: "#ff00c3",
                     },
-                    fonts: { body: "monospace" }
+                    fonts: { body: "monospace" },
                   }}
                 >
                   <UpdownButton namespace="docs" id="widget-like-colors" />
                 </Provider>
               </div>
-              <Anchor slug="other-props">
+              <Anchor slug="other-props" keyword="Like button HTML">
                 <h4>Other props</h4>
               </Anchor>
               <ul>
@@ -483,7 +513,7 @@ export default function Docs() {
                   Github repository
                 </a>{" "}
               </p>
-              <Anchor slug="recaptcha">
+              <Anchor slug="recaptcha" keyword="Like button HTML">
                 <h4>reCAPTCHA</h4>
               </Anchor>
               <p>

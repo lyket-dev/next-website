@@ -134,7 +134,7 @@ export default function Post() {
             <p>
               To learn more about how we value privacy, how visitors are
               recognized and how you can change the privacy settings, read our{" "}
-              <Link href="/docs/html">
+              <Link href="/docs/html" title="Like button HTML">
                 <a>documentation.</a>
               </Link>
             </p>
@@ -259,7 +259,7 @@ export default function Post() {
             </TryIt>
             <p>
               You can read more on how to customize the buttons in the{" "}
-              <Link href="/docs/html">
+              <Link href="/docs/html" title="Like button HTML">
                 <a>HTML widget documentation.</a>
               </Link>
             </p>
@@ -318,7 +318,7 @@ export default function Post() {
             <h5>More on the Wordpress like buttons</h5>
             <p>
               To choose and customize the buttons follow the{" "}
-              <Link href="/docs/html">
+              <Link href="/docs/html" title="Like button HTML">
                 <a>HTML widget documentation.</a>
               </Link>
             </p>

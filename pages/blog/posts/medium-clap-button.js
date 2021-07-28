@@ -150,7 +150,7 @@ export default function Post() {
               <li>
                 If you use HTML <strong>or a website builder</strong> you can
                 use use our HTML + Javascript widget! Check out the{" "}
-                <Link href="/docs/html">
+                <Link href="/docs/html" title="Like button HTML">
                   <a>HTML widget documentation</a>
                 </Link>{" "}
                 and start creating{" "}

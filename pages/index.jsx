@@ -237,7 +237,7 @@ export default function Home() {
                   all website builders that support custom HTML embedding -
                   Wordpress, Wix, Webflow and more!
                 </p>
-                <Link href="docs/html">
+                <Link href="docs/html" title="Like button HTML">
                   <a className="button--small">Read the docs</a>
                 </Link>
               </div>
@@ -280,7 +280,7 @@ export default function Home() {
                     <a>React component</a>
                   </Link>{" "}
                   or our{" "}
-                  <Link href="/docs/html">
+                  <Link href="/docs/html" title="Like button HTML">
                     <a>HTML widget</a>
                   </Link>{" "}
                   , you just need to choose a style, provide an identifier for

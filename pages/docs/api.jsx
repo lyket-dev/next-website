@@ -28,13 +28,14 @@ export default function Docs() {
           content="Lyket ranking API keeps track of your users likes and dislikes and provides the updated ranking in real-time"
           name="description"
         />
+        <meta name="keywords" content="ranking API, votes API" />
       </Head>
       <div className="page">
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">like buttons & ranking API</h2>
-            <h1 className="docs__title">Buttons & ranking API</h1>
+            <h1 className="page__kicker">like buttons & ranking API</h1>
+            <h2 className="docs__title">Buttons & ranking API</h2>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>

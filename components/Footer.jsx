@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
           <li className="footer__dot">•</li>
           <li className="footer__item">
-            <Link href="/docs/html">
+            <Link href="/docs/html" title="Like button HTML">
               <a className="footer__link">HTML Docs</a>
             </Link>
           </li>

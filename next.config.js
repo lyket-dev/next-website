@@ -7,28 +7,28 @@ module.exports = withReactSvg({
   env: {
     appBaseUrl: process.env.APP_BASE_URL,
     apiBaseUrl: process.env.API_BASE_URL,
-    lyketPublicApiKey: process.env.LYKET_PUBLIC_API_KEY
+    lyketPublicApiKey: process.env.LYKET_PUBLIC_API_KEY,
   },
   async redirects() {
     return [
       {
         source: "/blog/posts/react-clap-button",
         destination: "/blog/posts/clap-button",
-        permanent: true
+        permanent: true,
       },
       {
         source: "/blog/posts/like-clap-button-on-worpress",
         destination: "/blog/posts/wordpress-like-button",
-        permanent: true
+        permanent: true,
       },
       {
         source: "/docs/widget",
         destination: "/docs/html",
-        permanent: true
-      }
+        permanent: true,
+      },
     ];
   },
   webpack(config, _options) {
     return config;
-  }
+  },
 });

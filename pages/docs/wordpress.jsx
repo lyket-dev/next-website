@@ -6,7 +6,7 @@ import Head from "next/head";
 import {
   ApplauseSandbox,
   LikeSandbox,
-  UpdownSandbox
+  UpdownSandbox,
 } from "components/ButtonBox";
 
 import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
@@ -20,13 +20,17 @@ export default function Docs() {
           content="Create beautiful Wordpress like buttons, clap buttons or like/dislike buttons with Lyket like buttons plugin!"
           name="description"
         />
+        <meta
+          name="keywords"
+          content="Wordpress like button plugin, like button plugin Wordpress"
+        />
       </Head>
       <div className="page">
         <div className="page__section--gradient" />
         <section className="page__section">
           <div className="docs__title__container">
-            <h2 className="page__kicker">Wordpress like button plugin</h2>
-            <h1 className="docs__title">Wordpress like button plugin docs</h1>
+            <h1 className="page__kicker">Wordpress like button plugin</h1>
+            <h2 className="docs__title">Wordpress plugin docs</h2>
             <div className="docs__menu__container">
               <QuickDocsMenu />
             </div>
@@ -66,7 +70,7 @@ export default function Docs() {
               <p>
                 To learn more about how we value privacy, how visitors are
                 recognized and how you can change the privacy settings, read our{" "}
-                <Link href="/docs/html">
+                <Link href="/docs/html" title="Like button HTML">
                   <a>documentation.</a>
                 </Link>
               </p>
@@ -323,8 +327,8 @@ export default function Docs() {
                       background: "rgba(255, 224, 138, 0.4)",
                       text: "black",
                       icon: "violet",
-                      highlight: "#ff00c3"
-                    }
+                      highlight: "#ff00c3",
+                    },
                   }}
                 >
                   <UpdownButton namespace="docs" id="plugin-like-colors" />

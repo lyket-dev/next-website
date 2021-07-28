@@ -8,7 +8,7 @@ export default function QuickDocsMenu() {
         <a className="menu__link">React</a>
       </ActiveLink>
       <span>|</span>
-      <ActiveLink href="/docs/html">
+      <ActiveLink href="/docs/html" title="Like button HTML">
         <a className="menu__link">HTML</a>
       </ActiveLink>
       <span>|</span>
