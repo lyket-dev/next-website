@@ -4,7 +4,7 @@ import Prism from "prismjs";
 import PrismJsx from "prismjs/components/prism-jsx.min";
 import Line from "prismjs/plugins/line-numbers/prism-line-numbers.js";
 
-export default function Code({ children }) {
+export default function Code({ children, language }) {
   useEffect(() => {
     if (typeof document !== undefined && children !== null) {
       Prism.highlightAll(children);
@@ -12,7 +12,7 @@ export default function Code({ children }) {
   }, [children, Prism]);
 
   return (
-    <pre className="language-jsx line-numbers">
+    <pre className={`language-${language || "jsx"} line-numbers`}>
       <code>{children}</code>
     </pre>
   );

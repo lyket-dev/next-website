@@ -186,7 +186,7 @@ export default function Docs() {
                 Replace "[YOUR-API-KEY]" in the code with your personal public
                 API key.
               </p>
-              <Code>
+              <Code language="html">
                 &lt;script
                 src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]"&gt;&lt;/script&gt;
               </Code>
@@ -206,11 +206,10 @@ export default function Docs() {
                     session ID can be useful if you don't want Lyket to result
                     in your cookie detection software.
                   </p>
-                  <Code>
+                  <Code language="html">
                     {`<script
   src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]&disableSessionId"
->
-</script>`}
+></script>`}
                   </Code>
                 </li>
                 <li>
@@ -246,7 +245,7 @@ export default function Docs() {
               <p>
                 Use the <em>data-lyket-type="like"</em> to create a like button.
               </p>
-              <Code>
+              <Code language="html">
                 {`<!-- minimal settings -->
 <div data-lyket-type="like" data-lyket-id="my-first-post"></div>
 
@@ -303,7 +302,7 @@ export default function Docs() {
                 Use the <em>data-lyket-type="updown"</em> to create a
                 like/dislike button.
               </p>
-              <Code>
+              <Code language="html">
                 {`<!-- minimal settings -->
 <div data-lyket-type="updown" data-lyket-id="my-first-post"></div>
 
@@ -356,7 +355,7 @@ export default function Docs() {
               <p>
                 Use the <em>data-lyket-type="clap"</em> to create a clap button.
               </p>
-              <Code>
+              <Code language="html">
                 {`<!-- minimal settings -->
 <div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
 
@@ -441,7 +440,7 @@ export default function Docs() {
                 </li>
               </ul>
               <p>Here is an example for an Updown button:</p>
-              <Code>
+              <Code language="html">
                 {`<!-- button with color scheme -->
 <div
   data-lyket-type="updown"
@@ -467,7 +466,7 @@ export default function Docs() {
                 To do that simply add a style property in the containing{" "}
                 <em>div</em>, with your desired size.
               </p>
-              <Code>
+              <Code language="html">
                 {`<!-- button with hidden counter -->
 <div style="font-size: 12px"
   data-lyket-type="updown"
@@ -487,7 +486,7 @@ export default function Docs() {
                   </p>
                 </li>
               </ul>
-              <Code>
+              <Code language="html">
                 {`<!-- button with hidden counter -->
 <div
   data-lyket-type="updown"
@@ -528,7 +527,7 @@ export default function Docs() {
                 . Then you need to pass the reCAPTCHA site key in the Javascript
                 script, like this.
               </p>
-              <Code>
+              <Code language="html">
                 {`<!-- Client-side reCAPTCHA site key -->
 
 <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[YOUR-API-KEY]&recaptchaSiteKey=[YOUR-RECAPTCHA-SITE-KEY]"></script>`}
