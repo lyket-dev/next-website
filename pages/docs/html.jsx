@@ -399,6 +399,9 @@ export default function Docs() {
               <Anchor slug="styling-the-buttons" keyword="Like button HTML">
                 <h4>Styling the buttons</h4>
               </Anchor>
+              <Anchor slug="colors-and-fonts" keyword="Like button HTML">
+                <h6>Change colors and font family</h6>
+              </Anchor>
               <p>
                 You can <strong>change the default colors</strong> and provide
                 favourite color scheme, just by adding a few attributes to your
@@ -437,7 +440,7 @@ export default function Docs() {
                   family.
                 </li>
               </ul>
-              <p>Here is an example for an Updown button</p>
+              <p>Here is an example for an Updown button:</p>
               <Code>
                 {`<!-- button with color scheme -->
 <div
@@ -453,28 +456,27 @@ export default function Docs() {
 ></div>
 `}
               </Code>
-              <div className="flex-center big">
-                <div className="try">Try it! →</div>
-                <Provider
-                  apiKey={process.env.lyketPublicApiKey}
-                  baseUrl={process.env.apiBaseUrl}
-                  theme={{
-                    colors: {
-                      primary: "#b8fff3",
-                      secondary: "rgba(220, 234, 108, 0.6)",
-                      background: "rgba(255, 224, 138, 0.4)",
-                      text: "black",
-                      icon: "violet",
-                      highlight: "#ff00c3",
-                    },
-                    fonts: { body: "monospace" },
-                  }}
-                >
-                  <UpdownButton namespace="docs" id="widget-like-colors" />
-                </Provider>
-              </div>
+              <Anchor slug="change-size" keyword="Like button HTML">
+                <h6>Change size</h6>
+              </Anchor>
+              <p>
+                You can increase or decrease the size of the button
+                proportionally by changing the CSS <em>font-size</em> property.
+              </p>
+              <p>
+                To do that simply add a style property in the containing{" "}
+                <em>div</em>, with your desired size.
+              </p>
+              <Code>
+                {`<!-- button with hidden counter -->
+<div style="font-size: 12px"
+  data-lyket-type="updown"
+  data-lyket-id="my-first-post"
+></div>
+`}
+              </Code>
               <Anchor slug="other-props" keyword="Like button HTML">
-                <h4>Other props</h4>
+                <h6>Other props</h6>
               </Anchor>
               <ul>
                 <li>
