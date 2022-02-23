@@ -70,6 +70,8 @@ export default function Privacy() {
               </p>
               <p className="ternary__huge">10€/month</p>
               <p className="ternary__text">billed monthly</p>
+              <p className="ternary__huge">100€/year</p>
+              <p className="ternary__text">billed yearly</p>
             </div>
           </div>
           <div className="text__center">
