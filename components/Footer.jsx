@@ -50,12 +50,21 @@ export default function Footer() {
           </li>
         </ul>
         <ul className="footer__list">
-          <li className="footer__item">Copyright Lyket 2021</li>
+          <li className="footer__item">Copyright Lyket 2022</li>
           <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/privacy">
               <a className="footer__link">Privacy Policy</a>
             </Link>
+          </li>
+          <li className="footer__dot">•</li>
+          <li className="footer__item">
+            <Link href="/terms">
+              <a className="footer__link">Terms of use</a>
+            </Link>
+          </li>
+          <li className="footer__dot">•</li>
+          <li className="footer__item">
             <Link href="/blog">
               <a className="footer__link">Blog</a>
             </Link>
