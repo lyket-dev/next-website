@@ -58,6 +58,37 @@ export default function Privacy() {
               which you have provided.
             </li>
           </p>
+          <p>
+            Your personal data information will not be shared with any third
+            party except when:
+          </p>
+          <ul>
+            <li>requested by law enforcement;</li>
+            <li>
+              it is necessary to protect our rights, safety, and property; or
+            </li>
+            <li>
+              it is necessary to diagnose and fix problems with the service.
+            </li>
+          </ul>
+          <h4>External services</h4>
+          <ol>
+            <li>
+              Lyket data is stored in the United States (
+              <a href="https://www.heroku.com/policy/security">
+                Heroku security policy
+              </a>
+              ).
+            </li>
+            <li>
+              If you subscribe, you agree to{" "}
+              <a href="https://stripe.com/privacy">Stripe's privacy policy</a>.
+            </li>
+            <li>
+              When you log in, a cookie is stored to authenticate you on future
+              visits.
+            </li>
+          </ol>
         </div>
       </section>
     </div>

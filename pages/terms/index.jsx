@@ -16,20 +16,7 @@ export default function Terms() {
             <li>a person interacting with a website with Lyket embedded.</li>
           </ul>
           <h4>Your Rights</h4>
-          <ul>
-            <li>
-              Your personal data information will not be shared with any third
-              party except when:
-            </li>
-            <li>requested by law enforcement;</li>
-            <li>
-              it is necessary to protect our rights, safety, and property; or
-            </li>
-            <li>
-              it is necessary to diagnose and fix problems with the service.
-            </li>
-          </ul>
-          <ol class="continue">
+          <ol>
             <li>You will not be shown ads.</li>
             <li>
               No cookies other than those that are necessary for site operation
@@ -59,11 +46,11 @@ export default function Terms() {
             </li>
             <li>
               If there is a payment failure, you will receive an email
-              notification. You will have four weeks to rectify the issue.
+              notification. You will have two weeks to rectify the issue.
             </li>
             <li>
               You may permanently delete your account. Note that your data may
-              temporarily persist in backups for up to two weeks after deletion.
+              temporarily persist for up to two weeks after deletion.
             </li>
             <li>
               You have the right to an explanation (or a warning, if possible)
@@ -78,17 +65,6 @@ export default function Terms() {
               that issued your card to take payments from your card account in
               accordance with the terms of this agreement.
             </li>
-            <li>You must not post spam.</li>
-            <li>
-              You have taken measures to ensure your website's readers are aware
-              of their privacy rights in regards to your use of Lyket on your
-              website.
-            </li>
-            <li>
-              You must not store or submit any content to Lyket that is illegal
-              under Delaware law or United States law.
-            </li>
-            <li>You must not use Lyket to harass others.</li>
             <li>
               If you notice any data integrity, privacy, or security bugs in the
               service, please report it directly{" "}
@@ -128,43 +104,65 @@ export default function Terms() {
               changes. You will not be bound by the changes until 30 days after
               the email notification.
             </li>
-            <li>Any disputes will be settled under Delaware law.</li>
           </ol>
-          <h4>Privacy Policy</h4>
-          <ol class="continue">
-            <li>
-              Lyket data is stored in the United States (
-              <a href="https://www.heroku.com/policy/security">
-                Heroku security policy
-              </a>
-              ).
-            </li>
-            <li>
-              If you subscribe, you agree to{" "}
-              <a href="https://stripe.com/privacy">Stripe's privacy policy</a>.
-            </li>
-            <li>
-              When you log in, a cookie is stored to authenticate you on future
-              visits.
-            </li>
-          </ol>
+          <h4>Subscription, Payment and Refunds</h4>
+          <p>
+            The subscription fee is charged monthly on the day of your initial
+            payment. You may cancel your account and subscription at any time.
+          </p>
+          <p>
+            Your subscription will automatically renew on the renewal date for a
+            new billing period at the end of Your current billing period. At
+            this time Your account will be charged the new subscription fee for
+            the next billing period.
+          </p>
+          <p>
+            Lyket reserves the right to change fees and charges or introduce new
+            charges at any time. You will be notified of any such change via an
+            email to our user subscription list.
+          </p>
+          <p>
+            You may upgrade or downgrade your account plan with Lyket at any
+            time via email to our support team.
+          </p>
+          <p>
+            Any change to Your account will take effect immediately and apply to
+            all future invoices.
+          </p>
+          <p>
+            If You are upgrading Your account, we will charge you immediately
+            for the remaining time of Your billing period for Your new account
+            plan.
+          </p>
+          <p>
+            If you are downgrading your account, we will charge You the new plan
+            amount at your next renewal date of Your billing period.
+          </p>
+          <p>
+            Once you start paying for the Service, You can cancel and terminate
+            this Agreement and the provision of the Service via email at any
+            time.
+          </p>
+          <p>
+            Annual fees are refundable after 6 months of use of the Service, by
+            half of the total quota. They are non-refundable after that period.
+            Monthly fees are non refundable.
+          </p>
           <h4>Disclaimer</h4>
-          <ol class="continue">
-            <li>Use of the service is at your own risk.</li>
-            <li>
-              THE SERVICE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-              WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-              OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-              DISCLAIMED. IN NO EVENT SHALL LYKET BE LIABLE FOR ANY DIRECT,
-              INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-              (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-              SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-              HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-              CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
-              OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SERVICE, EVEN
-              IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-            </li>
-          </ol>
+          <p>Use of the service is at your own risk.</p>
+          <p>
+            THE SERVICE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+            WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+            MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+            IN NO EVENT SHALL LYKET BE LIABLE FOR ANY DIRECT, INDIRECT,
+            INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+            BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+            LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+            CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+            LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+            ANY WAY OUT OF THE USE OF THIS SERVICE, EVEN IF ADVISED OF THE
+            POSSIBILITY OF SUCH DAMAGE.
+          </p>
         </div>
       </section>
     </div>
