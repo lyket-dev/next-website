@@ -15,6 +15,9 @@
 .docs__menu__container
   +vertical-padding(6)
 
+.docs__menu
+  +margin-bottom(2)
+
 .docs__title
   text-align: center
   position: relative
@@ -90,6 +93,20 @@
 @media only screen and (min-width: 900px)
   .docs
     +font-size(gamma)
+    display: flex
+
+  .docs__menu__right
+    width: 80%
+
+  .docs__menu
+    position: relative
+    +margin-right(2)
+    +font-size(smallprint)
+    overflow: hidden
+    li
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
 
   .docs__container
     padding: 100px 0
