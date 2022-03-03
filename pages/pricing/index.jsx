@@ -74,21 +74,44 @@ export default function Privacy() {
               <p className="ternary__text">billed yearly</p>
             </div>
           </div>
-          <div className="text__center">
-            <p className="ternary__text">
-              <strong>
-                Need more pageviews?{" "}
-                <Link href="/contact">
-                  <a>Contact us!</a>
-                </Link>
-              </strong>
-            </p>
+          <div>
+            <div className="text__center">
+              <p className="ternary__text">
+                <strong>
+                  Need more pageviews?{" "}
+                  <Link href="/contact">
+                    <a>Contact us!</a>
+                  </Link>
+                </strong>
+              </p>
+            </div>
+            <div className="ternary__text">
+              <a className="button" href={`${process.env.appBaseUrl}/signup`}>
+                GET STARTED!
+                <Arrow />
+              </a>
+            </div>
           </div>
-          <div className="ternary__text">
-            <a className="button" href={`${process.env.appBaseUrl}/signup`}>
-              GET STARTED!
-              <Arrow />
-            </a>
+          <div className="text__left">
+            <div className="page__title">
+              <h3>Pricing faqs</h3>
+            </div>
+            <div className="markdown">
+              <h6>What is a pageview? </h6>
+              <p>
+                The pageview constitutes a user visit to a page containing one
+                or more buttons. Meaning that your pageviews counter will
+                increase each time a user sees your page
+              </p>
+              <h6>What are the conditions for the free plan? </h6>
+              <p>
+                The free plan has the hard limit of 500 pageviews for one month,
+                and resets the pageviews counter every month. If you never reach
+                the limit, the free plan will be free forever. Otherwise, if you
+                reach the limit even for one month, you will need to switch to a
+                paid plan.
+              </p>
+            </div>
           </div>
           <h2 className="page__title">What you get</h2>
           <div className="stripes">
