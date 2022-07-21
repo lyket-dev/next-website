@@ -8,6 +8,7 @@ module.exports = withReactSvg({
     appBaseUrl: process.env.APP_BASE_URL,
     apiBaseUrl: process.env.API_BASE_URL,
     lyketPublicApiKey: process.env.LYKET_PUBLIC_API_KEY,
+    lyketResetApiKey: process.env.LYKET_RESET_API_KEY,
   },
   async redirects() {
     return [

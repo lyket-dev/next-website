@@ -6,7 +6,7 @@ import Code from "components/Code";
 import TryIt from "components/TryIt";
 
 export const meta = {
-  title: "Add a Wordpress like button in a matter of seconds"
+  title: "Add a Wordpress like button in a matter of seconds",
 };
 
 export default function Post() {
@@ -162,7 +162,7 @@ export default function Post() {
             </p>
             <Code>
               {`<script
-    src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa"
+    src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=${process.env.lyketResetApiKey}"
 />`}
             </Code>
             <p>
@@ -250,8 +250,8 @@ export default function Post() {
                   colors: {
                     background: "#b8fff3",
                     text: "violet",
-                    primary: "rgba(255, 224, 138, 0.4)"
-                  }
+                    primary: "rgba(255, 224, 138, 0.4)",
+                  },
                 }}
               >
                 <LikeButton namespace="blog" id="wordpress-example-colors" />

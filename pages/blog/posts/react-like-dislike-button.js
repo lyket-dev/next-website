@@ -11,7 +11,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 
 export const meta = {
-  title: "How to add like/dislike buttons to any React website with Lyket"
+  title: "How to add like/dislike buttons to any React website with Lyket",
 };
 
 export default function Post() {
@@ -140,7 +140,7 @@ export default function Post() {
             <Code>
               {`import { Provider, UpdownButton } from "@lyket/react";
 
-<Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
+<Provider apiKey="${process.env.lyketResetApiKey}">
   <UpdownButton
     namespace="my-documentation"
     id="like-dislike-buttons-api"
@@ -211,7 +211,7 @@ export default function Post() {
                 {`import { Provider, UpdownButton } from "@lyket/react";
 
 <Provider
-  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
+  apiKey="${process.env.lyketResetApiKey}"
   theme={{
     colors: {
       background: "rgba(255, 224, 138, 0.4)",
@@ -238,8 +238,8 @@ export default function Post() {
                     background: "rgba(255, 224, 138, 0.4)",
                     text: "violet",
                     primary: "#b8fff3",
-                    secondary: "rgba(220, 234, 108, 0.6)"
-                  }
+                    secondary: "rgba(220, 234, 108, 0.6)",
+                  },
                 }}
               >
                 <UpdownButton
@@ -300,7 +300,7 @@ export default function Post() {
                   handlePressDown,
                   totalScore,
                   userVoteDirection,
-                  isLoading
+                  isLoading,
                 }) => {
                   return (
                     <div>

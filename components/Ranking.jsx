@@ -7,7 +7,7 @@ import { rankLikeButtonsByNamespace } from "utils/rank";
 const buttonsByType = {
   clap: { component: ClapButton, color: "blue" },
   like: { component: LikeButton, color: "blue" },
-  updown: { component: UpdownButton, color: "blue" }
+  updown: { component: UpdownButton, color: "blue" },
 };
 
 const Ranking = () => {
@@ -19,7 +19,7 @@ const Ranking = () => {
   useAsyncEffect(async () => {
     const rank = await rankLikeButtonsByNamespace({
       namespace: "ranking-sandbox",
-      type: selected
+      type: selected,
     });
 
     setSortingArray(rank);
@@ -31,7 +31,7 @@ const Ranking = () => {
         <div className="menu">
           <button
             className={`menu__link${selected === "like" ? " active" : " "}`}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               setSelected("like");
             }}
@@ -41,7 +41,7 @@ const Ranking = () => {
           <span>|</span>
           <button
             className={`menu__link${selected === "updown" ? " active" : " "}`}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               setSelected("updown");
             }}
@@ -52,7 +52,7 @@ const Ranking = () => {
           <span>|</span>
           <button
             className={`menu__link${selected === "clap" ? " active" : " "}`}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               setSelected("clap");
             }}
@@ -67,25 +67,25 @@ const Ranking = () => {
             .sort((a, b) => {
               return sortingArray.indexOf(a) - sortingArray.indexOf(b);
             })
-            .map(name => (
+            .map((name) => (
               <div className="ranking__element" key={`${selected}-${name}`}>
                 <img
                   className="ranking__image"
                   src={`/assets/${name.split("-")[1]}.png`}
                 ></img>
                 <Provider
-                  apiKey={process.env.lyketPublicApiKey}
+                  apiKey={process.env.lyketResetApiKey}
                   baseUrl={process.env.apiBaseUrl}
                   theme={{
                     colors: {
-                      primary: buttonsByType[selected].color
-                    }
+                      primary: buttonsByType[selected].color,
+                    },
                   }}
                 >
                   <Button
-                    onPress={buttonData => setDummy(!dummy)}
-                    onPressUp={buttonData => setDummy(!dummy)}
-                    onPressDown={buttonData => setDummy(!dummy)}
+                    onPress={(buttonData) => setDummy(!dummy)}
+                    onPressUp={(buttonData) => setDummy(!dummy)}
+                    onPressDown={(buttonData) => setDummy(!dummy)}
                     namespace="ranking-sandbox"
                     id={name}
                   />

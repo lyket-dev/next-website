@@ -3,7 +3,8 @@ import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Head from "next/head";
 import Link from "next/link";
-import { LikeButton, ClapButton, UpdownButton } from "@lyket/react";
+import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
+import HomeSandbox from "components/HomeSandbox";
 
 const menu = [
   {
@@ -108,6 +109,12 @@ export default function Docs() {
                   </Link>
                 </li>
               </ul>
+              <p>
+                Choose a button, then copy & paste the code to see how easy it
+                is!
+              </p>
+              <HomeSandbox selectedTab="like" selectedTech="react" />
+
               <h4 id="how-buttons-work">How the buttons work</h4>
               <p>
                 All Lyket buttons share these{" "}
@@ -819,7 +826,7 @@ export Faq = () => {
                 userVoteDirection > 0
                 ? ":D"
                 : userVoteDirection === 0
-                ? "waiting for vote..."
+                ? "I am waiting for you to vote..."
                 : ":("
               }
             </div>
@@ -866,7 +873,7 @@ export Faq = () => {
                         {userVoteDirection > 0
                           ? ":D"
                           : userVoteDirection === 0
-                          ? "waiting for vote..."
+                          ? "I am waiting for you to vote..."
                           : ":("}
                       </div>
                     </div>
@@ -887,6 +894,46 @@ export Faq = () => {
                 the <strong>theme</strong> prop in the provider. Colors support
                 rgba, hex, and color names.
               </p>
+
+              <Code>
+                {`import { Provider, LikeButton } from "@lyket/react";
+
+<Provider
+  apiKey="${process.env.lyketResetApiKey}"
+  theme={{
+    colors: {
+      background: "#b8fff3",
+      text: "violet",
+      primary: "rgba(255, 224, 138, 0.4)"
+    }
+  }}
+>
+  <LikeButton
+    namespace="my-blog-post"
+    id="how-to-beat-me-at-chess"
+  />
+</Provider>
+  `}
+              </Code>
+              <div className="flex-center big">
+                <div className="try">Click! →</div>
+                <Provider
+                  apiKey={process.env.lyketPublicApiKey}
+                  baseUrl={process.env.apiBaseUrl}
+                  theme={{
+                    colors: {
+                      background: "#b8fff3",
+                      text: "violet",
+                      primary: "rgba(255, 224, 138, 0.4)",
+                    },
+                  }}
+                >
+                  <LikeButton
+                    namespace="blog"
+                    id="like-button-react-example-colors"
+                  />
+                </Provider>
+              </div>
               <h6>Button colors</h6>
               <ul>
                 <li>
@@ -933,14 +980,6 @@ export Faq = () => {
   },
 };`}
               </Code>
-              <p>
-                The Provider component makes a deep merge, so you can overwrite
-                the theme object totally or partially.
-              </p>
-              <p>
-                Not all the templates support theming. Read the templates detail
-                to know which ones.
-              </p>
               <h4 id="recaptcha">reCAPTCHA</h4>
               <p>
                 Lyket is integrated with Google reCAPTCHA V3 to handle malicious

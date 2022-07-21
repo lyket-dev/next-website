@@ -77,7 +77,7 @@ export default function Home() {
               Choose a button, then copy & paste the code to see how easy it is
             </p>
           </div>
-          <HomeSandbox />
+          <HomeSandbox selectedTab="like" selectedTech="html" />
         </div>
       </section>
       <section className="section">

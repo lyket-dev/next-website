@@ -12,7 +12,7 @@ import Code from "components/Code";
 import StarRatings from "react-star-ratings";
 
 export const meta = {
-  title: "React rating component with Lyket"
+  title: "React rating component with Lyket",
 };
 
 export default function Post() {
@@ -164,7 +164,7 @@ export default function Post() {
             <Code>
               {`import { Provider, Rating } from "@lyket/react";
 
-  <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
+  <Provider apiKey="${process.env.lyketResetApiKey}">
     <Rating
       namespace="cooking-book"
       id="my-ramen-recipy"
@@ -223,7 +223,7 @@ export default function Post() {
               {`import { Provider, Rating } from "@lyket/react";
 
 <Provider
-  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
+  apiKey="${process.env.lyketResetApiKey}"
   theme={{
     colors: {
       background: "#b8fff3",

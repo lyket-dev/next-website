@@ -9,9 +9,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import Code from "components/Code";
+import HomeSandbox from "components/HomeSandbox";
 
 export const meta = {
-  title: "How to add a React like button with Lyket"
+  title: "How to add a like button to your React project",
 };
 
 export default function Post() {
@@ -59,17 +60,20 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>React like button | Lyket</title>
+        <title>
+          React like button - How to add a like button to your React project |
+          Lyket
+        </title>
         <meta
-          content="Lyket is the ultimate tool to add like buttons to any React project in a matter of seconds"
+          content="Whether you have a blog or an ecommerce in React, instant feedback is crucial. Lyket lets you add a like button to React in a matter of seconds!"
           name="description"
         />
         <meta name="keywords" content="React like button, React, like button" />
       </Head>
       <div className="page">
         <section className="page__section">
-          <h2 className="page__kicker">React like button</h2>
-          <h1 className="page__title">{meta.title}</h1>
+          <h1 className="page__kicker">React like button</h1>
+          <h2 className="page__title">{meta.title}</h2>
           <div className="half__reaction">
             <LikeButton
               namespace="blog"
@@ -78,8 +82,8 @@ export default function Post() {
             />
           </div>
         </section>
-        <section className="page__section">
-          <div className="markdown">
+        <div className="markdown">
+          <section className="page__section">
             <p>
               If you ever tried to add a <strong>like button to React</strong> I
               am sure you encountered a few obstacles on your way.
@@ -103,6 +107,10 @@ export default function Post() {
                 with all this data!
               </li>
             </ul>
+            <p>
+              Choose a button, then copy & paste the code to see how easy it is
+            </p>
+            <HomeSandbox selectedTab="like" selectedTech="react" />
             <h4>Lyket in action!</h4>
             <p>
               Lyket takes care of all these nuisances for you! It lets you add
@@ -135,7 +143,7 @@ export default function Post() {
             <Code>
               {`import { Provider, LikeButton } from "@lyket/react";
 
-  <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
+  <Provider apiKey="${process.env.lyketResetApiKey}">
     <LikeButton
       namespace="my-blog-post"
       id="how-to-beat-me-at-chess"
@@ -201,7 +209,7 @@ export default function Post() {
               {`import { Provider, LikeButton } from "@lyket/react";
 
 <Provider
-  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
+  apiKey="${process.env.lyketResetApiKey}"
   theme={{
     colors: {
       background: "#b8fff3",
@@ -226,8 +234,8 @@ export default function Post() {
                   colors: {
                     background: "#b8fff3",
                     text: "violet",
-                    primary: "rgba(255, 224, 138, 0.4)"
-                  }
+                    primary: "rgba(255, 224, 138, 0.4)",
+                  },
                 }}
               >
                 <LikeButton
@@ -353,8 +361,8 @@ export default function Post() {
                 </Link>
               </li>
             </ul>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
   );

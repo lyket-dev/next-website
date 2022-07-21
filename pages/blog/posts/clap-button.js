@@ -11,7 +11,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 
 export const meta = {
-  title: "How to add a clap button to your website with Lyket"
+  title: "How to add a clap button to your website with Lyket",
 };
 
 export default function Post() {
@@ -116,7 +116,7 @@ export default function Post() {
             <Code>
               {`import { Provider, ClapButton } from "@lyket/react";
 
-  <Provider apiKey="acc0dbccce8e557db5ebbe6d605aaa">
+  <Provider apiKey="${process.env.lyketResetApiKey}">
     <ClapButton
       namespace="my-blog-post"
       id="applause-react"
@@ -176,7 +176,7 @@ export default function Post() {
               {`import { Provider, ClapButton } from "@lyket/react";
 
 <Provider
-  apiKey="acc0dbccce8e557db5ebbe6d605aaa"
+  apiKey="${process.env.lyketResetApiKey}"
   theme={{
     colors: {
       background: "#b8fff3",
@@ -199,8 +199,8 @@ export default function Post() {
                   colors: {
                     background: "#b8fff3",
                     text: "violet",
-                    primary: "rgba(255, 224, 138, 0.4)"
-                  }
+                    primary: "rgba(255, 224, 138, 0.4)",
+                  },
                 }}
               >
                 <ClapButton

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Code from "components/Code";
 
 export const meta = {
-  title: "Blogger like button with Lyket + video tutorial"
+  title: "Blogger like button with Lyket + video tutorial",
 };
 
 export default function Post() {
@@ -75,7 +75,7 @@ export default function Post() {
   data-lyket-id="everybody-like-now"
 />
 
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa" />
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=${process.env.lyketResetApiKey}" />
 `}
             </Code>
             <p>
@@ -169,8 +169,8 @@ export default function Post() {
                       primary: "violet",
                       background: "#333",
                       text: "grey",
-                      highlight: "#ff00c3"
-                    }
+                      highlight: "#ff00c3",
+                    },
                   }}
                 >
                   <LikeButton

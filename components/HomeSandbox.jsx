@@ -6,21 +6,21 @@ import Confetti from "react-confetti";
 const buttons = {
   clap: ClapButton,
   like: LikeButton,
-  updown: UpdownButton
+  updown: UpdownButton,
 };
 
-const HomeSandbox = () => {
-  const [selected, setButton] = useState("clap");
+const HomeSandbox = ({ selectedTab, selectedTech }) => {
+  const [selected, setButton] = useState(selectedTab || "clap");
   const [showConfetti, setShowConfetti] = useState(false);
   const Button = buttons[selected];
 
   return (
-    <>
+    <div>
       <div className="space--bottom-4">
         <div className="menu">
           <button
             className={`menu__link${selected === "clap" ? " active" : " "}`}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               setButton("clap");
             }}
@@ -31,7 +31,7 @@ const HomeSandbox = () => {
 
           <button
             className={`menu__link${selected === "like" ? " active" : " "}`}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               setButton("like");
             }}
@@ -42,7 +42,7 @@ const HomeSandbox = () => {
 
           <button
             className={`menu__link${selected === "updown" ? " active" : " "}`}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               setButton("updown");
             }}
@@ -56,13 +56,13 @@ const HomeSandbox = () => {
           <Confetti width={2000} height={500} recycle={false} gravity={0.4} />
         )}
         <div className="flag__left">
-          <Window currentButton={selected} />
+          <Window currentButton={selected} selectedTech={selectedTech} />
         </div>
         <div className="flag__right">
           <div className="lyket__container">
             <div className={`lyket__${selected}`}>
               <Button
-                onPress={buttonData => {
+                onPress={(buttonData) => {
                   if (
                     buttonData.attributes.userLiked ||
                     buttonData.attributes.userClaps
@@ -73,7 +73,7 @@ const HomeSandbox = () => {
                     setShowConfetti(false);
                   }
                 }}
-                onPressUp={buttonData => {
+                onPressUp={(buttonData) => {
                   if (buttonData.attributes.userVoteDirection > 0) {
                     setShowConfetti(true);
                     setTimeout(() => setShowConfetti(false), 3000);
@@ -88,7 +88,7 @@ const HomeSandbox = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
