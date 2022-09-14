@@ -125,9 +125,9 @@ export default function Docs() {
                 When installed you will see the settings menu on your Wordpress
                 sidebar.
               </p>
-              <h4 id="registration">2. Registrate to Lyket</h4>
+              <h4 id="registration">2. Register on Lyket</h4>
               <p>
-                To registrate, navigate to{" "}
+                To register, navigate to{" "}
                 <a href="https://app.lyket.dev" target="_blank">
                   Lyket registration page
                 </a>{" "}
