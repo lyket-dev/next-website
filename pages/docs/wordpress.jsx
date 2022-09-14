@@ -64,8 +64,8 @@ export default function Docs() {
               <p>
                 This is both great for user experience and for{" "}
                 <strong>privacy reasons</strong>, because your visitors don't
-                have to identify, their data is not stored anywhwere and not
-                sold to third parts!
+                have to identify, their data is not stored anywhere and not sold
+                to third parts!
               </p>
               <p>
                 To learn more about how we value privacy, how visitors are
@@ -248,7 +248,7 @@ export default function Docs() {
 
               <h3 id="clap-button">Clap button</h3>
               <p>
-                Clap buttons behave like Medium applauses. Users can like
+                Clap buttons behave like Medium applause buttons. Users can like
                 multiple times and every other call from the same user will
                 increment the claps number.
               </p>
