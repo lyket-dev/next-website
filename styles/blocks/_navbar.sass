@@ -38,12 +38,12 @@
         text-decoration: underline
 
 .navbar__logo
-  +font-size(alphaplus)
   width: auto
   height: auto
   text-decoration: none
   font-weight: bold
   text-decoration: none
+  line-height: 1
   a
     display: block
     text-decoration: none
@@ -53,11 +53,16 @@
 .navbar__logo--desk
   @extend .navbar__logo
   display: none
+  text-shadow: 5px 0 $base-body-color
+  background: linear-gradient(170deg, #fffca1 20%, #ffcaff 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  font-size: 50px
 
 .navbar__logo--mobile
   @extend .navbar__logo
-  width: 42px
-  height: 42px
+  width: 52px
+  height: 52px
   display: block
   background-size: contain
   background-repeat: no-repeat
