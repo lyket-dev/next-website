@@ -1,6 +1,5 @@
 import React from "react";
 import QuickDocsMenu from "components/QuickDocsMenu";
-import Code from "components/Code";
 import Link from "next/link";
 import Head from "next/head";
 import {

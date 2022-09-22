@@ -13,11 +13,12 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <div className="navbar__logo">
-        <Link href="/">
-          <a>LYKET</a>
-        </Link>
-      </div>
+      <Link href="/">
+        <a className="navbar__logo">
+          <div className="navbar__logo--mobile"></div>
+          <div className="navbar__logo--desk">LYKET</div>
+        </a>
+      </Link>
       <ul className={`navbar__container${menuOpen ? "--visible" : ""}`}>
         <a className="navbar__toggler" onClick={() => setMenuOpen(false)}>
           <Close />
