@@ -6,15 +6,13 @@ export default function Layout({ children }) {
   return (
     <main>
       <Head>
-        <title>
-          Lyket - Instantly add clap and like buttons to your website
-        </title>
+        <title>Lyket - Instantly add like buttons to any website!</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#21fdd5" />
         <meta
           name="description"
-          content="Bring your content to life! Lyket lets you instantly implement a feedback system to any website with clap/like/vote buttons that respect your visitor's privacy 👍❤️👏"
+          content="Lyket is the simplest tool to receive immediate feedback, with like buttons that respect your visitors privacy"
         />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
