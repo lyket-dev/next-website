@@ -1,67 +1,64 @@
 .window
-  +font-size(regular)
-  box-shadow: $shadow
-  border-radius: 3px
-  font-weight: 500
-  max-width: 550px
   margin: 0 auto
-  text-align: left
-  background-color: white
-  overflow-wrap: break-word
-  +monospaced-font-family
-
-.window__top
-  border-top-left-radius: 3px
-  border-top-right-radius: 3px
-  // background-color: $green
-  // border-bottom: 1px solid $base-body-color
-  +horizontal-padding(3)
-  +vertical-padding(3)
-  a
-    +margin-right(2)
-
-.window__body
-  +margin-bottom(6)
   position: relative
-  border-bottom-left-radius: 3px
-  border-bottom-right-radius: 3px
-  pre
-    margin: 0 !important
-    padding-top: 42px !important
-    padding-bottom: 42px !important
+  min-width: 50%
+  border-radius: 5px
+  +padding(6)
+  box-shadow: $shadow
+  max-width: 900px
+  +font-size(regular)
 
+.window__container
+  +center
 
-.window__link
-  @extend .menu__link
-  cursor: pointer
+.window__label
+  +center-horizontally
+  font-size: 18px
+  background: $gradient
+  border-radius: 20px
+  font-weight: bold
+  +vertical-padding(.2)
+  +horizontal-padding(1)
+  top: -12px
+  text-align: center
+
+.window__bigtext
+  +font-size(huge)
+  font-weight: bold
+  text-align: center
+
+.window__title
+  +font-size(regular)
+  +margin-bottom(1)
   font-weight: bold
 
-.window__link.active
-  &:after
-    width: 100%
+.window__text
+  +font-size(regular)
+  +margin-bottom(4)
+  font-weight: 500
 
-.window__code
-  border: 3px solid rgba($light-body-color, 0.3)
-  border-radius: 5px
+.window__icon
+  +margin-right(.5)
+  width: 24px
+  border-radius: 20px
 
-.copy-button
-  +padding(1)
-  +horizontal-padding(1.5)
+.window__mini
+  font-size: 10px
+
+.blank
+  +center-horizontally
+  background: white
   position: absolute
-  top: -22px
-  right: 12px
-  font-weight: bold
-  border-radius: 5px
-  background-color: $yellow
-  &:hover
-    background-color: $yellow
+  z-index: 2
+  width: 60%
 
-@media only screen and (min-width: 1000px)
+@media only screen and (max-width: 960px)
   .window
-    width: 550px
+    min-height: 200px
+    width: 100%
+    +margin-bottom(4)
+    +padding(4)
+    max-width: none
 
-  .window__top
-    +horizontal-padding(5)
-
-  .window__body
-    +margin-bottom(0)
+  .window
+    +padding(4)

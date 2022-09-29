@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
-import Window from "./Window";
+import CodeBox from "./CodeBox";
 import Confetti from "react-confetti";
 
 const buttons = {
@@ -56,7 +56,7 @@ const HomeSandbox = ({ selectedTab, selectedTech }) => {
           <Confetti width={2000} height={500} recycle={false} gravity={0.4} />
         )}
         <div className="flag__left">
-          <Window currentButton={selected} selectedTech={selectedTech} />
+          <CodeBox currentButton={selected} selectedTech={selectedTech} />
         </div>
         <div className="flag__right">
           <div className="lyket__container">

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Provider, ClapButton, LikeButton, UpdownButton } from "@lyket/react";
-import Window from "./Window";
 import useAsyncEffect from "utils/useAsyncEffect";
 import { rankLikeButtonsByNamespace } from "utils/rank";
 

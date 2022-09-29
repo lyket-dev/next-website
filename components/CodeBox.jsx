@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Code from "components/Code";
 
-export default function Window({ currentButton, selectedTech }) {
+export default function CodeBox({ currentButton, selectedTech }) {
   const [tech, setTech] = useState(selectedTech || "html");
   const capitolized =
     currentButton.charAt(0).toUpperCase() + currentButton.slice(1);
@@ -30,10 +30,10 @@ export default function Window({ currentButton, selectedTech }) {
   };
 
   return (
-    <div className="window">
-      <div className="window__top">
+    <div className="code-box">
+      <div className="code-box__top">
         <a
-          className={`window__link${tech === "html" ? " active" : " "}`}
+          className={`code-box__link${tech === "html" ? " active" : " "}`}
           onClick={(e) => {
             e.preventDefault();
             setTech("html");
@@ -42,7 +42,7 @@ export default function Window({ currentButton, selectedTech }) {
           HTML
         </a>
         <a
-          className={`window__link${tech === "react" ? " active" : " "}`}
+          className={`code-box__link${tech === "react" ? " active" : " "}`}
           onClick={(e) => {
             e.preventDefault();
             setTech("react");
@@ -51,7 +51,7 @@ export default function Window({ currentButton, selectedTech }) {
           React
         </a>
       </div>
-      <div className="window__body">
+      <div className="code-box__body">
         <Code>{tech === "react" ? reactText() : htmlText()}</Code>
         <button
           className="copy-button"

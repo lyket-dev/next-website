@@ -1,27 +1,24 @@
 .form
-  border: 2px solid $base-body-color
-  border-radius: 3px
-  margin-bottom: $grid-gutter
-  font-weight: 400
-  padding: 30px
-  max-width: 500px
-  margin: 0 auto
-  text-align: center
-
   label
     display: block
-    +margin-bottom(2)
+    +margin-right(2)
+    font-weight: 500
 
-  input, select
+  input, select, textarea
     position: relative
     border: none
     border-radius: 0
     background-color: #fff
-    padding: 0.7rem 1rem
+    padding: 0
+    +padding-bottom(.2)
     width: 60%
-    border-bottom: 1px dashed $base-body-color
+    border-bottom: 1px solid $border-color
 
-  textarea
-    border: 1px solid $light-body-color
-    +margin-bottom(2)
-    border-radius: 3px
+  button[type="submit"]
+    margin: 0 auto
+    display: block
+
+.form__row
+  display: flex
+  align-content: center
+  +margin-bottom(4)
