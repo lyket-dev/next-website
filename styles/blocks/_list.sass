@@ -1,5 +1,6 @@
 .list
-  // margin-bottom()
+  display: flex
+  justify-content: center
 
 .list__item
   +margin-bottom(2)
@@ -11,3 +12,21 @@
   width: 2rem
   height: 2rem
   display: inline-block
+
+.list__logos
+  height: 30px
+  width: auto
+  fill: $placeholder-body-color
+  +margin-top(2)
+
+@media only screen and (min-width: 1000px)
+  .list
+    +margin-top(3)
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+  .list__logos
+    height: 45px
+    width: auto
+    padding: 0 30px
