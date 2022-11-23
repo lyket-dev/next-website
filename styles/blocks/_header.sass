@@ -7,12 +7,12 @@
 
 .header__title
   +heading-font-family
-  +font-size(big)
+  font-size: 54px
   text-align: center
   font-weight: 700
   max-width: 420px
   margin: 0 auto
-  +margin-bottom(6)
+  +margin-bottom(3)
   line-height: 1.05em
 
 .header__subtitle
@@ -30,18 +30,32 @@
   a
     text-decoration: underline
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 800px)
+  .header
+    +padding-top(8)
+    +padding-bottom(6)
+
+  .header__title
+    font-size: 70px
+    max-width: 620px
+    +margin-bottom(4)
+
+  .header__subtitle
+    font-size: 25px
+    max-width: 620px
+
+@media only screen and (min-width: 1200px)
   .header
     +padding-top(12)
     +padding-bottom(6)
 
   .header__title
     +font-size(huge)
-    max-width: 620px
+    max-width: 680px
 
   .header__subtitle
     font-size: 27px
-    max-width: 620px
+    max-width: 600px
     +margin-bottom(5)
 
   .header__image
