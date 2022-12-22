@@ -10,7 +10,7 @@
     "deploy": "yarn build && yarn export"
   },
   "dependencies": {
-    "@lyket/react": "^1.4.7",
+    "@lyket/react": "^2.0.0",
     "@material-ui/core": "^4.11.2",
     "next": "^10.1.3",
     "next-react-svg": "^1.1.2",
