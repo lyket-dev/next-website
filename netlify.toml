@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/docs/widget"
+  to = "/docs/html"
+  status = 301
+
+[[redirects]]
   from = "/blog/posts/react-clap-button"
   to = "/blog/posts/clap-button"
   status = 301
@@ -6,4 +11,9 @@
 [[redirects]]
   from = "/blog/posts/like-clap-button-on-worpress"
   to = "/blog/posts/wordpress-like-button"
+  status = 301
+
+[[redirects]]
+  from = "/blog/posts/react-rating-component"
+  to = "/blog/posts/star-rating-react"
   status = 301
