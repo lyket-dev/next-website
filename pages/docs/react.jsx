@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import QuickDocsMenu from "components/QuickDocsMenu";
+import React from "react";
+import { QuickReactDocsMenu } from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Head from "next/head";
 import Link from "next/link";
@@ -61,11 +61,11 @@ export default function Docs() {
 					<h1 className="page__kicker">clap & like button on React</h1>
 					<h2 className="docs__title">React docs</h2>
 					<div className="docs__menu__container">
-						<QuickDocsMenu />
+						<QuickReactDocsMenu />
 					</div>
 				</div>
 				<section className="page__section">
-					<div className="docs">
+					<div className="docs__with-menu">
 						<ul className="docs__menu">
 							TOPICS
 							{menu.map((item) => {
@@ -86,31 +86,30 @@ export default function Docs() {
 								NextJS, Gatsby, create-react-app.
 							</p>
 							<p>
-								If you want to find out how to use the{" "}
-								<strong>React library in detail</strong> you came to the right
-								place. If you prefer to{" "}
-								<strong>learn with examples and ready-made snippets</strong> to
-								copy and paste, you can visit:
+								In this page we illustrate how to work with Lyket buttons,
+								continue on reading if you are just browsing. Navigate to the
+								one of these pages if you want to read the detailed
+								documentation on a certain button:
 							</p>
 							<ul>
 								<li>
-									<Link href="/blog/posts/react-like-button">
-										How to add like buttons to a React project
+									<Link href="/docs/react/like-button-react">
+										Like buttons React documentation
 									</Link>
 								</li>
 								<li>
-									<Link href="/blog/posts/clap-button">
-										How to add clap buttons to a React project
+									<Link href="/docs/react/applause-button-react">
+										Applause button React documentation
 									</Link>
 								</li>
 								<li>
-									<Link href="/blog/posts/react-like-dislike-button">
-										How to add like dislike buttons to a React project
+									<Link href="/docs/react/like-dislike-button-react">
+										Like dislike buttons React documentation
 									</Link>
 								</li>
 								<li>
-									<Link href="/blog/posts/star-rating-react">
-										How to create a Star rating component with React
+									<Link href="/docs/react/rating-component-react">
+										Rating component React documentation
 									</Link>
 								</li>
 							</ul>
@@ -883,7 +882,7 @@ export Faq = () => {
 									);
 								}}
 							</UpdownButton>
-							<h4 id="styling">Apply custom styling to the button templates</h4>
+							<h4 id="styling">Style your the button templates</h4>
 							<h5>Resizing</h5>
 							<p>
 								All button templates can be resized by wrapping them in a

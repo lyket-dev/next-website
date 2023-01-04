@@ -36,15 +36,23 @@ export default function Docs() {
 								<strong>compatible with all React frameworks</strong> like
 								NextJS, Gatsby, create-react-app.
 							</p>
+						</div>
+					</div>
+				</section>
 
-							<section>
-								<HomeSandbox
-									selectedTab="like"
-									selectedTech="react"
-									showMenu={false}
-								/>
-							</section>
+				<section className="section">
+					<div className="section__container">
+						<HomeSandbox
+							selectedTab="like"
+							selectedTech="react"
+							showMenu={false}
+						/>
+					</div>
+				</section>
 
+				<section className="page__section">
+					<div className="docs">
+						<div className="markdown docs__menu__right">
 							<p>
 								If you want to find out how to use the{" "}
 								<strong>React library in detail</strong> you came to the right
@@ -338,92 +346,94 @@ export StandingOvation = () => {
 								</Code>
 							</section>
 
-							<h3 id="custom-button">Custom like buttons</h3>
-							<p>
-								You may want to give a different flavour to your like button,{" "}
-								<strong>for example using your company logo as the icon</strong>
-								. You can do that by{" "}
-								<strong>creating your own custom button</strong>!
-							</p>
-							<p>These are the available props:</p>
-							<ul>
-								<li>
-									<strong>handlePressUp</strong>:{" "}
-									<em>(buttonData: ClapButtonData) =&gt; void</em>
-								</li>
-								<li>
-									<strong>totalScore</strong>: <em>number</em>
-								</li>
-								<li>
-									<strong>userLiked</strong>: <em>boolean</em>
-								</li>
-								<li>
-									<strong>isLoading</strong>: <em>boolean</em>
-								</li>
-								<li>
-									<strong>isCounterVisible</strong>: <em>boolean</em>
-								</li>
-							</ul>
-							<Code>
-								{`import { LikeButton } from '@lyket/react';
-
+							<section>
+								<h3 id="custom-button">Custom like buttons</h3>
+								<p>
+									You may want to give a different flavour to your like button,{" "}
+									<strong>
+										for example using your company logo as the icon
+									</strong>
+									. You can do that by{" "}
+									<strong>creating your own custom button</strong>!
+								</p>
+								<p>These are the available props:</p>
+								<ul>
+									<li>
+										<strong>handlePressUp</strong>:{" "}
+										<em>(buttonData: ClapButtonData) =&gt; void</em>
+									</li>
+									<li>
+										<strong>totalScore</strong>: <em>number</em>
+									</li>
+									<li>
+										<strong>userLiked</strong>: <em>boolean</em>
+									</li>
+									<li>
+										<strong>isLoading</strong>: <em>boolean</em>
+									</li>
+									<li>
+										<strong>isCounterVisible</strong>: <em>boolean</em>
+									</li>
+								</ul>
+								<Code>
+									{`import { LikeButton } from '@lyket/react';
+								
 export Faq = () => {
-  return (
-    <>
-      <h4 id="Do you like pizza?">Do you like pizza?</h4>
-      <LikeButton
-        id="do-you-like-pizza"
-        namespace="faq"
-        hideCounterIfLessThan={1}
-      >
-        {({
-          handlePress,
-          totalLikes,
-          userLiked,
-          isLoading,
-          isCounterVisible
-        }) => (
-          <>
-            <button onClick={handlePress} disabled={isLoading}>
-              🍕
-            </button>
-            {isCounterVisible && <div>Total: {totalLikes}</div>}
-            {userLiked && <div>Great! I like pizza as well!</div>}
-          </>
-        )}
-      </LikeButton>
-    </>
-  )
+	return (
+		<>
+			<h4 id="Do you like pizza?">Do you like pizza?</h4>
+			<LikeButton
+				id="do-you-like-pizza"
+				namespace="faq"
+				hideCounterIfLessThan={1}
+			>
+				{({
+					handlePress,
+					totalLikes,
+					userLiked,
+					isLoading,
+					isCounterVisible
+				}) => (
+					<>
+						<button onClick={handlePress} disabled={isLoading}>
+							🍕
+						</button>
+						{isCounterVisible && <div>Total: {totalLikes}</div>}
+						{userLiked && <div>Great! I like pizza as well!</div>}
+					</>
+				)}
+			</LikeButton>
+		</>
+	)
 };`}
-							</Code>
-							<LikeButton
-								namespace="react-docs"
-								id="like-button-react-example-custom"
-							>
-								{({ handlePress, totalLikes, userLiked, isLoading }) => {
-									return (
-										<div className="center">
-											<div className="flex-center big">
-												<div className="try">Try! →</div>
-												<button
-													className="huge"
-													onClick={handlePress}
-													disabled={isLoading}
-												>
-													🍕
-												</button>
+								</Code>
+								<LikeButton
+									namespace="react-docs"
+									id="like-button-react-example-custom"
+								>
+									{({ handlePress, totalLikes, userLiked, isLoading }) => {
+										return (
+											<div className="center">
+												<div className="flex-center big">
+													<div className="try">Try! →</div>
+													<button
+														className="huge"
+														onClick={handlePress}
+														disabled={isLoading}
+													>
+														🍕
+													</button>
+												</div>
+												<strong>Total likes: {totalLikes}</strong>
+												{userLiked && <div>Great! I like pizza as well!</div>}
 											</div>
-											<strong>Total likes: {totalLikes}</strong>
-											{userLiked && <div>Great! I like pizza as well!</div>}
-										</div>
-									);
-								}}
-							</LikeButton>
+										);
+									}}
+								</LikeButton>
+							</section>
 
 							<section>
-								<h3 id="styling">
-									Apply custom styling to like button templates
-								</h3>
+								<h3 id="styling">Style your like button templates</h3>
 								<h5>Resizing</h5>
 								<p>
 									All button templates can be resized by wrapping them in a

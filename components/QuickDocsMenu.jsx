@@ -48,8 +48,11 @@ export function QuickReactDocsMenu() {
 				<>Applause</>
 			</ActiveLink>
 			<span>|</span>
-			<ActiveLink href="/docs/react/rate-button-react" className="menu__link">
-				<>Rate</>
+			<ActiveLink
+				href="/docs/react/rating-component-react"
+				className="menu__link"
+			>
+				<>Rating</>
 			</ActiveLink>
 		</div>
 	);

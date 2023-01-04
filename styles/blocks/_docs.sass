@@ -1,6 +1,9 @@
 .docs
   text-align: left
 
+.docs__with-menu
+  @extend .docs
+
 .docs__title__container
   position: relative
   // max-width: 98%
@@ -94,6 +97,8 @@
 @media only screen and (min-width: 900px)
   .docs
     +font-size(gamma)
+
+  .docs__with-menu
     display: flex
 
   .docs__menu__right

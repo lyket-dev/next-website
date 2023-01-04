@@ -40,14 +40,23 @@ export default function Docs() {
 								<strong>compatible with all React frameworks</strong> like
 								NextJS, Gatsby, create-react-app.
 							</p>
-							<section>
-								<HomeSandbox
-									selectedTab="updown"
-									selectedTech="react"
-									showMenu={false}
-								/>
-							</section>
+						</div>
+					</div>
+				</section>
 
+				<section className="section">
+					<div className="section__container">
+						<HomeSandbox
+							selectedTab="updown"
+							selectedTech="react"
+							showMenu={false}
+						/>
+					</div>
+				</section>
+
+				<section className="page__section">
+					<div className="docs">
+						<div className="markdown docs__menu__right">
 							<section>
 								<p>
 									If you want to find out how to use the{" "}
@@ -505,9 +514,7 @@ export Faq = () => {
 							</UpdownButton>
 
 							<section>
-								<h3 id="styling">
-									Apply custom styling to like/dislike button templates
-								</h3>
+								<h3 id="styling">Style your like/dislike button templates</h3>
 
 								<h5>Resizing</h5>
 								<p>

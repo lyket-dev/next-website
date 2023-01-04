@@ -36,15 +36,23 @@ export default function Docs() {
 								<strong>compatible with all React frameworks</strong> like
 								NextJS, Gatsby, create-react-app.
 							</p>
+						</div>
+					</div>
+				</section>
 
-							<section>
-								<HomeSandbox
-									selectedTab="clap"
-									selectedTech="react"
-									showMenu={false}
-								/>
-							</section>
+				<section className="section">
+					<div className="section__container">
+						<HomeSandbox
+							selectedTab="clap"
+							selectedTech="react"
+							showMenu={false}
+						/>
+					</div>
+				</section>
 
+				<section className="page__section">
+					<div className="docs">
+						<div className="markdown docs__menu__right">
 							<p>
 								If you want to find out how to use the{" "}
 								<strong>React library in detail</strong> you came to the right
@@ -422,9 +430,7 @@ export Faq = () => {
 							</ClapButton>
 
 							<section>
-								<h3 id="styling">
-									Apply custom styling to like button templates
-								</h3>
+								<h3 id="styling">Style your like button templates</h3>
 								<h5>Resizing</h5>
 								<p>
 									All button templates can be resized by wrapping them in a
