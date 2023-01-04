@@ -432,10 +432,10 @@
   dependencies:
     stream "^0.0.2"
 
-"@lyket/react@^2.0.1-canary.4":
-  version "2.0.1-canary.4"
-  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-2.0.1-canary.4.tgz#2c040bd63f6720a69cbf760c114ded017913ff27"
-  integrity sha512-B3CBwAHycQr7d6dj9s25zvyzMa9DJ48Z/u1NGgNKoPZTXsoRUcXpQ5sESjL59jLNI4ZwLGrjzo8KY23aM9WWFw==
+"@lyket/react@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@lyket/react/-/react-2.0.0.tgz#ebbe4ea238f1fed814d13e115918e009e563cbf4"
+  integrity sha512-mwQ0xZlaOSQ1VzdMGZeVMG69qvuJ3IecT/MYdPRqoZUy2IcrQmdELruzsFHjY/9gKXn1rLyhb8PSEJmnv8PqGw==
   dependencies:
     "@emotion/react" "^11.10.5"
     humps "^2.0.1"
