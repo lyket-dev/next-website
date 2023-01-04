@@ -327,6 +327,7 @@ export default function Docs() {
 								<div className="try">Try it! →</div>
 								<Provider
 									apiKey={process.env.lyketPublicApiKey}
+									baseUrl={process.env.apiBaseUrl}
 									theme={{
 										colors: {
 											primary: "#b8fff3",
