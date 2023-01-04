@@ -1,30 +1,30 @@
 .code-box
-  +font-size(regular)
+  +font-size(smallprint)
   box-shadow: $shadow
-  border-radius: 3px
+  border-radius: 5px
   font-weight: 500
-  max-width: 550px
+  max-width: 500px
   margin: 0 auto
   text-align: left
   background-color: white
   overflow-wrap: break-word
   +monospaced-font-family
+  overflow: hidden
 
 .code-box__top
-  border-top-left-radius: 3px
-  border-top-right-radius: 3px
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
   // background-color: $green
   // border-bottom: 1px solid $base-body-color
   +horizontal-padding(3)
-  +vertical-padding(3)
+  +vertical-padding(2)
   a
     +margin-right(2)
 
 .code-box__body
-  +margin-bottom(6)
   position: relative
-  border-bottom-left-radius: 3px
-  border-bottom-right-radius: 3px
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
   pre
     margin: 0 !important
     padding-top: 42px !important

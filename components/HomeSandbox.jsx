@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
+import { ClapButton, LikeButton, UpdownButton, RateButton } from "@lyket/react";
 import CodeBox from "./CodeBox";
 import Confetti from "react-confetti";
 
@@ -7,6 +7,7 @@ const buttons = {
 	clap: ClapButton,
 	like: LikeButton,
 	updown: UpdownButton,
+	rate: RateButton,
 };
 
 const HomeSandbox = ({ selectedTab, selectedTech, showMenu = true }) => {
@@ -50,10 +51,22 @@ const HomeSandbox = ({ selectedTab, selectedTech, showMenu = true }) => {
 						>
 							Updown
 						</button>
+
+						<span>|</span>
+
+						<button
+							className={`menu__link${selected === "rate" ? " active" : " "}`}
+							onClick={(e) => {
+								e.preventDefault();
+								setButton("rate");
+							}}
+						>
+							Rate
+						</button>
 					</div>
 				</div>
 			)}
-			<div className="flag">
+			<div className={"flag"}>
 				{showConfetti && (
 					<Confetti width={2000} height={500} recycle={false} gravity={0.4} />
 				)}
@@ -63,6 +76,9 @@ const HomeSandbox = ({ selectedTab, selectedTech, showMenu = true }) => {
 				<div className="flag__right">
 					<div className="lyket__container">
 						<div className={`lyket__${selected}`}>
+							{selected === "rate" && (
+								<p className="lyket__rate__intro">Your rating</p>
+							)}
 							<Button
 								onPress={(buttonData) => {
 									if (
@@ -85,7 +101,20 @@ const HomeSandbox = ({ selectedTab, selectedTech, showMenu = true }) => {
 								}}
 								namespace="homepage"
 								id={`everybody-${selected}-now`}
+								showRating="user"
 							/>
+							{selected === "rate" && (
+								<div className={`lyket__${selected}`}>
+									<p className="lyket__rate__intro space--top-2">
+										Average rating
+									</p>
+									<Button
+										namespace="homepage"
+										id={`everybody-${selected}-now`}
+										showRating="average"
+									/>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>

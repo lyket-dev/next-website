@@ -26,3 +26,31 @@ export default function QuickDocsMenu() {
 		</div>
 	);
 }
+
+export function QuickReactDocsMenu() {
+	return (
+		<div className="menu">
+			<ActiveLink href="/docs/react/like-button-react" className="menu__link">
+				<>Like</>
+			</ActiveLink>
+			<span>|</span>
+			<ActiveLink
+				href="/docs/react/like-dislike-button-react"
+				className="menu__link"
+			>
+				<>Like/dislike</>
+			</ActiveLink>
+			<span>|</span>
+			<ActiveLink
+				href="/docs/react/applause-button-react"
+				className="menu__link"
+			>
+				<>Applause</>
+			</ActiveLink>
+			<span>|</span>
+			<ActiveLink href="/docs/react/rate-button-react" className="menu__link">
+				<>Rate</>
+			</ActiveLink>
+		</div>
+	);
+}

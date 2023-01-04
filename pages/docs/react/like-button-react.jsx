@@ -1,49 +1,10 @@
 import React, { useState } from "react";
-import QuickDocsMenu from "components/QuickDocsMenu";
+import { QuickReactDocsMenu } from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Head from "next/head";
 import Link from "next/link";
-import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
+import { LikeButton, Provider } from "@lyket/react";
 import HomeSandbox from "components/HomeSandbox";
-
-const menu = [
-	{
-		id: "how-buttons-work",
-		label: "How the buttons work",
-	},
-	{
-		id: "installation",
-		label: "Installation",
-	},
-	{
-		id: "buttons",
-		label: "Configuring the buttons",
-	},
-	{
-		id: "templates",
-		label: "Button Templates",
-	},
-	{
-		id: "like-button",
-		label: "Configuring a Like Button",
-	},
-	{
-		id: "updown-button",
-		label: "Configuring a Like/Dislike Button",
-	},
-	{
-		id: "clap-button",
-		label: "Configuring a Clap Button",
-	},
-	{
-		id: "custom-button",
-		label: "Create a custom button",
-	},
-	{
-		id: "styling",
-		label: "Applying custom style to button templates",
-	},
-];
 
 export default function Docs() {
 	return (
@@ -51,7 +12,7 @@ export default function Docs() {
 			<Head>
 				<title>Instantly implement like buttons on React | Lyket</title>
 				<meta
-					content="Lyket is the number one tool to add, manage and track like buttons on any React project."
+					content="Lyket is the ultimate tool to add, manage and track like buttons on any React project."
 					name="description"
 				/>
 			</Head>
@@ -61,7 +22,7 @@ export default function Docs() {
 					<h1 className="page__kicker">like button React</h1>
 					<h2 className="docs__title">Lyket like button documentation</h2>
 					<div className="docs__menu__container">
-						<QuickDocsMenu />
+						<QuickReactDocsMenu />
 					</div>
 				</div>
 				<section className="page__section">
@@ -168,7 +129,7 @@ export default function Docs() {
 							</section>
 
 							<section>
-								<h4 id="installation">Installation</h4>
+								<h4 id="installation">Install Lyket</h4>
 								<p>Well, Let's get started! To install the component run</p>
 								<Code>yarn add @lyket/react</Code>
 								<p>or</p>
@@ -265,7 +226,7 @@ export BlogPost = ({ title, content }) => {
 								</Code>
 								<div className="flex-center big">
 									<div className="try">Try it! →</div>
-									<LikeButton namespace="detail-docs" id="react-like-button" />
+									<LikeButton namespace="react-docs" id="react-like-button" />
 								</div>
 								<h6>Required props</h6>
 								<ul>
@@ -369,7 +330,7 @@ export StandingOvation = () => {
       <h4 id="Do you like pizza?">Do you like pizza?</h4>
       <LikeButton
         id="do-you-like-pizza"
-        component={ClapButton.templates.Twitter}
+        component={LikeButton.templates.Twitter}
       />
     </>
   );
@@ -384,18 +345,25 @@ export StandingOvation = () => {
 								. You can do that by{" "}
 								<strong>creating your own custom button</strong>!
 							</p>
-							<p>
-								Here is an example for each button type of using a custom
-								component by passing it as <strong>"children"</strong>. You can
-								pass a custom component also{" "}
-								<strong>through the component prop</strong>.
-							</p>
-							<h6>Custom Like Button</h6>
-							<p>
-								The clap button component allows you to customize the look and
-								feel of your button, like changing the icon, show or hide the
-								counter and so on. These are the available props:
-							</p>
+							<p>These are the available props:</p>
+							<ul>
+								<li>
+									<strong>handlePressUp</strong>:{" "}
+									<em>(buttonData: ClapButtonData) =&gt; void</em>
+								</li>
+								<li>
+									<strong>totalScore</strong>: <em>number</em>
+								</li>
+								<li>
+									<strong>userLiked</strong>: <em>boolean</em>
+								</li>
+								<li>
+									<strong>isLoading</strong>: <em>boolean</em>
+								</li>
+								<li>
+									<strong>isCounterVisible</strong>: <em>boolean</em>
+								</li>
+							</ul>
 							<Code>
 								{`import { LikeButton } from '@lyket/react';
 
@@ -429,7 +397,7 @@ export Faq = () => {
 };`}
 							</Code>
 							<LikeButton
-								namespace="detail-docs"
+								namespace="react-docs"
 								id="like-button-react-example-custom"
 							>
 								{({ handlePress, totalLikes, userLiked, isLoading }) => {
@@ -451,40 +419,6 @@ export Faq = () => {
 									);
 								}}
 							</LikeButton>
-							<h6>
-								<em>LikeButtonData</em>
-							</h6>
-							<ul>
-								<li>
-									<strong>id</strong>: <em>string</em>
-								</li>
-								<li>
-									<strong>type</strong>: <em>"like_button"</em>
-								</li>
-								<li>
-									<strong>attributes</strong>: <em>Object</em>
-									<ul>
-										<li>
-											<strong>namespace</strong>: <em>string</em>
-										</li>
-										<li>
-											<strong>namespaceRank</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>totalLikes</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>totalRank</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>totalVotes</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>userLiked</strong>: <em>boolean</em>
-										</li>
-									</ul>
-								</li>
-							</ul>
 
 							<section>
 								<h3 id="styling">
@@ -590,6 +524,7 @@ export Faq = () => {
 };`}
 								</Code>
 							</section>
+
 							<section>
 								<h4 id="recaptcha">reCAPTCHA</h4>
 								<p>

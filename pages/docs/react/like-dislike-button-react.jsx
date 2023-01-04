@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QuickDocsMenu from "components/QuickDocsMenu";
+import { QuickReactDocsMenu } from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function Docs() {
 					Implement like/dislike buttons to your React project | Lyket
 				</title>
 				<meta
-					content="Lyket is a tool to instantly add like/dislike to any React project."
+					content="Lyket is the ultimate tool to instantly add like/dislike to any React project."
 					name="description"
 				/>
 			</Head>
@@ -26,7 +26,7 @@ export default function Docs() {
 						Implement like/dislike buttons on React
 					</h2>
 					<div className="docs__menu__container">
-						<QuickDocsMenu />
+						<QuickReactDocsMenu />
 					</div>
 				</div>
 				<section className="page__section">
@@ -234,7 +234,10 @@ export BlogPost = ({ title, content }) => {
 								</Code>
 								<div className="flex-center big">
 									<div className="try">Try it! →</div>
-									<UpdownButton namespace="docs" id="react-updown-button" />
+									<UpdownButton
+										namespace="react-docs"
+										id="react-updown-button"
+									/>
 								</div>
 								<h6>Required props</h6>
 								<ul>
@@ -308,7 +311,7 @@ export BlogPost = ({ title, content }) => {
 							</section>
 
 							<section>
-								<h4 id="templates">Button Templates</h4>
+								<h4 id="templates">Like/disklike button Templates</h4>
 								<p>
 									Lyket provides a set of{" "}
 									<strong>out-of-the-box templates</strong>. You can see all the
@@ -357,20 +360,16 @@ export BlogPost = ({ title, content }) => {
 										<strong>Heart</strong>: Heart style - supports custom theme
 									</li>
 								</ul>
-								<p>
-									Import templates directly from the button. Here is an example
-									of using the Twitter template on a LikeButton.
-								</p>
 								<Code>
-									{`import { LikeButton } from '@lyket/react';
+									{`import { UpdownButton } from '@lyket/react';
 
 export StandingOvation = () => {
   return (
     <>
       <h4 id="Do you like pizza?">Do you like pizza?</h4>
-      <LikeButton
+      <UpdownButton
         id="do-you-like-pizza"
-        component={ClapButton.templates.Twitter}
+        component={UpdownButton.templates.Chevron}
       />
     </>
   );
@@ -462,7 +461,7 @@ export Faq = () => {
 };`}
 							</Code>
 							<UpdownButton
-								namespace="docs"
+								namespace="react-docs"
 								id="like-dislike-button-react-example-custom"
 							>
 								{({
