@@ -58,8 +58,8 @@ export default function Docs() {
 			<div className="page">
 				<div className="page__section--gradient" />
 				<div className="docs__title__container">
-					<h2 className="page__kicker">clap & like button on React</h2>
-					<h1 className="docs__title">React docs</h1>
+					<h1 className="page__kicker">clap & like button on React</h1>
+					<h2 className="docs__title">React docs</h2>
 					<div className="docs__menu__container">
 						<QuickDocsMenu />
 					</div>
@@ -106,6 +106,11 @@ export default function Docs() {
 								<li>
 									<Link href="/blog/posts/react-like-dislike-button">
 										How to add like dislike buttons to a React project
+									</Link>
+								</li>
+								<li>
+									<Link href="/blog/posts/star-rating-react">
+										How to create a Star rating component with React
 									</Link>
 								</li>
 							</ul>

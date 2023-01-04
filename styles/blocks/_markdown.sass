@@ -7,16 +7,10 @@
   h1, h2, h3, h4, h5
     +heading-font-family
 
-  h1
-    font-weight: bold
-    +font-size(alphaplus)
-    +margin-top(5)
-    +margin-bottom(4)
-
   h3
     +font-size(alphaplus)
     font-weight: 700
-    +margin-top(5)
+    +margin-top(6)
     +margin-bottom(3)
 
   h4
@@ -104,7 +98,8 @@
     +margin-right(2)
 
   .big
-    +font-size(big)
+    +font-size(alphaplus)
+    line-height: 1
 
   .huge
     +font-size(huge)
@@ -118,13 +113,20 @@
 .language-html
   overflow: scroll
 
+// desktop first
 @media only screen and (max-width: 1000px)
   .markdown
     .big
-      +font-size(alpha)
+      font-size: 40px
 
     .huge
       +font-size(big)
+
+    h3
+      font-size: 40px
+      font-weight: 700
+      +margin-top(6)
+      +margin-bottom(3)
 
     h4
       +font-size(alpha)
@@ -142,7 +144,7 @@
       padding-left: 20px
       +margin-bottom(4)
 
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 600px)
   .markdown
     .big
       +font-size(beta)

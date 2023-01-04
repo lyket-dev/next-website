@@ -67,8 +67,8 @@ export default function Post() {
 			</Head>
 			<div className="page">
 				<section className="page__section">
-					<h2 className="page__kicker">React like/dislike button</h2>
-					<h1 className="page__title">{meta.title}</h1>
+					<h1 className="page__kicker">React like/dislike button</h1>
+					<h2 className="page__title">{meta.title}</h2>
 					<div className="half__reaction">
 						<UpdownButton namespace="blog" id="like-dislike-button-react" />
 					</div>
@@ -383,6 +383,11 @@ export default function Post() {
 							<li>
 								<Link href="/blog/posts/react-like-button">
 									How to create a React like button
+								</Link>
+							</li>
+							<li>
+								<Link href="/blog/posts/star-rating-react">
+									How to create a Star rating component with React
 								</Link>
 							</li>
 						</ul>

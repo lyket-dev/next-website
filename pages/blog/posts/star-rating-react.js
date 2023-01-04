@@ -17,7 +17,6 @@ export const meta = {
 
 export default function Post() {
 	const [dialogOpen, setDialog] = useState(false);
-	const [rating, setRating] = useState(2);
 
 	const openSubscribeModal = () => {
 		setTimeout(() => setDialog(true), 500);
@@ -76,8 +75,8 @@ export default function Post() {
 			</Head>
 			<div className="page">
 				<section className="page__section">
-					<h2 className="page__kicker">Star rating React</h2>
-					<h1 className="page__title">{meta.title}</h1>
+					<h1 className="page__kicker">Star rating React</h1>
+					<h2 className="page__title">{meta.title}</h2>
 					<div className="half__reaction">
 						<UpdownButton
 							namespace="blog"
@@ -238,7 +237,7 @@ export default function Post() {
 							/>
 						</div>
 						<p />
-						<h4>Change stars colors!</h4>
+						<h3>Change the star rating colors!</h3>
 						<p>
 							You can use your website colors to style the React rating
 							component. Do that by configuring the Provider component. It
@@ -312,7 +311,7 @@ export default function Post() {
 							</div>
 						</Provider>
 
-						<h4>Create your own star rating button!</h4>
+						<h3>Create your own star rating button!</h3>
 						<p>
 							You may want to have a rating component more consistent with your
 							website, for example you may want to use pizza as an icon as a
@@ -417,7 +416,7 @@ export default function Post() {
 							)}
 						</RateButton>
 
-						<h4>Engage your users!</h4>
+						<h3>Engage your users!</h3>
 						<p>
 							Once you have your star rating component up and running, you can
 							start thinking about how to{" "}
@@ -454,7 +453,7 @@ export default function Post() {
 							/>
 						</div>
 
-						<h4>See results</h4>
+						<h3>See results</h3>
 						<p>
 							Now that you have a review counter in your website, you might be
 							interested to see statistics on the ratings.
@@ -470,7 +469,7 @@ export default function Post() {
 							of feedback buttons, you can read our{" "}
 							<Link href="/docs/react">React documentation</Link>.
 						</p>
-						<h4>The other button types</h4>
+						<h3>The other button types</h3>
 						<p>
 							The Star rating React is just one of user-feedback tools that
 							Lyket offers. Each button has a different behaviour and can get

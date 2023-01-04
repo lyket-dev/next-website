@@ -24,7 +24,8 @@ export default function Post() {
 			</Head>
 			<div className="page">
 				<section className="page__section">
-					<h1 className="page__title">{meta.title}</h1>
+					<h1 className="page__kicker">Facebook like button</h1>
+					<h2 className="page__title">{meta.title}</h2>
 					<div className="half__reaction">
 						<ClapButton
 							namespace="blog"

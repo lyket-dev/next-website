@@ -351,6 +351,11 @@ export default function Post() {
 									How to create a React like dislike button
 								</Link>
 							</li>
+							<li>
+								<Link href="/blog/posts/star-rating-react">
+									How to create a Star rating component with React
+								</Link>
+							</li>
 						</ul>
 					</section>
 				</div>
