@@ -14,8 +14,6 @@ Docs.getInitialProps = async (_ctx) => {
 };
 
 export default function Docs({ schema }) {
-	console.log(schema);
-
 	return (
 		<>
 			<Head>
