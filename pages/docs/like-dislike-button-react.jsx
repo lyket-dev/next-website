@@ -6,60 +6,25 @@ import Link from "next/link";
 import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
 import HomeSandbox from "components/HomeSandbox";
 
-const menu = [
-	{
-		id: "how-buttons-work",
-		label: "How the buttons work",
-	},
-	{
-		id: "installation",
-		label: "Installation",
-	},
-	{
-		id: "buttons",
-		label: "Configuring the buttons",
-	},
-	{
-		id: "templates",
-		label: "Button Templates",
-	},
-	{
-		id: "like-button",
-		label: "Configuring a Like Button",
-	},
-	{
-		id: "updown-button",
-		label: "Configuring a Like/Dislike Button",
-	},
-	{
-		id: "clap-button",
-		label: "Configuring a Clap Button",
-	},
-	{
-		id: "custom-button",
-		label: "Create a custom button",
-	},
-	{
-		id: "styling",
-		label: "Applying custom style to button templates",
-	},
-];
-
 export default function Docs() {
 	return (
 		<>
 			<Head>
-				<title>Instantly implement like buttons on React | Lyket</title>
+				<title>
+					Implement like/dislike buttons to your React project | Lyket
+				</title>
 				<meta
-					content="Lyket is the number one tool to add, manage and track like buttons on any React project."
+					content="Lyket is a tool to instantly add like/dislike to any React project."
 					name="description"
 				/>
 			</Head>
 			<div className="page">
 				<div className="page__section--gradient" />
 				<div className="docs__title__container">
-					<h1 className="page__kicker">like button React</h1>
-					<h2 className="docs__title">Lyket like button documentation</h2>
+					<h1 className="page__kicker">like/dislike button React</h1>
+					<h2 className="docs__title">
+						Implement like/dislike buttons on React
+					</h2>
 					<div className="docs__menu__container">
 						<QuickDocsMenu />
 					</div>
@@ -68,39 +33,42 @@ export default function Docs() {
 					<div className="docs">
 						<div className="markdown docs__menu__right">
 							<p>
-								Lyket is the ultimate tool to add like buttons to your React
-								project! The library allows a{" "}
+								Lyket is the ultimate tool to add like/dislike buttons to your
+								React app! The library allows a{" "}
 								<strong>great deal of customization</strong> with just a few
 								lines of code and it's{" "}
 								<strong>compatible with all React frameworks</strong> like
 								NextJS, Gatsby, create-react-app.
 							</p>
-
 							<section>
 								<HomeSandbox
-									selectedTab="like"
+									selectedTab="updown"
 									selectedTech="react"
 									showMenu={false}
 								/>
 							</section>
 
-							<p>
-								If you want to find out how to use the{" "}
-								<strong>React library in detail</strong> you came to the right
-								place. If you prefer to{" "}
-								<strong>learn with examples and ready-made snippets</strong> to
-								copy and paste, you can visit:
-							</p>
-							<ul>
-								<li>
-									<Link href="/blog/posts/react-like-button">
-										How to add like buttons to a React project
-									</Link>
-								</li>
-							</ul>
+							<section>
+								<p>
+									If you want to find out how to use the{" "}
+									<strong>React library in detail</strong> you came to the right
+									place. If you prefer to{" "}
+									<strong>learn with examples and ready-made snippets</strong>{" "}
+									to copy and paste, you can visit:
+								</p>
+								<ul>
+									<li>
+										<Link href="/blog/posts/react-like-dislike-button">
+											How to add like dislike buttons to a React project
+										</Link>
+									</li>
+								</ul>
+							</section>
 
 							<section>
-								<h3 id="how-buttons-work">How Lyket like buttons work</h3>
+								<h3 id="how-buttons-work">
+									How Lyket like/dislike buttons work
+								</h3>
 								<p>
 									All Lyket buttons share these{" "}
 									<strong>basic behaviors and features:</strong>
@@ -168,7 +136,7 @@ export default function Docs() {
 							</section>
 
 							<section>
-								<h4 id="installation">Installation</h4>
+								<h4 id="installation">Install Lyket</h4>
 								<p>Well, Let's get started! To install the component run</p>
 								<Code>yarn add @lyket/react</Code>
 								<p>or</p>
@@ -237,35 +205,36 @@ ReactDOM.render(
 							</section>
 
 							<section>
-								<h4 id="buttons">Configuring like buttons</h4>
+								<h3 id="buttons">Configure like/dislike buttons</h3>
 								<p>
 									Once you configured the Provider you can start adding like
 									buttons anywhere in your app.
 								</p>
 								<p>
-									Like buttons behave like Twitter like buttons.
-									<strong>Visitors can only like once</strong> and a subsequent
-									request from the same visitor will remove the visitor's like.
+									Up/down buttons behave like Reddit like/dislike buttons.
+									Visitors <strong>can only like or dislike once</strong> and a
+									subsequent action from the visitor will remove the visitor's
+									like or dislike.
 								</p>
 								<Code>
-									{`import { LikeButton } from '@lyket/react';
+									{`import { UpdownButton } from '@lyket/react';
 
 export BlogPost = ({ title, content }) => {
   return (
     <div>
       {title}
-      <LikeButton
-        id="how-to-reduce-footprint"
+      <UpdownButton
+        id="how-i-joined-the-raiders-of-the-lost-ark"
         namespace="post"
       />
       {content}
     </div>
-    );
-  };`}
+  );
+};`}
 								</Code>
 								<div className="flex-center big">
 									<div className="try">Try it! →</div>
-									<LikeButton namespace="detail-docs" id="react-like-button" />
+									<UpdownButton namespace="docs" id="react-updown-button" />
 								</div>
 								<h6>Required props</h6>
 								<ul>
@@ -321,16 +290,25 @@ export BlogPost = ({ title, content }) => {
 									</li>
 									<li>
 										<p>
-											<strong>onPress</strong>:{" "}
-											<em>(buttonData: LikeButtonData) =&gt; void</em> - This
-											function gets called whenever a Press action is triggered.
+											<strong>onPressUp</strong>:{" "}
+											<em>(buttonData: UpdownButtonData) =&gt; void</em> - This
+											function gets called whenever a PressUp action is
+											triggered.
+										</p>
+									</li>
+									<li>
+										<p>
+											<strong>onPressDown</strong>:{" "}
+											<em>(buttonData: UpdownButtonData) =&gt; void</em> - This
+											function gets called whenever a PressDown action is
+											triggered.
 										</p>
 									</li>
 								</ul>
 							</section>
 
 							<section>
-								<h4 id="templates">Like button Templates</h4>
+								<h4 id="templates">Button Templates</h4>
 								<p>
 									Lyket provides a set of{" "}
 									<strong>out-of-the-box templates</strong>. You can see all the
@@ -341,6 +319,7 @@ export BlogPost = ({ title, content }) => {
 									By default, ie. if you don't specify any template or custom
 									component, Lyket will show the Simple Template.
 								</p>
+								<h6 id="like-templates">LikeButton Templates</h6>
 								<ul>
 									<li>
 										<strong>Simple (default)</strong> - supports custom theme
@@ -351,6 +330,28 @@ export BlogPost = ({ title, content }) => {
 									<li>
 										<strong>Chevron</strong>: Chevron style - supports custom
 										theme
+									</li>
+								</ul>
+								<h6 id="updown-templates">UpdownButton Templates</h6>
+								<ul>
+									<li>
+										<strong>Simple (default)</strong> - supports custom theme
+									</li>
+									<li>
+										<strong>Reddit</strong>: Reddit style
+									</li>
+									<li>
+										<strong>Chevron</strong>: Chevron style - supports custom
+										theme
+									</li>
+								</ul>
+								<h6 id="clap-templates">ClapButton Templates</h6>
+								<ul>
+									<li>
+										<strong>Simple (default)</strong> - supports custom theme
+									</li>
+									<li>
+										<strong>Medium</strong>: Medium style
 									</li>
 									<li>
 										<strong>Heart</strong>: Heart style - supports custom theme
@@ -377,119 +378,138 @@ export StandingOvation = () => {
 								</Code>
 							</section>
 
-							<h3 id="custom-button">Custom like buttons</h3>
+							<h4 id="custom-button">Custom like/dislike button</h4>
 							<p>
-								You may want to give a different flavour to your like button,{" "}
+								You may want to give a different flavour to a button,{" "}
 								<strong>for example using your company logo as the icon</strong>
 								. You can do that by{" "}
-								<strong>creating your own custom button</strong>!
+								<strong>creating your own custom button</strong>! Like/dislike
+								component allows you to customize the look and feel of your
+								button, like changing the icon, show or hide the counter and so
+								on.
 							</p>
 							<p>
-								Here is an example for each button type of using a custom
-								component by passing it as <strong>"children"</strong>. You can
-								pass a custom component also{" "}
-								<strong>through the component prop</strong>.
+								Here is an example of a custom component by passing it as{" "}
+								<strong>"children"</strong>. You can also pass a custom
+								component also <strong>through the component prop</strong>.
 							</p>
-							<h6>Custom Like Button</h6>
-							<p>
-								The clap button component allows you to customize the look and
-								feel of your button, like changing the icon, show or hide the
-								counter and so on. These are the available props:
-							</p>
+
+							<p>These are the available props:</p>
+							<ul>
+								<li>
+									<strong>handlePressUp</strong>:{" "}
+									<em>(buttonData: ClapButtonData) =&gt; void</em>
+								</li>
+								<li>
+									<strong>handlePressDown</strong>:{" "}
+									<em>(buttonData: ClapButtonData) =&gt; void</em>
+								</li>
+								<li>
+									<strong>totalScore</strong>: <em>number</em>
+								</li>
+								<li>
+									<strong>userVoteDirection</strong>: <em>-1 | 0 | 1</em>
+								</li>
+								<li>
+									<strong>isLoading</strong>: <em>boolean</em>
+								</li>
+								<li>
+									<strong>isCounterVisible</strong>: <em>boolean</em>
+								</li>
+							</ul>
 							<Code>
-								{`import { LikeButton } from '@lyket/react';
+								{`import { UpdownButton } from '@lyket/react';
 
 export Faq = () => {
   return (
     <>
       <h4 id="Do you like pizza?">Do you like pizza?</h4>
-      <LikeButton
+      <UpdownButton
         id="do-you-like-pizza"
         namespace="faq"
         hideCounterIfLessThan={1}
       >
         {({
-          handlePress,
-          totalLikes,
-          userLiked,
+          handlePressUp,
+          handlePressDown,
+          totalScore,
+          userVoteDirection,
+          isCounterVisible,
           isLoading,
-          isCounterVisible
         }) => (
           <>
-            <button onClick={handlePress} disabled={isLoading}>
-              🍕
+            <button onClick={handlePressUp} disabled={isLoading}>
+              + 🍕
             </button>
-            {isCounterVisible && <div>Total: {totalLikes}</div>}
-            {userLiked && <div>Great! I like pizza as well!</div>}
+            <button onClick={handlePressDown} disabled={isLoading}>
+              - 🍕
+            </button>
+            <div>Total votes: {totalScore}</div>
+            <div>
+              {
+                userVoteDirection > 0
+                ? ":D"
+                : userVoteDirection === 0
+                ? "I am waiting for you to vote..."
+                : ":("
+              }
+            </div>
           </>
         )}
-      </LikeButton>
+      </UpdownButton>
     </>
-  )
+  );
 };`}
 							</Code>
-							<LikeButton
-								namespace="detail-docs"
-								id="like-button-react-example-custom"
+							<UpdownButton
+								namespace="docs"
+								id="like-dislike-button-react-example-custom"
 							>
-								{({ handlePress, totalLikes, userLiked, isLoading }) => {
+								{({
+									handlePressUp,
+									handlePressDown,
+									totalScore,
+									userVoteDirection,
+									isLoading,
+								}) => {
 									return (
 										<div className="center">
 											<div className="flex-center big">
 												<div className="try">Try! →</div>
 												<button
-													className="huge"
-													onClick={handlePress}
+													className="big"
+													onClick={handlePressUp}
 													disabled={isLoading}
 												>
-													🍕
+													+ 🍕
+												</button>
+												<span> or </span>
+												<button
+													className="big"
+													onClick={handlePressDown}
+													disabled={isLoading}
+												>
+													- 🍕
 												</button>
 											</div>
-											<strong>Total likes: {totalLikes}</strong>
-											{userLiked && <div>Great! I like pizza as well!</div>}
+											<div>Total votes: {totalScore}</div>
+											<div>
+												{userVoteDirection > 0
+													? ":D"
+													: userVoteDirection === 0
+													? "I am waiting for you to vote..."
+													: ":("}
+											</div>
 										</div>
 									);
 								}}
-							</LikeButton>
-							<h6>
-								<em>LikeButtonData</em>
-							</h6>
-							<ul>
-								<li>
-									<strong>id</strong>: <em>string</em>
-								</li>
-								<li>
-									<strong>type</strong>: <em>"like_button"</em>
-								</li>
-								<li>
-									<strong>attributes</strong>: <em>Object</em>
-									<ul>
-										<li>
-											<strong>namespace</strong>: <em>string</em>
-										</li>
-										<li>
-											<strong>namespaceRank</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>totalLikes</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>totalRank</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>totalVotes</strong>: <em>number</em>
-										</li>
-										<li>
-											<strong>userLiked</strong>: <em>boolean</em>
-										</li>
-									</ul>
-								</li>
-							</ul>
+							</UpdownButton>
 
 							<section>
 								<h3 id="styling">
-									Apply custom styling to like button templates
+									Apply custom styling to like/dislike button templates
 								</h3>
+
 								<h5>Resizing</h5>
 								<p>
 									All button templates can be resized by wrapping them in a
@@ -590,6 +610,7 @@ export Faq = () => {
 };`}
 								</Code>
 							</section>
+
 							<section>
 								<h4 id="recaptcha">reCAPTCHA</h4>
 								<p>
