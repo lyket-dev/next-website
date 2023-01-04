@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns="http://www.w3.org/2000/svg" width="182" height="40" viewBox="0 0 182 40" version="1.1" id="svg26">
-  <metadata id="metadata30">
-    <rdf:RDF>
-      <cc:Work rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-        <dc:title>Logo GE</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs id="defs12">
+<svg width="182" height="40" viewBox="0 0 182 40">
 
-  </defs>
-  <title id="title14">Logo GE</title>
+
   <g fill="none" fill-rule="evenodd" id="g24">
     <path d="M 0,1 H 182 V 39 H 0 Z" id="path16"/>
     <g style="font-size:18px;font-family:GEInspiraSans-Regular" fill="#c6c6c6" id="text20" aria-label="GE Healthcare">

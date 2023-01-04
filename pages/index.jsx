@@ -210,54 +210,6 @@ export default function Home() {
 					<Ranking />
 				</div>
 			</section>
-			{false && (
-				<section className="section--primary">
-					<div className="section__container">
-						<h2 className="section__title">
-							<Decorator
-								fulltext="No-brainer"
-								toDecorate="No-brainer"
-								color="yellow"
-							/>
-						</h2>
-
-						<div className="ternary">
-							<div className="ternary__item--dyn">
-								<h6 className="ternary__title">The API</h6>
-								<p className="shbox">
-									Lyket's <strong>simple API</strong> tracks all reactions. You
-									can use a private API key to make requests from your server or
-									the public one to make requests from the client
-								</p>
-								<Link href="docs/api">
-									<a className="button--small">Read the docs</a>
-								</Link>
-							</div>
-							<div className="ternary__item--dyn">
-								<h6 className="ternary__title">The widget</h6>
-								<p className="shbox">
-									The jack-of-all-trades, Lyket's embedded version works with
-									all website builders that support custom HTML embedding -
-									Wordpress, Wix, Webflow and more!
-								</p>
-								<Link href="docs/html" title="Like button HTML">
-									<a className="button--small">Read the docs</a>
-								</Link>
-							</div>
-							<div className="ternary__item--dyn">
-								<h6 className="ternary__title">The React library</h6>
-								<p className="shbox">
-									The <strong>React/JS client</strong>works with all React based
-									frameworks and SSGs - like Gatsby, NextJS, React Native - See
-								</p>
-								<Link href="docs/react">
-									<a className="button--small">Read the docs</a>
-								</Link>
-							</div>
-						</div>
-					</div>
-				</section>
-			)}
 			<section className="section--primary">
 				<div className="section__container">
 					<h2 className="section__title">
@@ -278,13 +230,10 @@ export default function Home() {
 							<div className="stripe__container">
 								<h6 className="stripe__title">Fastest implementation</h6>
 								<p className="stripe__text">
-									By using our{" "}
-									<Link href="/docs/react">
-										<a>React component</a>
-									</Link>{" "}
+									By using our <Link href="/docs/react">React component</Link>{" "}
 									or our{" "}
 									<Link href="/docs/html" title="Like button HTML">
-										<a>HTML widget</a>
+										HTML widget
 									</Link>{" "}
 									, you just need to choose a style, provide an identifier for
 									your button and <strong>you are done!</strong>
@@ -302,7 +251,7 @@ export default function Home() {
 									can <strong>discourage interaction</strong> +{" "}
 									<strong>is bad for privacy concerns</strong>.{" "}
 									<Link href="/blog/posts/stop-using-facebook-like-button">
-										<a>Read more</a>
+										Read more
 									</Link>
 								</p>
 							</div>
@@ -316,10 +265,7 @@ export default function Home() {
 								<p className="stripe__text">
 									In addition to our score keeping system, we provide{" "}
 									<strong>updated and detailed rankings</strong> for all of your
-									buttons.{" "}
-									<Link href="/docs/api#ranking-api">
-										<a>Read more</a>
-									</Link>
+									buttons. <Link href="/docs/api#ranking-api">Read more</Link>
 								</p>
 							</div>
 						</div>
@@ -334,9 +280,7 @@ export default function Home() {
 									data in order. That is why we prioritize categorization! Each
 									button can have one broad{" "}
 									<strong>category, and multiple tags</strong>.{" "}
-									<Link href="/docs/api#categorization">
-										<a>Read more</a>
-									</Link>
+									<Link href="/docs/api#categorization">Read more</Link>
 								</p>
 							</div>
 						</div>
@@ -365,9 +309,7 @@ export default function Home() {
 									plan for test/hobby projects.{" "}
 									<strong>No credit card needed!</strong>
 								</p>
-								<Link href="/pricing">
-									<a>Visit our pricing page</a>
-								</Link>
+								<Link href="/pricing">Visit our pricing page</Link>
 							</div>
 						</div>
 					</div>

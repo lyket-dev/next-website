@@ -6,79 +6,73 @@ import Arrow from "public/icons/outline/arrow-right.svg";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const router = useRouter();
+	const [menuOpen, setMenuOpen] = useState(false);
+	const router = useRouter();
 
-  useEffect(() => setMenuOpen(false), [router.pathname]);
+	useEffect(() => setMenuOpen(false), [router.pathname]);
 
-  return (
-    <div className="navbar">
-      <Link href="/">
-        <a className="navbar__logo">
-          <div className="navbar__logo--mobile"></div>
-          <div className="navbar__logo--desk">LYKET</div>
-        </a>
-      </Link>
-      <ul className={`navbar__container${menuOpen ? "--visible" : ""}`}>
-        <a className="navbar__toggler" onClick={() => setMenuOpen(false)}>
-          <Close />
-        </a>
-        <li className="navbar__item">
-          <Link href="/templates">
-            <a className="navbar__link">Templates</a>
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <div className="navbar__group">
-            <a className="navbar__link">Docs</a>
-            <div className="navbar__pane">
-              <Link href="/docs/react">
-                <a className="navbar__pane__link">
-                  <strong>React</strong>
-                  <p>Add like buttons in a React project</p>
-                </a>
-              </Link>
-              <Link href="/docs/html" title="Like button HTML">
-                <a className="navbar__pane__link">
-                  <strong>HTML</strong>
-                  <p>Add HTML like buttons to any website</p>
-                </a>
-              </Link>
-              <Link href="/docs/wordpress">
-                <a className="navbar__pane__link">
-                  <strong>Wordpress</strong>
-                  <p>Like button Wordpress plugin</p>
-                </a>
-              </Link>
-              <Link href="/docs/api">
-                <a className="navbar__pane__link">
-                  <strong>API</strong>
-                  <p>All available endpoints</p>
-                </a>
-              </Link>
-            </div>
-          </div>
-        </li>
-        <li className="navbar__item">
-          <Link href="/pricing">
-            <a className="navbar__link">Pricing</a>
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link href="/contact">
-            <a className="navbar__link">Contact us</a>
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <a className="button" href={`${process.env.appBaseUrl}/signup`}>
-            Register
-            <Arrow />
-          </a>
-        </li>
-      </ul>
-      <a className="navbar__toggler" onClick={() => setMenuOpen(true)}>
-        <Menu />
-      </a>
-    </div>
-  );
+	return (
+		<div className="navbar">
+			<Link href="/" className="navbar__logo">
+				<div className="navbar__logo--mobile" />
+				<div className="navbar__logo--desk">LYKET</div>
+			</Link>
+			<ul className={`navbar__container${menuOpen ? "--visible" : ""}`}>
+				<button className="navbar__toggler" onClick={() => setMenuOpen(false)}>
+					<Close />
+				</button>
+				<li className="navbar__item">
+					<Link href="/templates" className="navbar__link">
+						Templates
+					</Link>
+				</li>
+				<li className="navbar__item">
+					<div className="navbar__group">
+						<span className="navbar__link">Docs</span>
+						<div className="navbar__pane">
+							<Link href="/docs/react" className="navbar__pane__link">
+								<strong>React</strong>
+								<p>Add like buttons in a React project</p>
+							</Link>
+							<Link
+								href="/docs/html"
+								title="Like button HTML"
+								className="navbar__pane__link"
+							>
+								<strong>HTML</strong>
+								<p>Add HTML like buttons to any website</p>
+							</Link>
+							<Link href="/docs/wordpress" className="navbar__pane__link">
+								<strong>Wordpress</strong>
+								<p>Like button Wordpress plugin</p>
+							</Link>
+							<Link href="/docs/api" className="navbar__pane__link">
+								<strong>API</strong>
+								<p>All available endpoints</p>
+							</Link>
+						</div>
+					</div>
+				</li>
+				<li className="navbar__item">
+					<Link href="/pricing" className="navbar__link">
+						Pricing
+					</Link>
+				</li>
+				<li className="navbar__item">
+					<Link href="/contact" className="navbar__link">
+						Contact us
+					</Link>
+				</li>
+				<li className="navbar__item">
+					<a className="button" href={`${process.env.appBaseUrl}/signup`}>
+						Register
+						<Arrow />
+					</a>
+				</li>
+			</ul>
+			<button className="navbar__toggler" onClick={() => setMenuOpen(true)}>
+				<Menu />
+			</button>
+		</div>
+	);
 }

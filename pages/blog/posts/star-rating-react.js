@@ -9,7 +9,6 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import Code from "components/Code";
-import StarRatings from "react-star-ratings";
 import { RateButton } from "@lyket/react";
 
 export const meta = {
@@ -144,10 +143,7 @@ export default function Post() {
 							"my-ramen-recipe" under the "cooking-book" category. To do that we
 							import the Provider component and the Rating component where we
 							want our button to be. Read more about configuring the Provider
-							component on the{" "}
-							<Link href="/docs/react">
-								<a>docs</a>
-							</Link>
+							component on the <Link href="/docs/react">docs</Link>
 						</p>
 						<Code>
 							{`import { Provider, RateButton } from "@lyket/react";
@@ -201,11 +197,8 @@ export default function Post() {
 							The most known rating is clearly the star rating! But you can
 							change the rating component style by choosing one of the templates
 							you can find in the{" "}
-							<Link href="/templates">
-								<a>templates section</a>
-							</Link>
-							. If you choose the Heart template you will get all hearts instead
-							of stars.
+							<Link href="/templates">templates section</Link>. If you choose
+							the Heart template you will get all hearts instead of stars.
 						</p>
 						<Code>
 							{`<span className="try">Average rating: </span>
@@ -350,6 +343,7 @@ export default function Post() {
 				if (userRating > index) {
 					return (
 						<button
+							key={index}
 							onClick={() => handlePress(index + 1)}
 							disabled={isLoading}
 						>
@@ -389,6 +383,7 @@ export default function Post() {
 											if (averageRating > index) {
 												return (
 													<button
+														key={`button-${index}`}
 														className="big"
 														onClick={() => handlePress(index + 1)}
 														disabled={isLoading}
@@ -473,10 +468,7 @@ export default function Post() {
 						<p>
 							For more details about Lyket's star rating React, and other type
 							of feedback buttons, you can read our{" "}
-							<Link href="/docs/react">
-								<a>React documentation</a>
-							</Link>
-							.
+							<Link href="/docs/react">React documentation</Link>.
 						</p>
 						<h4>The other button types</h4>
 						<p>
@@ -487,17 +479,17 @@ export default function Post() {
 						<ul>
 							<li>
 								<Link href="/blog/posts/react-like-button">
-									<a>How to add a React like button to your website</a>
+									How to add a React like button to your website
 								</Link>
 							</li>
 							<li>
 								<Link href="/blog/posts/clap-button">
-									<a>How to create a React clap button</a>
+									How to create a React clap button
 								</Link>
 							</li>
 							<li>
 								<Link href="/blog/posts/react-like-dislike-button">
-									<a>How to add a React like/dislike button to your website</a>
+									How to add a React like/dislike button to your website
 								</Link>
 							</li>
 						</ul>
