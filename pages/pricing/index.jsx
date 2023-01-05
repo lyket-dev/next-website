@@ -117,10 +117,12 @@ export default function Privacy() {
 								<Thumb className="icon" />
 							</div>
 							<div className="stripe__container">
-								<h6 className="stripe__title">Three different buttons</h6>
+								<h6 className="stripe__title">
+									Four different button behaviors
+								</h6>
 								<p className="stripe__text">
-									All three buttons have a specific function and can be used to
-									receive different feedback.
+									Lyket offers four types of button behaviors, each with a
+									specific function and aimed at gathering different feedback.
 								</p>
 							</div>
 						</div>
@@ -145,7 +147,7 @@ export default function Privacy() {
 							<div className="stripe__container">
 								<h6 className="stripe__title">Support</h6>
 								<p className="stripe__text">
-									We are a small team always ready to help you.
+									We are an enthusiastic team, and always ready to help you.
 								</p>
 							</div>
 						</div>
@@ -154,10 +156,10 @@ export default function Privacy() {
 								<Mail className="icon" />
 							</div>
 							<div className="stripe__container">
-								<h6 className="stripe__title">Email notifications</h6>
+								<h6 className="stripe__title">Out of the box buttons</h6>
 								<p className="stripe__text">
-									Get notified when someone is leaving a feedback or when you
-									reach a certain number of votes! [WIP]
+									Implementing your first Lyket button on a website takes
+									literally 4 minutes, thanks to our out-of-the-box-integration.
 								</p>
 							</div>
 						</div>
@@ -178,9 +180,9 @@ export default function Privacy() {
 								<ImEx className="icon" />
 							</div>
 							<div className="stripe__container">
-								<h6 className="stripe__title">Import-export data</h6>
+								<h6 className="stripe__title">Import data</h6>
 								<p className="stripe__text">
-									Easily import your data from Medium or export to csv.
+									Easily import your data from Medium or any csv file.
 								</p>
 							</div>
 						</div>

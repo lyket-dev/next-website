@@ -220,7 +220,12 @@ ReactDOM.render(
 								user's vote.
 							</p>
 							<p>
-								The component can show the average rating or the user rating.
+								Rating components have two interfaces. Given the same button,
+								ie. with same id-namespace combination, you may want to show two
+								types of information: the average rating for that button, and an
+								interface in which the user can click to leave their rating. You
+								can select which interface you want to show, with the attribute{" "}
+								<code>showRating</code>
 							</p>
 							<Code>
 								{`import { RateButton } from '@lyket/react';
@@ -250,8 +255,8 @@ export Restaurant = () => {
 								<div className="try">Average rating: </div>
 								<div>
 									<RateButton
-										namespace="cooking-book"
-										id="my-ramen-recipe"
+										namespace="react-docs"
+										id="star-rating"
 										showRating="average"
 									/>
 								</div>
@@ -260,8 +265,8 @@ export Restaurant = () => {
 							<div className="flex-left big">
 								<div className="try">Click to rate! →</div>
 								<RateButton
-									namespace="cooking-book"
-									id="my-ramen-recipe"
+									namespace="react-docs"
+									id="star-rating"
 									showRating="user"
 								/>
 							</div>

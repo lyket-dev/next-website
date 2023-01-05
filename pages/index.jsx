@@ -12,7 +12,7 @@ import Trending from "public/icons/outline/trending-up.svg";
 import GeHC from "public/icons/logos/ge-logo.svg";
 import Heat from "public/icons/logos/heat-logo.svg";
 import TedX from "public/icons/logos/tedx-logo.svg";
-import { ClapButton, LikeButton, UpdownButton } from "@lyket/react";
+import { ClapButton, LikeButton, RateButton, UpdownButton } from "@lyket/react";
 
 export default function Home() {
 	return (
@@ -87,7 +87,15 @@ export default function Home() {
 							<p className="half__text">
 								Know immediately which are the{" "}
 								<strong>most wanted products in your catalog</strong> by letting
-								your users leave a like!
+								your users leave a like, while{" "}
+								<Link href="/blog/posts/stop-using-facebook-like-button">
+									respecting their privacy
+								</Link>
+								! Learn now how to{" "}
+								<Link href="/blog/posts/react-like-button">
+									add a like button
+								</Link>{" "}
+								to your website.
 							</p>
 						</div>
 						<div className="half__right">
@@ -145,10 +153,12 @@ export default function Home() {
 							<p className="half__text">
 								Comments can lead to useless polemics, while a{" "}
 								<strong>simple like button</strong> can make your blog feel
-								alive!
+								alive!{" "}
+								<Link href="/blog/posts/medium-clap-button">Read more.</Link>
 							</p>
 						</div>
 					</div>
+
 					<div className="half">
 						<div className="half__left half__shadow">
 							<h2 className="half__kicker">For developers</h2>
@@ -187,6 +197,50 @@ export default function Home() {
 							</div>
 						</div>
 						<div className="half__line--yellow" />
+					</div>
+
+					<div className="half">
+						<div className="half__line--pink" />
+						<div className="half__left">
+							<div className="half__reaction">
+								<div className="half__image__container">
+									<img
+										className="half__arrow"
+										alt="arrow"
+										src="/assets/arrow-down.png"
+									/>
+									<img
+										src="/assets/rating-component-react.png"
+										alt="rating-component-react"
+										title="rating-component-react"
+									/>
+								</div>
+								<div className="text__left">
+									<RateButton
+										id="blog"
+										namespace="homepage"
+										showRating="user"
+									/>
+									<RateButton
+										id="blog"
+										namespace="homepage"
+										showRating="average"
+									/>
+								</div>
+							</div>
+						</div>
+						<div className="half__right half__shadow">
+							<h2 className="half__kicker">For community builders</h2>
+							<p className="half__title">
+								Which of your services is the most appreciated?
+							</p>
+							<p className="half__text">
+								If you are offering a service, or content in general, it is
+								paramount to know, and to let other know,{" "}
+								<strong>what the community thinks</strong> about it!{" "}
+								<Link href="/docs/react/react-rating-component">Read how.</Link>
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>

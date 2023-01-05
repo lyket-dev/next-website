@@ -3,7 +3,13 @@ import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Link from "next/link";
 import Head from "next/head";
-import { LikeButton, ClapButton, UpdownButton, Provider } from "@lyket/react";
+import {
+	LikeButton,
+	ClapButton,
+	UpdownButton,
+	Provider,
+	RateButton,
+} from "@lyket/react";
 import Anchor from "components/Anchor";
 
 export default function Docs() {
@@ -227,7 +233,7 @@ export default function Docs() {
 								<h4>All Lyket's HTML like buttons</h4>
 							</Anchor>
 							<p>
-								There are three different button types that have their own
+								There are four different button types that have their own
 								behaviours and properties. Each one of them can be used in
 								<strong>
 									different contexts and to achieve different results
@@ -395,6 +401,101 @@ export default function Docs() {
 									<strong>Heart</strong>: Heart style - supports custom theme
 								</li>
 							</ul>
+
+							<Anchor slug="html-star-rating" keyword="HTML star rating">
+								<h5>Clap button HTML</h5>
+							</Anchor>
+							<p>
+								Star rating behaves like <em>Tripadvisor ratings</em>. Each user
+								can leave one vote. By clicking again on the same button, the
+								vote will be removed.
+							</p>
+							<p>
+								Rating components have two interfaces. Given the same button,
+								ie. with same id-namespace combination, you may want to show two
+								types of information: the average rating for that button, and an
+								interface in which the user can click to leave their rating. You
+								can select which interface you want to show, with the attribute{" "}
+								<code>data-lyket-show-rating</code>
+							</p>
+							<p>
+								Use the <em>data-lyket-type="rate"</em> to create a star rating
+								button.
+							</p>
+							<Code language="html">
+								{`<!-- minimal settings -->
+<div data-lyket-type="rating" data-lyket-id="my-first-post" data-lyket-show-rating="user"/>
+<div data-lyket-type="rating" data-lyket-id="my-first-post" data-lyket-show-rating="average"/>
+
+<!-- with namespace -->
+<div
+  data-lyket-type="rating"
+  data-lyket-id="my-second-post"
+  data-lyket-namespace="blog"
+  data-lyket-show-rating="user"
+ />
+<div
+  data-lyket-type="rating"
+  data-lyket-id="my-second-post"
+  data-lyket-namespace="blog"
+  data-lyket-show-rating="average"
+ />
+
+<!-- with non-default template -->
+<div
+  data-lyket-type="rating"
+  data-lyket-id="my-third-post"
+  data-lyket-namespace="blog"
+	data-lyket-show-rating="user"
+  data-lyket-template="custom"
+ />
+<div
+  data-lyket-type="rating"
+  data-lyket-id="my-third-post"
+  data-lyket-namespace="blog"
+	data-lyket-show-rating="average"
+  data-lyket-template="custom"
+ />
+`}
+							</Code>
+							<div className="flex-left big">
+								<div className="try">Average rating: </div>
+								<div>
+									<RateButton
+										namespace="docs"
+										id="widget-rate-button"
+										showRating="average"
+									/>
+								</div>
+							</div>
+							<p />
+							<div className="flex-left big">
+								<div className="try">Click to rate! →</div>
+								<RateButton
+									namespace="docs"
+									id="widget-rate-button"
+									showRating="user"
+								/>
+							</div>
+							<Anchor
+								slug="rate-templates"
+								keyword="Star rating HTML Templates"
+							>
+								<h6>Star rating HTML Templates</h6>
+							</Anchor>
+							<ul>
+								<li>
+									<strong>Star (default)</strong> - does not support custom
+									theme
+								</li>
+								<li>
+									<strong>Custom</strong>: Medium style - supports custom theme
+								</li>
+								<li>
+									<strong>Heart</strong>: Heart style - supports custom theme
+								</li>
+							</ul>
+
 							<Anchor slug="styling-the-buttons" keyword="Like button HTML">
 								<h4>Styling the buttons</h4>
 							</Anchor>
