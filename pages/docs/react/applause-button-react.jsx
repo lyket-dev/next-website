@@ -20,7 +20,9 @@ export default function Docs() {
 				<div className="page__section--gradient" />
 				<div className="docs__title__container">
 					<h1 className="page__kicker">applause button React</h1>
-					<h2 className="docs__title">Implement applause buttons on React</h2>
+					<h2 className="docs__title">
+						How to implement applause buttons in React
+					</h2>
 					<div className="docs__menu__container">
 						<QuickReactDocsMenu />
 					</div>

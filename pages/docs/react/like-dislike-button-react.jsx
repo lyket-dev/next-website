@@ -23,7 +23,7 @@ export default function Docs() {
 				<div className="docs__title__container">
 					<h1 className="page__kicker">like/dislike button React</h1>
 					<h2 className="docs__title">
-						Implement like/dislike buttons on React
+						How to implement like/dislike buttons in React
 					</h2>
 					<div className="docs__menu__container">
 						<QuickReactDocsMenu />

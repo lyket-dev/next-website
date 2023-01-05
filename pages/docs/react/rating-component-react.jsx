@@ -21,7 +21,7 @@ export default function Docs() {
 				<div className="docs__title__container">
 					<h1 className="page__kicker">Rating component React</h1>
 					<h2 className="docs__title">
-						How to implement a rating component in React with Lyket
+						How to implement a rating component in React
 					</h2>
 					<div className="docs__menu__container">
 						<QuickReactDocsMenu />

@@ -10,7 +10,7 @@ export default function Docs() {
 	return (
 		<>
 			<Head>
-				<title>Instantly implement like buttons on React | Lyket</title>
+				<title>How to implement like buttons in React | Lyket</title>
 				<meta
 					content="Lyket is the ultimate tool to add, manage and track like buttons on any React project."
 					name="description"
