@@ -22,16 +22,17 @@ export default function Home() {
 					<div>
 						<h1 className="header__title">
 							<Decorator
-								fulltext="Add like buttons to any website!"
-								toDecorate="like buttons"
+								fulltext="Start receiving feedback, now!"
+								toDecorate="feedback"
 								color="blue"
 							/>
 						</h1>
 					</div>
 					<div>
 						<p className="header__subtitle">
-							Find out how to delight your customers and followers: start
-							getting <strong>immediate and no filter feedbacks</strong>, now!
+							Find out what delights your customers and followers. Implement{" "}
+							<strong>anonymous like and rating buttons</strong> on any website,
+							in a few clicks!
 						</p>
 						<div className="section--center">
 							<a

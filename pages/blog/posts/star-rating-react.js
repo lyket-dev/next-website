@@ -12,7 +12,7 @@ import Code from "components/Code";
 import { RateButton } from "@lyket/react";
 
 export const meta = {
-	title: "Implement a star rating in your React app with Lyket!",
+	title: "Add star ratings to your React project in a few clicks!",
 };
 
 export default function Post() {
@@ -60,12 +60,9 @@ export default function Post() {
 	return (
 		<>
 			<Head>
-				<title>
-					Star rating React - Out-of-the-box rating system for your website |
-					Lyket
-				</title>
+				<title>Out-of-the-box star rating React component | Lyket</title>
 				<meta
-					content="Implement a rating system with just a few clicks! With Lyket, you can add a star rating component without any effort"
+					content="Implement a star rating React component to any React project! With Lyket, it just takes no longer than 5 minutes."
 					name="description"
 				/>
 				<meta
