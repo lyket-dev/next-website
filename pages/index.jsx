@@ -216,17 +216,23 @@ export default function Home() {
 										title="rating-component-react"
 									/>
 								</div>
-								<div className="text__left">
-									<RateButton
-										id="blog"
-										namespace="homepage"
-										showRating="user"
-									/>
-									<RateButton
-										id="blog"
-										namespace="homepage"
-										showRating="average"
-									/>
+								<div className="text__left half__text">
+									<p className="space--bottom-1">Leave your review!</p>
+									<div className="half__rate space--bottom-2">
+										<RateButton
+											id="blog"
+											namespace="homepage"
+											showRating="user"
+										/>
+									</div>
+									<p className="space--bottom-1">The results</p>
+									<div className="half__rate">
+										<RateButton
+											id="blog"
+											namespace="homepage"
+											showRating="average"
+										/>
+									</div>
 								</div>
 							</div>
 						</div>

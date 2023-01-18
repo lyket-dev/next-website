@@ -1,6 +1,6 @@
 .half
   text-align: left
-  +margin-bottom(8)
+  +margin-bottom(6)
   position: relative
   display: flex
   flex-direction: column
@@ -10,7 +10,7 @@
 .half:last-child
   margin-bottom: 0
 
-.half:nth-of-type(2)
+.half:nth-of-type(2), .half:nth-of-type(4)
   @extend .half
   flex-direction: column-reverse
 
@@ -22,6 +22,9 @@
 
 .half__text
   +font-size(regular)
+
+.half__rate
+  font-size: 20px
 
 .half__item
   max-width: 700px
@@ -36,7 +39,6 @@
   @extend .half__item
 
 .half__shadow
-  +padding(3)
   border-radius: 3px
   max-width: 550px
 
@@ -64,7 +66,6 @@
 
 .half__reaction
   text-align: center
-  +margin-bottom(6)
   +font-size(alpha)
 
 .half__kicker
@@ -83,15 +84,9 @@
 .half__image__container
   position: relative
 
-@media only screen and (min-width: 900px)
-  .half
-    flex-direction: row
-    align-items: center
-    flex-basis: 50%
-    +font-size(gamma)
-
-  .half__kicker
-    text-align: left
+@media only screen and (min-width: 498px)
+  .half__rate
+    +font-size(alpha)
 
   .half__title
     font-size: 32px
@@ -99,8 +94,19 @@
   .half__text
     +font-size(gamma)
 
+@media only screen and (min-width: 960px)
+  .half
+    flex-direction: row
+    align-items: center
+    flex-basis: 50%
+    +font-size(gamma)
+    +margin-bottom(8)
+
   .half:nth-of-type(2)
     flex-direction: row
+
+  .half__kicker
+    text-align: left
 
   .half__item
     width: 50%
