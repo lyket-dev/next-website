@@ -253,14 +253,14 @@ export default function Docs() {
 							</p>
 							<Code language="html">
 								{`<!-- minimal settings -->
-<div data-lyket-type="like" data-lyket-id="my-first-post" />
+<div data-lyket-type="like" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
 <div
   data-lyket-type="like"
   data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
- />
+></div>
 
 <!-- with non-default template -->
 <div
@@ -268,7 +268,7 @@ export default function Docs() {
   data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
   data-lyket-template="twitter"
- />`}
+ ></div>`}
 							</Code>
 							<div className="flex-center big">
 								<div className="try">Try it! →</div>
@@ -310,14 +310,14 @@ export default function Docs() {
 							</p>
 							<Code language="html">
 								{`<!-- minimal settings -->
-<div data-lyket-type="updown" data-lyket-id="my-first-post" />
+<div data-lyket-type="updown" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
 <div
   data-lyket-type="updown"
   data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
- />
+></div>
 
 <!-- with non-default template -->
 <div
@@ -325,7 +325,7 @@ export default function Docs() {
   data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
   data-lyket-template="reddit"
- />`}
+ ></div>`}
 							</Code>
 							<div className="flex-center big">
 								<div className="try">Try it! →</div>
@@ -363,14 +363,14 @@ export default function Docs() {
 							</p>
 							<Code language="html">
 								{`<!-- minimal settings -->
-<div data-lyket-type="clap" data-lyket-id="my-first-post" />
+<div data-lyket-type="clap" data-lyket-id="my-first-post"></div>
 
 <!-- with namespace -->
 <div
   data-lyket-type="clap"
   data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
- />
+></div>
 
 <!-- with non-default template -->
 <div
@@ -378,7 +378,7 @@ export default function Docs() {
   data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
   data-lyket-template="medium"
- />`}
+></div>`}
 							</Code>
 							<div className="flex-center big">
 								<div className="try">Try it! →</div>
@@ -424,8 +424,8 @@ export default function Docs() {
 							</p>
 							<Code language="html">
 								{`<!-- minimal settings -->
-<div data-lyket-type="rating" data-lyket-id="my-first-post" data-lyket-show-rating="user"/>
-<div data-lyket-type="rating" data-lyket-id="my-first-post" data-lyket-show-rating="average"/>
+<div data-lyket-type="rating" data-lyket-id="my-first-post" data-lyket-show-rating="user"></div>
+<div data-lyket-type="rating" data-lyket-id="my-first-post" data-lyket-show-rating="average"></div>
 
 <!-- with namespace -->
 <div
@@ -433,13 +433,13 @@ export default function Docs() {
   data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
   data-lyket-show-rating="user"
- />
+></div>
 <div
   data-lyket-type="rating"
   data-lyket-id="my-second-post"
   data-lyket-namespace="blog"
   data-lyket-show-rating="average"
- />
+></div>
 
 <!-- with non-default template -->
 <div
@@ -448,14 +448,14 @@ export default function Docs() {
   data-lyket-namespace="blog"
 	data-lyket-show-rating="user"
   data-lyket-template="custom"
- />
+></div>
 <div
   data-lyket-type="rating"
   data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
 	data-lyket-show-rating="average"
   data-lyket-template="custom"
- />
+></div>
 `}
 							</Code>
 							<div className="flex-left big">
@@ -593,7 +593,7 @@ export default function Docs() {
   data-lyket-type="updown"
   data-lyket-id="my-first-post"
   data-lyket-show-counter-from="4"
- />
+></div>
 `}
 							</Code>
 							<h4>Button Templates</h4>

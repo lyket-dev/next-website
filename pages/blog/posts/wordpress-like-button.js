@@ -98,6 +98,7 @@ export default function Post() {
 							<a
 								href="https://wordpress.org/plugins/search/lyket"
 								target="_blank"
+								rel="noreferrer"
 							>
 								Wordpress plugin directory
 							</a>{" "}
@@ -112,6 +113,7 @@ export default function Post() {
 									className="button"
 									href="https://wordpress.org/plugins/lyket-like-buttons/#reviews"
 									target="_blank"
+									rel="noreferrer"
 								>
 									Leave us a review ♥
 								</a>
@@ -162,7 +164,7 @@ export default function Post() {
 						<Code>
 							{`<script
     src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=${process.env.lyketResetApiKey}"
-/>`}
+></script>`}
 						</Code>
 						<p>
 							Be aware that this code uses a test API key that resets all the
@@ -240,7 +242,7 @@ export default function Post() {
     data-lyket-color-background="b8fff3"
     data-lyket-color-text="violet"
     data-lyket-color-primary="rgba(255, 224, 138, 0.4)"
- />`}
+ ></div>`}
 						</Code>
 						<TryIt>
 							<Provider
@@ -276,7 +278,7 @@ export default function Post() {
     data-lyket-namespace="my-wordpress-blog"
     data-lyket-id="wordpress-heart-like-button"
     data-lyket-template="twitter"
- />`}
+ ></div>`}
 						</Code>
 						<p>
 							This code will generate the famous
