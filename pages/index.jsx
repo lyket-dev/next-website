@@ -245,7 +245,7 @@ export default function Home() {
 								If you are offering a service, or content in general, it is
 								paramount to know, and to let other know,{" "}
 								<strong>what the community thinks</strong> about it!{" "}
-								<Link href="/docs/react/react-rating-component">Read how.</Link>
+								<Link href="/docs/react/rating-component-react">Read how.</Link>
 							</p>
 						</div>
 					</div>
