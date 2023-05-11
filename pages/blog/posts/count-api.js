@@ -32,7 +32,7 @@ export default function Post() {
         <section className="page__section">
           <div className="markdown">
             <div className="center big">
-              <ClapButton namespace="blog" id="clap-button-react" />
+              <ClapButton namespace="blog" id="count-api" />
             </div>
             <p>
               Counting is a fundamental operation in many applications, ranging
