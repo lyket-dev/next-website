@@ -74,7 +74,7 @@ export default function Post() {
             <p>
               For example, making a request to{' '}
               <code>
-                https://api.lyket.dev/clap-buttons/user-visits/my-first-blog-post
+                https://api.lyket.dev/v1/clap-buttons/user-visits/my-first-blog-post
               </code>{' '}
               will automatically create a counter with ID
               "user-visits/my-first-blog-post".
@@ -117,7 +117,7 @@ export default function Post() {
             <p>
               Upon making a request to the endpoint{' '}
               <code>
-                https://api.lyket.dev/clap-buttons/user-visits/my-first-blog-post
+                https://api.lyket.dev/v1/clap-buttons/user-visits/my-first-blog-post
               </code>{' '}
               , you will receive a response indicating the current value of the
               counter. This information can be utilized to display real-time
@@ -129,7 +129,7 @@ export default function Post() {
 <head>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const counterUrl = "https://api.lyket.dev/clap-buttons/my-page/my-button"; // Replace with your counter ID
+      const counterUrl = "https://api.lyket.dev/v1/clap-buttons/my-page/my-button"; // Replace with your counter ID
       const apiKey = "YOUR_API_KEY"; // Replace with the API key you got from registration
 
       const options = {
@@ -140,9 +140,9 @@ export default function Post() {
 
       fetch(counterUrl, options)
         .then(response => response.json())
-        .then(data => {
+        .then(({ data }) => {
           const counter = document.getElementById("counter");
-          counter.innerHTML = \`Counter: \${data.attributes.totalClaps}\`;
+          counter.innerHTML = \`Counter: \${data.attributes.total_claps}\`;
         })
         .catch(error => {
           console.error("Error:", error);
@@ -170,7 +170,7 @@ export default function Post() {
 <head>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const counterUrl = "https://api.lyket.dev/clap-buttons/my-page/my-button/press";  // Replace /my-page/my-button with your counter ID
+      const counterUrl = "https://api.lyket.dev/v1/clap-buttons/my-page/my-button/press";  // Replace /my-page/my-button with your counter ID
       const apiKey = "YOUR_API_KEY"; // Replace with the API key you got from registration
 
       const options = {
@@ -186,10 +186,10 @@ export default function Post() {
       button.addEventListener("click", function() {
         fetch(counterUrl, options)
           .then(response => response.json())
-          .then(data => {
+          .then(({ data }) => {
             console.log("API response:", data);
             const counterContainer = document.getElementById("counter");
-            counterContainer.innerHTML = \`Counter: \${data.attributes.totalClaps}\`;
+            counterContainer.innerHTML = \`Counter: \${data.attributes.total_claps}\`;
           })
           .catch(error => {
             console.error("Error:", error);
@@ -228,7 +228,7 @@ export default function Post() {
 <head>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const counterUrl = "https://api.lyket.dev/clap-buttons/visits/name-of-my-page/press";
+      const counterUrl = "https://api.lyket.dev/v1/clap-buttons/visits/name-of-my-page/press";
       const apiKey = "YOUR_API_KEY"; // Replace with the API key you got from registration
 
       const options = {
@@ -241,10 +241,10 @@ export default function Post() {
 
       fetch(counterUrl, options)
         .then(response => response.json())
-        .then(data => {
+        .then(({ data }) => {
           const resultContainer = document.getElementById("result");
           resultContainer.innerHTML = \`Total visits to this page: \${JSON.stringify(
-            data.attributes.totalClaps,
+            data.attributes.total_claps,
           )}\`;
         })
         .catch(error => {
