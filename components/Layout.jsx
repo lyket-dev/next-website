@@ -1,8 +1,14 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+  const canonicalUrl = `https://lyket.dev${
+    router.asPath === "/" ? "" : router.asPath
+  }`.split("?")[0];
+
   return (
     <main>
       <Head>
@@ -28,6 +34,7 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/css?family=Roboto+Mono"
           rel="stylesheet"
         />
+        <link rel="canonical" href={canonicalUrl} />
       </Head>
       <Navbar />
       {children}
