@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -9,7 +9,8 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -20,7 +21,7 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        )
+        ),
       };
     } finally {
       sheet.seal();
@@ -34,18 +35,6 @@ export default class MyDocument extends Document {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-175162938-1"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag() {
-                    dataLayer.push(arguments);
-                  }
-                  gtag("js", new Date());
-
-                  gtag("config", "UA-175162938-1");`
-            }}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -58,14 +47,14 @@ export default class MyDocument extends Document {
                 autoResponse: 'Looking for the first available team member..',
                 autoNoResponse: 'Sorry, we are busy (or sleeping 😴) right now. You can leave your email address and you will be contacted shortly by our support team!',
                 mainColor: "#ff5dff",
-            };`
+            };`,
             }}
           />
           <script
             id="intergram"
             type="text/javascript"
             src="https://www.intergram.xyz/js/widget.js"
-          ></script>
+          />
         </Head>
 
         <body>
@@ -76,14 +65,14 @@ export default class MyDocument extends Document {
         <div
           className="loading-overlay"
           style={{
-            backgroundColor: "white",
-            position: "fixed",
-            transition: "all 0.25s ease-in-out",
+            backgroundColor: 'white',
+            position: 'fixed',
+            transition: 'all 0.25s ease-in-out',
             top: 0,
             left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: 2000
+            width: '100%',
+            height: '100%',
+            zIndex: 2000,
           }}
         />
       </Html>
