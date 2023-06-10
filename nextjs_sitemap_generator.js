@@ -10,12 +10,6 @@ sitemap({
   nextConfigPath: `${__dirname}/next.config.js`,
   ignoreIndexFiles: true,
   ignoredPaths: ['drafts'],
-  sitemapStylesheet: [
-    {
-      type: 'text/sass',
-      styleFile: '/styles/main.sass',
-    },
-  ],
 });
 
 console.log('✅ sitemap.xml generated!');
