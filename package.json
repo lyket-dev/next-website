@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 1234",
-    "build": "rimraf out && next build",
+    "build": "next build",
     "start": "next start -p 4567",
-    "export": "yarn build && next export && node nextjs_sitemap_generator.js",
+    "export": "rimraf out && yarn build && next export && node nextjs_sitemap_generator.js",
     "deploy": "yarn build && yarn export"
   },
   "dependencies": {
