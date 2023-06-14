@@ -61,7 +61,7 @@ export default function Post() {
     <>
       <Head>
         <title>
-          Star Rating React - Add a Star Rating component in a few clicks |
+          React Star Rating - Add a Star Rating component to any React app |
           Lyket
         </title>
         <meta
@@ -75,7 +75,7 @@ export default function Post() {
       </Head>
       <div className="page">
         <section className="page__section">
-          <h1 className="page__kicker">Star rating React</h1>
+          <h1 className="page__kicker">React star rating</h1>
           <h2 className="page__title">{meta.title}</h2>
         </section>
         <section className="page__section">
@@ -102,7 +102,7 @@ export default function Post() {
             </p>
             <p>
               There are a lot of great{' '}
-              <strong>Star rating React components</strong> around on Github,
+              <strong>React Star rating components</strong> around on Github,
               but <strong>the problems are always the same</strong>. Once you
               add the component, you have to integrate it with an{' '}
               <strong>API that keeps track of votes</strong>,{' '}
@@ -115,7 +115,7 @@ export default function Post() {
               Don't believe me? I will prove it to you! Try navigating to your
               favourite cooking recipies website, leave a rating, and then
               refresh the page. Are you able to vote again? That is because good
-              looking Star rating Reacts are not enough!
+              looking React Star ratings are not enough!
             </p>
             <h3>Lyket keeps track of user ratings for you</h3>
             <p>
@@ -138,7 +138,7 @@ export default function Post() {
             </p>
             <p>
               In this example we{' '}
-              <strong>create a Star rating React component</strong> with id
+              <strong>create a React Star rating component</strong> with id
               "my-ramen-recipe" under the "cooking-book" category. To do that we
               import the Provider component and the Rating component where we
               want our button to be. Read more about configuring the Provider
@@ -473,7 +473,7 @@ export default function Post() {
             </p>
             <h3>The other button types</h3>
             <p>
-              The Star rating React is just one of user-feedback tools that
+              The React Star rating is just one of user-feedback tools that
               Lyket offers. Each button has a different behaviour and can get
               you a different kind af feedback. See also{' '}
             </p>
