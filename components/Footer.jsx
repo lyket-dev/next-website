@@ -24,20 +24,14 @@ export default function Footer() {
           </li>
           <li className="footer__dot">•</li>
           <li className="footer__item">
-            <Link href="/docs/wordpress" className="footer__link">
-              Wordpress Docs
-            </Link>
-          </li>
-          <li className="footer__dot">•</li>
-          <li className="footer__item">
             <Link href="/docs/api" className="footer__link">
               API Docs
             </Link>
           </li>
           <li className="footer__dot">•</li>
           <li className="footer__item">
-            <Link href="/pricing" className="footer__link">
-              Pricing
+            <Link href="/templates" className="footer__link">
+              Templates
             </Link>
           </li>
           <li className="footer__dot">•</li>
@@ -46,6 +40,7 @@ export default function Footer() {
               Count API
             </Link>
           </li>
+          <li className="footer__dot">•</li>
           <li className="footer__item">
             <Link href="/blog/posts/star-rating-react" className="footer__link">
               React star rating
