@@ -84,10 +84,10 @@ export default function Page({ subscription, preview }) {
   return (
     <>
       <Head>{renderMetaTags(metaTags)}</Head>
-      <page>
+      <div className="page">
         <PageHeader title={page.title} h1={page.h1} />
         <PageBody content={page.content} id={page.slug} />
-      </page>
+      </div>
     </>
   );
 }

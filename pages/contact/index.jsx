@@ -16,7 +16,7 @@ export default function Contact() {
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="form__row">
-              <label className="form__label">*Email:</label>
+              <label className="form__label">Email*:</label>
               <input
                 type="email"
                 name="email"
@@ -25,23 +25,16 @@ export default function Contact() {
               />
             </div>
             <div className="form__row">
-              <label className="form__label">*Tech:</label>
-              <select type="text" name="tech" required>
-                <option value="">Choose one</option>
-                <option value="react">ReactJS</option>
-                <option value="next">Next.js</option>
-                <option value="gatsby">Gatsby</option>
-                <option value="reactStatic">React Static</option>
-                <option value="html">Simple HTML</option>
-                <option value="wordpress">Wordpress</option>
-                <option value="VueJS">VueJS</option>
-                <option value="other">Other - can you specify?</option>
-                <option value="idk">I don't know :)</option>
-              </select>
+              <label className="form__label">Company*:</label>
+              <input type="company" name="company" required />
             </div>
             <div className="form__row">
-              <label className="form__label">Message:</label>
-              <textarea name="message" />
+              <label className="form__label">Job Role*:</label>
+              <input type="role" name="role" required />
+            </div>
+            <div className="form__row">
+              <label className="form__label">Message*:</label>
+              <textarea name="message" required />
             </div>
             <button type="submit" className="button">
               {"Submit"}
