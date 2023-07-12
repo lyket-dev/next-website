@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function RegisterButton({ record }) {
+export default function RegisterButton() {
   return (
-    <div className="block--gradient" key={record ? record.id : 'register'}>
+    <div className="block--gradient">
       <div className="block__text__container">
         <h5 className="block__title">Get started with Lyket today!</h5>
         <p className="block__text">
@@ -12,7 +12,7 @@ export default function RegisterButton({ record }) {
         </p>
       </div>
       <div className="block__image">
-        <a href={`${process.env.APP_URL}/users/sign_up`} className="button">
+        <a href={`${process.env.appBaseUrl}/signup`} className="button">
           Get started for free
         </a>
       </div>

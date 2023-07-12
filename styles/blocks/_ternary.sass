@@ -4,47 +4,65 @@
   justify-content: space-between
   font-weight: 400
   font-size: 20px
+  +margin-bottom(12)
 
 .ternary__item
   display: flex
   flex-direction: column
-  text-align: center
   border-radius: 5px
-  align-items: center
   background: white
   +horizontal-padding(3)
-  +vertical-padding(5)
+  +vertical-padding(4)
   box-shadow: $shadow
   +margin-bottom(6)
+  text-align: left
   &:last-child
-    // +margin-bottom(0)
+    +margin-bottom(0)
+
+.ternary__icon
+  +margin-bottom(2)
+  +font-size(beta)
+  svg
+    height: 1.5em
 
 .ternary__title
-  +font-size(alpha)
+  +font-size(beta)
   font-weight: bold
-  +margin-bottom(3)
+  +margin-bottom(2)
 
-.ternary__text
-  +margin-bottom(3)
-  +font-size(gamma)
-  text-align: center
+.ternary__subtitle
+  +margin-bottom(2)
+  +font-size(regular)
+
+.ternary__list__item
+  +font-size(smallprint)
+  +margin-bottom(1.5)
+  line-height: 1
+  svg
+    height: .9em
+    vertical-align: middle
+
+.ternary__hint
+  +margin-bottom(1.5)
+  +font-size(regular)
+  color: $light-body-color
 
 .ternary__subtext
-  +font-size(beta)
-  text-align: center
 
 .ternary__huge
-  +font-size(alpha)
+  +font-size(beta)
   font-weight: 700
-  text-align: center
 
 @media only screen and (min-width: 900px)
   .ternary
     flex-direction: row
+    +margin-bottom(0)
 
   .ternary__item
-    flex-basis: 33%
     margin: 0
+    +margin-right(1)
     +margin-bottom(3)
     max-width: 30%
     box-shadow: 0 -21.1px 62.2px rgb($light-body-color, 7%)
+    &:last-child
+      +margin-right(0)
