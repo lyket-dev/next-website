@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Decorator({ image, fulltext, toDecorate, color }) {
+export default function Decorator({ fulltext, toDecorate, color }) {
   const splitted = fulltext.split(toDecorate);
 
   return (
