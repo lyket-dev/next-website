@@ -37,7 +37,7 @@ export default function Docs() {
                 Just by adding a few lines of code you will see beautiful like,
                 clap or like/dislike buttons! Something like this:
               </p>
-              <div className="half__reaction">
+              <div className="half__reaction space--bottom-4">
                 <UpdownButton namespace="docs" id="widget-main" />
               </div>
               <p>
@@ -235,7 +235,7 @@ export default function Docs() {
                 !
               </p>
               <Anchor slug="html-like-button" keyword="Like button in HTML">
-                <h5>Like button in HTML</h5>
+                <h3>Like button HTML</h3>
               </Anchor>
               <p>
                 Like buttons behave like <em>Twitter buttons</em>. Users can
@@ -272,7 +272,7 @@ export default function Docs() {
                 slug="like-templates"
                 keyword="Like button HTML Templates"
               >
-                <h2>Like button HTML Templates</h2>
+                <h5>Like button HTML Templates</h5>
               </Anchor>
               <ul>
                 <li>
@@ -290,7 +290,7 @@ export default function Docs() {
                 slug="html-like-dislike-button"
                 keyword="Like dislike button HTML"
               >
-                <h5>Like/dislike button HTML</h5>
+                <h3>Like/dislike button HTML</h3>
               </Anchor>
               <p>
                 Like/dislike buttons, or Updown buttons, behave like Reddit
@@ -329,7 +329,7 @@ export default function Docs() {
                 slug="updown-templates"
                 keyword="Like/dislike buttons HTML"
               >
-                <h6>Like/dislike buttons HTML Templates</h6>
+                <h5>Like/dislike buttons HTML Templates</h5>
               </Anchor>
               <ul>
                 <li>
@@ -345,7 +345,7 @@ export default function Docs() {
               </ul>
 
               <Anchor slug="html-clap-button" keyword="Clap button HTML">
-                <h5>Clap button HTML</h5>
+                <h3>Clap button HTML</h3>
               </Anchor>
               <p>
                 Clap buttons behave like <em>Medium applauses</em>. Users can
@@ -382,7 +382,7 @@ export default function Docs() {
                 slug="clap-templates"
                 keyword="Clap button HTML Templates"
               >
-                <h6>Clap button HTML Templates</h6>
+                <h5>Clap button HTML Templates</h5>
               </Anchor>
               <ul>
                 <li>
@@ -396,8 +396,8 @@ export default function Docs() {
                 </li>
               </ul>
 
-              <Anchor slug="html-star-rating" keyword="HTML star rating">
-                <h5>Clap button HTML</h5>
+              <Anchor slug="html-star-rating" keyword="star rating HTML">
+                <h3>Star rating HTML</h3>
               </Anchor>
               <p>
                 Star rating behaves like <em>Tripadvisor ratings</em>. Each user
@@ -463,7 +463,7 @@ export default function Docs() {
                 </div>
               </div>
               <p />
-              <div className="flex-left big">
+              <div className="flex-left big space--bottom-4">
                 <div className="try">Click to rate! →</div>
                 <RateButton
                   namespace="docs"
@@ -475,7 +475,7 @@ export default function Docs() {
                 slug="rate-templates"
                 keyword="Star rating HTML Templates"
               >
-                <h6>Star rating HTML Templates</h6>
+                <h5>Star rating HTML Templates</h5>
               </Anchor>
               <ul>
                 <li>

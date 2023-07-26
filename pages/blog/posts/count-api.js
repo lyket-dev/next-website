@@ -1,12 +1,12 @@
-import React from 'react';
-import Arrow from 'public/icons/outline/arrow-right.svg';
-import { ClapButton } from '@lyket/react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Code from 'components/Code';
+import React from "react";
+import Arrow from "public/icons/outline/arrow-right.svg";
+import { ClapButton } from "@lyket/react";
+import Link from "next/link";
+import Head from "next/head";
+import Code from "components/Code";
 
 export const meta = {
-  title: 'Lyket Count API: Simplifying Counting with an Intuitive API',
+  title: "Lyket Count API: Simplifying Counting with an Intuitive API",
 };
 
 export default function Post() {
@@ -14,7 +14,7 @@ export default function Post() {
     <>
       <Head>
         <title>
-          Lyket Count API: Simplifying Counting with an Intuitive API
+          Lyket Count API - Simplifying Counting with an Intuitive API
         </title>
         <meta
           content="Lyket Count API is a versatile and user-friendly solution for counting interactions, ranging
@@ -72,10 +72,10 @@ export default function Post() {
               namespace/id combination.
             </p>
             <p>
-              For example, making a request to{' '}
+              For example, making a request to{" "}
               <code>
                 https://api.lyket.dev/v1/clap-buttons/user-visits/my-first-blog-post
-              </code>{' '}
+              </code>{" "}
               will automatically create a counter with ID
               "user-visits/my-first-blog-post".
             </p>
@@ -110,15 +110,15 @@ export default function Post() {
             </ul>
             <p>
               To read the list of all the possible actions that our API offers,
-              please visit our{' '}
+              please visit our{" "}
               <Link href="/docs/api#schema">API documentation page</Link>
             </p>
             <h2>Getting Current Value of a Counter</h2>
             <p>
-              Upon making a request to the endpoint{' '}
+              Upon making a request to the endpoint{" "}
               <code>
                 https://api.lyket.dev/v1/clap-buttons/user-visits/my-first-blog-post
-              </code>{' '}
+              </code>{" "}
               , you will receive a response indicating the current value of the
               counter. This information can be utilized to display real-time
               statistics or provide valuable insights into user engagement.
@@ -206,7 +206,7 @@ export default function Post() {
 `}
             </Code>
             <p>
-              If you want to use our out-of-the-box Lyket buttons, checkout our{' '}
+              If you want to use our out-of-the-box Lyket buttons, checkout our{" "}
               <Link href="/html">HTML widget</Link> that provides also a nice
               looks to your counter buttons.
             </p>
