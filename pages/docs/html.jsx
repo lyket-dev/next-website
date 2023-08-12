@@ -597,8 +597,8 @@ export default function Docs() {
               </p>
               <p>
                 Do you have an idea for the perfect clap or like button?{" "}
-                <a href="mailto:write@lyket.dev">Write to us</a> explaining your
-                idea or make a pull request to our open-source{" "}
+                <a href="mailto:lyket.dev@gmail.com">Write to us</a> explaining
+                your idea or make a pull request to our open-source{" "}
                 <a
                   href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
                   target="_blank"
