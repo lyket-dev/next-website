@@ -8,11 +8,11 @@ export default function Terms() {
           <h1>Terms of Service and Policies</h1>
           <h4>Introduction</h4>
           <p>
-            This is a legal agreement between Lyket, ("Lyket", "us", "we",
-            "our") and one of the following ("you", or "your"):
+            This is a agreement between Lyket, ("Lyket", "us", "we", "our") and
+            one of the following ("you", or "your"):
           </p>
           <ul>
-            <li>a person registering or a Lyket account; or</li>
+            <li>a person registering to Lyket Lyket consultancies; or</li>
             <li>a person interacting with a website with Lyket embedded.</li>
           </ul>
           <h4>Your Rights</h4>
@@ -105,21 +105,20 @@ export default function Terms() {
               the email notification.
             </li>
           </ol>
-          <h4>Subscription, Payment and Refunds</h4>
+          <h4>Payment and Refunds</h4>
           <p>
-            The subscription fee is charged monthly on the day of your initial
-            payment. You may cancel your account and subscription at any time.
+            Your fee is charged monthly on the day of your initial payment. You
+            may cancel your account at any time by writing an email to us. To do
+            that, please use our contact form.
           </p>
           <p>
-            Your subscription will automatically renew on the renewal date for a
-            new billing period at the end of Your current billing period. At
-            this time Your account will be charged the new subscription fee for
-            the next billing period.
+            If not specified otherwise, you will be charged automatically for a
+            new billing period at the end of Your current billing period.
           </p>
           <p>
             Lyket reserves the right to change fees and charges or introduce new
             charges at any time. You will be notified of any such change via an
-            email to our user subscription list.
+            email.
           </p>
           <p>
             You may upgrade or downgrade your account plan with Lyket at any

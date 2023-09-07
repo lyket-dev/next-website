@@ -22,11 +22,9 @@ export default function Privacy() {
         </div>
         <div className="text__center">
           <p className="page__text">
-            We offer a simple pricing model that{" "}
-            <strong>grows with your project</strong>. You can start with a{" "}
-            <strong>test project for free</strong>,{" "}
-            <strong>without time limitation</strong>, and{" "}
-            <strong>we will not ask you for a credit card</strong>!
+            You can kickstart with a <strong>complimentary test project</strong>{" "}
+            , without any time constraints, or get a customized plan tailored to
+            your needs. No credit card information required!
           </p>
           <p className="page__text">
             * Hard limit means that if you exceed the limit in any given month,
