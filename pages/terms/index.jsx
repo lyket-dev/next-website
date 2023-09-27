@@ -87,6 +87,11 @@ export default function Terms() {
               sent.
             </li>
             <li>
+              After a period of time from the deactivation of your account, we
+              may delete your data. We will regularly clean our database if
+              accounts are not used.
+            </li>
+            <li>
               We may throttle and delete your account, domains, and comments at
               any time if you violate these terms.
             </li>
