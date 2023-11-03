@@ -244,7 +244,7 @@ export default function Docs({ schema }) {
 							</p>
 						</div>
 					</div>
-					<div className="api">{schema && <SwaggerUI spec={schema} />}</div>
+					<div className="api">{schema && <SwaggerUI url={`${process.env.apiBaseUrl}/schema`} />}</div>
 				</section>
 			</div>
 		</>
