@@ -1,12 +1,12 @@
 import React from 'react';
 import Arrow from 'public/icons/outline/arrow-right.svg';
 import { ClapButton } from '@lyket/react';
-import Link from 'next/link';
 import Head from 'next/head';
 import Code from 'components/Code';
 
 export const meta = {
-  title: 'Lyket as a Click Tracker: An Analytics Tool for GDPR Compliance',
+  title:
+    'Click Tracker Lyket: simple, GDPR Compliant, and cheap Analytics Tool',
 };
 
 export default function Post() {
@@ -14,7 +14,8 @@ export default function Post() {
     <>
       <Head>
         <title>
-          Lyket as a Click Tracker - An Analytics Tool for GDPR Compliance
+          Lyket as a Click Tracker - A simple, GDPR Compliant, and cheap
+          Analytics Tool
         </title>
         <meta
           content="Discover how Lyket's versatile API can be used as a click tracker, providing GDPR-compliant, affordable, and precise analytics for your website."
@@ -220,52 +221,7 @@ export default MyComponent;
 </body>
 </html>`}
             </Code>
-            <h2>Incrementing Counters Using Buttons</h2>
-            <p>
-              To track clicks on a button, use the clap behavior. Each click
-              will increment the counter by one. Here is an example
-              implementation:
-            </p>
-            <Code>
-              {`<!DOCTYPE html>
-<html>
-<head>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const counterUrl = "https://api.lyket.dev/v1/clap-buttons/click-tracker/my-link/press";  // Replace with your counter ID
-      const apiKey = "YOUR_API_KEY"; // Replace with your API key
 
-      const options = {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": \`Bearer \${apiKey}\`
-        }
-      };
-
-      const button = document.getElementById("counterButton");
-
-      button.addEventListener("click", function() {
-        fetch(counterUrl, options)
-          .then(response => response.json())
-          .then(({ data }) => {
-            console.log("API response:", data);
-            const counterContainer = document.getElementById("counter");
-            counterContainer.innerHTML = \`Counter: \${data.attributes.total_claps}\`;
-          })
-          .catch(error => {
-            console.error("Error:", error);
-          });
-      });
-    });
-  </script>
-</head>
-<body>
-  <button id="counterButton">Increment Counter</button>
-  <div id="counter"></div>
-</body>
-</html>`}
-            </Code>
             {/* <p>
               For a ready-made solution, check out our{' '}
               <Link href="/html">HTML widget</Link> for a visually appealing
