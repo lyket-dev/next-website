@@ -42,6 +42,12 @@ export default function Footer() {
           </li>
           <li className="footer__dot">•</li>
           <li className="footer__item">
+            <Link href="/blog/posts/click-tracker" className="footer__link">
+              Click tracker
+            </Link>
+          </li>
+          <li className="footer__dot">•</li>
+          <li className="footer__item">
             <Link href="/blog/posts/star-rating-react" className="footer__link">
               React star rating
             </Link>
