@@ -6,7 +6,7 @@ import Code from 'components/Code';
 
 export const meta = {
   title:
-    'Click Tracker Lyket: simple, GDPR Compliant, and cheap Analytics Tool',
+    'Lyket as a Click Tracker - A simple, GDPR Compliant, and cheap Analytics Tool',
 };
 
 export default function Post() {
@@ -14,8 +14,7 @@ export default function Post() {
     <>
       <Head>
         <title>
-          Lyket as a Click Tracker - A simple, GDPR Compliant, and cheap
-          Analytics Tool
+          Click Tracker Lyket: simple, GDPR Compliant, and cheap Analytics Tool
         </title>
         <meta
           content="Discover how Lyket's versatile API can be used as a click tracker, providing GDPR-compliant, affordable, and precise analytics for your website."
