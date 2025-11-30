@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
+  const recaptchaRef = useRef(null);
   return (
     <div className="page">
       <section className="page__section space--bottom-5">
@@ -14,7 +16,7 @@ export default function Contact() {
             data-netlify="true"
             className="form"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact-form" />
             <div className="form__row">
               <label className="form__label">Email*:</label>
               <input
@@ -35,6 +37,13 @@ export default function Contact() {
             <div className="form__row">
               <label className="form__label">Message*:</label>
               <textarea name="message" required />
+            </div>
+            <div className="form__row">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                data-netlify-recaptcha="true"
+              />
             </div>
             <button type="submit" className="button">
               {"Submit"}
