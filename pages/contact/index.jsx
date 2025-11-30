@@ -14,9 +14,10 @@ export default function Contact() {
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             className="form"
           >
-            <input type="hidden" name="form-name" value="contact-form" />
+            <input type="hidden" name="form-name" value="contact" />
             <div className="form__row">
               <label className="form__label">Email*:</label>
               <input
@@ -42,7 +43,6 @@ export default function Contact() {
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                data-netlify-recaptcha="true"
               />
             </div>
             <button type="submit" className="button">
