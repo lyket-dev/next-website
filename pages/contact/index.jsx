@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 
 export default function Contact() {
 	return (
@@ -14,13 +14,14 @@ export default function Contact() {
 						data-netlify="true"
 						action="/thanks"
 						className="form"
-						data-netlify-honeypot="bot-field"
+						netlify-honeypot="bot-field"
+						data-netlify-recaptcha="true"
 					>
-						{/* richiesti da Netlify */}
 						<input type="hidden" name="form-name" value="contact" />
-						<p hidden>
+						<p class="hidden">
 							<label>
-								Non compilare: <input name="bot-field" />
+								Don’t fill this out if you’re human:{" "}
+								<input name="bot-field" type="text" />
 							</label>
 						</p>
 
@@ -49,7 +50,6 @@ export default function Contact() {
 							<textarea name="message" required />
 						</div>
 
-						{/* reCAPTCHA gestito da Netlify */}
 						<div data-netlify-recaptcha="true"></div>
 
 						<button type="submit" className="button">
