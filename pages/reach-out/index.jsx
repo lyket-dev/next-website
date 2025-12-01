@@ -50,7 +50,7 @@ export default function Contact() {
 							<textarea name="message" required />
 						</div>
 
-						<div data-netlify-recaptcha="true"></div>
+						<div data-netlify-recaptcha="true" />
 
 						<button type="submit" className="button">
 							Submit
