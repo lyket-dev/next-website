@@ -59,7 +59,7 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li className="navbar__item">
-					<Link href="/form" className="navbar__link">
+					<Link href="/reach-out" className="navbar__link">
 						Contact us
 					</Link>
 				</li>
