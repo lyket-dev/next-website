@@ -127,18 +127,17 @@ export default function Privacy() {
 
           <h4>International data transfers</h4>
           <p>
-            Lyket's infrastructure is primarily hosted in the United States.
-            Where personal data (including hashed IPs) is transferred from the
-            EEA/UK/Switzerland to the United States, we rely on the following
-            legal mechanisms:
+            Lyket's core infrastructure — application server, database, and
+            cache — is hosted in the EU (Ireland, eu-west-1 region). Hashed
+            IPs, account data, and vote/button data processed for the service
+            do not leave the EEA.
+          </p>
+          <p>
+            A couple of subprocessors we use for billing and email are based
+            in the United States. Where personal data is transferred to them,
+            we rely on the following legal mechanisms:
           </p>
           <ul>
-            <li>
-              <strong>Heroku (Salesforce, Inc.)</strong>: covered by
-              Salesforce's active self-certification under the EU-U.S. Data
-              Privacy Framework, the UK Extension to the EU-U.S. DPF, and the
-              Swiss-U.S. DPF.
-            </li>
             <li>
               <strong>Stripe</strong>: covered by Stripe's active
               self-certification under the EU-U.S. Data Privacy Framework, the
@@ -175,13 +174,13 @@ export default function Privacy() {
                   <td>Heroku (Salesforce, Inc. / AWS)</td>
                   <td>Hosting, database (Postgres)</td>
                   <td>Hashed IPs, account data</td>
-                  <td>US — EU-U.S. DPF</td>
+                  <td>EU (Ireland, eu-west-1) — no international transfer</td>
                 </tr>
                 <tr>
                   <td>Redis Cloud (Redis, Inc.)</td>
                   <td>Vote and button counter storage</td>
                   <td>Hashed IPs, vote counters</td>
-                  <td>See Redis subprocessor list / DPA</td>
+                  <td>EU (Ireland, eu-west-1) — no international transfer</td>
                 </tr>
                 <tr>
                   <td>Stripe</td>
@@ -216,7 +215,7 @@ export default function Privacy() {
               .
             </li>
             <li>
-              Lyket data is stored in the United States (
+              Lyket's core data is stored in the EU, Ireland (
               <a href="https://www.heroku.com/policy/security">
                 Heroku security policy
               </a>
