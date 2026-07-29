@@ -10,7 +10,7 @@ export default function Terms() {
 			</Head>
 			<section className="page__section">
 				<div className="markdown">
-					<h1>Terms of Service and Policies</h1>
+					<h2>Terms of Service and Policies</h2>
 					<h4>Introduction</h4>
 					<p>
 						This is an agreement between Lyket ("Lyket", "us", "we", "our") and
@@ -21,8 +21,8 @@ export default function Terms() {
 						<li>a person interacting with a website with Lyket embedded.</li>
 					</ul>
 					<p>
-						Lyket is operated by <strong>Irene Oppo</strong> as an individual,
-						not a registered company.
+						Lyket is operated by Irene Oppo as an individual, not a registered
+						company.
 					</p>
 					<p>
 						This document covers the contractual terms of using Lyket. For
