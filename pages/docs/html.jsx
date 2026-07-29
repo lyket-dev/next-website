@@ -1,4 +1,5 @@
 import React from "react";
+import ObfuscatedEmail from "components/ObfuscatedEmail";
 import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Link from "next/link";
@@ -597,7 +598,7 @@ export default function Docs() {
               </p>
               <p>
                 Do you have an idea for the perfect clap or like button?{" "}
-                <a href="mailto:lyket.dev@gmail.com">Write to us</a> explaining
+                <ObfuscatedEmail>Write to us</ObfuscatedEmail> explaining
                 your idea or make a pull request to our open-source{" "}
                 <a
                   href="https://github.com/lyket-dev/lyket/tree/master/packages/react"

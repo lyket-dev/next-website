@@ -1,8 +1,13 @@
 import React from "react";
+import Head from "next/head";
+import ObfuscatedEmail from "components/ObfuscatedEmail";
 
 export default function Privacy() {
   return (
     <div className="page">
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       <section className="page__section">
         <div className="markdown">
           <h1>Privacy Policy</h1>
@@ -15,8 +20,7 @@ export default function Privacy() {
           </p>
           <p>
             The data controller for Lyket is <strong>Irene Oppo</strong>,
-            reachable at{" "}
-            <a href="mailto:lyket.dev@gmail.com">lyket.dev@gmail.com</a>.
+            reachable at <ObfuscatedEmail />.
           </p>
           <p>
             Should we ask you to provide certain information by which you can
@@ -225,8 +229,7 @@ export default function Privacy() {
             If you are located in the EEA, UK, or Switzerland, you have the
             right to access, correct, delete, or export your personal data,
             and to object to or restrict certain processing. To exercise
-            these rights, contact us at{" "}
-            <a href="mailto:lyket.dev@gmail.com">lyket.dev@gmail.com</a>.
+            these rights, contact us at <ObfuscatedEmail />.
           </p>
           <p>
             You also have the right to lodge a complaint with your national

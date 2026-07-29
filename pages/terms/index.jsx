@@ -1,20 +1,29 @@
 import React from "react";
+import Head from "next/head";
+import ObfuscatedEmail from "components/ObfuscatedEmail";
 
 export default function Terms() {
   return (
     <div className="page">
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       <section className="page__section">
         <div className="markdown">
           <h1>Terms of Service and Policies</h1>
           <h4>Introduction</h4>
           <p>
-            This is a agreement between Lyket, ("Lyket", "us", "we", "our") and
+            This is an agreement between Lyket ("Lyket", "us", "we", "our") and
             one of the following ("you", or "your"):
           </p>
           <ul>
-            <li>a person registering to Lyket Lyket consultancies; or</li>
+            <li>a person registering to Lyket; or</li>
             <li>a person interacting with a website with Lyket embedded.</li>
           </ul>
+          <p>
+            Lyket is operated by <strong>Irene Oppo</strong> as an individual,
+            not a registered company.
+          </p>
           <h4>Your Rights</h4>
           <ol>
             <li>You will not be shown ads.</li>
@@ -29,7 +38,7 @@ export default function Terms() {
             </li>
             <li>
               If there is a security or privacy breach, we promise to disclose
-              it on the website and on Twitter as soon as possible.
+              it on this website as soon as possible.
             </li>
             <li>
               You may remain anonymous. You are not required to provide your
@@ -58,7 +67,7 @@ export default function Terms() {
             </li>
           </ol>
           <h4>Your Responsibilities</h4>
-          <ol class="continue">
+          <ol className="continue">
             <li>You are at least 13 years old.</li>
             <li>
               You authorise us to send instructions to the financial institution
@@ -68,7 +77,7 @@ export default function Terms() {
             <li>
               If you notice any data integrity, privacy, or security bugs in the
               service, please report it directly{" "}
-              <a href="mailto:lyket.dev@gmail.com">by private email</a>.
+              <ObfuscatedEmail>by private email</ObfuscatedEmail>.
             </li>
             <li>
               You must not abuse the service in ways that could harm or deny
@@ -77,7 +86,7 @@ export default function Terms() {
             <li>Please do not submit truly sensitive data to Lyket.</li>
           </ol>
           <h4>Lyket's Rights</h4>
-          <ol class="continue">
+          <ol className="continue">
             <li>
               We may send you emails concerning the service or your account at
               any time.

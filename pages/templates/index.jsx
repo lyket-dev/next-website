@@ -1,4 +1,5 @@
 import React from "react";
+import ObfuscatedEmail from "components/ObfuscatedEmail";
 import {
   ApplauseSandbox,
   LikeSandbox,
@@ -16,7 +17,7 @@ export default function Templates() {
         </p>
         <p className="page__text">
           Do you have an idea for the perfect clap or like button?{" "}
-          <a href="mailto:lyket.dev@gmail.com">Write to us</a> explaining your
+          <ObfuscatedEmail>Write to us</ObfuscatedEmail> explaining your
           idea or make a pull request to our open-source{" "}
           <a
             href="https://github.com/lyket-dev/lyket/tree/master/packages/react"
