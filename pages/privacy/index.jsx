@@ -13,58 +13,79 @@ export default function Privacy() {
           <h1>Privacy Policy</h1>
           <p>
             This privacy policy sets out how Lyket uses and protects any
-            information that you give Lyket when you use this website or
-            integrate our service. Lyket is committed to ensuring that your
-            privacy is protected and it is one of the first priorities of our
-            service.
+            information you give us when you use this website, register for a
+            Lyket account, or interact with a website that integrates Lyket
+            buttons. Lyket is committed to ensuring that your privacy is
+            protected.
           </p>
           <p>
             The data controller for Lyket is <strong>Irene Oppo</strong>,
             reachable at <ObfuscatedEmail />.
           </p>
           <p>
-            Should we ask you to provide certain information by which you can
-            be identified when using this website, then you can be assured
-            that it will only be used in accordance with this privacy
-            statement.
-          </p>
-          <p>
             Lyket may change this policy from time to time by updating this
             page. You should check this page from time to time to ensure that
             you are happy with any changes. This policy was last updated on
-            29/07/2026. We may collect the following information:
+            29/07/2026.
           </p>
+          <p>
+            This policy is split in two parts, depending on who you are: a
+            person with a Lyket account, or a visitor of a website that uses
+            Lyket buttons.
+          </p>
+
+          <h4>If you have a Lyket account</h4>
+          <p>
+            If you register for a Lyket account, we collect the information
+            you submit — name, email, role and company — and a cookie is
+            stored to authenticate you on future visits.
+          </p>
+          <p>
+            We will save the information you submit to us until you remove or
+            change it, or until you remove your user account. Information
+            related to the login method you choose is saved until you remove
+            your account.
+          </p>
+          <p>We use this information to:</p>
           <ul>
             <li>
-              Your IP address — only a hashed version is retained, for abuse
-              prevention (see below)
+              Provide the service, including billing (via Stripe) and
+              transactional email (via Twilio SendGrid)
             </li>
             <li>
-              A randomly generated session identifier stored in your
-              browser's local storage, if you interact with a like/clap/rating
-              button
+              Keep internal records, mostly to combat spam and prevent abuse
             </li>
-            <li>Your name, email, role and company if you submit a form</li>
+            <li>Improve our products and services</li>
+            <li>
+              Rarely, send email about new features or other information which
+              we think you may find interesting, using the email address you
+              have provided
+            </li>
           </ul>
-
-          <h4>When using the buttons</h4>
           <p>
-            When you use the like/clap/rating buttons on a website integrating
-            Lyket, no personal information is requested from you directly, and
-            no cookie is set on your device. To recognise if you have already
-            voted and prevent duplicate votes, Lyket relies on a randomly
-            generated session identifier stored in your browser's local
-            storage. Separately, we process a{" "}
+            If you subscribe to a paid plan, you also agree to{" "}
+            <a href="https://stripe.com/privacy">Stripe's privacy policy</a>.
+          </p>
+
+          <h4>If you're a visitor of a website that uses Lyket</h4>
+          <p>
+            When you use the like/clap/rating buttons on a website
+            integrating Lyket, no personal information is requested from you
+            directly, and no cookie is set on your device. To recognise if
+            you have already voted and prevent duplicate votes, Lyket relies
+            on a randomly generated session identifier stored in your
+            browser's local storage. Separately, we process a{" "}
             <strong>hashed version of your IP address</strong> to detect and
             prevent abuse (such as spam or automated voting) — we never store
             the IP address itself in clear text, and the hashed value cannot
             reasonably be reversed back into your original IP address.
           </p>
           <p>
-            We will save the information you submit to us until you remove or
-            change the information, or until you remove your user account.
-            Information related to the login method you choose is saved until
-            you remove your user account.
+            For this data, Lyket acts as a data processor on behalf of the
+            website that embeds the buttons — that website is the data
+            controller for its own visitors, and its own privacy policy is
+            the primary reference for your rights as a visitor. We document
+            our own handling of this data here for transparency.
           </p>
 
           <h4>Data retention</h4>
@@ -90,23 +111,6 @@ export default function Privacy() {
             </li>
           </ul>
 
-          <h4>What we do with the information we gather</h4>
-          <p>
-            We require this information to understand your needs and provide
-            you with a better service, and in particular for the following
-            reasons:
-          </p>
-          <ul>
-            <li>
-              Internal record keeping, mostly to combat spam and prevent abuse
-            </li>
-            <li>We may use the information to improve our products and services</li>
-            <li>
-              We may rarely send email about new features or other
-              information which we think you may find interesting using the
-              email address which you have provided
-            </li>
-          </ul>
           <p>
             Your personal data will not be shared with any third party except
             when:
@@ -202,26 +206,6 @@ export default function Privacy() {
             subprocessor. If you would like to be notified of changes, please
             contact us.
           </p>
-
-          <h4>External services</h4>
-          <ol>
-            <li>
-              When you log in, a cookie is stored to authenticate you on
-              future visits.
-            </li>
-            <li>
-              If you subscribe, you agree to{" "}
-              <a href="https://stripe.com/privacy">Stripe's privacy policy</a>
-              .
-            </li>
-            <li>
-              Lyket's core data is stored in the EU, Ireland (
-              <a href="https://www.heroku.com/policy/security">
-                Heroku security policy
-              </a>
-              ).
-            </li>
-          </ol>
 
           <h4>Your rights</h4>
           <p>
