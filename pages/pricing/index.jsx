@@ -166,6 +166,14 @@ export default function Privacy() {
 								reach the limit even for one month, you will need to switch to a
 								paid plan.
 							</p>
+							<h6>Do I need to update my privacy policy to use Lyket? </h6>
+							<p>
+								At most, adding a single line — Lyket doesn't set any cookie on
+								your visitors' browsers, so there's no cookie consent banner or
+								heavy compliance work involved. See our{" "}
+								<Link href="/privacy">privacy policy</Link> for details on the
+								minimal data we process.
+							</p>
 						</div>
 					</div>
 					<h2 className="page__title">What you get</h2>
@@ -226,10 +234,10 @@ export default function Privacy() {
 								<Shield className="icon" />
 							</div>
 							<div className="stripe__container">
-								<h6 className="stripe__title">Privacy compliancy</h6>
+								<h6 className="stripe__title">No cookies for your visitors</h6>
 								<p className="stripe__text">
-									You don't have to update your privacy/cookie policy if you use
-									Lyket!
+									Lyket doesn't set any cookie on your visitors' browsers — we
+									use a hashed IP address instead to prevent duplicate votes.
 								</p>
 							</div>
 						</div>
