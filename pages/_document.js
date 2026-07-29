@@ -31,31 +31,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-175162938-1"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.intergramId = 217428232
-            window.intergramCustomizations = {
-                titleClosed: 'Chat 👋',
-                titleOpen: 'Lyket AMA',
-                introMessage: 'Hi! Anything on your mind? 👀',
-                autoResponse: 'Looking for the first available team member..',
-                autoNoResponse: 'Sorry, we are busy (or sleeping 😴) right now. You can leave your email address and you will be contacted shortly by our support team!',
-                mainColor: "#ff5dff",
-            };`,
-            }}
-          />
-          <script
-            id="intergram"
-            type="text/javascript"
-            src="https://www.intergram.xyz/js/widget.js"
-          />
-        </Head>
+        <Head />
 
         <body>
           <Main />
