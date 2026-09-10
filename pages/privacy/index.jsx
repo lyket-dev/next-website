@@ -72,13 +72,20 @@ export default function Privacy() {
 						When you use the like/clap/rating buttons on a website integrating
 						Lyket, no personal information is requested from you directly, and
 						no cookie is set on your device. To recognise if you have already
-						voted and prevent duplicate votes, Lyket relies on a randomly
-						generated session identifier stored in your browser's local storage.
+						voted and prevent duplicate votes, Lyket normally relies on a
+						randomly generated session identifier stored in your browser's local
+						storage.
+					</p>
+					<p>
 						Separately, we process a{" "}
-						<strong>hashed version of your IP address</strong> to detect and
-						prevent abuse (such as spam or automated voting) — we never store
-						the IP address itself in clear text, and the hashed value cannot
-						reasonably be reversed back into your original IP address.
+						<strong>hashed version of your IP address</strong> for two purposes:
+						(a) as an anti-abuse signal, to limit the number of sessions from a
+						single IP address over a rolling 30-day window; and (b) if the
+						website disables the session identifier mechanism, as the vote
+						identifier itself — the only signal available in that case to
+						recognise repeat votes. In both cases we never store the IP address
+						in clear text, and the hashed value cannot reasonably be reversed
+						back into your original IP address.
 					</p>
 					<p>
 						For this data, Lyket acts as a data processor on behalf of the
@@ -91,9 +98,14 @@ export default function Privacy() {
 					<h4>Data retention</h4>
 					<ul>
 						<li>
-							<strong>Vote and button data</strong> (hashed IPs and related
-							counters) is retained for as long as the account that owns the
-							corresponding project is active.
+							<strong>Vote data</strong> (the hashed IP or session identifier
+							recorded against a specific vote) is retained for as long as the
+							account that owns the corresponding project is active.
+						</li>
+						<li>
+							<strong>Anti-abuse counters</strong> (hashed IPs used to limit
+							sessions per IP) are kept on a rolling <strong>30-day</strong>{" "}
+							basis and expire automatically, regardless of account status.
 						</li>
 						<li>
 							Accounts that remain unused for <strong>12 months</strong> are
@@ -104,6 +116,11 @@ export default function Privacy() {
 							You may request deletion of your account and associated data at
 							any time by contacting us, see{" "}
 							<a href="https://lyket.dev/terms">Terms of use</a>.
+						</li>
+						<li>
+							When an account is deleted, all of its data — profile
+							information, vote and button data, and anti-abuse counters — is
+							completely erased, not just deactivated.
 						</li>
 						<li>
 							After account deletion, data may persist in backups for up to two
