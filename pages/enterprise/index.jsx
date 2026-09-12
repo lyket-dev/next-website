@@ -1,8 +1,18 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Decorator from "components/Decorator";
 import Share from "public/icons/outline/share.svg";
 import Hand from "public/icons/outline/hand.svg";
+import Globe from "public/icons/outline/globe.svg";
+import ScaleIcon from "public/icons/outline/scale.svg";
+import Server from "public/icons/outline/server.svg";
+import UserGroup from "public/icons/outline/user-group.svg";
+import ShieldCheck from "public/icons/outline/shield-check.svg";
+import Bolt from "public/icons/outline/lightning-bolt.svg";
+import GeHC from "public/icons/logos/ge-logo.svg";
+import Heat from "public/icons/logos/heat-logo.svg";
+import TedX from "public/icons/logos/tedx-logo.svg";
 
 export default function Enterprise() {
 	return (
@@ -19,20 +29,123 @@ export default function Enterprise() {
 				<div className="docs__title__container">
 					<h1 className="page__kicker">feedback management for enterprise teams</h1>
 					<h2 className="docs__title">
-						Empower Your Feedback Management with Lyket
+						<Decorator
+							fulltext="Empower Your Feedback Management with Lyket"
+							toDecorate="Feedback Management"
+							color="blue"
+						/>
 					</h2>
+					<p className="docs__text">
+						A first button is <strong>live in about 4 minutes</strong>,
+						visitors never log in to vote, and everything runs on{" "}
+						<strong>EU-hosted infrastructure</strong>.
+					</p>
+					<div className="section--center space--top-2">
+						<Link href="/reach-out" className="button--big button--center">
+							Talk to sales
+						</Link>
+					</div>
+					<div className="check">
+						<p className="check__text">EU-hosted infrastructure</p>
+						<p className="check__text">Signed DPA on request</p>
+						<p className="check__text">No credit card needed</p>
+					</div>
+					<div className="list">
+						<TedX className="list__logos" alt="tedx" />
+						<Heat className="list__logos" alt="heat-mvmnt" />
+						<GeHC className="list__logos" alt="ge-hc" />
+					</div>
 				</div>
+				<section className="section--primary">
+					<div className="section__container">
+						<h2 className="section__title">
+							<Decorator
+								fulltext="Built for what procurement checks first"
+								toDecorate="procurement checks first"
+								color="red"
+							/>
+						</h2>
+						<div className="stripes">
+							<div className="stripe__item">
+								<div className="stripe__left">
+									<Globe className="icon" />
+								</div>
+								<div className="stripe__container">
+									<h6 className="stripe__title">EU data residency</h6>
+									<p className="stripe__text">
+										Our infrastructure is <strong>hosted in the EU</strong>,
+										end to end — no data residency surprises to explain to
+										legal.
+									</p>
+								</div>
+							</div>
+							<div className="stripe__item">
+								<div className="stripe__left">
+									<ScaleIcon className="icon" />
+								</div>
+								<div className="stripe__container">
+									<h6 className="stripe__title">DPA on request</h6>
+									<p className="stripe__text">
+										Need a signed <strong>Art. 28 GDPR Data Processing
+										Agreement</strong>? Get in touch and we'll provide one.
+									</p>
+								</div>
+							</div>
+							<div className="stripe__item">
+								<div className="stripe__left">
+									<ShieldCheck className="icon" />
+								</div>
+								<div className="stripe__container">
+									<h6 className="stripe__title">No bots allowed</h6>
+									<p className="stripe__text">
+										Lyket is integrated with{" "}
+										<strong>Google reCAPTCHA V3</strong> to keep vote counts
+										honest, without ever interrupting real visitors.
+									</p>
+								</div>
+							</div>
+							<div className="stripe__item">
+								<div className="stripe__left">
+									<Server className="icon" />
+								</div>
+								<div className="stripe__container">
+									<h6 className="stripe__title">Built to scale</h6>
+									<p className="stripe__text">
+										Buttons stay responsive as traffic grows —{" "}
+										<strong>without you provisioning a single server</strong>.
+									</p>
+								</div>
+							</div>
+							<div className="stripe__item">
+								<div className="stripe__left">
+									<UserGroup className="icon" />
+								</div>
+								<div className="stripe__container">
+									<h6 className="stripe__title">No visitor login</h6>
+									<p className="stripe__text">
+										Visitors like, clap or rate without ever creating an
+										account or <strong>handing over personal data</strong>.
+									</p>
+								</div>
+							</div>
+							<div className="stripe__item">
+								<div className="stripe__left">
+									<Bolt className="icon" />
+								</div>
+								<div className="stripe__container">
+									<h6 className="stripe__title">Live in ~4 minutes</h6>
+									<p className="stripe__text">
+										Drop in our <strong>REST API</strong> or{" "}
+										<Link href="/docs/react">React component</Link> and your
+										first button is live almost immediately.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 				<section className="page__section">
 					<div className="markdown">
-						<p>
-							Lyket adds like, clap, rating and like/dislike buttons to any
-							website or app through a single API. A first button is{" "}
-							<strong>live in about 4 minutes</strong>, visitors never log in
-							or hand over personal data to vote, and our infrastructure is{" "}
-							<strong>hosted in the EU</strong>.
-						</p>
-						<p>Let's answer a few frequently asked questions.</p>
-
 						<h3>Shouldn't we build an enterprise feedback tool in-house?</h3>
 						<p>
 							Building a <strong>feedback management system</strong> that
@@ -120,14 +233,25 @@ export default function Enterprise() {
 							Processing Agreement under Art. 28 GDPR, just get in touch and
 							we'll provide one.
 						</p>
-
-						<h3>Get started with Lyket for Enterprise</h3>
-						<p>
-							Four button types, a REST API and dashboard, EU hosting, and
-							a first button live in about 4 minutes.{" "}
-							<Link href="/reach-out">Get in touch</Link> to talk about a{" "}
-							<strong>custom plan</strong> or a <strong>signed DPA</strong>.
-						</p>
+					</div>
+				</section>
+				<section className="page__section">
+					<div className="block--gradient">
+						<div className="block__text__container">
+							<h4 className="block__title block__title--sm">
+								Get started with Lyket for Enterprise
+							</h4>
+							<p className="block__text">
+								Four button types, a REST API and dashboard, EU hosting, and
+								a first button live in about 4 minutes. Let's talk about a{" "}
+								<strong>custom plan</strong> or a <strong>signed DPA</strong>.
+							</p>
+						</div>
+						<div className="block__image">
+							<Link href="/reach-out" className="button">
+								Get in touch
+							</Link>
+						</div>
 					</div>
 				</section>
 			</div>
