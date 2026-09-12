@@ -51,6 +51,8 @@
     background-color: #282936
     +horizontal-padding(2)
     +vertical-padding(4)
+    +monospaced-font-family
+    overflow-x: auto
 
   ul, ol, blockquote
     padding-left: 40px
@@ -119,8 +121,28 @@
   .h-space
     +horizontal-margin(2)
 
+.code-block
+  position: relative
+
+.code-block__copy
+  +padding(1)
+  +horizontal-padding(1.5)
+  position: absolute
+  top: 12px
+  right: 12px
+  font-weight: bold
+  border-radius: 5px
+  background-color: $yellow
+  &:hover
+    background-color: $yellow
+
 .language-html
   overflow: scroll
+
+@media only screen and (min-width: 1000px)
+  .markdown > .code-block
+    +margin-left(-2)
+    +margin-right(-2)
 
 // desktop first
 @media only screen and (max-width: 1000px)

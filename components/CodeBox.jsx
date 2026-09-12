@@ -53,18 +53,6 @@ export default function CodeBox({ currentButton, selectedTech }) {
       </div>
       <div className="code-box__body">
         <Code>{tech === "react" ? reactText() : htmlText()}</Code>
-        <button
-          className="copy-button"
-          onClick={(e) => {
-            e.preventDefault();
-
-            navigator.clipboard.writeText(
-              tech === "react" ? reactText() : htmlText()
-            );
-          }}
-        >
-          copy
-        </button>
       </div>
     </div>
   );
