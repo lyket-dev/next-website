@@ -1,0 +1,31 @@
+.contact
+  display: flex
+  flex-direction: column
+  text-align: left
+
+.contact__info
+  +margin-bottom(5)
+
+.contact__form
+  .window
+    margin: 0
+
+@media only screen and (min-width: 960px)
+  .contact
+    flex-direction: row
+    align-items: flex-start
+
+  .contact__info
+    flex: 0 0 40%
+    max-width: 40%
+    +margin-bottom(0)
+    +padding-right(4)
+    +padding-top(2)
+
+  .contact__form
+    flex: 0 0 60%
+    max-width: 60%
+
+    .window
+      margin: 0
+      max-width: none
