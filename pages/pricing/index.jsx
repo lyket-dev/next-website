@@ -168,10 +168,15 @@ export default function Privacy() {
 							</p>
 							<h6>Do I need to update my privacy policy to use Lyket? </h6>
 							<p>
-								At most, adding a single line — Lyket doesn't set any cookie on
-								your visitors' browsers. See our{" "}
-								<Link href="/privacy">privacy policy</Link> for details on the
-								minimal data we process.
+								At most, adding a line about Lyket as a sub-processor. Visitors
+								never log in or hand over personal data to vote — by default
+								Lyket just remembers their vote via a random ID in their
+								browser's local storage (not a cookie), and separately uses a
+								hashed IP as an anti-abuse safeguard. If you'd rather nothing be
+								stored on the visitor's device at all, you can disable the
+								local-storage ID and rely solely on the hashed IP. See our{" "}
+								<Link href="/privacy">privacy policy</Link> for the exact
+								details.
 							</p>
 						</div>
 					</div>
@@ -233,10 +238,12 @@ export default function Privacy() {
 								<Shield className="icon" />
 							</div>
 							<div className="stripe__container">
-								<h6 className="stripe__title">No cookies for your visitors</h6>
+								<h6 className="stripe__title">No login for your visitors</h6>
 								<p className="stripe__text">
-									Lyket doesn't set any cookie on your visitors' browsers — we
-									use a hashed IP address instead to prevent duplicate votes.
+									Visitors can like, clap or rate without ever creating an
+									account or handing over personal data — no cookie is set
+									either, just a random ID kept in their browser to avoid double
+									votes.
 								</p>
 							</div>
 						</div>
