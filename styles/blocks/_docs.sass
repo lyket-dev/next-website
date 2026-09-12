@@ -4,8 +4,10 @@
 .docs__with-menu
   @extend .docs
   position: relative
+  padding-bottom: 80px
 
 .docs__menu__toggle
+  +font-size(regular)
   position: fixed
   right: 24px
   bottom: 24px
@@ -14,8 +16,8 @@
   border: none
   border-radius: 999px
   font-weight: bold
-  +padding(1.5)
-  +horizontal-padding(2.5)
+  +padding(1.2)
+  +horizontal-padding(2.2)
   box-shadow: $shadow
   cursor: pointer
 
@@ -157,10 +159,6 @@
   .docs
     +font-size(gamma)
 
-  .docs__container
-    padding: 100px 0
-    max-width: 950px
-
   .docs__menu__container
     +padding-bottom(4)
 
@@ -173,12 +171,6 @@
 
   .docs__link
     +margin-top(2)
-
-  .docs__text
-    max-width: 85%
-    margin: 0 auto
-    +font-size(gamma)
-    +margin-bottom(3)
 
   .docs__title__container
     position: relative
