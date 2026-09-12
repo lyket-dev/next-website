@@ -169,8 +169,7 @@ export default function Privacy() {
 							<h6>Do I need to update my privacy policy to use Lyket? </h6>
 							<p>
 								At most, adding a single line — Lyket doesn't set any cookie on
-								your visitors' browsers, so there's no cookie consent banner or
-								heavy compliance work involved. See our{" "}
+								your visitors' browsers. See our{" "}
 								<Link href="/privacy">privacy policy</Link> for details on the
 								minimal data we process.
 							</p>
