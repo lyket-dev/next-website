@@ -15,7 +15,7 @@ export default function Post() {
 				<title>Add a like button to your Gatsby website | Lyket</title>
 				<meta
 					name="description"
-					content="Your Gatsby website could use some loving? Lyket lets you add privacy compliant like buttons to any Gatsby project in a matter of seconds"
+					content="Your Gatsby website could use some loving? Lyket lets you add like buttons, designed to support GDPR compliance, to any Gatsby project in a matter of seconds"
 				/>
 				<meta
 					name="keywords"
@@ -38,10 +38,11 @@ export default function Post() {
 				<section className="page__section">
 					<div className="markdown">
 						<p>
-							Lyket is the ultimate tool to quickly implement GDPR-compliant
-							<strong>like buttons on Gatsby</strong>. From the moment you
-							create the button our server will keep track of every visitor
-							interaction without storing their personal data.
+							Lyket is a tool designed to support GDPR compliance while you
+							quickly implement <strong>like buttons on Gatsby</strong>. From
+							the moment you create the button our server will keep track of
+							every visitor interaction, using a hashed identifier instead of
+							storing raw personal data.
 						</p>
 						<h4>What is Gatsby?</h4>
 						<p>

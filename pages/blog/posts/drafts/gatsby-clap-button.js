@@ -29,10 +29,11 @@ export default function Post() {
 				<section className="page__section">
 					<div className="markdown">
 						<p>
-							Lyket is the ultimate tool to implement GDPR-compliant clap or
-							applause buttons on Gatsby. From the moment you create the button
-							our server will keep track of every visitor interaction without
-							storing their personal data.
+							Lyket is a tool designed to support GDPR compliance while you
+							implement clap or applause buttons on Gatsby. From the moment you
+							create the button our server will keep track of every visitor
+							interaction, using a hashed identifier instead of storing raw
+							personal data.
 						</p>
 						<p>
 							To get started you just need to signup to Lyket and get your

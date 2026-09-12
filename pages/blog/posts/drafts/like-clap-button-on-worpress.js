@@ -14,7 +14,7 @@ export default function Post() {
 				<title>Lyket - Like and clap buttons for Wordpress</title>
 				<meta
 					property="og:description"
-					content="Lyket lets you add privacy compliant clap and like buttons to any Wordpress project in a matter of seconds"
+					content="Lyket lets you add clap and like buttons, designed to support GDPR compliance, to any Wordpress project in a matter of seconds"
 					name="description"
 				/>
 			</Head>
@@ -29,10 +29,11 @@ export default function Post() {
 				<section className="page__section">
 					<div className="markdown">
 						<p>
-							Lyket is the ultimate tool to quickly implement GDPR-compliant
-							like, clap and vote buttons on any Wordpress project. From the
-							moment you create a button our server will keep track of every
-							visitor interaction, without storing their personal data.
+							Lyket is a tool designed to support GDPR compliance while you
+							quickly implement like, clap and vote buttons on any Wordpress
+							project. From the moment you create a button our server will keep
+							track of every visitor interaction, using a hashed identifier
+							instead of storing raw personal data.
 						</p>
 						<p>
 							If you’re using Wordpress you are probably accustomed to plugins.

@@ -14,7 +14,7 @@ export default function Post() {
 			<Head>
 				<title>How to add a Blogger like button | Lyket</title>
 				<meta
-					content="Lyket lets you add privacy compliant clap and like buttons to Blogger in a matter of seconds"
+					content="Lyket lets you add clap and like buttons, designed to support GDPR compliance, to Blogger in a matter of seconds"
 					name="description"
 				/>
 				<meta

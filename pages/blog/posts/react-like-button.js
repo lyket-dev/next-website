@@ -113,14 +113,13 @@ export default function Post() {
 						<HomeSandbox selectedTab="like" selectedTech="react" />
 						<h4>Lyket in action!</h4>
 						<p>
-							Lyket takes care of all these nuisances for you! It lets you add
-							GDPR-compliant{" "}
+							Lyket takes care of all these nuisances for you! It lets you add{" "}
 							<strong>
 								like buttons on any React project, including NextJS, Gatsby,
 								React Native
 							</strong>{" "}
-							and any other framework that uses React, and see the scores on
-							your personal dashboard.
+							and any other framework that uses React, designed to support GDPR
+							compliance, and see the scores on your personal dashboard.
 						</p>
 						<p>
 							Here is a{" "}

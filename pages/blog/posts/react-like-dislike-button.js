@@ -57,7 +57,7 @@ export default function Post() {
 			<Head>
 				<title>React like/dislike button | Lyket</title>
 				<meta
-					content="Lyket lets you add privacy compliant like dislike buttons to any React project in a matter of seconds"
+					content="Lyket lets you add like dislike buttons, designed to support GDPR compliance, to any React project in a matter of seconds"
 					name="description"
 				/>
 				<meta
@@ -113,8 +113,8 @@ export default function Post() {
 							It stores every visitor interaction in its database and then
 							<strong>you are in complete control of your data</strong>. You can
 							visualize it in your private area, import and export anytime.
-							Moreover you don't have to worry about privacy because Lyket does
-							not store sensible data making it <strong>GDPR-compliant</strong>.
+							Lyket avoids storing raw visitor data and is{" "}
+							<strong>designed to support GDPR compliance</strong>.
 						</p>
 						<h4>A simple like/dislike button</h4>
 						<p>

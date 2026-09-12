@@ -60,7 +60,7 @@ export default function Post() {
 			<Head>
 				<title>Add a clap button to your website | Lyket</title>
 				<meta
-					content="Lyket lets you add privacy compliant clap buttons to any website in a matter of seconds"
+					content="Lyket lets you add clap buttons, designed to support GDPR compliance, to any website in a matter of seconds"
 					name="description"
 				/>
 				<meta name="keywords" content="Clap button, applause button" />
@@ -86,13 +86,14 @@ export default function Post() {
 							popular.
 						</p>
 						<p>
-							Lyket is the ultimate tool to add GDPR-compliant{" "}
+							Lyket is the ultimate tool to add{" "}
 							<strong>
 								clap buttons to any React project, including NextJS, Gatsby,
 								React Native
 							</strong>{" "}
-							and any other framework that uses React, and to be always updated
-							to what your visitors enjoy the most about your website.
+							and any other framework that uses React — designed to support
+							GDPR compliance — and to be always updated to what your visitors
+							enjoy the most about your website.
 						</p>
 						<p>
 							I will give you a few examples on how you can easily integrate

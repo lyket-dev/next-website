@@ -13,7 +13,7 @@ export default function Post() {
 			<Head>
 				<title>Add a like button to Notion | Lyket</title>
 				<meta
-					content="Lyket lets you add privacy compliant clap and like buttons to any Notion project in a matter of seconds"
+					content="Lyket lets you add clap and like buttons, designed to support GDPR compliance, to any Notion project in a matter of seconds"
 					name="description"
 				/>
 				<meta
@@ -33,10 +33,11 @@ export default function Post() {
 				<section className="page__section">
 					<div className="markdown">
 						<p>
-							With Lyket you can quickly implement GDPR-compliant{" "}
-							<strong>like, clap or vote buttons Notion</strong>. From the
-							moment you create the button our server will keep track of every
-							visitor interaction without storing their personal data.
+							With Lyket you can quickly implement{" "}
+							<strong>like, clap or vote buttons Notion</strong>, designed to
+							support GDPR compliance. From the moment you create the button our
+							server will keep track of every visitor interaction, using a
+							hashed identifier instead of storing raw personal data.
 						</p>
 						<p>
 							To get started you just need to{" "}

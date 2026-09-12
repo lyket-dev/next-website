@@ -13,7 +13,7 @@ export default function Post() {
 			<Head>
 				<title>Add a like button to your NextJS website | Lyket</title>
 				<meta
-					content="Lyket lets you add privacy compliant like buttons to any NextJS project in a matter of seconds"
+					content="Lyket lets you add like buttons, designed to support GDPR compliance, to any NextJS project in a matter of seconds"
 					name="description"
 					keywords="nextjs, like button, nextjs like button"
 				/>

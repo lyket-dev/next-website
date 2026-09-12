@@ -14,7 +14,7 @@ export default function Post() {
 				<title>Lyket - Add a clap button to your NextJS website</title>
 				<meta
 					property="og:description"
-					content="Your NextJS website could use some loving? Lyket lets you add privacy compliant clap buttons to any NextJS project in a matter of seconds"
+					content="Your NextJS website could use some loving? Lyket lets you add clap buttons, designed to support GDPR compliance, to any NextJS project in a matter of seconds"
 					name="description"
 				/>
 			</Head>
@@ -33,11 +33,12 @@ export default function Post() {
 				<section className="page__section">
 					<div className="markdown">
 						<p>
-							Lyket is the ultimate tool to quickly implement GDPR-compliant
-							clap buttons on any NextJS project, NextJS, NextJS, NextJS Native
-							and any other framework that uses NextJS. From the moment you
-							create the button our server will keep track of every visitor
-							interaction without storing their personal data.
+							Lyket is a tool designed to support GDPR compliance while you
+							quickly implement clap buttons on any NextJS project, NextJS
+							Native and any other framework that uses NextJS. From the moment
+							you create the button our server will keep track of every
+							visitor interaction, using a hashed identifier instead of storing
+							raw personal data.
 						</p>
 						<p>
 							To get started you just need to signup to Lyket and get your
