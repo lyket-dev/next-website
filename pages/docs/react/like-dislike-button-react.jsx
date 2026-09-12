@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import {
+	DisableSessionIdDisclaimer,
+	RecaptchaCookieNote,
+} from "components/DisableSessionIdDisclaimer";
 import { QuickReactDocsMenu } from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Head from "next/head";
@@ -196,6 +200,7 @@ ReactDOM.render(
 											will result as unauthorized. Read more in the{" "}
 											<Link href="#recaptcha">reCAPTCHA</Link> section at the
 											end of this document.
+											<RecaptchaCookieNote />
 										</p>
 									</li>
 									<li>
@@ -205,9 +210,9 @@ ReactDOM.render(
 											Lyket won't store a unique session ID for your visitors
 											making them anonymous. Lyket will then discriminate
 											visitors (to tell if they already liked a button or not)
-											only based on the IP address. Disabling the session ID can
-											be useful if you don't want Lyket to result in your cookie
-											detection software.
+											only based on the IP address, writing no cookie or local
+											storage entry.
+											<DisableSessionIdDisclaimer />
 										</p>
 									</li>
 								</ul>

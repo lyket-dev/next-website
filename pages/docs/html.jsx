@@ -1,5 +1,9 @@
 import React from "react";
 import ObfuscatedEmail from "components/ObfuscatedEmail";
+import {
+  DisableSessionIdDisclaimer,
+  RecaptchaCookieNote,
+} from "components/DisableSessionIdDisclaimer";
 import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Link from "next/link";
@@ -203,9 +207,9 @@ export default function Docs() {
                     </strong>{" "}
                     for your visitors making them anonymous. Lyket will then
                     discriminate visitors (to tell if they already liked a
-                    button or not) only based on the IP address. Disabling the
-                    session ID can be useful if you don't want Lyket to result
-                    in your cookie detection software.
+                    button or not) only based on the IP address, writing no
+                    cookie or local storage entry.
+                    <DisableSessionIdDisclaimer />
                   </p>
                   <Code language="html">
                     {`<script
@@ -221,6 +225,7 @@ export default function Docs() {
                     otherwise your buttons will result as unauthorized. Read
                     more in the <Link href="#recaptcha">reCAPTCHA</Link> section
                     at the end of this document.
+                    <RecaptchaCookieNote />
                   </p>
                 </li>
               </ul>
