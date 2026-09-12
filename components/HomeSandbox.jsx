@@ -66,14 +66,14 @@ const HomeSandbox = ({ selectedTab, selectedTech, showMenu = true }) => {
 					</div>
 				</div>
 			)}
-			<div className={"flag"}>
+			<div className={"sandbox"}>
 				{showConfetti && (
 					<Confetti width={2000} height={500} recycle={false} gravity={0.4} />
 				)}
-				<div className="flag__left">
+				<div className="sandbox__left">
 					<CodeBox currentButton={selected} selectedTech={selectedTech} />
 				</div>
-				<div className="flag__right">
+				<div className="sandbox__right">
 					<div className="lyket__container">
 						<div className={`lyket__${selected}`}>
 							{selected === "rate" && (

@@ -1,0 +1,24 @@
+.sandbox
+  display: flex
+  flex-direction: column
+  text-align: center
+
+.sandbox__left, .sandbox__right
+  position: relative
+  width: 100%
+
+.sandbox__right
+  +margin-top(5)
+
+@media only screen and (min-width: 1000px)
+  .sandbox
+    align-items: center
+    flex-direction: row
+    text-align: left
+
+  .sandbox__left, .sandbox__right
+    flex-grow: 0
+
+  .sandbox__right
+    margin-top: 0
+    +margin-left(4)
