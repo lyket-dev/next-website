@@ -6,9 +6,15 @@
 .contact__info
   +margin-bottom(5)
 
-.contact__form
-  .window
-    margin: 0
+.contact__panel
+  background-color: $light-bg-color
+  border: 1px solid $border-color
+  border-radius: 16px
+  +padding(4)
+
+  .form
+    input, select, textarea
+      background-color: transparent
 
 @media only screen and (min-width: 960px)
   .contact
@@ -26,6 +32,5 @@
     flex: 0 0 60%
     max-width: 60%
 
-    .window
-      margin: 0
-      max-width: none
+  .contact__panel
+    +padding(5)

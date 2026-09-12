@@ -37,7 +37,7 @@ export default function Contact() {
 						</p>
 					</div>
 					<div className="contact__form">
-						<div className="window">
+						<div className="contact__panel">
 							<form
 								name="contact"
 								method="POST"
