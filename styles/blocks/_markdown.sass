@@ -125,19 +125,32 @@
   position: relative
 
 .code-block__copy
-  +padding(1)
-  +horizontal-padding(1.5)
+  +padding-top(0.5)
+  +padding-bottom(0.5)
+  +horizontal-padding(1)
+  +font-size(micro)
   position: absolute
-  top: 12px
-  right: 12px
-  font-weight: bold
+  top: 10px
+  right: 10px
+  font-weight: 600
   border-radius: 5px
   background-color: $yellow
+  opacity: 0.6
+  transition: opacity 0.15s
   &:hover
     background-color: $yellow
+    opacity: 1
 
 .language-html
   overflow: scroll
+
+@media only screen and (max-width: 1000px)
+  .code-block__copy
+    +padding-top(0.25)
+    +padding-bottom(0.25)
+    +horizontal-padding(0.75)
+    top: 8px
+    right: 8px
 
 @media only screen and (min-width: 1000px)
   .markdown > .code-block
