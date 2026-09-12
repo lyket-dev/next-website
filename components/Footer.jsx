@@ -85,6 +85,14 @@ export default function Footer() {
             </a>
           </li>
         </ul>
+        <p className="footer__text">
+          This site uses local storage (not cookies) to power its own
+          like/clap buttons. See our{" "}
+          <Link href="/privacy" className="footer__link">
+            Privacy Policy
+          </Link>{" "}
+          for details.
+        </p>
       </div>
     </footer>
   );
