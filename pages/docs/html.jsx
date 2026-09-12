@@ -3,7 +3,7 @@ import ObfuscatedEmail from "components/ObfuscatedEmail";
 import {
   DisableSessionIdDisclaimer,
   RecaptchaCookieNote,
-} from "components/DisableSessionIdDisclaimer";
+} from "components/CommonButtonProps";
 import QuickDocsMenu from "components/QuickDocsMenu";
 import Code from "components/Code";
 import Link from "next/link";
