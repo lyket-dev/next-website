@@ -204,22 +204,23 @@ export Restaurant = () => {
   return (
     <div>
       <h1>My Restaurant</h1>
-		<p>Average ratings for My Restaurant</p>
+      <p>Average ratings for My Restaurant</p>
       <RateButton
         id="my-restaurant"
         namespace="restaurants"
-				showRating="average"
+        showRating="average"
       />
-		<p>Rate My Restaurant</p>
+      <p>Rate My Restaurant</p>
       <RateButton
         id="my-restaurant"
         namespace="restaurants"
-				showRating="user"
+        showRating="user"
       />
       {content}
     </div>
     );
-  };`}
+  };
+`}
 							</Code>
 							<div className="flex-left big">
 								<div className="try">Average rating: </div>
@@ -485,9 +486,9 @@ export StandingOvation = () => {
   apiKey="${process.env.lyketApiKey}"
   theme={{
     colors: {
-			primary: "#ffaa02",
-			icon: "lightgrey",
-			text: "purple",
+      primary: "#ffaa02",
+      icon: "lightgrey",
+      text: "purple",
     }
   }}
 >

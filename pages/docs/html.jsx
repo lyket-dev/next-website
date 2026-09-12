@@ -446,14 +446,14 @@ export default function Docs() {
   data-lyket-type="rating"
   data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
-	data-lyket-show-rating="user"
+  data-lyket-show-rating="user"
   data-lyket-template="custom"
 ></div>
 <div
   data-lyket-type="rating"
   data-lyket-id="my-third-post"
   data-lyket-namespace="blog"
-	data-lyket-show-rating="average"
+  data-lyket-show-rating="average"
   data-lyket-template="custom"
 ></div>
 `}
