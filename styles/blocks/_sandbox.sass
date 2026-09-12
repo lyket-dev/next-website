@@ -16,9 +16,14 @@
     flex-direction: row
     text-align: left
 
-  .sandbox__left, .sandbox__right
+  .sandbox__left
+    width: auto
     flex-grow: 0
+    flex-shrink: 0
 
   .sandbox__right
+    width: auto
     margin-top: 0
+    flex: 1 1 auto
+    min-width: 0
     +margin-left(4)

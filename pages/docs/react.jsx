@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ProviderRequiredProps,
   ProviderOptionalProps,
@@ -53,6 +53,8 @@ const menu = [
 ];
 
 export default function Docs() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -73,12 +75,44 @@ export default function Docs() {
         </div>
         <section className="page__section">
           <div className="docs__with-menu">
-            <ul className="docs__menu">
-              TOPICS
+            <button
+              type="button"
+              className="docs__menu__toggle"
+              onClick={() => setMenuOpen(true)}
+            >
+              Topics
+            </button>
+            {isMenuOpen && (
+              <button
+                type="button"
+                className="docs__menu__backdrop"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Close menu"
+              />
+            )}
+            <ul
+              className={`docs__menu${isMenuOpen ? " docs__menu--open" : ""}`}
+            >
+              <li className="docs__menu__header">
+                TOPICS
+                <button
+                  type="button"
+                  className="docs__menu__close"
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  ×
+                </button>
+              </li>
               {menu.map((item) => {
                 return (
                   <li key={item.id}>
-                    <Link href={`#${item.id}`}>{item.label}</Link>
+                    <Link
+                      href={`#${item.id}`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
                   </li>
                 );
               })}

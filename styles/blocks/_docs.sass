@@ -3,6 +3,50 @@
 
 .docs__with-menu
   @extend .docs
+  position: relative
+
+.docs__menu__toggle
+  position: fixed
+  right: 24px
+  bottom: 24px
+  z-index: 40
+  background-color: $yellow
+  border: none
+  border-radius: 999px
+  font-weight: bold
+  +padding(1.5)
+  +horizontal-padding(2.5)
+  box-shadow: $shadow
+  cursor: pointer
+
+.docs__menu__backdrop
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.4)
+  border: none
+  padding: 0
+  z-index: 45
+  cursor: pointer
+
+.docs__menu__header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-weight: 700
+  +margin-bottom(2)
+
+.docs__menu__close
+  background: none
+  border: none
+  font-size: 28px
+  line-height: 1
+  cursor: pointer
+  padding: 0
 
 .docs__title__container
   position: relative
@@ -19,7 +63,24 @@
   +padding-bottom(6)
 
 .docs__menu
-  +margin-bottom(2)
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  width: min(320px, 85vw)
+  background-color: white
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15)
+  z-index: 50
+  overflow-y: auto
+  transform: translateX(100%)
+  transition: transform 0.3s ease
+  +padding(3)
+  +font-size(smallprint)
+  li
+    +margin-bottom(1)
+
+.docs__menu--open
+  transform: translateX(0)
 
 .docs__title
   text-align: center
@@ -95,22 +156,6 @@
 @media only screen and (min-width: 900px)
   .docs
     +font-size(gamma)
-
-  .docs__with-menu
-    display: flex
-
-  .docs__menu__right
-    width: 80%
-
-  .docs__menu
-    position: relative
-    +margin-right(2)
-    +font-size(smallprint)
-    overflow: hidden
-    li
-      white-space: nowrap
-      overflow: hidden
-      text-overflow: ellipsis
 
   .docs__container
     padding: 100px 0
