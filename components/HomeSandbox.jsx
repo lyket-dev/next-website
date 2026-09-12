@@ -112,6 +112,7 @@ const HomeSandbox = ({ selectedTab, selectedTech, showMenu = true }) => {
 										namespace="homepage"
 										id={`everybody-${selected}-now`}
 										showRating="average"
+										totalReviewsLabel=""
 									/>
 								</div>
 							)}
