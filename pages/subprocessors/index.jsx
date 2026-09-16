@@ -84,6 +84,15 @@ export default function Subprocessors() {
 									<td>EU (Ireland, eu-west-1) — no international transfer</td>
 								</tr>
 								<tr>
+									<td>Amazon S3 (Amazon Web Services)</td>
+									<td>Database backups</td>
+									<td>
+										Full database backup snapshots (hashed IPs, account data,
+										vote/button data) — deleted after 14 days
+									</td>
+									<td>EU (Ireland, eu-west-1) — no international transfer</td>
+								</tr>
+								<tr>
 									<td>Stripe</td>
 									<td>Payment processing</td>
 									<td>Billing data of paying customers only</td>
